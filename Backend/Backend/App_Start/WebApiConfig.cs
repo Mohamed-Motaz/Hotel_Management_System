@@ -1,4 +1,5 @@
-﻿using Newtonsoft.Json;
+﻿using Backend.Database;
+using Newtonsoft.Json;
 using Newtonsoft.Json.Serialization;
 using System;
 using System.Collections.Generic;
@@ -36,6 +37,8 @@ namespace Backend
                 routeTemplate: "api/{controller}/{id}",
                 defaults: new { id = RouteParameter.Optional }
             );
+
+            bool dbDone = DbOperations.InitializeDB();
         }
     }
 }

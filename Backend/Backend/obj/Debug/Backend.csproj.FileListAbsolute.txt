@@ -66,3 +66,11 @@ C:\Users\Mohamed Motaz\Desktop\HotelManagementSystem\Backend\Backend\obj\Debug\B
 C:\Users\Mohamed Motaz\Desktop\HotelManagementSystem\Backend\Backend\obj\Debug\Backend.csproj.CoreCompileInputs.cache
 C:\Users\Mohamed Motaz\Desktop\HotelManagementSystem\Backend\Backend\obj\Debug\Backend.dll
 C:\Users\Mohamed Motaz\Desktop\HotelManagementSystem\Backend\Backend\obj\Debug\Backend.pdb
+C:\Users\Mohamed Motaz\Desktop\HotelManagementSystem\Backend\Backend\bin\EntityFramework.dll
+C:\Users\Mohamed Motaz\Desktop\HotelManagementSystem\Backend\Backend\bin\EntityFramework.SqlServer.dll
+C:\Users\Mohamed Motaz\Desktop\HotelManagementSystem\Backend\Backend\bin\System.Data.SQLite.dll
+C:\Users\Mohamed Motaz\Desktop\HotelManagementSystem\Backend\Backend\bin\System.Data.SQLite.EF6.dll
+C:\Users\Mohamed Motaz\Desktop\HotelManagementSystem\Backend\Backend\bin\System.Data.SQLite.Linq.dll
+C:\Users\Mohamed Motaz\Desktop\HotelManagementSystem\Backend\Backend\bin\EntityFramework.xml
+C:\Users\Mohamed Motaz\Desktop\HotelManagementSystem\Backend\Backend\bin\EntityFramework.SqlServer.xml
+C:\Users\Mohamed Motaz\Desktop\HotelManagementSystem\Backend\Backend\bin\System.Data.SQLite.xml
