@@ -7,12 +7,12 @@ namespace Backend.Models
 {
     public class BookingInformation
     {
-        private int id;
-        private int roomId;
-        private int boardId;
-        private int residentId;
-        private long startDate;
-        private long endDate;
-        private float totalPrice;
+        public int id { get; set; }
+        public int roomId { get; set; }
+        public int boardId { get; set; }
+        public int residentId { get; set; }
+        public long startDate { get; set; }
+        public long endDate { get; set; }
+        public float totalPrice { get; set; }
     }
 }
