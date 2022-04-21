@@ -179,8 +179,18 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Models\AbstractPrivilegedWorker.cs" />
+    <Compile Include="Models\AbstractUser.cs" />
+    <Compile Include="Models\AbstractWorker.cs" />
     <Compile Include="Models\BookingInformation.cs" />
+    <Compile Include="Models\ListCreate.cs" />
+    <Compile Include="Models\Iterator.cs" />
+    <Compile Include="Models\ListIterator.cs" />
+    <Compile Include="Models\Manager.cs" />
+    <Compile Include="Models\Receptionist.cs" />
+    <Compile Include="Models\Resident.cs" />
     <Compile Include="Models\Room.cs" />
+    <Compile Include="Models\RoomService.cs" />
     <Compile Include="obj\Debug\.NETFramework,Version=v4.7.2.AssemblyAttributes.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
