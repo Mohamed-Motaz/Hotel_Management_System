@@ -179,7 +179,16 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Models\BedAndBreakfast.cs" />
+    <Compile Include="Models\BoardingType.cs" />
+    <Compile Include="Models\BoardingTypesCahce.cs" />
+    <Compile Include="Models\HalfBoard.cs" />
     <Compile Include="Models\BookingInformation.cs" />
+    <Compile Include="Models\FullBoard.cs" />
+    <Compile Include="Models\ChainPatternTester.cs" />
+    <Compile Include="Models\ConsoleLogger.cs" />
+    <Compile Include="Models\FileLogger.cs" />
+    <Compile Include="Models\Logger.cs" />
     <Compile Include="Models\Room.cs" />
     <Compile Include="obj\Debug\.NETFramework,Version=v4.7.2.AssemblyAttributes.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
