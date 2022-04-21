@@ -18,39 +18,9 @@ namespace Frontend
         {
             InitializeComponent();
             cmbCourse.BackColor = SystemColors.Control;
-            combCourse();
         }
 
-        public void combCourse()
-        {
-            //string query2 = "select * from patient_by_course";
-            //MySqlDataAdapter data2 = new MySqlDataAdapter(query2, con);
-            DataTable dt2 = new DataTable();
-            //data2.Fill(dt2);
 
-            //DataRow dr2 = dt2.NewRow();
-            //dr2["course"] = "Select Course";
-            //dt2.Rows.InsertAt(dr2, 0);
-            //cmbCourse.ValueMember = "id";
-            //cmbCourse.DisplayMember = "course";
-            //cmbCourse.DataSource = dt2;
-        }
-        public void DrawRectangleFloat(PaintEventArgs e)
-        {
-
-            // Create pen.
-            Pen blackPen = new Pen(Color.Black, 3);
-
-            // Create location and size of rectangle.
-            float x = 100.0F;
-            float y = 100.0F;
-            float width = 200.0F;
-            float height = 200.0F;
-
-            // Draw rectangle to screen.
-            e.Graphics.DrawRectangle(blackPen, x, y, width, height);
-        }
-        //MySqlConnection con = new MySqlConnection("server= localhost; database = nuclinic; username=root; password=;Convert Zero Datetime=True");
 
 
         private void bunifuTileButton1_Click(object sender, EventArgs e)
@@ -138,7 +108,7 @@ namespace Frontend
                 string id2 = textBox8.Text;
 
                 string studentid = id2 + "-" + id1;
-                label35.Text = studentid;
+                //label35.Text = studentid;
                 string gender = null;
                 if (rbMale.Checked)
                 {
@@ -181,22 +151,22 @@ namespace Frontend
                 MessageBox.Show("Record Successfully Added");
                 //con.Close();
                 clear();
-                panelMH.Visible = true;
+                //panelMH.Visible = true;
                 panelBI.Visible = false;
-                circle2.Visible = true;
-                line2.Visible = true;
+                //circle2.Visible = true;
+                //line2.Visible = true;
                 bar1.Visible = false;
                 bar2.Visible = true;
-                panel1.Visible = true;
+                //panel1.Visible = true;
 
                 try
                 {
-                    string query = "select * from patient where studentid = '" + label35.Text + "' ";
+                    //string query = "select * from patient where studentid = '" + label35.Text + "' ";
                     //MySqlDataAdapter data = new MySqlDataAdapter(query, con);
                     DataTable dt = new DataTable();
                     //data.Fill(dt);
 
-                    label36.Text = dt.Rows[0]["id"].ToString();
+                    //label36.Text = dt.Rows[0]["id"].ToString();
                 }
                 catch (Exception ex)
                 {
@@ -334,57 +304,57 @@ namespace Frontend
         private void bunifuFlatButton1_Click(object sender, EventArgs e)
         {
             bar4.Visible = false;
-            circle2.Visible = true;
-            line2.Visible = true;
+            //circle2.Visible = true;
+            //line2.Visible = true;
             panelBI.Visible = false;
-            panelMH.Visible = true;
-            bunifuFlatButton1.ForeColor = Color.FromArgb(36, 116, 166);
+            //panelMH.Visible = true;
+            //bunifuFlatButton1.ForeColor = Color.FromArgb(36, 116, 166);
             bar1.Visible = false;
             bar2.Visible = true;
-            panel1.Visible = true;
-            panelPE.Visible = false;
-            line3.Visible = false;
-            circle3.Visible = false;
+            //panel1.Visible = true;
+            //panelPE.Visible = false;
+            //line3.Visible = false;
+            //circle3.Visible = false;
             bar3.Visible = false;
-            line4.Visible = false;
-            circle4.Visible = false;
+            //line4.Visible = false;
+            //circle4.Visible = false;
 
         }
 
         private void bunifuFlatButton2_Click_1(object sender, EventArgs e)
         {
-            circle2.Visible = false;
-            line2.Visible = false;
+            //circle2.Visible = false;
+            //line2.Visible = false;
             panelBI.Visible = true;
-            panelMH.Visible = false;
-            panelPE.Visible = false;
+            //panelMH.Visible = false;
+            //panelPE.Visible = false;
             bar1.Visible = true;
             bar2.Visible = false;
-            panel1.Visible = false;
+            //panel1.Visible = false;
             bar4.Visible = false;
-            line3.Visible = false;
-            circle3.Visible = false;
+            //line3.Visible = false;
+            //circle3.Visible = false;
             bar3.Visible = false;
-            line4.Visible = false;
-            circle4.Visible = false;
+            //line4.Visible = false;
+            //circle4.Visible = false;
             
         }
 
         private void bunifuFlatButton4_Click(object sender, EventArgs e)
         {
             panelBI.Visible = false;
-            panelPE.Visible = true;
+            //panelPE.Visible = true;
             panelBI.Hide();
             bar4.Visible = false;
-            line3.Visible = true;
-            circle3.Visible = true;
+            //line3.Visible = true;
+            //circle3.Visible = true;
             bar3.Visible = true;
             bar2.Visible = false;
-            circle2.Visible = true;
-            line2.Visible = true;
+            //circle2.Visible = true;
+            //line2.Visible = true;
             bar1.Visible = false;
-            line4.Visible = false;
-            circle4.Visible = false;
+            //line4.Visible = false;
+            //circle4.Visible = false;
             
 
 
@@ -403,7 +373,7 @@ namespace Frontend
             DialogResult dialogResult = MessageBox.Show("Do you want to clear all the fields?", "", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
             if (dialogResult == DialogResult.Yes)
             {
-                clearPanelMH();
+                //clearPanelMH();
             }
             else if (dialogResult == DialogResult.No)
             {
@@ -411,31 +381,31 @@ namespace Frontend
             }
         }
 
-        public void clearPanelMH()
-        {
-            HOPI.Checked = false;
-            Allergy.Checked = false;
-            TB.Checked = false;
-            DM.Checked = false;
-            HA.Checked = false;
-            HPN.Checked = false;
-            KD.Checked = false;
-            GO.Checked = false;
-            Smoker.Checked = false;
-            Alcoholic.Checked = false;
-            txtHOPI.Text = "";
-            txtHOPI.Text = "";
-            txtAllergy.Text = "";
-            txtTB.Text = "";
-            txtDM.Text = "";
-            txtHA.Text = "";
-            txtHPN.Text = "";
-            txtKD.Text = "";
-            txtGO.Text = "";
-            txtSmoker.Text = "";
-            txtAlcohol.Text = "";
+        //public void clearPanelMH()
+        //{
+        //    HOPI.Checked = false;
+        //    Allergy.Checked = false;
+        //    TB.Checked = false;
+        //    DM.Checked = false;
+        //    HA.Checked = false;
+        //    HPN.Checked = false;
+        //    KD.Checked = false;
+        //    GO.Checked = false;
+        //    Smoker.Checked = false;
+        //    Alcoholic.Checked = false;
+        //    txtHOPI.Text = "";
+        //    txtHOPI.Text = "";
+        //    txtAllergy.Text = "";
+        //    txtTB.Text = "";
+        //    txtDM.Text = "";
+        //    txtHA.Text = "";
+        //    txtHPN.Text = "";
+        //    txtKD.Text = "";
+        //    txtGO.Text = "";
+        //    txtSmoker.Text = "";
+        //    txtAlcohol.Text = "";
 
-        }
+        //}
 
         private void txtReligion_TextChanged(object sender, EventArgs e)
         {
@@ -502,39 +472,39 @@ namespace Frontend
 
         private void GO_OnChange(object sender, EventArgs e)
         {
-            if (GO.Checked == true)
-            {
-                cGO = "YES ";
-            }
-            else if (GO.Checked == false)
-                cGO = "";
+            //if (GO.Checked == true)
+            //{
+            //    cGO = "YES ";
+            //}
+            //else if (GO.Checked == false)
+            //    cGO = "";
         }
 
         private void Smoker_OnChange(object sender, EventArgs e)
         {
-            if (Smoker.Checked == true)
-            {
-                cSmoker = "YES ";
-            }
-            else if (Smoker.Checked == false)
-                cSmoker = "";
+            //if (Smoker.Checked == true)
+            //{
+            //    cSmoker = "YES ";
+            //}
+            //else if (Smoker.Checked == false)
+            //    cSmoker = "";
         }
 
         private void Alcoholic_OnChange(object sender, EventArgs e)
         {
-            if (Alcoholic.Checked == true)
-            {
-                cAlcoholic = "YES ";
-            }
-            else if (Alcoholic.Checked == false)
-                cAlcoholic = "";
+            //if (Alcoholic.Checked == true)
+            //{
+            //    cAlcoholic = "YES ";
+            //}
+            //else if (Alcoholic.Checked == false)
+            //    cAlcoholic = "";
         }
 
         private void save_Click(object sender, EventArgs e)
         {
-            if (BP.Text == "" || PR.Text == "" || Wt.Text == ""||Ht.Text==""||Skin.Text==""||Eyes.Text==""||OD.Text==""||OS.Text==""||Ears.Text==""||AD.Text==""||AD1.Text==""||Nose.Text==""||Throat.Text==""||Neck.Text==""||Thorax.Text==""||Heart.Text==""||
-                Lungs.Text==""||Abdomen.Text==""||Extremities.Text==""||Deformities.Text=="")
-            {
+            //if (BP.Text == "" || PR.Text == "" || Wt.Text == ""||Ht.Text==""||Skin.Text==""||Eyes.Text==""||OD.Text==""||OS.Text==""||Ears.Text==""||AD.Text==""||AD1.Text==""||Nose.Text==""||Throat.Text==""||Neck.Text==""||Thorax.Text==""||Heart.Text==""||
+            //    Lungs.Text==""||Abdomen.Text==""||Extremities.Text==""||Deformities.Text=="")
+            //{
                 DialogResult dialogResult = MessageBox.Show("The form is incomplete, do you want to proceed?", "", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
                 if (dialogResult == DialogResult.Yes)
                 {
@@ -544,9 +514,9 @@ namespace Frontend
                 {
                     //do something else
                 }
-            }
-            else
-                executePE();
+            //}
+            //else
+            //    executePE();
 
         }
         public void executePE()
@@ -558,8 +528,8 @@ namespace Frontend
                 DataTable dt = new DataTable();
                 //data.Fill(dt);
 
-                label36.Text = dt.Rows[0]["id"].ToString();
-                string id = label36.Text;
+                //label36.Text = dt.Rows[0]["id"].ToString();
+                //string id = label36.Text;
 
                 //MySqlCommand cmd = new MySqlCommand();
                 //cmd.Connection = con;
@@ -596,9 +566,9 @@ namespace Frontend
                 //cmd.ExecuteNonQuery();
                 MessageBox.Show("Record Successfully Added");
                 //con.Close();
-                clearPE();
-                line4.Visible = true;
-                circle4.Visible = true;
+                //clearPE();
+                //line4.Visible = true;
+                //circle4.Visible = true;
                 
                 bar4.Visible = true;
                 bar3.Visible = false;
@@ -615,39 +585,14 @@ namespace Frontend
             }
 
         }
-        public void clearPE()
-        {
-            BP.Clear();
-            PR.Clear();
-            Wt.Clear();
-            Ht.Clear();
-            Skin.Clear();
-            Eyes.Clear();
-            OD.Clear();
-            OS.Clear();
-            Ears.Clear();
-            AD.Clear();
-            AD1.Clear();
-            Throat.Clear();
-            Neck.Clear();
-            Thorax.Clear();
-            Heart.Clear();
-            Lungs.Clear();
-            Abdomen.Clear();
-            Extremities.Clear();
-            Deformities.Clear();
-            Other.Clear();
-            Nose.Clear();
 
-
-        }
 
         private void bunifuFlatButton9_Click(object sender, EventArgs e)
         {
             DialogResult dialogResult = MessageBox.Show("Do you want to clear all the fields?", "", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
             if (dialogResult == DialogResult.Yes)
             {
-                clearPE();
+                //clearPE();
             }
             else if (dialogResult == DialogResult.No)
             {
@@ -658,81 +603,81 @@ namespace Frontend
         private void btn4_Click(object sender, EventArgs e)
         {
             panelBI.Visible = false;
-            panelPE.Visible = false;
-            pictureBox3.Visible = true;
-            panelMH.Visible = false;
-            line3.Visible = true;
-            circle3.Visible = true;
+            //panelPE.Visible = false;
+            //pictureBox3.Visible = true;
+            //panelMH.Visible = false;
+            //line3.Visible = true;
+            //circle3.Visible = true;
             bar3.Visible = false;
             bar2.Visible = false;
-            circle2.Visible = true;
-            line2.Visible = false;
+            //circle2.Visible = true;
+            //line2.Visible = false;
             bar1.Visible = false;
             bar4.Visible = true;
-            line2.Visible = true;
-            line4.Visible = true;
-            circle4.Visible = true;
+            //line2.Visible = true;
+            //line4.Visible = true;
+            //circle4.Visible = true;
             
         }
 
         private void KD_OnChange(object sender, EventArgs e)
         {
-            if (KD.Checked == true)
-            {
-                cKD = "YES ";
-            }
-            else if (KD.Checked == false)
-                cKD = "";
+            //if (KD.Checked == true)
+            //{
+            //    cKD = "YES ";
+            //}
+            //else if (KD.Checked == false)
+            //    cKD = "";
         }
 
         private void HPN_OnChange(object sender, EventArgs e)
         {
-            if (HPN.Checked == true)
-            {
-                cHPN = "YES ";
-            }
-            else if (HPN.Checked == false)
-                cHPN = "";
+            //if (HPN.Checked == true)
+            //{
+            //    cHPN = "YES ";
+            //}
+            //else if (HPN.Checked == false)
+            //    cHPN = "";
         }
 
         private void HA_OnChange(object sender, EventArgs e)
         {
-            if (HA.Checked == true)
-            {
-                cHA = "YES ";
-            }
-            else if (HA.Checked == false)
-                cHA = "";
+            //if (HA.Checked == true)
+            //{
+            //    cHA = "YES ";
+            //}
+            //else if (HA.Checked == false)
+            //    cHA = "";
         }
 
         private void DM_OnChange(object sender, EventArgs e)
         {
-            if (DM.Checked == true)
-            {
-                cDM = "YES ";
-            }
-            else if (DM.Checked == false)
-                cDM = "";
+            //if (DM.Checked == true)
+            //{
+            //    cDM = "YES ";
+            //}
+            //else if (DM.Checked == false)
+            //    cDM = "";
         }
 
-        private void TB_OnChange(object sender, EventArgs e)
+        private void tb_onchange(object sender, EventArgs e)
         {
-            if (TB.Checked == true)
-            {
-                cTB = "YES ";
-            }
-            else if (TB.Checked == false)
-                cTB = "";
+            ////    if (TB.Checked == true)
+            ////    {
+            ////        cTB = "YES ";
+            ////    }
+            ////    else if (TB.Checked == false)
+            ////        cTB = "";
         }
 
         private void Allergy_OnChange(object sender, EventArgs e)
         {
-            if (Allergy.Checked == true)
-            {
-                cAllergy = "YES ";
-            }
-            else if (Allergy.Checked == false)
-                cAllergy = "";
+            //if (Allergy.Checked == true)
+            //{
+            //    cAllergy = "YES ";
+            //}
+            //else if (Allergy.Checked == false)
+            //    cAllergy = "";
         }
 
         private void frmAddPatient_Load(object sender, EventArgs e)
@@ -784,8 +729,8 @@ namespace Frontend
                 //DataTable dt = new DataTable();
                 //data.Fill(dt);
 
-                label36.Text = "hellllloooooo";
-                string id = label36.Text;
+                //label36.Text = "hellllloooooo";
+                //string id = label36.Text;
 
                 //MySqlCommand cmd = new MySqlCommand();
                 //MySqlCommand cmd2 = new MySqlCommand();
@@ -810,7 +755,7 @@ namespace Frontend
                 //cmd2.ExecuteNonQuery();
                 MessageBox.Show("Record Successfully Added");
                 //con.Close();
-                clearPE();
+                //clearPE();
                 cleardctd();
                 //cmbComplaint.Text = "Select Category";
                 
@@ -893,38 +838,38 @@ namespace Frontend
 
         private void bunifuFlatButton7_Click(object sender, EventArgs e)
         {
-            if (HOPI.Checked == false)
-            {
-                cHOPI = "";
-            }
-            if (Allergy.Checked == false)
-            {
-                cAllergy = "";
-            }
-            if (TB.Checked == false)
-                cTB = "";
-            if (DM.Checked == false)
-                cDM = "";
-            if (HA.Checked == false)
-                cHA = "";
-            if (HPN.Checked == false)
-                cHPN = "";
-            if (KD.Checked == false)
-                cKD = "";
-            if (GO.Checked == false)
-                cGO = "";
-            if (Smoker.Checked == false)
-                cSmoker = "";
-            if (Alcoholic.Checked == false)
-                cAlcoholic = "";
+            //if (HOPI.Checked == false)
+            //{
+            //    cHOPI = "";
+            //}
+            //if (Allergy.Checked == false)
+            //{
+            //    cAllergy = "";
+            //}
+            //if (TB.Checked == false)
+            //    cTB = "";
+            //if (DM.Checked == false)
+            //    cDM = "";
+            //if (HA.Checked == false)
+            //    cHA = "";
+            //if (HPN.Checked == false)
+            //    cHPN = "";
+            //if (KD.Checked == false)
+            //    cKD = "";
+            //if (GO.Checked == false)
+            //    cGO = "";
+            //if (Smoker.Checked == false)
+            //    cSmoker = "";
+            //if (Alcoholic.Checked == false)
+            //    cAlcoholic = "";
 
 
-            if (label35.Text == "0" || label36.Text == "0")
-            {
-                MessageBox.Show("Please Add Patient First");
-            }
-            else
-            {
+            //if (label35.Text == "0" || label36.Text == "0")
+            //{
+            //    MessageBox.Show("Please Add Patient First");
+            //}
+            //else
+            //{
 
                 try
                 {
@@ -933,8 +878,8 @@ namespace Frontend
                     //DataTable dt = new DataTable();
                     //data.Fill(dt);
 
-                    label36.Text = "thats meeeeee";
-                    string id = label36.Text;
+                    //label36.Text = "thats meeeeee";
+                    //string id = label36.Text;
 
                     //MySqlCommand cmd = new MySqlCommand();
                     //cmd.Connection = con;
@@ -957,13 +902,13 @@ namespace Frontend
                     MessageBox.Show("Record Successfully Added");
                  
                     //con.Close();
-                    clearPanelMH();
-                    panelPE.Visible = true;
-                    panelMH.Visible = false;
+                    //clearPanelMH();
+                    //panelPE.Visible = true;
+                    //panelMH.Visible = false;
                     bar1.Visible = false;
-                    line3.Visible = true;
-                    circle3.Visible = true;
-               
+                    //line3.Visible = true;
+                    //circle3.Visible = true;
+
                     bar4.Visible = false;
                     bar3.Visible = true;
                     bar2.Visible = false;
@@ -973,9 +918,9 @@ namespace Frontend
                 {
                     MessageBox.Show(ex.Message);
                     //con.Close();
-                    clearPanelMH();
+                    //clearPanelMH();
                 }
-            }
+            //}
         }
   
      
@@ -1011,14 +956,6 @@ namespace Frontend
         }
       
 
-        private void HOPI_OnChange(object sender, EventArgs e)
-        {
-            if (HOPI.Checked == true)
-            {
-                cHOPI = "YES ";
-            }
-            else if(HOPI.Checked == false)
-                cHOPI = "";
-        }
+        
     }
 }

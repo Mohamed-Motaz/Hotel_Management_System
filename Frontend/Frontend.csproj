@@ -79,10 +79,22 @@
     <Compile Include="Diagnosis.Designer.cs">
       <DependentUpon>Diagnosis.cs</DependentUpon>
     </Compile>
-    <Compile Include="DiagnosisPanel.cs">
+    <Compile Include="Extras\ArchivePanel.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="DiagnosisPanel.Designer.cs">
+    <Compile Include="Extras\ArchivePanel.Designer.cs">
+      <DependentUpon>ArchivePanel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Extras\BasePanel.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Extras\BasePanel.Designer.cs">
+      <DependentUpon>BasePanel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Extras\DiagnosisPanel.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Extras\DiagnosisPanel.Designer.cs">
       <DependentUpon>DiagnosisPanel.cs</DependentUpon>
     </Compile>
     <Compile Include="DoctorList.cs">
@@ -90,6 +102,30 @@
     </Compile>
     <Compile Include="DoctorList.Designer.cs">
       <DependentUpon>DoctorList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Extras\ManageClinicPanel.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Extras\ManageClinicPanel.Designer.cs">
+      <DependentUpon>ManageClinicPanel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Extras\MedicalHistoryPanel.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Extras\MedicalHistoryPanel.Designer.cs">
+      <DependentUpon>MedicalHistoryPanel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Extras\PatientDiagnosisPanel.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Extras\PatientDiagnosisPanel.Designer.cs">
+      <DependentUpon>PatientDiagnosisPanel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Extras\PhysicalExaminationPanel.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Extras\PhysicalExaminationPanel.Designer.cs">
+      <DependentUpon>PhysicalExaminationPanel.cs</DependentUpon>
     </Compile>
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
@@ -102,6 +138,12 @@
     </Compile>
     <Compile Include="Main.Designer.cs">
       <DependentUpon>Main.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MainForms\ManagerForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MainForms\ManagerForm.Designer.cs">
+      <DependentUpon>ManagerForm.cs</DependentUpon>
     </Compile>
     <Compile Include="Models\TestClass.cs" />
     <Compile Include="Patients.cs">
@@ -130,17 +172,38 @@
     <EmbeddedResource Include="Diagnosis.resx">
       <DependentUpon>Diagnosis.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="DiagnosisPanel.resx">
+    <EmbeddedResource Include="Extras\ArchivePanel.resx">
+      <DependentUpon>ArchivePanel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Extras\BasePanel.resx">
+      <DependentUpon>BasePanel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Extras\DiagnosisPanel.resx">
       <DependentUpon>DiagnosisPanel.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="DoctorList.resx">
       <DependentUpon>DoctorList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Extras\ManageClinicPanel.resx">
+      <DependentUpon>ManageClinicPanel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Extras\MedicalHistoryPanel.resx">
+      <DependentUpon>MedicalHistoryPanel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Extras\PatientDiagnosisPanel.resx">
+      <DependentUpon>PatientDiagnosisPanel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Extras\PhysicalExaminationPanel.resx">
+      <DependentUpon>PhysicalExaminationPanel.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Main.resx">
       <DependentUpon>Main.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MainForms\ManagerForm.resx">
+      <DependentUpon>ManagerForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Patients.resx">
       <DependentUpon>Patients.cs</DependentUpon>

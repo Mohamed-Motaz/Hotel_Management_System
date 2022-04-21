@@ -9,24 +9,24 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using MySql.Data.MySqlClient;
 using System.Data.SqlClient;
+using Frontend.Extras;
 
 namespace Frontend
 {
     public partial class frmMain : Form
     {
+        ArchivePanel archivePanel = new ArchivePanel();
+        ManageClinicPanel clinicPanel = new ManageClinicPanel();
         public frmMain()
         {
             InitializeComponent();
-            frmPatient frm = new frmPatient();
-            frm.TopLevel = false;
-            frm.AutoScroll = true;
-            //frmMain.panelPatientList.Controls.Add(frm);
-            frm.Show();
-            chart1.Series["Data"]["PixelPointWidth"] = "30";
-            chart2.Series["Data"]["PixelPointWidth"] = "30";
-            label25.Text = dataGridView1.RowCount.ToString();
-            bunifuDatepicker1.Value = DateTime.Now;
-            bunifuDatepicker2.Value = DateTime.Now;
+
+
+            //chart1.Series["Data"]["PixelPointWidth"] = "30";
+            //chart2.Series["Data"]["PixelPointWidth"] = "30";
+            //label25.Text = dataGridView1.RowCount.ToString();
+            //bunifuDatepicker1.Value = DateTime.Now;
+            //bunifuDatepicker2.Value = DateTime.Now;
             cmbComplaints();
 
 
@@ -75,28 +75,29 @@ namespace Frontend
             DataRow dr = dt.NewRow();
          
             dt.Rows.InsertAt(dr, 0);
-            comboBox1.ValueMember = "id";
-            comboBox1.DisplayMember = "Name";
-            comboBox1.DataSource = dt;
+            //comboBox1.ValueMember = "id";
+            //comboBox1.DisplayMember = "Name";
+            //comboBox1.DataSource = dt;
         }
 
 
         private void bunifuFlatButton2_Click(object sender, EventArgs e)
         {
-            panel8.Visible = false;
+            //panel8.Visible = false;
             line5.Visible = false;
             line4.Visible = false;
-            panelArhive.Visible = false;
+            line1.Visible = false;
+            //panelArhive.Visible = false;
             picPatientList.Visible = true;
             line3.Visible = false;
             pictureBox6.Visible = false;
-            panel1.Visible = true;
-            panel1.Controls.Clear();
+            //panel1.Visible = true;
+            //panel1.Controls.Clear();
             frmPatient frm = new frmPatient();
             frm.TopLevel = false;
-            panel1.Controls.Add(frm);
+            //panel1.Controls.Add(frm);
             frm.Show();
-            panel7.Visible = false;
+            //panel7.Visible = false;
 
             //frmPatient frm = new frmPatient();
             //frm.Show();
@@ -105,15 +106,16 @@ namespace Frontend
 
         private void bunifuFlatButton1_Click(object sender, EventArgs e)
         {
-            panel8.Visible = false;
-            panelArhive.Visible = false;
-            panel1.Visible = false;
+            //panel8.Visible = false;
+            //panelArhive.Visible = false;
+            //panel1.Visible = false;
             line3.Visible = false;
             picPatientList.Visible = false;
             pictureBox6.Visible = true;
             load();
             line4.Visible = false;
-            panel7.Visible = false;
+            line1.Visible = false;
+            //panel7.Visible = false;
             line5.Visible = false;
 
 
@@ -184,7 +186,7 @@ namespace Frontend
             //    myReader = cmdDatabase1.ExecuteReader();
                 //while (myReader.Read())
                 //{
-                    this.chart1.Series["Data"].Points.AddXY("xxxxx", "yyyy");
+                    //this.chart1.Series["Data"].Points.AddXY("xxxxx", "yyyy");
 
             //    }
             //}
@@ -196,42 +198,43 @@ namespace Frontend
 
         private void bunifuFlatButton3_Click(object sender, EventArgs e)
         {
-            panel8.Visible = false;
+            //panel8.Visible = false;
             line5.Visible = false;
+            line1.Visible = false;
             line4.Visible = false;
             picPatientList.Visible = false;
             line3.Visible = true;
             pictureBox6.Visible = false;
-            panelArhive.Visible = true;
-            panel1.Visible = false;
-            panel7.Visible = false;
+            //panelArhive.Visible = true;
+            //panel1.Visible = false;
+            //panel7.Visible = false;
         }
         public void loadArhive()
         {
-            if (comboBox1.Text == "" && txtSearch.Text == "")
-            {
-                startArchive();
-            }
-            else
-            {
+            //if (comboBox1.Text == "" && txtSearch.Text == "")
+            //{
+            startArchive();
+            //}
+            //else
+            //{
 
 
-                //MySqlConnection con = new MySqlConnection("server = localhost; database = nuclinic; username = root; password = ; Convert Zero Datetime=True");
-                //MySqlCommand command = new MySqlCommand("SELECT dctd.date, patient.studentid,dctd.id,patient.firstname,patient.lastname,dctd.doctor,dctd.treatment,dctd.complaints,dctd.category from patient INNER JOIN dctd ON patient.id=dctd.id  Where (date BETWEEN @date AND @date2) && (category = @category || category = @category2) ", con);
-                //command.Parameters.AddWithValue("@date", dateTimePicker1.Value.Date);
-                //command.Parameters.AddWithValue("@date2", dateTimePicker2.Value.Date);
-                //command.Parameters.AddWithValue("@category", txtSearch.Text);
-                //command.Parameters.AddWithValue("@category2", comboBox1.Text);
+            //    //MySqlConnection con = new MySqlConnection("server = localhost; database = nuclinic; username = root; password = ; Convert Zero Datetime=True");
+            //    //MySqlCommand command = new MySqlCommand("SELECT dctd.date, patient.studentid,dctd.id,patient.firstname,patient.lastname,dctd.doctor,dctd.treatment,dctd.complaints,dctd.category from patient INNER JOIN dctd ON patient.id=dctd.id  Where (date BETWEEN @date AND @date2) && (category = @category || category = @category2) ", con);
+            //    //command.Parameters.AddWithValue("@date", dateTimePicker1.Value.Date);
+            //    //command.Parameters.AddWithValue("@date2", dateTimePicker2.Value.Date);
+            //    //command.Parameters.AddWithValue("@category", txtSearch.Text);
+            //    //command.Parameters.AddWithValue("@category2", comboBox1.Text);
 
-                ////MySqlCommand command = new MySqlCommand("SELECT patient.lastname,patient.studentid,dctd.id,dctd.complaints,dctd.date from patient INNER JOIN dctd ON patient.id=dctd.id", con);
-                //MySqlDataAdapter da = new MySqlDataAdapter(command);
-                DataTable dt = new DataTable();
-                //da.Fill(dt);
-                dataGridView1.DataSource = dt;
-                label25.Text = dataGridView1.RowCount.ToString();
-                label29.Visible = true;
-                label29.Text = "Showing: "+ dataGridView1.RowCount.ToString()+ " results";
-            }
+            //    ////MySqlCommand command = new MySqlCommand("SELECT patient.lastname,patient.studentid,dctd.id,dctd.complaints,dctd.date from patient INNER JOIN dctd ON patient.id=dctd.id", con);
+            //    //MySqlDataAdapter da = new MySqlDataAdapter(command);
+            //    DataTable dt = new DataTable();
+            //    //da.Fill(dt);
+            //    dataGridView1.DataSource = dt;
+            //    label25.Text = dataGridView1.RowCount.ToString();
+            //    label29.Visible = true;
+            //    label29.Text = "Showing: "+ dataGridView1.RowCount.ToString()+ " results";
+            //}
 
         }
         public void startArchive()
@@ -245,12 +248,12 @@ namespace Frontend
 
                 ////MySqlCommand command = new MySqlCommand("SELECT patient.lastname,patient.studentid,dctd.id,dctd.complaints,dctd.date from patient INNER JOIN dctd ON patient.id=dctd.id", con);
                 //MySqlDataAdapter da = new MySqlDataAdapter(command);
-                DataTable dt = new DataTable();
+                //DataTable dt = new DataTable();
                 //da.Fill(dt);
-                dataGridView1.DataSource = dt;
-            label25.Text = dataGridView1.RowCount.ToString();
-            label29.Visible = true;
-            label29.Text = "Showing: " + dataGridView1.RowCount.ToString() + " results";
+            //    dataGridView1.DataSource = dt;
+            //label25.Text = dataGridView1.RowCount.ToString();
+            //label29.Visible = true;
+            //label29.Text = "Showing: " + dataGridView1.RowCount.ToString() + " results";
         }
 
        
@@ -262,40 +265,40 @@ namespace Frontend
 
         private void bunifuDatepicker1_onValueChanged(object sender, EventArgs e)
         {
-            var date = bunifuDatepicker1.Value;
-            dateTimePicker1.Value = date;
+            //var date = bunifuDatepicker1.Value;
+            //dateTimePicker1.Value = date;
             
         }
 
         private void bunifuDatepicker2_onValueChanged(object sender, EventArgs e)
         {
-            var date = bunifuDatepicker2.Value;
-            dateTimePicker2.Value = date;
+            //var date = bunifuDatepicker2.Value;
+            //dateTimePicker2.Value = date;
         }
 
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-            if (dataGridView1.Columns[e.ColumnIndex].Name == "Delete")
-            {
+            //if (dataGridView1.Columns[e.ColumnIndex].Name == "Delete")
+            //{
 
 
 
 
-                int id = Convert.ToInt32(dataGridView1.Rows[e.RowIndex].Cells["id"].Value.ToString());
-                //MySqlDataAdapter ada = new MySqlDataAdapter("select id as 'id',studentid as 'Student ID',firstname as'Firstname',lastname as 'Lastname',telno as 'Contact No',age as 'Age',sex as 'Gender',course as'Course' from patient where id= '" + id + "'", con);
+            //    int id = Convert.ToInt32(dataGridView1.Rows[e.RowIndex].Cells["id"].Value.ToString());
+            //    //MySqlDataAdapter ada = new MySqlDataAdapter("select id as 'id',studentid as 'Student ID',firstname as'Firstname',lastname as 'Lastname',telno as 'Contact No',age as 'Age',sex as 'Gender',course as'Course' from patient where id= '" + id + "'", con);
 
-                dataGridView1.CurrentCell = dataGridView1.Rows[e.RowIndex].Cells[e.ColumnIndex];
-                dataGridView1.Rows[e.RowIndex].Selected = true;
-                dataGridView1.Focus();
-                DataTable dt = new DataTable();
-                //ada.Fill(dt);
-                dataGridView1.DataSource = dt;
+            //    dataGridView1.CurrentCell = dataGridView1.Rows[e.RowIndex].Cells[e.ColumnIndex];
+            //    dataGridView1.Rows[e.RowIndex].Selected = true;
+            //    dataGridView1.Focus();
+            //    DataTable dt = new DataTable();
+            //    //ada.Fill(dt);
+            //    dataGridView1.DataSource = dt;
 
-                foreach (DataRow dr in dt.Rows)
-                {
-                    textBox1.Text = dr["id"].ToString();
+            //    foreach (DataRow dr in dt.Rows)
+            //    {
+            //        textBox1.Text = dr["id"].ToString();
 
-                }
+            //    }
 
                 if (MessageBox.Show("Are you sure you want to delete this?", "Message", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
                 {
@@ -325,49 +328,49 @@ namespace Frontend
                 {
                     loadArhive();
                 }
-            }
-            else if (dataGridView1.Columns[e.ColumnIndex].Name == "View")
-            {
-                if (dataGridView1.Columns[e.ColumnIndex].Name == "View")
-                {
+            
+            //else if (dataGridView1.Columns[e.ColumnIndex].Name == "View")
+            //{
+            //    if (dataGridView1.Columns[e.ColumnIndex].Name == "View")
+            //    {
 
-                    int id = Convert.ToInt32(dataGridView1.Rows[e.RowIndex].Cells["id"].Value.ToString());
-                    //MySqlDataAdapter ada = new MySqlDataAdapter("select id as 'id',studentid as 'Student ID',firstname as'Firstname',lastname as 'Lastname',telno as 'Contact No',age as 'Age',sex as 'Gender',course as'Course' from patient where id= '" + id + "'", con);
+            //        int id = Convert.ToInt32(dataGridView1.Rows[e.RowIndex].Cells["id"].Value.ToString());
+            //        //MySqlDataAdapter ada = new MySqlDataAdapter("select id as 'id',studentid as 'Student ID',firstname as'Firstname',lastname as 'Lastname',telno as 'Contact No',age as 'Age',sex as 'Gender',course as'Course' from patient where id= '" + id + "'", con);
 
-                    dataGridView1.CurrentCell = dataGridView1.Rows[e.RowIndex].Cells[e.ColumnIndex];
-                    dataGridView1.Rows[e.RowIndex].Selected = true;
-
-
-
-
-                    DataTable dt = new DataTable();
-                    //ada.Fill(dt);
-                    dataGridView1.DataSource = dt;
-
-                    foreach (DataRow dr in dt.Rows)
-                    {
-                        frmViewPatient frm = new frmViewPatient();
-
-                        //frm.label2.Text = dr["id"].ToString();
-                        frm.ID = dt.Rows[0]["id"].ToString();
-                        frm.Firstname = dt.Rows[0]["Firstname"].ToString();
-                        frm.Lastname = dt.Rows[0]["Lastname"].ToString();
-                        // frm.Middlename = dt.Rows[0]["middlename"].ToString();
-                        frm.Studentid = dt.Rows[0]["Student ID"].ToString();
-                        //frm.Birthday = dt.Rows[0]["Birthday"].ToString();
-                        frm.Course = dt.Rows[0]["Course"].ToString();
-                        frm.ShowDialog();
-
-                    }
-                }
-                else
-                {
-                    loadArhive();
-                }
+            //        dataGridView1.CurrentCell = dataGridView1.Rows[e.RowIndex].Cells[e.ColumnIndex];
+            //        dataGridView1.Rows[e.RowIndex].Selected = true;
 
 
 
-            }
+
+            //        DataTable dt = new DataTable();
+            //        //ada.Fill(dt);
+            //        dataGridView1.DataSource = dt;
+
+            //        foreach (DataRow dr in dt.Rows)
+            //        {
+            //            frmViewPatient frm = new frmViewPatient();
+
+            //            //frm.label2.Text = dr["id"].ToString();
+            //            frm.ID = dt.Rows[0]["id"].ToString();
+            //            frm.Firstname = dt.Rows[0]["Firstname"].ToString();
+            //            frm.Lastname = dt.Rows[0]["Lastname"].ToString();
+            //            // frm.Middlename = dt.Rows[0]["middlename"].ToString();
+            //            frm.Studentid = dt.Rows[0]["Student ID"].ToString();
+            //            //frm.Birthday = dt.Rows[0]["Birthday"].ToString();
+            //            frm.Course = dt.Rows[0]["Course"].ToString();
+            //            frm.ShowDialog();
+
+            //        }
+            //    }
+            //    else
+            //    {
+            //        loadArhive();
+            //    }
+
+
+
+            //}
         }
 
 
@@ -429,13 +432,13 @@ namespace Frontend
 
         private void linkLabel1_LinkClicked_1(object sender, LinkLabelLinkClickedEventArgs e)
         {
-            txtSearch.Text = "";
-            bunifuDatepicker1.Value = DateTime.Now;
-            bunifuDatepicker2.Value = DateTime.Now;
-            dataGridView1.DataSource = null;
-            dataGridView1.Refresh();
-            label25.Text = "0";
-            label29.Visible = false;
+            //txtSearch.Text = "";
+            //bunifuDatepicker1.Value = DateTime.Now;
+            //bunifuDatepicker2.Value = DateTime.Now;
+            //dataGridView1.DataSource = null;
+            //dataGridView1.Refresh();
+            //label25.Text = "0";
+            //label29.Visible = false;
         }
 
         private void cmbComplaint_onItemSelected(object sender, EventArgs e)
@@ -445,31 +448,47 @@ namespace Frontend
 
         private void radioButton1_CheckedChanged(object sender, EventArgs e)
         {
-            txtSearch.Enabled = false;
-            comboBox1.Enabled = true;
-            txtSearch.Text = "";
-            label28.Enabled = false;
-            label27.Enabled = true;
+            //txtSearch.Enabled = false;
+            //comboBox1.Enabled = true;
+            //txtSearch.Text = "";
+            //label28.Enabled = false;
+            //label27.Enabled = true;
         }
 
         private void radioButton2_CheckedChanged(object sender, EventArgs e)
         {
-            comboBox1.Enabled = false;
-            txtSearch.Enabled = true;
-            comboBox1.Text = "";
-            label28.Enabled = true;
-            label27.Enabled = false;
+            //comboBox1.Enabled = false;
+            //txtSearch.Enabled = true;
+            //comboBox1.Text = "";
+            //label28.Enabled = true;
+            //label27.Enabled = false;
         }
 
         private void bunifuFlatButton9_Click_1(object sender, EventArgs e)
         {
             line5.Visible = false;
             line4.Visible = true;
+            line1.Visible = false;
             picPatientList.Visible = false;
             pictureBox6.Visible = false;
             line3.Visible = false;
-            panel7.Visible = true;
-            panel8.Visible = false;
+            //panel7.Visible = true;
+            //panel8.Visible = false;
+            clearAllPanels();
+
+            clinicPanel = new ManageClinicPanel();
+            clinicPanel.TopLevel = false;
+            clinicPanel.AutoScroll = true;
+            clinicPanel.TopMost = true;
+            clinicPanel.Dock = DockStyle.Fill;
+            this.panel1.Controls.Add(clinicPanel);
+            clinicPanel.Show();
+        }
+
+        private void clearAllPanels()
+        {
+            archivePanel.Close();
+            clinicPanel.Close();
         }
 
         private void bunifuTileButton1_Click(object sender, EventArgs e)
@@ -493,8 +512,14 @@ namespace Frontend
         private void bunifuFlatButton10_Click(object sender, EventArgs e)
         {
             Load3();
-            panel8.Visible = true;
-            line4.Visible = true;
+
+            PatientDiagnosisPanel panel = new PatientDiagnosisPanel();
+            panel.TopLevel = false;
+            panel.AutoScroll = true;
+
+
+            //panel8.Visible = true;
+            line1.Visible = false; 
             picPatientList.Visible = false;
             pictureBox6.Visible = false;
             line3.Visible = false;
@@ -515,10 +540,10 @@ namespace Frontend
   
 
             ////MySqlCommand command = new MySqlCommand("SELECT patient.lastname,patient.studentid,dctd.id,dctd.complaints,dctd.date from patient INNER JOIN dctd ON patient.id=dctd.id", con);
-            //MySqlDataAdapter da = new MySqlDataAdapter(command);
-            DataTable dt = new DataTable();
-            //da.Fill(dt);
-            dataGridView2.DataSource = dt;
+            ////MySqlDataAdapter da = new MySqlDataAdapter(command);
+            //DataTable dt = new DataTable();
+            ////da.Fill(dt);
+            //dataGridView2.DataSource = dt;
 
         }
 
@@ -536,341 +561,341 @@ namespace Frontend
         private void linkLabel2_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
             Load3();
-            searchbox.Text="";
-            result.Visible = false;
+            //searchbox.Text="";
+            //result.Visible = false;
         }
 
         private void dataGridView2_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
          
-            if (dataGridView2.Columns[e.ColumnIndex].Name == "VIEW")
-            {
-                try
-                {
+            //if (dataGridView2.Columns[e.ColumnIndex].Name == "VIEW")
+            //{
+            //    try
+            //    {
 
-                    int id = Convert.ToInt32(dataGridView2.Rows[e.RowIndex].Cells["id"].Value.ToString());
-                    //MySqlDataAdapter ada = new MySqlDataAdapter("select id,date,complaints,category, doctor from dctd where id= '" + id + "'", con);
+            //        int id = Convert.ToInt32(dataGridView2.Rows[e.RowIndex].Cells["id"].Value.ToString());
+            //        //MySqlDataAdapter ada = new MySqlDataAdapter("select id,date,complaints,category, doctor from dctd where id= '" + id + "'", con);
 
-                    dataGridView2.CurrentCell = dataGridView2.Rows[e.RowIndex].Cells[e.ColumnIndex];
-                    dataGridView2.Rows[e.RowIndex].Selected = true;
-
-
+            //        dataGridView2.CurrentCell = dataGridView2.Rows[e.RowIndex].Cells[e.ColumnIndex];
+            //        dataGridView2.Rows[e.RowIndex].Selected = true;
 
 
-                    DataTable dt = new DataTable();
-                    //ada.Fill(dt);
-                    dataGridView2.DataSource = dt;
-
-                    foreach (DataRow dr in dt.Rows)
-                    {
-                        frmViewPatient frm = new frmViewPatient();
-
-                        //frm.label2.Text = dr["id"].ToString();
-                        frm.ID = dt.Rows[0]["id"].ToString();
-                        frm.Firstname = dt.Rows[0]["Firstname"].ToString();
-                        frm.Lastname = dt.Rows[0]["Lastname"].ToString();
-                        // frm.Middlename = dt.Rows[0]["middlename"].ToString();
-                        frm.Studentid = dt.Rows[0]["Student ID"].ToString();
-                        //frm.Birthday = dt.Rows[0]["Birthday"].ToString();
-                        frm.Course = dt.Rows[0]["Course"].ToString();
-                        frm.ShowDialog();
-
-                    }
-                }
-                catch (Exception ex)
-                {
-                    MessageBox.Show(ex.Message);
-                }
 
 
-            }
+            //        DataTable dt = new DataTable();
+            //        //ada.Fill(dt);
+            //        dataGridView2.DataSource = dt;
+
+                //    foreach (DataRow dr in dt.Rows)
+                //    {
+                //        frmViewPatient frm = new frmViewPatient();
+
+                //        //frm.label2.Text = dr["id"].ToString();
+                //        frm.ID = dt.Rows[0]["id"].ToString();
+                //        frm.Firstname = dt.Rows[0]["Firstname"].ToString();
+                //        frm.Lastname = dt.Rows[0]["Lastname"].ToString();
+                //        // frm.Middlename = dt.Rows[0]["middlename"].ToString();
+                //        frm.Studentid = dt.Rows[0]["Student ID"].ToString();
+                //        //frm.Birthday = dt.Rows[0]["Birthday"].ToString();
+                //        frm.Course = dt.Rows[0]["Course"].ToString();
+                //        frm.ShowDialog();
+
+                //    }
+                //}
+                //catch (Exception ex)
+                //{
+                //    MessageBox.Show(ex.Message);
+                //}
+
+
+            
         }
 
         private void dataGridView2_CellContentClick_1(object sender, DataGridViewCellEventArgs e)
         {
-            if (dataGridView2.Columns[e.ColumnIndex].Name == "Delete")
-            {
+            //if (dataGridView2.Columns[e.ColumnIndex].Name == "Delete")
+            //{
 
 
 
 
-                int id = Convert.ToInt32(dataGridView2.Rows[e.RowIndex].Cells["id"].Value.ToString());
-                //MySqlDataAdapter ada = new MySqlDataAdapter("select id as 'id',studentid as 'Student ID',firstname as'Firstname',lastname as 'Lastname',telno as 'Contact No',age as 'Age',sex as 'Gender',course as'Course' from patient where id= '" + id + "'", con);
+            //    int id = Convert.ToInt32(dataGridView2.Rows[e.RowIndex].Cells["id"].Value.ToString());
+            //    //MySqlDataAdapter ada = new MySqlDataAdapter("select id as 'id',studentid as 'Student ID',firstname as'Firstname',lastname as 'Lastname',telno as 'Contact No',age as 'Age',sex as 'Gender',course as'Course' from patient where id= '" + id + "'", con);
 
-                dataGridView2.CurrentCell = dataGridView2.Rows[e.RowIndex].Cells[e.ColumnIndex];
-                dataGridView2.Rows[e.RowIndex].Selected = true;
-                dataGridView2.Focus();
-                DataTable dt = new DataTable();
-                //ada.Fill(dt);
-                dataGridView2.DataSource = dt;
+            //    dataGridView2.CurrentCell = dataGridView2.Rows[e.RowIndex].Cells[e.ColumnIndex];
+            //    dataGridView2.Rows[e.RowIndex].Selected = true;
+            //    dataGridView2.Focus();
+            //    DataTable dt = new DataTable();
+            //    //ada.Fill(dt);
+            //    dataGridView2.DataSource = dt;
 
-                foreach (DataRow dr in dt.Rows)
-                {
-                    textBox1.Text = dr["id"].ToString();
+            //    foreach (DataRow dr in dt.Rows)
+            //    {
+            //        textBox1.Text = dr["id"].ToString();
 
-                }
+            //    }
 
-                if (MessageBox.Show("Are you sure you want to delete this?", "Message", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
-                {
-
-
-                    try
-                    {
-
-                        MySqlCommand cmd = new MySqlCommand();
-                        //cmd.Connection = con;
-                        //cmd.CommandText = "delete from patient where id = '" + textBox1.Text + "'";
+            //    if (MessageBox.Show("Are you sure you want to delete this?", "Message", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+            //    {
 
 
-                        //con.Open();
-                        //cmd.ExecuteNonQuery();
-                        MessageBox.Show("Item Deleted");
-                        Load3();
-                        //con.Close();
+            //        try
+            //        {
 
-                    }
-                    catch (Exception ex)
-                    {
-                        MessageBox.Show(ex.Message);
-                    }
-                }
-                else
-                {
-                    Load3();
-                }
-            }
-            else if (dataGridView2.Columns[e.ColumnIndex].Name == "View")
-            {
-                if (dataGridView2.Columns[e.ColumnIndex].Name == "View")
-                {
-
-                    int id = Convert.ToInt32(dataGridView2.Rows[e.RowIndex].Cells["id"].Value.ToString());
-                    //MySqlDataAdapter ada = new MySqlDataAdapter("select id as 'id',studentid as 'Student ID',firstname as'Firstname',lastname as 'Lastname',telno as 'Contact No',age as 'Age',sex as 'Gender',course as'Course' from patient where id= '" + id + "'", con);
-
-                    dataGridView2.CurrentCell = dataGridView1.Rows[e.RowIndex].Cells[e.ColumnIndex];
-                    dataGridView2.Rows[e.RowIndex].Selected = true;
+            //            MySqlCommand cmd = new MySqlCommand();
+            //            //cmd.Connection = con;
+            //            //cmd.CommandText = "delete from patient where id = '" + textBox1.Text + "'";
 
 
+            //            //con.Open();
+            //            //cmd.ExecuteNonQuery();
+            //            MessageBox.Show("Item Deleted");
+            //            Load3();
+            //            //con.Close();
+
+            //        }
+            //        catch (Exception ex)
+            //        {
+            //            MessageBox.Show(ex.Message);
+            //        }
+            //    }
+            //    else
+            //    {
+            //        Load3();
+            //    }
+            //}
+            //else if (dataGridView2.Columns[e.ColumnIndex].Name == "View")
+            //{
+            //    if (dataGridView2.Columns[e.ColumnIndex].Name == "View")
+            //    {
+
+            //        int id = Convert.ToInt32(dataGridView2.Rows[e.RowIndex].Cells["id"].Value.ToString());
+            //        //MySqlDataAdapter ada = new MySqlDataAdapter("select id as 'id',studentid as 'Student ID',firstname as'Firstname',lastname as 'Lastname',telno as 'Contact No',age as 'Age',sex as 'Gender',course as'Course' from patient where id= '" + id + "'", con);
+
+            //        dataGridView2.CurrentCell = dataGridView1.Rows[e.RowIndex].Cells[e.ColumnIndex];
+            //        dataGridView2.Rows[e.RowIndex].Selected = true;
 
 
-                    DataTable dt = new DataTable();
-                    //ada.Fill(dt);
-                    dataGridView2.DataSource = dt;
 
-                    foreach (DataRow dr in dt.Rows)
-                    {
-                        frmViewPatient frm = new frmViewPatient();
 
-                        //frm.label2.Text = dr["id"].ToString();
-                        frm.ID = dt.Rows[0]["id"].ToString();
-                        frm.Firstname = dt.Rows[0]["Firstname"].ToString();
-                        frm.Lastname = dt.Rows[0]["Lastname"].ToString();
-                        // frm.Middlename = dt.Rows[0]["middlename"].ToString();
-                        frm.Studentid = dt.Rows[0]["Student ID"].ToString();
-                        //frm.Birthday = dt.Rows[0]["Birthday"].ToString();
-                        frm.Course = dt.Rows[0]["Course"].ToString();
-                        frm.ShowDialog();
+            //        DataTable dt = new DataTable();
+            //        //ada.Fill(dt);
+            //        dataGridView2.DataSource = dt;
 
-                    }
-                }
-                else
-                {
-                    Load3();
-                }
-            }
+            //        foreach (DataRow dr in dt.Rows)
+            //        {
+            //            frmViewPatient frm = new frmViewPatient();
+
+            //            //frm.label2.Text = dr["id"].ToString();
+            //            frm.ID = dt.Rows[0]["id"].ToString();
+            //            frm.Firstname = dt.Rows[0]["Firstname"].ToString();
+            //            frm.Lastname = dt.Rows[0]["Lastname"].ToString();
+            //            // frm.Middlename = dt.Rows[0]["middlename"].ToString();
+            //            frm.Studentid = dt.Rows[0]["Student ID"].ToString();
+            //            //frm.Birthday = dt.Rows[0]["Birthday"].ToString();
+            //            frm.Course = dt.Rows[0]["Course"].ToString();
+            //            frm.ShowDialog();
+
+            //        }
+            //    }
+            //    else
+            //    {
+            //        Load3();
+            //    }
+            //}
         }
 
         private void dataGridView2_CellContentClick_2(object sender, DataGridViewCellEventArgs e)
         {
-            if (dataGridView2.Columns[e.ColumnIndex].Name == "Delete")
-            {
+            //if (dataGridView2.Columns[e.ColumnIndex].Name == "Delete")
+            //{
 
 
 
 
-                int id = Convert.ToInt32(dataGridView1.Rows[e.RowIndex].Cells["id"].Value.ToString());
-                //MySqlDataAdapter ada = new MySqlDataAdapter("select id as 'id',studentid as 'Student ID',firstname as'Firstname',lastname as 'Lastname',telno as 'Contact No',age as 'Age',sex as 'Gender',course as'Course' from patient where id= '" + id + "'", con);
+            //    int id = Convert.ToInt32(dataGridView1.Rows[e.RowIndex].Cells["id"].Value.ToString());
+            //    //MySqlDataAdapter ada = new MySqlDataAdapter("select id as 'id',studentid as 'Student ID',firstname as'Firstname',lastname as 'Lastname',telno as 'Contact No',age as 'Age',sex as 'Gender',course as'Course' from patient where id= '" + id + "'", con);
 
-                dataGridView1.CurrentCell = dataGridView1.Rows[e.RowIndex].Cells[e.ColumnIndex];
-                dataGridView1.Rows[e.RowIndex].Selected = true;
-                dataGridView1.Focus();
-                DataTable dt = new DataTable();
-                //ada.Fill(dt);
-                dataGridView1.DataSource = dt;
+            //    dataGridView1.CurrentCell = dataGridView1.Rows[e.RowIndex].Cells[e.ColumnIndex];
+            //    dataGridView1.Rows[e.RowIndex].Selected = true;
+            //    dataGridView1.Focus();
+            //    DataTable dt = new DataTable();
+            //    //ada.Fill(dt);
+            //    dataGridView1.DataSource = dt;
 
-                foreach (DataRow dr in dt.Rows)
-                {
-                    textBox1.Text = dr["id"].ToString();
+            //    foreach (DataRow dr in dt.Rows)
+            //    {
+            //        textBox1.Text = dr["id"].ToString();
 
-                }
+            //    }
 
-                if (MessageBox.Show("Are you sure you want to delete this?", "Message", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
-                {
-
-
-                    try
-                    {
-
-                        //MySqlCommand cmd = new MySqlCommand();
-                        //cmd.Connection = con;
-                        //cmd.CommandText = "delete from patient where id = '" + textBox1.Text + "'";
+            //    if (MessageBox.Show("Are you sure you want to delete this?", "Message", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+            //    {
 
 
-                        //con.Open();
-                        //cmd.ExecuteNonQuery();
-                        MessageBox.Show("Item Deleted");
-                        loadArhive();
-                        //con.Close();
+            //        try
+            //        {
 
-                    }
-                    catch (Exception ex)
-                    {
-                        MessageBox.Show(ex.Message);
-                    }
-                }
-                else
-                {
-                    loadArhive();
-                }
-            }
-            else if (dataGridView2.Columns[e.ColumnIndex].Name == "VIEW")
-            {
-                if (dataGridView2.Columns[e.ColumnIndex].Name == "VIEW")
-                {
-
-                    int id = Convert.ToInt32(dataGridView1.Rows[e.RowIndex].Cells["id"].Value.ToString());
-                    //MySqlDataAdapter ada = new MySqlDataAdapter("select * from dctd where id= '" + id + "'", con);
-
-                    dataGridView2.CurrentCell = dataGridView2.Rows[e.RowIndex].Cells[e.ColumnIndex];
-                    dataGridView2.Rows[e.RowIndex].Selected = true;
+            //            //MySqlCommand cmd = new MySqlCommand();
+            //            //cmd.Connection = con;
+            //            //cmd.CommandText = "delete from patient where id = '" + textBox1.Text + "'";
 
 
+            //            //con.Open();
+            //            //cmd.ExecuteNonQuery();
+            //            MessageBox.Show("Item Deleted");
+            //            loadArhive();
+            //            //con.Close();
 
+            //        }
+            //        catch (Exception ex)
+            //        {
+            //            MessageBox.Show(ex.Message);
+            //        }
+            //    }
+            //    else
+            //    {
+            //        loadArhive();
+            //    }
+            //}
+            //else if (dataGridView2.Columns[e.ColumnIndex].Name == "VIEW")
+            //{
+            //    if (dataGridView2.Columns[e.ColumnIndex].Name == "VIEW")
+            //    {
 
-                    DataTable dt = new DataTable();
-                    //ada.Fill(dt);
-                    dataGridView2.DataSource = dt;
+            //        int id = Convert.ToInt32(dataGridView1.Rows[e.RowIndex].Cells["id"].Value.ToString());
+            //        //MySqlDataAdapter ada = new MySqlDataAdapter("select * from dctd where id= '" + id + "'", con);
 
-                    foreach (DataRow dr in dt.Rows)
-                    {
-                        frmViewPatient frm = new frmViewPatient();
-
-                        //frm.label2.Text = dr["id"].ToString();
-                        frm.ID = dt.Rows[0]["id"].ToString();
-                        frm.Firstname = dt.Rows[0]["Firstname"].ToString();
-                        frm.Lastname = dt.Rows[0]["Lastname"].ToString();
-                        // frm.Middlename = dt.Rows[0]["middlename"].ToString();
-                        frm.Studentid = dt.Rows[0]["Student ID"].ToString();
-                        //frm.Birthday = dt.Rows[0]["Birthday"].ToString();
-                        frm.Course = dt.Rows[0]["Course"].ToString();
-                        frm.ShowDialog();
-
-                    }
-                }
-                else
-                {
-                    Load3();
-                }
+            //        dataGridView2.CurrentCell = dataGridView2.Rows[e.RowIndex].Cells[e.ColumnIndex];
+            //        dataGridView2.Rows[e.RowIndex].Selected = true;
 
 
 
-            }
+
+            //        DataTable dt = new DataTable();
+            //        //ada.Fill(dt);
+            //        dataGridView2.DataSource = dt;
+
+            //        foreach (DataRow dr in dt.Rows)
+            //        {
+            //            frmViewPatient frm = new frmViewPatient();
+
+            //            //frm.label2.Text = dr["id"].ToString();
+            //            frm.ID = dt.Rows[0]["id"].ToString();
+            //            frm.Firstname = dt.Rows[0]["Firstname"].ToString();
+            //            frm.Lastname = dt.Rows[0]["Lastname"].ToString();
+            //            // frm.Middlename = dt.Rows[0]["middlename"].ToString();
+            //            frm.Studentid = dt.Rows[0]["Student ID"].ToString();
+            //            //frm.Birthday = dt.Rows[0]["Birthday"].ToString();
+            //            frm.Course = dt.Rows[0]["Course"].ToString();
+            //            frm.ShowDialog();
+
+            //        }
+            //    }
+            //    else
+            //    {
+            //        Load3();
+            //    }
+
+
+
+            //}
         }
 
         private void dataGridView2_CellContentClick_3(object sender, DataGridViewCellEventArgs e)
         {
-            if (dataGridView2.Columns[e.ColumnIndex].Name == "Delete")
-            {
+            //if (dataGridView2.Columns[e.ColumnIndex].Name == "Delete")
+            //{
 
 
 
 
-                int id = Convert.ToInt32(dataGridView2.Rows[e.RowIndex].Cells["id"].Value.ToString());
-                //MySqlDataAdapter ada = new MySqlDataAdapter("select id as 'id',studentid as 'Student ID',firstname as'Firstname',lastname as 'Lastname',telno as 'Contact No',age as 'Age',sex as 'Gender',course as'Course' from patient where id= '" + id + "'", con);
+            //    int id = Convert.ToInt32(dataGridView2.Rows[e.RowIndex].Cells["id"].Value.ToString());
+            //    //MySqlDataAdapter ada = new MySqlDataAdapter("select id as 'id',studentid as 'Student ID',firstname as'Firstname',lastname as 'Lastname',telno as 'Contact No',age as 'Age',sex as 'Gender',course as'Course' from patient where id= '" + id + "'", con);
 
-                dataGridView2.CurrentCell = dataGridView2.Rows[e.RowIndex].Cells[e.ColumnIndex];
-                dataGridView2.Rows[e.RowIndex].Selected = true;
-                dataGridView2.Focus();
-                DataTable dt = new DataTable();
-                //ada.Fill(dt);
-                dataGridView2.DataSource = dt;
+            //    dataGridView2.CurrentCell = dataGridView2.Rows[e.RowIndex].Cells[e.ColumnIndex];
+            //    dataGridView2.Rows[e.RowIndex].Selected = true;
+            //    dataGridView2.Focus();
+            //    DataTable dt = new DataTable();
+            //    //ada.Fill(dt);
+            //    dataGridView2.DataSource = dt;
 
-                foreach (DataRow dr in dt.Rows)
-                {
-                    textBox1.Text = dr["id"].ToString();
+            //    foreach (DataRow dr in dt.Rows)
+            //    {
+            //        textBox1.Text = dr["id"].ToString();
 
-                }
+            //    }
 
-                if (MessageBox.Show("Are you sure you want to delete this?", "Message", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
-                {
-
-
-                    try
-                    {
-
-                        //MySqlCommand cmd = new MySqlCommand();
-                        //cmd.Connection = con;
-                        //cmd.CommandText = "delete from dctd where id = '" + textBox1.Text + "'";
+            //    if (MessageBox.Show("Are you sure you want to delete this?", "Message", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+            //    {
 
 
-                        //con.Open();
-                        //cmd.ExecuteNonQuery();
-                        MessageBox.Show("Item Deleted");
-                        //con.Close();
-                        Load3();
-                    }
-                    catch (Exception ex)
-                    {
-                        MessageBox.Show(ex.Message);
-                    }
-                }
-                else
-                {
-                    Load3();
-                }
-            }
-            else if (dataGridView2.Columns[e.ColumnIndex].Name == "PROFILE")
-            {
-                if (dataGridView2.Columns[e.ColumnIndex].Name == "PROFILE")
-                {
+            //        try
+            //        {
 
-                    int id = Convert.ToInt32(dataGridView2.Rows[e.RowIndex].Cells["id"].Value.ToString());
-                    //MySqlDataAdapter ada = new MySqlDataAdapter("select id as 'id',studentid as 'Student ID',firstname as'Firstname',lastname as 'Lastname',telno as 'Contact No',age as 'Age',sex as 'Gender',course as'Course' from patient where id= '" + id + "'", con);
-
-                    dataGridView2.CurrentCell = dataGridView2.Rows[e.RowIndex].Cells[e.ColumnIndex];
-                    dataGridView2.Rows[e.RowIndex].Selected = true;
+            //            //MySqlCommand cmd = new MySqlCommand();
+            //            //cmd.Connection = con;
+            //            //cmd.CommandText = "delete from dctd where id = '" + textBox1.Text + "'";
 
 
+            //            //con.Open();
+            //            //cmd.ExecuteNonQuery();
+            //            MessageBox.Show("Item Deleted");
+            //            //con.Close();
+            //            Load3();
+            //        }
+            //        catch (Exception ex)
+            //        {
+            //            MessageBox.Show(ex.Message);
+            //        }
+            //    }
+            //    else
+            //    {
+            //        Load3();
+            //    }
+            //}
+            //else if (dataGridView2.Columns[e.ColumnIndex].Name == "PROFILE")
+            //{
+            //    if (dataGridView2.Columns[e.ColumnIndex].Name == "PROFILE")
+            //    {
 
+            //        int id = Convert.ToInt32(dataGridView2.Rows[e.RowIndex].Cells["id"].Value.ToString());
+            //        //MySqlDataAdapter ada = new MySqlDataAdapter("select id as 'id',studentid as 'Student ID',firstname as'Firstname',lastname as 'Lastname',telno as 'Contact No',age as 'Age',sex as 'Gender',course as'Course' from patient where id= '" + id + "'", con);
 
-                    DataTable dt = new DataTable();
-                    //ada.Fill(dt);
-                    dataGridView2.DataSource = dt;
-
-                    foreach (DataRow dr in dt.Rows)
-                    {
-                        frmViewPatient frm = new frmViewPatient();
-
-                        //frm.label2.Text = dr["id"].ToString();
-                        frm.ID = dt.Rows[0]["id"].ToString();
-                        frm.Firstname = dt.Rows[0]["Firstname"].ToString();
-                        frm.Lastname = dt.Rows[0]["Lastname"].ToString();
-                        // frm.Middlename = dt.Rows[0]["middlename"].ToString();
-                        frm.Studentid = dt.Rows[0]["Student ID"].ToString();
-                        //frm.Birthday = dt.Rows[0]["Birthday"].ToString();
-                        frm.Course = dt.Rows[0]["Course"].ToString();
-                        frm.ShowDialog();
-
-                    }
-                }
-                else
-                {
-                    Load3();
-                }
+            //        dataGridView2.CurrentCell = dataGridView2.Rows[e.RowIndex].Cells[e.ColumnIndex];
+            //        dataGridView2.Rows[e.RowIndex].Selected = true;
 
 
 
-            }
+
+            //        DataTable dt = new DataTable();
+            //        //ada.Fill(dt);
+            //        dataGridView2.DataSource = dt;
+
+            //        foreach (DataRow dr in dt.Rows)
+            //        {
+            //            frmViewPatient frm = new frmViewPatient();
+
+            //            //frm.label2.Text = dr["id"].ToString();
+            //            frm.ID = dt.Rows[0]["id"].ToString();
+            //            frm.Firstname = dt.Rows[0]["Firstname"].ToString();
+            //            frm.Lastname = dt.Rows[0]["Lastname"].ToString();
+            //            // frm.Middlename = dt.Rows[0]["middlename"].ToString();
+            //            frm.Studentid = dt.Rows[0]["Student ID"].ToString();
+            //            //frm.Birthday = dt.Rows[0]["Birthday"].ToString();
+            //            frm.Course = dt.Rows[0]["Course"].ToString();
+            //            frm.ShowDialog();
+
+            //        }
+            //    }
+            //    else
+            //    {
+            //        Load3();
+            //    }
+
+
+
+            //}
         }
 
         private void bunifuFlatButton11_Click(object sender, EventArgs e)
@@ -904,14 +929,47 @@ namespace Frontend
 
             ////MySqlCommand command = new MySqlCommand("SELECT patient.lastname,patient.studentid,dctd.id,dctd.complaints,dctd.date from patient INNER JOIN dctd ON patient.id=dctd.id", con);
             //MySqlDataAdapter da = new MySqlDataAdapter(command);
-            DataTable dt = new DataTable();
-            //da.Fill(dt);
-            dataGridView2.DataSource = dt;
-            label35.Visible = true;
-            label34.Visible = true;
-            label34.Text = dataGridView2.RowCount.ToString();
-            result.Visible = true;
-            result.Text = "Showing: " + dataGridView2.RowCount.ToString() + " results";
+            //DataTable dt = new DataTable();
+            ////da.Fill(dt);
+            //dataGridView2.DataSource = dt;
+            //label35.Visible = true;
+            //label34.Visible = true;
+            //label34.Text = dataGridView2.RowCount.ToString();
+            //result.Visible = true;
+            //result.Text = "Showing: " + dataGridView2.RowCount.ToString() + " results";
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void bunifuFlatButton2_Click_1(object sender, EventArgs e)
+        {
+            line5.Visible = false;
+            line4.Visible = false;
+            line1.Visible = true;
+            picPatientList.Visible = false;
+            pictureBox6.Visible = false;
+            line3.Visible = false;
+
+            archivePanel.TopLevel = false;
+            archivePanel.AutoScroll = true;
+            archivePanel.TopMost = true;
+            archivePanel.Dock = DockStyle.Fill;
+            this.panel1.Controls.Add(archivePanel);
+            archivePanel.Show();
+
+        }
+
+        private void pictureBox2_Click(object sender, EventArgs e)
+        {
+
         }
 
         private void timer1_Tick(object sender, EventArgs e)
@@ -928,11 +986,11 @@ namespace Frontend
             //using (MySqlDataAdapter adpt = new MySqlDataAdapter(query, con))
             //{
 
-                DataSet dset = new DataSet();
+                //DataSet dset = new DataSet();
 
-                //adpt.Fill(dset);
+                ////adpt.Fill(dset);
 
-                dataGridView1.DataSource = dset.Tables[0];
+                //dataGridView1.DataSource = dset.Tables[0];
 
 
             //}
@@ -954,7 +1012,7 @@ namespace Frontend
             //    myReader = cmdDatabase1.ExecuteReader();
             //    while (myReader.Read())
             //    {
-                    this.chart2.Series["Data"].Points.AddXY("yooooo", "hiiiii");
+                    //this.chart2.Series["Data"].Points.AddXY("yooooo", "hiiiii");
 
             //    }
             //}

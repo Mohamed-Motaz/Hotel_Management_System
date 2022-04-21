@@ -128,15 +128,16 @@ namespace Frontend
 
         private void bunifuTileButton1_Click(object sender, EventArgs e)
         {
-            DialogResult dialogResult = MessageBox.Show("Do you want to exit the application?", "", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
-            if (dialogResult == DialogResult.Yes)
-            {
-                Application.Exit();
-            }
-            else if (dialogResult == DialogResult.No)
-            {
-                //do something else
-            }
+            Application.Exit();
+            //DialogResult dialogResult = MessageBox.Show("Do you want to exit the application?", "", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            //if (dialogResult == DialogResult.Yes)
+            //{
+            //    Application.Exit();
+            //}
+            //else if (dialogResult == DialogResult.No)
+            //{
+            //    //do something else
+            //}
         }
 
         public void select()
