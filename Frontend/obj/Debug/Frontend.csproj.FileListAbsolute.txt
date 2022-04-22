@@ -52,3 +52,37 @@ C:\Users\Mohamed Motaz\Desktop\HotelManagementSystem\Frontend\obj\Debug\Frontend
 C:\Users\Mohamed Motaz\Desktop\HotelManagementSystem\Frontend\obj\Debug\Frontend.ManagerForms.EditOrDeleteWorker.resources
 C:\Users\Mohamed Motaz\Desktop\HotelManagementSystem\Frontend\obj\Debug\Frontend.ManagerForms.ResidentsList.resources
 C:\Users\Mohamed Motaz\Desktop\HotelManagementSystem\Frontend\obj\Debug\Frontend.ManagerForms.WorkersList.resources
+C:\Users\LENOVO\Downloads\Hotel_Management_System\Frontend\bin\Debug\Frontend.exe.config
+C:\Users\LENOVO\Downloads\Hotel_Management_System\Frontend\bin\Debug\Frontend.exe
+C:\Users\LENOVO\Downloads\Hotel_Management_System\Frontend\bin\Debug\Frontend.pdb
+C:\Users\LENOVO\Downloads\Hotel_Management_System\Frontend\bin\Debug\Bunifu_UI_v1.52.dll
+C:\Users\LENOVO\Downloads\Hotel_Management_System\Frontend\bin\Debug\MySql.Data.xml
+C:\Users\LENOVO\Downloads\Hotel_Management_System\Frontend\obj\Debug\Frontend.csproj.AssemblyReference.cache
+C:\Users\LENOVO\Downloads\Hotel_Management_System\Frontend\obj\Debug\Frontend.frmAddPatient.resources
+C:\Users\LENOVO\Downloads\Hotel_Management_System\Frontend\obj\Debug\Frontend.Category.resources
+C:\Users\LENOVO\Downloads\Hotel_Management_System\Frontend\obj\Debug\Frontend.Course.resources
+C:\Users\LENOVO\Downloads\Hotel_Management_System\Frontend\obj\Debug\Frontend.Diagnosis.resources
+C:\Users\LENOVO\Downloads\Hotel_Management_System\Frontend\obj\Debug\Frontend.Extras.AddResident.resources
+C:\Users\LENOVO\Downloads\Hotel_Management_System\Frontend\obj\Debug\Frontend.Extras.ArchivePanel.resources
+C:\Users\LENOVO\Downloads\Hotel_Management_System\Frontend\obj\Debug\Frontend.Extras.Dashboard.resources
+C:\Users\LENOVO\Downloads\Hotel_Management_System\Frontend\obj\Debug\Frontend.DiagnosisPanel.resources
+C:\Users\LENOVO\Downloads\Hotel_Management_System\Frontend\obj\Debug\Frontend.DoctorList.resources
+C:\Users\LENOVO\Downloads\Hotel_Management_System\Frontend\obj\Debug\Frontend.ManagerForms.EditOrDeleteWorker.resources
+C:\Users\LENOVO\Downloads\Hotel_Management_System\Frontend\obj\Debug\Frontend.Extras.ManageResidents.resources
+C:\Users\LENOVO\Downloads\Hotel_Management_System\Frontend\obj\Debug\Frontend.Extras.ManageWorkers.resources
+C:\Users\LENOVO\Downloads\Hotel_Management_System\Frontend\obj\Debug\Frontend.Extras.MedicalHistoryPanel.resources
+C:\Users\LENOVO\Downloads\Hotel_Management_System\Frontend\obj\Debug\Frontend.Extras.PatientDiagnosisPanel.resources
+C:\Users\LENOVO\Downloads\Hotel_Management_System\Frontend\obj\Debug\Frontend.Extras.AddWorker.resources
+C:\Users\LENOVO\Downloads\Hotel_Management_System\Frontend\obj\Debug\Frontend.ManagerForms.ResidentsList.resources
+C:\Users\LENOVO\Downloads\Hotel_Management_System\Frontend\obj\Debug\Frontend.Extras.RoomsStatus.resources
+C:\Users\LENOVO\Downloads\Hotel_Management_System\Frontend\obj\Debug\Frontend.frmLogin.resources
+C:\Users\LENOVO\Downloads\Hotel_Management_System\Frontend\obj\Debug\Frontend.frmMain.resources
+C:\Users\LENOVO\Downloads\Hotel_Management_System\Frontend\obj\Debug\Frontend.ManagerForms.WorkersList.resources
+C:\Users\LENOVO\Downloads\Hotel_Management_System\Frontend\obj\Debug\Frontend.frmPatient.resources
+C:\Users\LENOVO\Downloads\Hotel_Management_System\Frontend\obj\Debug\Frontend.Properties.Resources.resources
+C:\Users\LENOVO\Downloads\Hotel_Management_System\Frontend\obj\Debug\Frontend.frmViewPatient.resources
+C:\Users\LENOVO\Downloads\Hotel_Management_System\Frontend\obj\Debug\Frontend.csproj.GenerateResource.cache
+C:\Users\LENOVO\Downloads\Hotel_Management_System\Frontend\obj\Debug\Frontend.csproj.CoreCompileInputs.cache
+C:\Users\LENOVO\Downloads\Hotel_Management_System\Frontend\obj\Debug\Frontend.csproj.CopyComplete
+C:\Users\LENOVO\Downloads\Hotel_Management_System\Frontend\obj\Debug\Frontend.exe
+C:\Users\LENOVO\Downloads\Hotel_Management_System\Frontend\obj\Debug\Frontend.pdb
