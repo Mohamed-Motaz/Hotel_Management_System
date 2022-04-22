@@ -52,14 +52,14 @@ namespace Frontend.ManagerForms
         private void editWorkerBtn_Click(object sender, EventArgs e)
         {
             //api takes all data and edit it 
-            // and delete it
+            // and clear it
             clearBtn_Click(sender, e);
         }
 
         private void deleteWorkerBtn_Click(object sender, EventArgs e)
         {
             //api takes searchbyIdTextbox.Text , jobTitleTextBox.Text 
-            // and delete it
+            // and clear it
             clearBtn_Click(sender,e);
         }
 
