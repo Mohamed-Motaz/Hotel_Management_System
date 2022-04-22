@@ -189,7 +189,6 @@
     <Compile Include="Models\ConsoleLogger.cs" />
     <Compile Include="Models\FileLogger.cs" />
     <Compile Include="Models\Logger.cs" />
-    <Compile Include="Models\Room.cs" />
     <Compile Include="Models\RoomFactory.cs" />
     <Compile Include="Models\Rooms\DoubleRoom.cs" />
     <Compile Include="Models\Rooms\Room.cs" />

@@ -4,3 +4,7 @@
 /r/nLog Entry : 8:40:21 PM Friday, April 22, 2022
    :App Startup
 ----------------------------------------------
+
+Log Entry : 9:25:23 PM Friday, April 22, 2022
+   :App Startup Successfull
+----------------------------------------------

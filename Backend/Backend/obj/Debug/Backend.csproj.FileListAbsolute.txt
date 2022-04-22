@@ -151,3 +151,4 @@ C:\Users\Salma\Source\Repos\Hotel_Management_System\Backend\Backend\bin\System.W
 C:\Users\Salma\Source\Repos\Hotel_Management_System\Backend\Backend\bin\Antlr3.Runtime.pdb
 C:\Users\Salma\Source\Repos\Hotel_Management_System\Backend\Backend\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
 C:\Users\Salma\Source\Repos\Hotel_Management_System\Backend\Backend\obj\Debug\Backend.csproj.CopyComplete
+C:\Users\Mohamed Motaz\Desktop\HotelManagementSystem\Backend\Backend\bin\System.Net.Http.dll

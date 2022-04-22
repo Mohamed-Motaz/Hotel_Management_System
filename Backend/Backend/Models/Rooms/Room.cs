@@ -9,11 +9,11 @@ namespace Backend.Models.Rooms
     {
 
         public int Id { get; set; }
-        public RoomType Type { get; set; }
+        public RoomTypes Type { get; set; }
         public double PricePerNight { get; set; }
         public RoomStatus Status { get; set; }
 
-        public Room(int id, RoomType type, double pricePerNight, RoomStatus status) {
+        public Room(int id, RoomTypes type, double pricePerNight, RoomStatus status) {
             this.Id = id;
             this.Type = type;
             this.PricePerNight = pricePerNight;
@@ -24,7 +24,7 @@ namespace Backend.Models.Rooms
         {
             return "Room #"+Id+":\n"
                 +"Type: "+Type+"\n"
-                +"Price Per Night: " + RricePerNight + "\n"
+                +"Price Per Night: " + PricePerNight + "\n"
                 +"Status: " + Status + "\n";
         }
 

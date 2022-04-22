@@ -20,15 +20,15 @@ namespace Backend.Models
         }
 
 
-        public bool CheckIfRoomAvailable(RoomType type)
+        public bool CheckIfRoomAvailable(RoomTypes type)
         {
-            if ((type == RoomType.Single) && (Apphost.CURR_SINGLE_ROOMS < Apphost.MAX_SINGLE_ROOMS))
+            if ((type == RoomTypes.Single) && (Apphost.CURR_SINGLE_ROOMS < Apphost.MAX_SINGLE_ROOMS))
                 return true;
 
-            if ((type == RoomType.Double) && (Apphost.CURR_DOUBLE_ROOMS < Apphost.MAX_DOUBLE_ROOMS))
+            if ((type == RoomTypes.Double) && (Apphost.CURR_DOUBLE_ROOMS < Apphost.MAX_DOUBLE_ROOMS))
                 return true;
 
-            if ((type == RoomType.Triple) && (Apphost.CURR_TRIPLE_ROOMS < Apphost.MAX_TRIPLE_ROOMS))
+            if ((type == RoomTypes.Triple) && (Apphost.CURR_TRIPLE_ROOMS < Apphost.MAX_TRIPLE_ROOMS))
                 return true;
 
             return false;

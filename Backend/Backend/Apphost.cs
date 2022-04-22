@@ -60,4 +60,10 @@ namespace Backend
         BedAndBreakfast
     }
 
+    public enum RoomStatus
+    {
+        Reserved, 
+        Available
+    }
+
 }
