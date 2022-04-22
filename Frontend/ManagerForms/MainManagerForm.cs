@@ -377,8 +377,6 @@ namespace Frontend
             manageWorkersLine.Visible = false;
             manageResidentsLine.Visible = false;
             dashboardLine.Visible = true;
-            picPatientList.Visible = false;
-            pictureBox6.Visible = false;
             viewRoomsStatusLine.Visible = false;
 
             dashboard = new Dashboard();
@@ -399,8 +397,6 @@ namespace Frontend
             manageWorkersLine.Visible = false;
             manageResidentsLine.Visible = false;
             dashboardLine.Visible = false;
-            picPatientList.Visible = false;
-            pictureBox6.Visible = false;
             viewRoomsStatusLine.Visible = true;
 
             roomsStatus = new RoomsStatus();
@@ -421,8 +417,6 @@ namespace Frontend
             manageWorkersLine.Visible = false;
             manageResidentsLine.Visible = true;
             dashboardLine.Visible = false;
-            picPatientList.Visible = false;
-            pictureBox6.Visible = false;
             viewRoomsStatusLine.Visible = false;
 
             manageResidents = new ManageResidents();
@@ -443,8 +437,6 @@ namespace Frontend
             manageWorkersLine.Visible = true;
             manageResidentsLine.Visible = false;
             dashboardLine.Visible = false;
-            picPatientList.Visible = false;
-            pictureBox6.Visible = false;
             viewRoomsStatusLine.Visible = false;
 
             manageWorkers = new ManageWorkers();

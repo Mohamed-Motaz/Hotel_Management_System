@@ -163,11 +163,11 @@
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
-    <Compile Include="Main.cs">
+    <Compile Include="ManagerForms\MainManagerForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Main.Designer.cs">
-      <DependentUpon>Main.cs</DependentUpon>
+    <Compile Include="ManagerForms\MainManagerForm.Designer.cs">
+      <DependentUpon>MainManagerForm.cs</DependentUpon>
     </Compile>
     <Compile Include="ManagerForms\WorkersList.cs">
       <SubType>Form</SubType>
@@ -244,8 +244,8 @@
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Main.resx">
-      <DependentUpon>Main.cs</DependentUpon>
+    <EmbeddedResource Include="ManagerForms\MainManagerForm.resx">
+      <DependentUpon>MainManagerForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ManagerForms\WorkersList.resx">
       <DependentUpon>WorkersList.cs</DependentUpon>
@@ -280,6 +280,10 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="national_u_logo.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="ReceptionistForms\" />
+    <Folder Include="ResidentForms\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -16,5 +16,33 @@ namespace Frontend.ManagerForms
         {
             InitializeComponent();
         }
+
+        private void getWorkers()
+        {
+            //api to get all workers and their ids
+        }
+
+        private void editWorker()
+        {
+            //create new worker object
+
+            //fill the object
+
+            //call api to edit the object
+        }
+
+        private void deleteWorker()
+        {
+            //collect the id
+
+            //call api to delete worker
+        }
+
+
+
+        //apis needed
+        //edit worker -> input worker object, typeOfWorker manager
+        //delete worker -> input workerId,    typeOfWorker
+        //getWorkers -> input nothing, output all workers and their types
     }
 }
