@@ -6,13 +6,12 @@ using System.Web;
 namespace Backend.Models
 {
 
-    public class BookingBulider : AbstractBulider
+    public class BookingBuilder : AbstractBuilder
     {
 
-        public override void bulidbooking(RoomType roomType, BoardingType boardType)
+        public override void BuildBooking(RoomType roomType, BoardingType boardType)
         {
-            Booking.roomtype = roomType;
-            Booking.boardtype = boardType;
+            throw new NotImplementedException();
         }
     }
 }
