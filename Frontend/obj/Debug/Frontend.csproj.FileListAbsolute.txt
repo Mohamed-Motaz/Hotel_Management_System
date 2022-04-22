@@ -53,3 +53,4 @@ C:\Users\Mohamed Motaz\Desktop\HotelManagementSystem\Frontend\obj\Debug\Frontend
 C:\Users\Mohamed Motaz\Desktop\HotelManagementSystem\Frontend\obj\Debug\Frontend.ManagerForms.WorkersList.resources
 C:\Users\Mohamed Motaz\Desktop\HotelManagementSystem\Frontend\obj\Debug\Frontend.ManagerForms.frmMain.resources
 C:\Users\Mohamed Motaz\Desktop\HotelManagementSystem\Frontend\obj\Debug\Frontend.ReceptionistForms.frmMainReceptionist.resources
+C:\Users\Mohamed Motaz\Desktop\HotelManagementSystem\Frontend\obj\Debug\Frontend.ReceptionistForms.ManageResidents.resources

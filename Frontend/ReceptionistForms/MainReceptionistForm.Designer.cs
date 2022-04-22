@@ -462,7 +462,7 @@
             this.manageReservationsButton.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.manageReservationsButton.Textcolor = System.Drawing.Color.White;
             this.manageReservationsButton.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.manageReservationsButton.Click += new System.EventHandler(this.manageWorkersButton_Click);
+            this.manageReservationsButton.Click += new System.EventHandler(this.manageReservationsButton_Click);
             // 
             // label2
             // 

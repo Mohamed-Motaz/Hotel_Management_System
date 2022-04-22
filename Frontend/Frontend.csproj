@@ -190,6 +190,18 @@
     <Compile Include="ReceptionistForms\MainReceptionistForm.Designer.cs">
       <DependentUpon>MainReceptionistForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="ReceptionistForms\ManageReservations.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ReceptionistForms\ManageReservations.Designer.cs">
+      <DependentUpon>ManageReservations.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ReceptionistForms\ManageResidents.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ReceptionistForms\ManageResidents.Designer.cs">
+      <DependentUpon>ManageResidents.cs</DependentUpon>
+    </Compile>
     <Compile Include="ViewPatient.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -270,6 +282,9 @@
     </Compile>
     <EmbeddedResource Include="ReceptionistForms\MainReceptionistForm.resx">
       <DependentUpon>MainReceptionistForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ReceptionistForms\ManageResidents.resx">
+      <DependentUpon>ManageResidents.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ViewPatient.resx">
       <DependentUpon>ViewPatient.cs</DependentUpon>
