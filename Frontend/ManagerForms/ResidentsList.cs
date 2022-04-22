@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.Dynamic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -15,6 +16,60 @@ namespace Frontend.ManagerForms
         public ResidentsList()
         {
             InitializeComponent();
+        }
+        public List<dynamic> GetResidentList()
+        {
+
+            List<dynamic> residents = new List<dynamic>();
+            dynamic resident = new ExpandoObject();
+
+            resident.id = "1";
+            resident.age = "35";
+            resident.Name = "Salma";
+            resident.Email = "salma@hotmail.com";
+            resident.PhoneNumber = "011111111";
+            resident.password = "4444";
+
+            residents.Add(resident);
+
+            return residents;
+        }
+
+        private void ResidentsList_Load(object sender, EventArgs e)
+        {
+            SetupDataGridView();
+        }
+
+        private void SetupDataGridView()
+        {
+            dataGridView1.ColumnCount = 8;
+            dataGridView1.Columns[2].Name = "ID";
+            dataGridView1.Columns[3].Name = "Name";
+            dataGridView1.Columns[4].Name = "Age";
+            dataGridView1.Columns[5].Name = "PhoneNumber";
+            dataGridView1.Columns[6].Name = "Email";
+            dataGridView1.Columns[7].Name = "Password";
+           
+            List<dynamic> residents = GetResidentList();
+
+            foreach (dynamic res in residents)
+            {
+                DataGridViewRow row = (DataGridViewRow)dataGridView1.Rows[0].Clone();
+                row.Cells[2].Value = res.id;
+                row.Cells[3].Value = res.age;
+                row.Cells[4].Value = res.Name;
+                row.Cells[5].Value = res.Email;
+                row.Cells[6].Value = res.PhoneNumber;
+                row.Cells[7].Value = res.password;
+
+                dataGridView1.Rows.Add(row);
+            }
+
+        }
+
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            
         }
     }
 }
