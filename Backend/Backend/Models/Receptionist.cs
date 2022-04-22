@@ -27,17 +27,7 @@ namespace Backend.Models
         public void assignResidentToARoom(int residentID, string roomType)
         {
             // check availiablity of the room , then decrement the number of 
-        /*    if (roomType.Equals("single"))
-            {
-                for(int i = 0; i<singleRooms.size(); i++)
-                {
-                    if(singleRoom[i].status == 1)
-                    {
-                        singleRoom[i].status = 0;
-                    }
-                }
-            }
-        */
+       
         }
     }
 }

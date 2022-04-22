@@ -7,9 +7,9 @@ namespace Backend.Models
 {
     public abstract class AbstractWorker : AbstractUser
     {
-        private int salary;
-        public string jobTitle; 
-        public string incomeType;
+        public int salary { set; get; }
+        public string jobTitle { set;  get; }
+        public string incomeType { set;  get; }
 
         protected AbstractWorker(int id, string userName, int age, string email, string phoneNumber, int salary, string jobTitle, string incomeType) : base(id, userName, age, email, phoneNumber)
         {
@@ -19,18 +19,6 @@ namespace Backend.Models
         }
 
         // operations
-        int getSalary(int salary)
-        {
-            return salary;
-        }
-        string getJobTitle(string jobTitle)
-        {
-            return jobTitle;
-        }
-        string getIncomeType(string incomeType)
-        {
-            return incomeType;
-        }
 
     }
 }

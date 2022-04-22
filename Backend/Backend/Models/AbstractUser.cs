@@ -7,11 +7,11 @@ namespace Backend.Models
 {
     public class AbstractUser
     {
-        protected int id;
-        protected string userName;
-        protected int age;
-        protected string email;
-        protected string phoneNumber;
+        public int id { set; get; }
+        public string userName { set; get; }
+        public int age { set; get; }
+        public string email { set; get; }
+        public string phoneNumber { set; get; }
 
         public AbstractUser(int id, string userName, int age, string email, string phoneNumber)
         {
@@ -19,26 +19,6 @@ namespace Backend.Models
             this.userName = userName;
             this.age = age;
             this.email = email;
-            this.phoneNumber = phoneNumber;
-        }
-        public void setID(int id)
-        {
-            this.id = id;
-        }
-        public void setUserName(String userName)
-        {
-            this.userName = userName;
-        }
-        public void setAge(int age)
-        {
-            this.age = age;
-        }
-        public void setEmail(String email)
-        {
-            this.email = email;
-        }
-        public void setMobileNumber(String phoneNumber)
-        {
             this.phoneNumber = phoneNumber;
         }
  
