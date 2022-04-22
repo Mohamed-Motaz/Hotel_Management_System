@@ -25,11 +25,22 @@ namespace Backend.Models
         // users are workers and residents
         protected void viewAllUsersInfo(string typeOfUsers)
         {
+            if (typeOfUsers.ToLower()=="workers")
+            {
 
+            }
+            else if (typeOfUsers.ToLower() == "redidents")
+            {
+
+            }
         }
         private string getIncomeInfo(string duration)
         {
-            string inCome = "weekly";
+            string inCome = "";
+            if(duration != null)
+            {
+                inCome = duration;
+            }
             return inCome;
         }
 

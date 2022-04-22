@@ -8,7 +8,7 @@ namespace Backend.Models
     public abstract class AbstractPrivilegedWorker: AbstractWorker
     {
         private int password;
-        void signIn()
+        void signIn(int name, int password)
         {
 
         }

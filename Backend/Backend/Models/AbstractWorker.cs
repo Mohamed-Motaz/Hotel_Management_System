@@ -12,6 +12,18 @@ namespace Backend.Models
         public string incomeType;
 
         // operations
+        void setSalary(int salary)
+        {
+            this.salary = salary;
+        }
+        void setJobTitle(string jobTitle)
+        {
+            this.jobTitle = jobTitle;
+        }
+        void setIncomeType(string incomeType)
+        {
+            this.incomeType = incomeType;
+        }
 
     }
 }
