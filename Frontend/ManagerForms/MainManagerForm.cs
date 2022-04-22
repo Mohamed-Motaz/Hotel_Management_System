@@ -11,7 +11,7 @@ using MySql.Data.MySqlClient;
 using System.Data.SqlClient;
 using Frontend.Extras;
 
-namespace Frontend
+namespace Frontend.ManagerForms
 {
     public partial class frmMain : Form
     {
