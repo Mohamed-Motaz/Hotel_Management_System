@@ -1,4 +1,6 @@
-﻿using System;
+﻿using Backend.Models.BoardTypes;
+using Backend.Models.Loggers;
+using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
@@ -6,9 +8,17 @@ using System.Web;
 
 namespace Backend
 {
-    public class Apphost
-    {
-        public static string DB_PATH = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "db.sqlite");
+
+
+    public static class Apphost
+    { 
+
+        //global variables
+        public static Logger logger;
+
+        public static string CUR_DIRECTORY = AppDomain.CurrentDomain.BaseDirectory;
+        public static string DB_PATH = Path.Combine(CUR_DIRECTORY, "db.sqlite");
+
 
         public static int MAX_SINGLE_ROOMS = 30;
         public static int MAX_DOUBLE_ROOMS = 30;
@@ -18,19 +28,42 @@ namespace Backend
         public static int CURR_DOUBLE_ROOMS = 0;
         public static int CURR_TRIPLE_ROOMS = 0;
 
+        private static Logger GetChainOfLoggers()
+        {
+            Logger fileLogger = new FileLogger(Logger.FileLogger);
+            Logger consoleLogger = new ConsoleLogger(Logger.ConsoleLogger);
+            consoleLogger.SetNextLogger(fileLogger);
+            return consoleLogger;
+        }
+
+        public static void InitializeApp()
+        {
+            logger = GetChainOfLoggers();
+            BoardingTypesCache.LoadCache();
+        }
+
     }
 
-    public enum RoomType
+   
+
+    public enum RoomTypes
     {
         Single,
         Double,
         Triple
     }
 
-    public enum BoardingType
+    public enum BoardingTypes
     {
         Full,
-        Hald,
+        Half,
         BedAndBreakfast
     }
+
+    public enum RoomStatus
+    {
+        Reserved, 
+        Available
+    }
+
 }
