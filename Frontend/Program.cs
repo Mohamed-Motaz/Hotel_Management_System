@@ -1,6 +1,4 @@
-﻿using Frontend.Extras;
-using Frontend.ManagerForms;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
@@ -18,7 +16,7 @@ namespace Frontend
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new EditOrDeleteWorker());
+            Application.Run(new frmLogin());
         }
     }
 }
