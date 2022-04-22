@@ -1,0 +1,42 @@
+C:\Users\jeremydvera\Documents\Visual Studio 2017\Frontend\bin\Debug\Frontend.exe.config
+C:\Users\jeremydvera\Documents\Visual Studio 2017\Frontend\bin\Debug\Frontend.exe
+C:\Users\jeremydvera\Documents\Visual Studio 2017\Frontend\bin\Debug\Frontend.pdb
+C:\Users\jeremydvera\Documents\Visual Studio 2017\Frontend\bin\Debug\Bunifu_UI_v1.52.dll
+C:\Users\jeremydvera\Documents\Visual Studio 2017\Frontend\obj\Debug\Frontend.csprojResolveAssemblyReference.cache
+C:\Users\jeremydvera\Documents\Visual Studio 2017\Frontend\obj\Debug\Frontend.Properties.Resources.resources
+C:\Users\jeremydvera\Documents\Visual Studio 2017\Frontend\obj\Debug\Frontend.csproj.GenerateResource.Cache
+C:\Users\jeremydvera\Documents\Visual Studio 2017\Frontend\obj\Debug\Frontend.csproj.CoreCompileInputs.cache
+C:\Users\jeremydvera\Documents\Visual Studio 2017\Frontend\obj\Debug\Frontend.exe
+C:\Users\jeremydvera\Documents\Visual Studio 2017\Frontend\obj\Debug\Frontend.pdb
+C:\Users\jeremydvera\Documents\Visual Studio 2017\Frontend\obj\Debug\Frontend.frmLogin.resources
+C:\Users\jeremydvera\Documents\Visual Studio 2017\Frontend\obj\Debug\Frontend.frmMain.resources
+C:\Users\jeremydvera\Documents\Visual Studio 2017\Frontend\bin\Debug\MySql.Data.dll
+C:\Users\jeremydvera\Documents\Visual Studio 2017\Frontend\bin\Debug\MySql.Data.xml
+C:\Users\jeremydvera\Documents\Visual Studio 2017\Frontend\obj\Debug\Frontend.frmPatient.resources
+C:\Users\jeremydvera\Documents\Visual Studio 2017\Frontend\obj\Debug\Frontend.frmViewPatient.resources
+C:\Users\jeremydvera\Documents\Visual Studio 2017\Frontend\obj\Debug\Frontend.frmAddPatient.resources
+C:\Users\jeremydvera\Documents\Visual Studio 2017\Frontend\obj\Debug\Frontend.csproj.CopyComplete
+C:\Users\jeremydvera\Documents\Visual Studio 2017\Frontend\obj\Debug\Frontend.DoctorList.resources
+C:\Users\jeremydvera\Documents\Visual Studio 2017\Frontend\obj\Debug\Frontend.Category.resources
+C:\Users\jeremydvera\Documents\Visual Studio 2017\Frontend\obj\Debug\Frontend.Course.resources
+C:\Users\jeremydvera\Documents\Visual Studio 2017\Frontend\obj\Debug\Frontend.Diagnosis.resources
+C:\Users\Mohamed Motaz\Desktop\National-University-Clinic-Management-System-master\Frontend\bin\Debug\Frontend.exe.config
+C:\Users\Mohamed Motaz\Desktop\National-University-Clinic-Management-System-master\Frontend\bin\Debug\Frontend.exe
+C:\Users\Mohamed Motaz\Desktop\National-University-Clinic-Management-System-master\Frontend\bin\Debug\Frontend.pdb
+C:\Users\Mohamed Motaz\Desktop\National-University-Clinic-Management-System-master\Frontend\bin\Debug\Bunifu_UI_v1.52.dll
+C:\Users\Mohamed Motaz\Desktop\National-University-Clinic-Management-System-master\Frontend\bin\Debug\MySql.Data.xml
+C:\Users\Mohamed Motaz\Desktop\National-University-Clinic-Management-System-master\Frontend\obj\Debug\Frontend.csproj.AssemblyReference.cache
+C:\Users\Mohamed Motaz\Desktop\National-University-Clinic-Management-System-master\Frontend\obj\Debug\Frontend.frmAddPatient.resources
+C:\Users\Mohamed Motaz\Desktop\National-University-Clinic-Management-System-master\Frontend\obj\Debug\Frontend.Category.resources
+C:\Users\Mohamed Motaz\Desktop\National-University-Clinic-Management-System-master\Frontend\obj\Debug\Frontend.Course.resources
+C:\Users\Mohamed Motaz\Desktop\National-University-Clinic-Management-System-master\Frontend\obj\Debug\Frontend.Diagnosis.resources
+C:\Users\Mohamed Motaz\Desktop\National-University-Clinic-Management-System-master\Frontend\obj\Debug\Frontend.DoctorList.resources
+C:\Users\Mohamed Motaz\Desktop\National-University-Clinic-Management-System-master\Frontend\obj\Debug\Frontend.frmLogin.resources
+C:\Users\Mohamed Motaz\Desktop\National-University-Clinic-Management-System-master\Frontend\obj\Debug\Frontend.frmMain.resources
+C:\Users\Mohamed Motaz\Desktop\National-University-Clinic-Management-System-master\Frontend\obj\Debug\Frontend.frmPatient.resources
+C:\Users\Mohamed Motaz\Desktop\National-University-Clinic-Management-System-master\Frontend\obj\Debug\Frontend.Properties.Resources.resources
+C:\Users\Mohamed Motaz\Desktop\National-University-Clinic-Management-System-master\Frontend\obj\Debug\Frontend.frmViewPatient.resources
+C:\Users\Mohamed Motaz\Desktop\National-University-Clinic-Management-System-master\Frontend\obj\Debug\Frontend.csproj.GenerateResource.cache
+C:\Users\Mohamed Motaz\Desktop\National-University-Clinic-Management-System-master\Frontend\obj\Debug\Frontend.csproj.CoreCompileInputs.cache
+C:\Users\Mohamed Motaz\Desktop\National-University-Clinic-Management-System-master\Frontend\obj\Debug\Frontend.exe
+C:\Users\Mohamed Motaz\Desktop\National-University-Clinic-Management-System-master\Frontend\obj\Debug\Frontend.pdb
