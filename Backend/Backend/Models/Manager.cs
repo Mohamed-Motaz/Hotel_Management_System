@@ -7,6 +7,9 @@ namespace Backend.Models
 {
     public class Manager : AbstractPrivilegedWorker
     {
+        public Manager(int id, string userName, int age, string email, string phoneNumber, int salary, string jobTitle, string incomeType, string password) : 
+            base(id, userName, age, email, phoneNumber, salary, jobTitle, incomeType, password) {}
+
         public override void addUser(AbstractUser newWorker)
         {
      
@@ -25,11 +28,11 @@ namespace Backend.Models
         // users are workers and residents
         protected void viewAllUsersInfo(string typeOfUsers)
         {
-            if (typeOfUsers.ToLower()=="workers")
+            if (typeOfUsers.ToLower().Equals("workers"))
             {
 
             }
-            else if (typeOfUsers.ToLower() == "redidents")
+            else if (typeOfUsers.ToLower().Equals("residents"))
             {
 
             }

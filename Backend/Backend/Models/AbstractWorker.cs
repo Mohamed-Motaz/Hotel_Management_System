@@ -5,24 +5,31 @@ using System.Web;
 
 namespace Backend.Models
 {
-    public abstract class AbstractWorker: AbstractUser
+    public abstract class AbstractWorker : AbstractUser
     {
         private int salary;
         public string jobTitle; 
         public string incomeType;
 
-        // operations
-        void setSalary(int salary)
+        protected AbstractWorker(int id, string userName, int age, string email, string phoneNumber, int salary, string jobTitle, string incomeType) : base(id, userName, age, email, phoneNumber)
         {
             this.salary = salary;
-        }
-        void setJobTitle(string jobTitle)
-        {
             this.jobTitle = jobTitle;
-        }
-        void setIncomeType(string incomeType)
-        {
             this.incomeType = incomeType;
+        }
+
+        // operations
+        int getSalary(int salary)
+        {
+            return salary;
+        }
+        string getJobTitle(string jobTitle)
+        {
+            return jobTitle;
+        }
+        string getIncomeType(string incomeType)
+        {
+            return incomeType;
         }
 
     }
