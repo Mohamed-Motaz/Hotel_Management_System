@@ -18,23 +18,5 @@ namespace Backend.Models
            iterator = new ListIterator(list);
            return iterator;
         }
-        public int length()
-        {
-            return list.Count;
-        }
-        public void add(Object obj)
-        {
-            list.Add(obj);
-        }
-        public void delete(Object obj)
-        {
-            list.Remove(obj);
-        }
-
-        public object this[int index]
-        {
-            get { return list[index]; }
-            set { list[index]= value; }
-        }
     }
 }

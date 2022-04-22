@@ -27,7 +27,7 @@ namespace Backend.Models
         public override object getNext()
         {
             object next = null;
-            if (curIndex < list.Count - 1)
+            if (this.hasNext())
             {
                next = list[curIndex++];
             }
@@ -36,7 +36,7 @@ namespace Backend.Models
 
         public override bool hasNext()
         {
-            return curIndex + 1 < list.Count;
+            return curIndex < list.Count;
         }
     }
 }
