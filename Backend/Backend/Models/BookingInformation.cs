@@ -14,5 +14,8 @@ namespace Backend.Models
         public long startDate { get; set; }
         public long endDate { get; set; }
         public float totalPrice { get; set; }
+
+        public RoomType roomtype;
+        public BoardingType boardtype;
     }
 }
