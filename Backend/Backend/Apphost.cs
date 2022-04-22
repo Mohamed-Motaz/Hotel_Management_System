@@ -71,7 +71,7 @@ namespace Backend
                 {
                     ListOfAvailableRooms.list.Add((Room)new SingleRoom(
                             100 + NumberOfRoom,
-                            RoomTypes.Double,
+                            RoomTypes.Triple,
                             2700,
                             RoomStatus.Available
                         ));
