@@ -60,19 +60,19 @@ namespace Backend
                 }
                 else if (room < 60 && room >= 30)
                 {
-                    ListOfAvailableRooms.list.Add((Room)new SingleRoom(
+                    ListOfAvailableRooms.list.Add((Room)new DoubleRoom(
                             200 + NumberOfRoom,
                             RoomTypes.Double,
-                            2700,
+                            4000,
                             RoomStatus.Available
                         ));
                 }
                 else if (room < 90 && room >= 60)
                 {
-                    ListOfAvailableRooms.list.Add((Room)new SingleRoom(
+                    ListOfAvailableRooms.list.Add((Room)new TripleRoom(
                             300 + NumberOfRoom,
                             RoomTypes.Triple,
-                            2700,
+                            4800,
                             RoomStatus.Available
                         ));
                 }
