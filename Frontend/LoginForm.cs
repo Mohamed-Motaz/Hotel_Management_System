@@ -9,6 +9,9 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using MySql.Data.MySqlClient;
 using System.Data.SqlClient;
+using Frontend.ManagerForms;
+using Frontend.ReceptionistForms;
+
 
 namespace Frontend
 {
@@ -23,14 +26,16 @@ namespace Frontend
         }
 
 
-        //MySqlConnection con = new MySqlConnection("server = localhost; database = nuclinic; username = root; password = ;");
         int count;
         private string username, password;
 
 
         private void btnLogin_Click(object sender, EventArgs e)
         {
-                login();
+            //login();
+           frmMain managerMainForm = new frmMain();
+            this.Hide();
+            managerMainForm.Show();
         }
 
         private void login()
@@ -140,27 +145,14 @@ namespace Frontend
             //}
         }
 
-        public void select()
+        private void bunifuFlatButton1_Click_1(object sender, EventArgs e)
         {
-           // MySqlConnection con = new MySqlConnection("server = localhost; database = nuclinic; username = root; password = ;");
-            //SqlConnection Cn = new SqlConnection("server = localhost; database = nuclinic; username = root; password = ;");
-            //SqlCommand Cmd = Cn.CreateCommand();
-            //try
-            //{
-            //    SqlDataReader myReader = null;
-            //    SqlCommand myCommand = new SqlCommand("select * firstname from user",Cn);
-            //    myReader = myCommand.ExecuteReader();
-            //    while (myReader.Read())
-            //    {
-            //       // textBox1.Text = myReader["Column1"].ToString();
-
-            //    }
-            //}
-            //catch (Exception e)
-            //{
-            //    MessageBox.Show(e.ToString());
-            //}
+            frmMainReceptionist frmMainReceptionist = new frmMainReceptionist();
+            this.Hide();
+            frmMainReceptionist.Show();
         }
+
+
         
 
        

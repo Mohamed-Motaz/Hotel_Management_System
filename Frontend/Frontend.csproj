@@ -43,6 +43,7 @@
     <Reference Include="MySql.Data, Version=6.9.9.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL" />
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.DirectoryServices" />
     <Reference Include="System.Windows.Forms.DataVisualization" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
@@ -109,6 +110,12 @@
     <Compile Include="DoctorList.Designer.cs">
       <DependentUpon>DoctorList.cs</DependentUpon>
     </Compile>
+    <Compile Include="ManagerForms\EditOrDeleteResident.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ManagerForms\EditOrDeleteResident.Designer.cs">
+      <DependentUpon>EditOrDeleteResident.cs</DependentUpon>
+    </Compile>
     <Compile Include="ManagerForms\EditOrDeleteWorker.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -157,11 +164,11 @@
     <Compile Include="ManagerForms\RoomsStatus.Designer.cs">
       <DependentUpon>RoomsStatus.cs</DependentUpon>
     </Compile>
-    <Compile Include="Form1.cs">
+    <Compile Include="LoginForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form1.Designer.cs">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <Compile Include="LoginForm.Designer.cs">
+      <DependentUpon>LoginForm.cs</DependentUpon>
     </Compile>
     <Compile Include="ManagerForms\MainManagerForm.cs">
       <SubType>Form</SubType>
@@ -184,6 +191,36 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ReceptionistForms\AddReservation.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ReceptionistForms\AddReservation.Designer.cs">
+      <DependentUpon>AddReservation.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ReceptionistForms\EditOrDeleteReservation.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ReceptionistForms\EditOrDeleteReservation.Designer.cs">
+      <DependentUpon>EditOrDeleteReservation.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ReceptionistForms\MainReceptionistForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ReceptionistForms\MainReceptionistForm.Designer.cs">
+      <DependentUpon>MainReceptionistForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ReceptionistForms\ManageReservations.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ReceptionistForms\ManageReservations.Designer.cs">
+      <DependentUpon>ManageReservations.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ReceptionistForms\ManageResidents.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ReceptionistForms\ManageResidents.Designer.cs">
+      <DependentUpon>ManageResidents.cs</DependentUpon>
+    </Compile>
     <Compile Include="ViewPatient.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -217,6 +254,9 @@
     <EmbeddedResource Include="DoctorList.resx">
       <DependentUpon>DoctorList.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="ManagerForms\EditOrDeleteResident.resx">
+      <DependentUpon>EditOrDeleteResident.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="ManagerForms\EditOrDeleteWorker.resx">
       <DependentUpon>EditOrDeleteWorker.cs</DependentUpon>
     </EmbeddedResource>
@@ -241,8 +281,8 @@
     <EmbeddedResource Include="ManagerForms\RoomsStatus.resx">
       <DependentUpon>RoomsStatus.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Form1.resx">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <EmbeddedResource Include="LoginForm.resx">
+      <DependentUpon>LoginForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ManagerForms\MainManagerForm.resx">
       <DependentUpon>MainManagerForm.cs</DependentUpon>
@@ -262,6 +302,21 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="ReceptionistForms\AddReservation.resx">
+      <DependentUpon>AddReservation.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ReceptionistForms\EditOrDeleteReservation.resx">
+      <DependentUpon>EditOrDeleteReservation.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ReceptionistForms\MainReceptionistForm.resx">
+      <DependentUpon>MainReceptionistForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ReceptionistForms\ManageReservations.resx">
+      <DependentUpon>ManageReservations.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ReceptionistForms\ManageResidents.resx">
+      <DependentUpon>ManageResidents.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="ViewPatient.resx">
       <DependentUpon>ViewPatient.cs</DependentUpon>
     </EmbeddedResource>
@@ -282,7 +337,6 @@
     <Content Include="national_u_logo.ico" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="ReceptionistForms\" />
     <Folder Include="ResidentForms\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

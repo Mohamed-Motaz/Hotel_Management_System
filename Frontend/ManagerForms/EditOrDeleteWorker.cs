@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.Dynamic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -12,31 +13,70 @@ namespace Frontend.ManagerForms
 {
     public partial class EditOrDeleteWorker : Form
     {
+        dynamic worker;
+
         public EditOrDeleteWorker()
         {
             InitializeComponent();
         }
 
-        private void getWorkers()
+        private void EditOrDeleteWorker_Load(object sender, EventArgs e)
         {
-            //api to get all workers and their ids
+            worker = new ExpandoObject();
+            passwordTextBox.Enabled = !isRoomService.Checked;
         }
 
-        private void editWorker()
+
+        private void searchByIdBtn_Click(object sender, EventArgs e)
         {
-            //create new worker object
+            worker.id = searchbyIdTextbox.Text;
 
-            //fill the object
+            //TODO: api set worker to the api returend worker
 
-            //call api to edit the object
+            nameTextBox.Text = worker.name;
+            ageTextBox.Text = worker.age;
+            emailTextBox.Text = worker.email;
+            if (isRoomService.Checked) { worker.password = ""; }
+            else { passwordTextBox.Text = worker.password; }
+            phoneTextBox.Text = worker.phoneNumber;
+            salaryTextBox.Text = worker.salary;
+            jobTitleTextBox.Text = worker.jobType;
+            incomeTypeTextBox.Text = worker.incomeType;
         }
 
-        private void deleteWorker()
+        private void isRoomService_CheckedChanged(object sender, EventArgs e)
         {
-            //collect the id
-
-            //call api to delete worker
+            passwordTextBox.Enabled = !isRoomService.Checked;
         }
+
+        private void editWorkerBtn_Click(object sender, EventArgs e)
+        {
+            //api takes all data and edit it 
+            // and clear it
+            clearBtn_Click(sender, e);
+        }
+
+        private void deleteWorkerBtn_Click(object sender, EventArgs e)
+        {
+            //api takes searchbyIdTextbox.Text , jobTitleTextBox.Text 
+            // and clear it
+            clearBtn_Click(sender,e);
+        }
+
+        private void clearBtn_Click(object sender, EventArgs e)
+        {
+            searchbyIdTextbox.Text = "";
+            nameTextBox.Text = "";
+            ageTextBox.Text = "";
+            emailTextBox.Text = "";
+            passwordTextBox.Text = "";
+            phoneTextBox.Text = "";
+            salaryTextBox.Text = "";
+            jobTitleTextBox.Text = "";
+            incomeTypeTextBox.Text = "";
+        }
+
+
 
 
 
