@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Backend.Models.Loggers;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -18,6 +19,10 @@ namespace Backend
             FilterConfig.RegisterGlobalFilters(GlobalFilters.Filters);
             RouteConfig.RegisterRoutes(RouteTable.Routes);
             BundleConfig.RegisterBundles(BundleTable.Bundles);
+
+            Apphost.InitializeApp();
+            Apphost.logger.LogMessages(Logger.FileLogger, "App Startup Successfull");
+
         }
     }
 }

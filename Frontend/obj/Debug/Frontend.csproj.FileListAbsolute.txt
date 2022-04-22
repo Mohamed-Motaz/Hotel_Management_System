@@ -33,7 +33,6 @@ C:\Users\Mohamed Motaz\Desktop\HotelManagementSystem\Frontend\obj\Debug\Frontend
 C:\Users\Mohamed Motaz\Desktop\HotelManagementSystem\Frontend\obj\Debug\Frontend.DoctorList.resources
 C:\Users\Mohamed Motaz\Desktop\HotelManagementSystem\Frontend\obj\Debug\Frontend.Extras.MedicalHistoryPanel.resources
 C:\Users\Mohamed Motaz\Desktop\HotelManagementSystem\Frontend\obj\Debug\Frontend.frmLogin.resources
-C:\Users\Mohamed Motaz\Desktop\HotelManagementSystem\Frontend\obj\Debug\Frontend.frmMain.resources
 C:\Users\Mohamed Motaz\Desktop\HotelManagementSystem\Frontend\obj\Debug\Frontend.frmPatient.resources
 C:\Users\Mohamed Motaz\Desktop\HotelManagementSystem\Frontend\obj\Debug\Frontend.Properties.Resources.resources
 C:\Users\Mohamed Motaz\Desktop\HotelManagementSystem\Frontend\obj\Debug\Frontend.frmViewPatient.resources
@@ -52,37 +51,10 @@ C:\Users\Mohamed Motaz\Desktop\HotelManagementSystem\Frontend\obj\Debug\Frontend
 C:\Users\Mohamed Motaz\Desktop\HotelManagementSystem\Frontend\obj\Debug\Frontend.ManagerForms.EditOrDeleteWorker.resources
 C:\Users\Mohamed Motaz\Desktop\HotelManagementSystem\Frontend\obj\Debug\Frontend.ManagerForms.ResidentsList.resources
 C:\Users\Mohamed Motaz\Desktop\HotelManagementSystem\Frontend\obj\Debug\Frontend.ManagerForms.WorkersList.resources
-C:\Users\DELL\Desktop\DAF-Flutter-Projects\Hotel_Management_System\Frontend\bin\Debug\Frontend.exe.config
-C:\Users\DELL\Desktop\DAF-Flutter-Projects\Hotel_Management_System\Frontend\bin\Debug\Frontend.exe
-C:\Users\DELL\Desktop\DAF-Flutter-Projects\Hotel_Management_System\Frontend\bin\Debug\Frontend.pdb
-C:\Users\DELL\Desktop\DAF-Flutter-Projects\Hotel_Management_System\Frontend\bin\Debug\Bunifu_UI_v1.52.dll
-C:\Users\DELL\Desktop\DAF-Flutter-Projects\Hotel_Management_System\Frontend\bin\Debug\MySql.Data.xml
-C:\Users\DELL\Desktop\DAF-Flutter-Projects\Hotel_Management_System\Frontend\obj\Debug\Frontend.csprojAssemblyReference.cache
-C:\Users\DELL\Desktop\DAF-Flutter-Projects\Hotel_Management_System\Frontend\obj\Debug\Frontend.frmAddPatient.resources
-C:\Users\DELL\Desktop\DAF-Flutter-Projects\Hotel_Management_System\Frontend\obj\Debug\Frontend.Category.resources
-C:\Users\DELL\Desktop\DAF-Flutter-Projects\Hotel_Management_System\Frontend\obj\Debug\Frontend.Course.resources
-C:\Users\DELL\Desktop\DAF-Flutter-Projects\Hotel_Management_System\Frontend\obj\Debug\Frontend.Diagnosis.resources
-C:\Users\DELL\Desktop\DAF-Flutter-Projects\Hotel_Management_System\Frontend\obj\Debug\Frontend.Extras.AddResident.resources
-C:\Users\DELL\Desktop\DAF-Flutter-Projects\Hotel_Management_System\Frontend\obj\Debug\Frontend.Extras.ArchivePanel.resources
-C:\Users\DELL\Desktop\DAF-Flutter-Projects\Hotel_Management_System\Frontend\obj\Debug\Frontend.Extras.Dashboard.resources
-C:\Users\DELL\Desktop\DAF-Flutter-Projects\Hotel_Management_System\Frontend\obj\Debug\Frontend.DiagnosisPanel.resources
-C:\Users\DELL\Desktop\DAF-Flutter-Projects\Hotel_Management_System\Frontend\obj\Debug\Frontend.DoctorList.resources
-C:\Users\DELL\Desktop\DAF-Flutter-Projects\Hotel_Management_System\Frontend\obj\Debug\Frontend.ManagerForms.EditOrDeleteWorker.resources
-C:\Users\DELL\Desktop\DAF-Flutter-Projects\Hotel_Management_System\Frontend\obj\Debug\Frontend.Extras.ManageResidents.resources
-C:\Users\DELL\Desktop\DAF-Flutter-Projects\Hotel_Management_System\Frontend\obj\Debug\Frontend.Extras.ManageWorkers.resources
-C:\Users\DELL\Desktop\DAF-Flutter-Projects\Hotel_Management_System\Frontend\obj\Debug\Frontend.Extras.MedicalHistoryPanel.resources
-C:\Users\DELL\Desktop\DAF-Flutter-Projects\Hotel_Management_System\Frontend\obj\Debug\Frontend.Extras.PatientDiagnosisPanel.resources
-C:\Users\DELL\Desktop\DAF-Flutter-Projects\Hotel_Management_System\Frontend\obj\Debug\Frontend.Extras.AddWorker.resources
-C:\Users\DELL\Desktop\DAF-Flutter-Projects\Hotel_Management_System\Frontend\obj\Debug\Frontend.ManagerForms.ResidentsList.resources
-C:\Users\DELL\Desktop\DAF-Flutter-Projects\Hotel_Management_System\Frontend\obj\Debug\Frontend.Extras.RoomsStatus.resources
-C:\Users\DELL\Desktop\DAF-Flutter-Projects\Hotel_Management_System\Frontend\obj\Debug\Frontend.frmLogin.resources
-C:\Users\DELL\Desktop\DAF-Flutter-Projects\Hotel_Management_System\Frontend\obj\Debug\Frontend.frmMain.resources
-C:\Users\DELL\Desktop\DAF-Flutter-Projects\Hotel_Management_System\Frontend\obj\Debug\Frontend.ManagerForms.WorkersList.resources
-C:\Users\DELL\Desktop\DAF-Flutter-Projects\Hotel_Management_System\Frontend\obj\Debug\Frontend.frmPatient.resources
-C:\Users\DELL\Desktop\DAF-Flutter-Projects\Hotel_Management_System\Frontend\obj\Debug\Frontend.Properties.Resources.resources
-C:\Users\DELL\Desktop\DAF-Flutter-Projects\Hotel_Management_System\Frontend\obj\Debug\Frontend.frmViewPatient.resources
-C:\Users\DELL\Desktop\DAF-Flutter-Projects\Hotel_Management_System\Frontend\obj\Debug\Frontend.csproj.GenerateResource.cache
-C:\Users\DELL\Desktop\DAF-Flutter-Projects\Hotel_Management_System\Frontend\obj\Debug\Frontend.csproj.CoreCompileInputs.cache
-C:\Users\DELL\Desktop\DAF-Flutter-Projects\Hotel_Management_System\Frontend\obj\Debug\Frontend.csproj.CopyComplete
-C:\Users\DELL\Desktop\DAF-Flutter-Projects\Hotel_Management_System\Frontend\obj\Debug\Frontend.exe
-C:\Users\DELL\Desktop\DAF-Flutter-Projects\Hotel_Management_System\Frontend\obj\Debug\Frontend.pdb
+C:\Users\Mohamed Motaz\Desktop\HotelManagementSystem\Frontend\obj\Debug\Frontend.ManagerForms.frmMain.resources
+C:\Users\Mohamed Motaz\Desktop\HotelManagementSystem\Frontend\obj\Debug\Frontend.ReceptionistForms.frmMainReceptionist.resources
+C:\Users\Mohamed Motaz\Desktop\HotelManagementSystem\Frontend\obj\Debug\Frontend.ReceptionistForms.ManageResidents.resources
+C:\Users\Mohamed Motaz\Desktop\HotelManagementSystem\Frontend\obj\Debug\Frontend.ReceptionistForms.AddReservation.resources
+C:\Users\Mohamed Motaz\Desktop\HotelManagementSystem\Frontend\obj\Debug\Frontend.ReceptionistForms.EditOrDeleteReservation.resources
+C:\Users\Mohamed Motaz\Desktop\HotelManagementSystem\Frontend\obj\Debug\Frontend.ReceptionistForms.ManageReservations.resources
+C:\Users\Mohamed Motaz\Desktop\HotelManagementSystem\Frontend\obj\Debug\Frontend.csproj.CopyComplete

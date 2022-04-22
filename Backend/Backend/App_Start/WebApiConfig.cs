@@ -1,4 +1,5 @@
 ﻿using Backend.Database;
+using Backend.Models.Loggers;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Serialization;
 using System;
@@ -38,7 +39,8 @@ namespace Backend
                 defaults: new { id = RouteParameter.Optional }
             );
 
-            bool dbDone = DbOperations.InitializeDB();
+           
+
         }
     }
 }
