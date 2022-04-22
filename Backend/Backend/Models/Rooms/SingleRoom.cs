@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace ConsoleApp1
+namespace Backend.Models.Rooms
 {
     class SingleRoom : Room
     {
