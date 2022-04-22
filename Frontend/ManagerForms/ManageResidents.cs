@@ -10,11 +10,16 @@ using System.Windows.Forms;
 
 namespace Frontend.Extras
 {
-    public partial class PhysicalExaminationPanel : Form
+    public partial class ManageResidents : Form
     {
-        public PhysicalExaminationPanel()
+        public ManageResidents()
         {
             InitializeComponent();
+        }
+
+        private void residentsListButton_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

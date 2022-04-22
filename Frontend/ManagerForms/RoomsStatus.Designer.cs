@@ -1,7 +1,7 @@
 ﻿
-namespace Frontend.MainForms
+namespace Frontend.Extras
 {
-    partial class ManagerForm
+    partial class RoomsStatus
     {
         /// <summary>
         /// Required designer variable.
@@ -29,19 +29,32 @@ namespace Frontend.MainForms
         /// </summary>
         private void InitializeComponent()
         {
+            this.textBox1 = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
-            // ManagerForm
+            // textBox1
+            // 
+            this.textBox1.Location = new System.Drawing.Point(227, 215);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(347, 20);
+            this.textBox1.TabIndex = 105;
+            this.textBox1.Text = "add charts to show the rooms status, reserved or not w kedah";
+            // 
+            // RoomsStatus
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Name = "ManagerForm";
-            this.Text = "ManagerForm";
+            this.ClientSize = new System.Drawing.Size(1146, 744);
+            this.Controls.Add(this.textBox1);
+            this.Name = "RoomsStatus";
+            this.Text = "RoomsStatus";
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
         #endregion
+
+        private System.Windows.Forms.TextBox textBox1;
     }
 }

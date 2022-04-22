@@ -585,7 +585,7 @@
   <metadata name="timer1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>17, 17</value>
   </metadata>
-  <data name="bunifuFlatButton3.Iconimage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <data name="viewRoomsStatusButton.Iconimage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAGAAAABgCAYAAADimHc4AAAABGdBTUEAALGPC/xhBQAABmFJREFUeF7t
         mkuIHFUYhcdH4pMsgpuoiELEhWjwtR9QlOwkGElmesYBYQQFMQtxO7hSjLoRHys3goIP8AHiRgiIrwRB
@@ -618,7 +618,7 @@
         GJ2zK/8Bw2fBIIm2OcIAAAAASUVORK5CYII=
 </value>
   </data>
-  <data name="bunifuFlatButton3.Iconimage_right" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <data name="viewRoomsStatusButton.Iconimage_right" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAADIAAAAyCAYAAAAeP4ixAAAABGdBTUEAALGPC/xhBQAAAxJJREFUaEPt
         mNtOU0EYhWtMMIpRRPGIBjwGfZI+QNNz06s+nRdGvfOIiQfwUCgtSiuhLTHCU+j6df1mHCed3ZvpbNOV
@@ -743,7 +743,7 @@
         fwF3XSEZiuviAAAAAElFTkSuQmCC
 </value>
   </data>
-  <data name="bunifuFlatButton9.Iconimage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <data name="manageResidentsButton.Iconimage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAEAAAABACAYAAACqaXHeAAAABGdBTUEAALGPC/xhBQAABB5JREFUeF7t
         mctLVVEUxrW39IAek6I30YPqf3CidoOcCVe9mjhwEjRtEIQEDSKCIi3oNY2gqGnSgwKJpgW9bGBmNrAG
@@ -766,7 +766,7 @@
         GzaoFRt2AxqG5Drxm5K/h2WhcJ4n+Hm8ru4v9VOwc+Q4qHkAAAAASUVORK5CYII=
 </value>
   </data>
-  <data name="bunifuFlatButton9.Iconimage_right" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <data name="manageResidentsButton.Iconimage_right" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAADIAAAAyCAYAAAAeP4ixAAAABGdBTUEAALGPC/xhBQAAAxJJREFUaEPt
         mNtOU0EYhWtMMIpRRPGIBjwGfZI+QNNz06s+nRdGvfOIiQfwUCgtSiuhLTHCU+j6df1mHCed3ZvpbNOV

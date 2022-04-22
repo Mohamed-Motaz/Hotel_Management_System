@@ -8,11 +8,11 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace Frontend.MainForms
+namespace Frontend.Extras
 {
-    public partial class ManagerForm : Form
+    public partial class ManageWorkers : Form
     {
-        public ManagerForm()
+        public ManageWorkers()
         {
             InitializeComponent();
         }

@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace Frontend.Extras
 {
-    public partial class ManageClinicPanel : Form
+    public partial class AddWorker : Form
     {
-        public ManageClinicPanel()
+        public AddWorker()
         {
             InitializeComponent();
         }
