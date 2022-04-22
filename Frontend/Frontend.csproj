@@ -184,6 +184,18 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ReceptionistForms\AddReservation.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ReceptionistForms\AddReservation.Designer.cs">
+      <DependentUpon>AddReservation.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ReceptionistForms\EditOrDeleteReservation.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ReceptionistForms\EditOrDeleteReservation.Designer.cs">
+      <DependentUpon>EditOrDeleteReservation.cs</DependentUpon>
+    </Compile>
     <Compile Include="ReceptionistForms\MainReceptionistForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -280,8 +292,17 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="ReceptionistForms\AddReservation.resx">
+      <DependentUpon>AddReservation.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ReceptionistForms\EditOrDeleteReservation.resx">
+      <DependentUpon>EditOrDeleteReservation.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="ReceptionistForms\MainReceptionistForm.resx">
       <DependentUpon>MainReceptionistForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ReceptionistForms\ManageReservations.resx">
+      <DependentUpon>ManageReservations.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ReceptionistForms\ManageResidents.resx">
       <DependentUpon>ManageResidents.cs</DependentUpon>

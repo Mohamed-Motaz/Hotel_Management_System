@@ -16,5 +16,17 @@ namespace Frontend.ReceptionistForms
         {
             InitializeComponent();
         }
+
+        private void addReservationButton_Click(object sender, EventArgs e)
+        {
+            AddReservation addReservation = new AddReservation();
+            addReservation.Show();
+        }
+
+        private void editOrDeleteReservationButton_Click(object sender, EventArgs e)
+        {
+            EditOrDeleteReservation editOrDeleteReservation = new EditOrDeleteReservation();
+            editOrDeleteReservation.Show();
+        }
     }
 }
