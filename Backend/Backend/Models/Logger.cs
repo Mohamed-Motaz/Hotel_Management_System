@@ -7,25 +7,25 @@ namespace Backend.Models.Loggers
 {
     public abstract class Logger
     {
-        public static int Info = 1 ;
-        public static int Debug = 2;
-        public static int Error = 3;
+        public static int ConsoleLogger = 1 ;
+        public static int FileLogger = 2;
+
         protected int level;
 
-        protected Logger nextLogger;
+        private Logger nextLogger;
 
-        public void setNextLogger(Logger NextLogger)
+        public void SetNextLogger(Logger NextLogger)
         {
             nextLogger = NextLogger;
         }
-        public void logMessages(int level, string message)
+        public void LogMessages(int level, string message)
         {
             if (this.level <= level)
-                write(message);
+                Write(message);
             if (nextLogger != null)
-                nextLogger.logMessages(level, message);
+                nextLogger.LogMessages(level, message);
         }
 
-        abstract public void write(string messages);
+        public abstract void Write(string messages);
     }
 }

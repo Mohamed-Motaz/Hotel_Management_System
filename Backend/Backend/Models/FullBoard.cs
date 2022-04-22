@@ -9,9 +9,9 @@ namespace Backend.Models
     {
         public FullBoard()
         {
-            setId(1);
-            setPrice(1500);
-            setType(1);
+            this.id = 1;
+            price = 1500;
+            type = BoardingTypes.Full;
         }
     }
 }

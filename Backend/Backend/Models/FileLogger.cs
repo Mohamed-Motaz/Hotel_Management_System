@@ -9,35 +9,23 @@ namespace Backend.Models.Loggers
 {
     public class FileLogger : Logger
     {
-        private string CurrentDirectory
-        {
-            get;
-            set;
-        }
-        private string FileName
-        {
-            get;
-            set;
-        }
-        private string FilePath
-        {
-            get;
-            set;
-        }
+        public string CurrentDirectory { get; set; }
+        public string FileName { get; set; }
+        public string FilePath { get; set; }
         public FileLogger(int level)
         {
             this.level = level;
-            this.CurrentDirectory = Directory.GetCurrentDirectory();
-            this.FileName = "Log/txt";
-            this.FilePath = this.CurrentDirectory + "/" + this.FileName;
+            this.CurrentDirectory = Apphost.CUR_DIRECTORY;
+            this.FileName = "Log.txt";
+            this.FilePath = Path.Combine(CurrentDirectory, FileName);
         }
 
-        public override void write(string messages)
+        public override void Write(string messages)
         {
 
             using (StreamWriter w = File.AppendText(this.FilePath))
             {
-                w.Write("/r/nLog Entry : ");
+                w.Write("\r\nLog Entry : ");
                 w.WriteLine("{0} {1}", DateTime.Now.ToLongTimeString(), DateTime.Now.ToLongDateString());
                 w.WriteLine("   :{0}", messages);
                 w.WriteLine("----------------------------------------------");

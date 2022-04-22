@@ -12,9 +12,9 @@ namespace Backend.Models.Loggers
         {
             this.level = level;
         }
-        public override void write(string messages)
+        public override void Write(string message)
         {
-            Console.WriteLine("This is a console message : " + messages);
+            System.Diagnostics.Debug.WriteLine(message);
         }
     }
 }

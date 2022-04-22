@@ -9,9 +9,9 @@ namespace Backend.Models.BoardTypes
     {
         public BedAndBreakfast()
         {
-            setId(3);
-            setPrice(500);
-            setType(3);
+            this.id = 3;
+            price = 500;
+            type = BoardingTypes.BedAndBreakfast;
         }
     }
 }

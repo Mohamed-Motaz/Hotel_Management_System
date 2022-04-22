@@ -9,9 +9,9 @@ namespace Backend.Models.BoardTypes
     {
         public HalfBoard()
         {
-            setId(2);
-            setPrice(1000);
-            setType(2);
+            this.id = 2;
+            price = 1000;
+            type = BoardingTypes.Half;
         }
     }
 }

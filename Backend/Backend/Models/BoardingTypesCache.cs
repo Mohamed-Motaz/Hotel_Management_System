@@ -5,19 +5,19 @@ using System.Web;
 
 namespace Backend.Models.BoardTypes
 {
-    public class BoardingTypesCahce
+    public class BoardingTypesCache
     {
         public static Dictionary<int, BoardingType> dict = new Dictionary<int, BoardingType>();
-        public static void loadCache()
+        public static void LoadCache()
         {
             FullBoard fullBoard = new FullBoard();
-            dict.Add(fullBoard.getId(), fullBoard);
+            dict.Add(fullBoard.id, fullBoard);
 
             HalfBoard halfBoard = new HalfBoard();
-            dict.Add(halfBoard.getId(), halfBoard);
+            dict.Add(halfBoard.id, halfBoard);
 
             BedAndBreakfast bedAndBreakfast = new BedAndBreakfast();
-            dict.Add(bedAndBreakfast.getId(), bedAndBreakfast);
+            dict.Add(bedAndBreakfast.id, bedAndBreakfast);
         }
 
         public static BoardingType GetBoardingType(int boardingTypeId)
