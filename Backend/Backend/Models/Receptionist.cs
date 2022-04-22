@@ -7,7 +7,7 @@ namespace Backend.Models
 {
     public class Receptionist : AbstractPrivilegedWorker
     {
-        ListCreate listOfResidents = new ListCreate();
+        ListRepositry listOfResidents = new ListRepositry();
 
         public Receptionist(int id, string userName, int age, string email, string phoneNumber, int salary, string jobTitle, string incomeType, string password) :
             base(id, userName, age, email, phoneNumber, salary, jobTitle, incomeType, password) { }

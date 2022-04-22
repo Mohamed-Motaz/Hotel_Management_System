@@ -1,4 +1,5 @@
-﻿using Backend.Models.BoardTypes;
+﻿using Backend.Models;
+using Backend.Models.BoardTypes;
 using Backend.Models.Loggers;
 using System;
 using System.Collections.Generic;
@@ -41,7 +42,6 @@ namespace Backend
             logger = GetChainOfLoggers();
             BoardingTypesCache.LoadCache();
         }
-
     }
 
    

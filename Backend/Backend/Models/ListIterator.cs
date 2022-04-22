@@ -8,8 +8,8 @@ namespace Backend.Models
     public class ListIterator : Iterator
     {
         int curIndex = 0;
-        ListCreate list;
-        public ListIterator(ListCreate list)
+        List<object> list;
+        public ListIterator(List<object> list)
         {
             this.list = list;
         }
@@ -27,17 +27,16 @@ namespace Backend.Models
         public override object getNext()
         {
             object next = null;
-            if (curIndex < list.length() - 1)
+            if (curIndex < list.Count - 1)
             {
-               next = list[++curIndex];
+               next = list[curIndex++];
             }
             return next;
         }
 
         public override bool hasNext()
         {
-            return curIndex + 1 < list.length();
-        
+            return curIndex + 1 < list.Count;
         }
     }
 }

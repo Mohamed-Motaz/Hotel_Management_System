@@ -5,12 +5,18 @@ using System.Web;
 
 namespace Backend.Models
 {
-    public class ListCreate
+    public class ListRepositry : ContainerForIterator
     {
         List<Object> list = new List<object>();
-        public Iterator createListIterator()
+        private Iterator iterator;
+        public ListRepositry(List<Object>list)
         {
-            return new ListIterator(this);
+            this.list = list;
+        }
+        public override Iterator GetIterator()
+        {
+           iterator = new ListIterator(list);
+           return iterator;
         }
         public int length()
         {
@@ -24,6 +30,7 @@ namespace Backend.Models
         {
             list.Remove(obj);
         }
+
         public object this[int index]
         {
             get { return list[index]; }
