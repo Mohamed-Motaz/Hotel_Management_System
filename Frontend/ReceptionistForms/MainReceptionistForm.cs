@@ -11,16 +11,16 @@ using MySql.Data.MySqlClient;
 using System.Data.SqlClient;
 using Frontend.Extras;
 
-namespace Frontend.ManagerForms
+namespace Frontend.ReceptionistForms
 {
-    public partial class frmMain : Form
+    public partial class frmMainReceptionist : Form
     {
 
         Dashboard dashboard = new Dashboard();
         RoomsStatus roomsStatus = new RoomsStatus();
         ManageResidents manageResidents = new ManageResidents();
         ManageWorkers manageWorkers = new ManageWorkers();
-        public frmMain()
+        public frmMainReceptionist()
         {
             InitializeComponent();
 
@@ -81,27 +81,6 @@ namespace Frontend.ManagerForms
             //comboBox1.DisplayMember = "Name";
             //comboBox1.DataSource = dt;
         }
-
-
-        private void bunifuFlatButton1_Click(object sender, EventArgs e)
-        {
-            //panel8.Visible = false;
-            //panelArhive.Visible = false;
-            //panel1.Visible = false;
-            viewRoomsStatusLine.Visible = false;
-            picPatientList.Visible = false;
-            pictureBox6.Visible = true;
-            load();
-            manageResidentsLine.Visible = false;
-            dashboardLine.Visible = false;
-            //panel7.Visible = false;
-            manageWorkersLine.Visible = false;
-
-
-        }
-
-
-       
 
         private void btnLogout_Click_1(object sender, EventArgs e)
         {
@@ -374,10 +353,9 @@ namespace Frontend.ManagerForms
         private void openDashboard()
         {
             //set the correct line
-            manageWorkersLine.Visible = false;
+            manageReservationsLine.Visible = false;
             manageResidentsLine.Visible = false;
-            dashboardLine.Visible = true;
-            viewRoomsStatusLine.Visible = false;
+
 
             dashboard = new Dashboard();
             dashboard.TopLevel = false;
@@ -394,10 +372,8 @@ namespace Frontend.ManagerForms
         private void openRoomsStatus()
         {
             //set the correct line
-            manageWorkersLine.Visible = false;
+            manageReservationsLine.Visible = false;
             manageResidentsLine.Visible = false;
-            dashboardLine.Visible = false;
-            viewRoomsStatusLine.Visible = true;
 
             roomsStatus = new RoomsStatus();
             roomsStatus.TopLevel = false;
@@ -414,10 +390,9 @@ namespace Frontend.ManagerForms
         private void openManageResidents()
         {
             //set the correct line
-            manageWorkersLine.Visible = false;
+            manageReservationsLine.Visible = false;
             manageResidentsLine.Visible = true;
-            dashboardLine.Visible = false;
-            viewRoomsStatusLine.Visible = false;
+
 
             manageResidents = new ManageResidents();
             manageResidents.TopLevel = false;
@@ -434,10 +409,8 @@ namespace Frontend.ManagerForms
         private void openManageWorkers()
         {
             //set the correct line
-            manageWorkersLine.Visible = true;
+            manageReservationsLine.Visible = true;
             manageResidentsLine.Visible = false;
-            dashboardLine.Visible = false;
-            viewRoomsStatusLine.Visible = false;
 
             manageWorkers = new ManageWorkers();
             manageWorkers.TopLevel = false;

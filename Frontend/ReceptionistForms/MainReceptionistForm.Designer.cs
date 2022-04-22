@@ -1,6 +1,6 @@
-﻿namespace Frontend.ManagerForms
+﻿namespace Frontend.ReceptionistForms
 {
-    partial class frmMain
+    partial class frmMainReceptionist
     {
         /// <summary>
         /// Required designer variable.
@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmMain));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmMainReceptionist));
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.btnLogout = new Bunifu.Framework.UI.BunifuFlatButton();
             this.label1 = new System.Windows.Forms.Label();
@@ -43,33 +43,25 @@
             this.label = new Bunifu.Framework.UI.BunifuFlatButton();
             this.date = new Bunifu.Framework.UI.BunifuFlatButton();
             this.time = new Bunifu.Framework.UI.BunifuFlatButton();
-            this.viewRoomsStatusButton = new Bunifu.Framework.UI.BunifuFlatButton();
             this.label3 = new System.Windows.Forms.Label();
             this.pictureBox5 = new System.Windows.Forms.PictureBox();
-            this.picPatientList = new System.Windows.Forms.PictureBox();
             this.pictureBox6 = new System.Windows.Forms.PictureBox();
             this.label16 = new System.Windows.Forms.Label();
             this.bunifuCards2 = new Bunifu.Framework.UI.BunifuCards();
-            this.viewRoomsStatusLine = new System.Windows.Forms.PictureBox();
             this.manageResidentsLine = new System.Windows.Forms.PictureBox();
             this.manageResidentsButton = new Bunifu.Framework.UI.BunifuFlatButton();
-            this.manageWorkersLine = new System.Windows.Forms.PictureBox();
-            this.bunifuFlatButton10 = new Bunifu.Framework.UI.BunifuFlatButton();
+            this.manageReservationsLine = new System.Windows.Forms.PictureBox();
+            this.manageReservationsButton = new Bunifu.Framework.UI.BunifuFlatButton();
             this.label2 = new System.Windows.Forms.Label();
-            this.dashboardButton = new Bunifu.Framework.UI.BunifuFlatButton();
-            this.dashboardLine = new System.Windows.Forms.PictureBox();
             this.panel1 = new System.Windows.Forms.Panel();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.picPatientList)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.viewRoomsStatusLine)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.manageResidentsLine)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.manageWorkersLine)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dashboardLine)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.manageReservationsLine)).BeginInit();
             this.SuspendLayout();
             // 
             // pictureBox1
@@ -205,7 +197,6 @@
             this.bunifuFlatButton1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.bunifuFlatButton1.Textcolor = System.Drawing.Color.White;
             this.bunifuFlatButton1.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 6.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bunifuFlatButton1.Click += new System.EventHandler(this.bunifuFlatButton1_Click);
             // 
             // timer1
             // 
@@ -326,41 +317,6 @@
             this.time.Textcolor = System.Drawing.Color.White;
             this.time.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             // 
-            // viewRoomsStatusButton
-            // 
-            this.viewRoomsStatusButton.Activecolor = System.Drawing.Color.FromArgb(((int)(((byte)(19)))), ((int)(((byte)(30)))), ((int)(((byte)(46)))));
-            this.viewRoomsStatusButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(42)))), ((int)(((byte)(64)))));
-            this.viewRoomsStatusButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.viewRoomsStatusButton.BorderRadius = 0;
-            this.viewRoomsStatusButton.ButtonText = "View Rooms Status";
-            this.viewRoomsStatusButton.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.viewRoomsStatusButton.DisabledColor = System.Drawing.Color.Gray;
-            this.viewRoomsStatusButton.Iconcolor = System.Drawing.Color.Transparent;
-            this.viewRoomsStatusButton.Iconimage = ((System.Drawing.Image)(resources.GetObject("viewRoomsStatusButton.Iconimage")));
-            this.viewRoomsStatusButton.Iconimage_right = ((System.Drawing.Image)(resources.GetObject("viewRoomsStatusButton.Iconimage_right")));
-            this.viewRoomsStatusButton.Iconimage_right_Selected = null;
-            this.viewRoomsStatusButton.Iconimage_Selected = null;
-            this.viewRoomsStatusButton.IconMarginLeft = 15;
-            this.viewRoomsStatusButton.IconMarginRight = 0;
-            this.viewRoomsStatusButton.IconRightVisible = true;
-            this.viewRoomsStatusButton.IconRightZoom = 0D;
-            this.viewRoomsStatusButton.IconVisible = true;
-            this.viewRoomsStatusButton.IconZoom = 35D;
-            this.viewRoomsStatusButton.IsTab = false;
-            this.viewRoomsStatusButton.Location = new System.Drawing.Point(1, 239);
-            this.viewRoomsStatusButton.Name = "viewRoomsStatusButton";
-            this.viewRoomsStatusButton.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(42)))), ((int)(((byte)(64)))));
-            this.viewRoomsStatusButton.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(19)))), ((int)(((byte)(30)))), ((int)(((byte)(46)))));
-            this.viewRoomsStatusButton.OnHoverTextColor = System.Drawing.Color.White;
-            this.viewRoomsStatusButton.selected = false;
-            this.viewRoomsStatusButton.Size = new System.Drawing.Size(238, 48);
-            this.viewRoomsStatusButton.TabIndex = 22;
-            this.viewRoomsStatusButton.Text = "View Rooms Status";
-            this.viewRoomsStatusButton.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.viewRoomsStatusButton.Textcolor = System.Drawing.Color.White;
-            this.viewRoomsStatusButton.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.viewRoomsStatusButton.Click += new System.EventHandler(this.viewRoomsStatus_Click);
-            // 
             // label3
             // 
             this.label3.AutoSize = true;
@@ -383,16 +339,6 @@
             this.pictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox5.TabIndex = 25;
             this.pictureBox5.TabStop = false;
-            // 
-            // picPatientList
-            // 
-            this.picPatientList.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(116)))), ((int)(((byte)(166)))));
-            this.picPatientList.Location = new System.Drawing.Point(-1, 188);
-            this.picPatientList.Name = "picPatientList";
-            this.picPatientList.Size = new System.Drawing.Size(5, 48);
-            this.picPatientList.TabIndex = 1;
-            this.picPatientList.TabStop = false;
-            this.picPatientList.Visible = false;
             // 
             // pictureBox6
             // 
@@ -428,20 +374,10 @@
             this.bunifuCards2.Size = new System.Drawing.Size(667, 397);
             this.bunifuCards2.TabIndex = 23;
             // 
-            // viewRoomsStatusLine
-            // 
-            this.viewRoomsStatusLine.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(116)))), ((int)(((byte)(166)))));
-            this.viewRoomsStatusLine.Location = new System.Drawing.Point(-1, 238);
-            this.viewRoomsStatusLine.Name = "viewRoomsStatusLine";
-            this.viewRoomsStatusLine.Size = new System.Drawing.Size(5, 48);
-            this.viewRoomsStatusLine.TabIndex = 62;
-            this.viewRoomsStatusLine.TabStop = false;
-            this.viewRoomsStatusLine.Visible = false;
-            // 
             // manageResidentsLine
             // 
             this.manageResidentsLine.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(116)))), ((int)(((byte)(166)))));
-            this.manageResidentsLine.Location = new System.Drawing.Point(-1, 289);
+            this.manageResidentsLine.Location = new System.Drawing.Point(-1, 194);
             this.manageResidentsLine.Name = "manageResidentsLine";
             this.manageResidentsLine.Size = new System.Drawing.Size(5, 48);
             this.manageResidentsLine.TabIndex = 64;
@@ -469,7 +405,7 @@
             this.manageResidentsButton.IconVisible = true;
             this.manageResidentsButton.IconZoom = 35D;
             this.manageResidentsButton.IsTab = false;
-            this.manageResidentsButton.Location = new System.Drawing.Point(1, 290);
+            this.manageResidentsButton.Location = new System.Drawing.Point(1, 195);
             this.manageResidentsButton.Name = "manageResidentsButton";
             this.manageResidentsButton.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(42)))), ((int)(((byte)(64)))));
             this.manageResidentsButton.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(19)))), ((int)(((byte)(30)))), ((int)(((byte)(46)))));
@@ -483,50 +419,50 @@
             this.manageResidentsButton.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.manageResidentsButton.Click += new System.EventHandler(this.manageResidentsButton_Click);
             // 
-            // manageWorkersLine
+            // manageReservationsLine
             // 
-            this.manageWorkersLine.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(116)))), ((int)(((byte)(166)))));
-            this.manageWorkersLine.Location = new System.Drawing.Point(-1, 340);
-            this.manageWorkersLine.Name = "manageWorkersLine";
-            this.manageWorkersLine.Size = new System.Drawing.Size(5, 48);
-            this.manageWorkersLine.TabIndex = 193;
-            this.manageWorkersLine.TabStop = false;
-            this.manageWorkersLine.Visible = false;
+            this.manageReservationsLine.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(116)))), ((int)(((byte)(166)))));
+            this.manageReservationsLine.Location = new System.Drawing.Point(-1, 245);
+            this.manageReservationsLine.Name = "manageReservationsLine";
+            this.manageReservationsLine.Size = new System.Drawing.Size(5, 48);
+            this.manageReservationsLine.TabIndex = 193;
+            this.manageReservationsLine.TabStop = false;
+            this.manageReservationsLine.Visible = false;
             // 
-            // bunifuFlatButton10
+            // manageReservationsButton
             // 
-            this.bunifuFlatButton10.Activecolor = System.Drawing.Color.FromArgb(((int)(((byte)(19)))), ((int)(((byte)(30)))), ((int)(((byte)(46)))));
-            this.bunifuFlatButton10.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(42)))), ((int)(((byte)(64)))));
-            this.bunifuFlatButton10.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.bunifuFlatButton10.BorderRadius = 0;
-            this.bunifuFlatButton10.ButtonText = "Manage Workers";
-            this.bunifuFlatButton10.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.bunifuFlatButton10.DisabledColor = System.Drawing.Color.Gray;
-            this.bunifuFlatButton10.Iconcolor = System.Drawing.Color.Transparent;
-            this.bunifuFlatButton10.Iconimage = ((System.Drawing.Image)(resources.GetObject("bunifuFlatButton10.Iconimage")));
-            this.bunifuFlatButton10.Iconimage_right = ((System.Drawing.Image)(resources.GetObject("bunifuFlatButton10.Iconimage_right")));
-            this.bunifuFlatButton10.Iconimage_right_Selected = null;
-            this.bunifuFlatButton10.Iconimage_Selected = null;
-            this.bunifuFlatButton10.IconMarginLeft = 15;
-            this.bunifuFlatButton10.IconMarginRight = 0;
-            this.bunifuFlatButton10.IconRightVisible = true;
-            this.bunifuFlatButton10.IconRightZoom = 0D;
-            this.bunifuFlatButton10.IconVisible = true;
-            this.bunifuFlatButton10.IconZoom = 35D;
-            this.bunifuFlatButton10.IsTab = false;
-            this.bunifuFlatButton10.Location = new System.Drawing.Point(1, 341);
-            this.bunifuFlatButton10.Name = "bunifuFlatButton10";
-            this.bunifuFlatButton10.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(42)))), ((int)(((byte)(64)))));
-            this.bunifuFlatButton10.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(19)))), ((int)(((byte)(30)))), ((int)(((byte)(46)))));
-            this.bunifuFlatButton10.OnHoverTextColor = System.Drawing.Color.White;
-            this.bunifuFlatButton10.selected = false;
-            this.bunifuFlatButton10.Size = new System.Drawing.Size(238, 48);
-            this.bunifuFlatButton10.TabIndex = 192;
-            this.bunifuFlatButton10.Text = "Manage Workers";
-            this.bunifuFlatButton10.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.bunifuFlatButton10.Textcolor = System.Drawing.Color.White;
-            this.bunifuFlatButton10.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bunifuFlatButton10.Click += new System.EventHandler(this.manageWorkersButton_Click);
+            this.manageReservationsButton.Activecolor = System.Drawing.Color.FromArgb(((int)(((byte)(19)))), ((int)(((byte)(30)))), ((int)(((byte)(46)))));
+            this.manageReservationsButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(42)))), ((int)(((byte)(64)))));
+            this.manageReservationsButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.manageReservationsButton.BorderRadius = 0;
+            this.manageReservationsButton.ButtonText = "Manage Reservations";
+            this.manageReservationsButton.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.manageReservationsButton.DisabledColor = System.Drawing.Color.Gray;
+            this.manageReservationsButton.Iconcolor = System.Drawing.Color.Transparent;
+            this.manageReservationsButton.Iconimage = ((System.Drawing.Image)(resources.GetObject("manageReservationsButton.Iconimage")));
+            this.manageReservationsButton.Iconimage_right = ((System.Drawing.Image)(resources.GetObject("manageReservationsButton.Iconimage_right")));
+            this.manageReservationsButton.Iconimage_right_Selected = null;
+            this.manageReservationsButton.Iconimage_Selected = null;
+            this.manageReservationsButton.IconMarginLeft = 15;
+            this.manageReservationsButton.IconMarginRight = 0;
+            this.manageReservationsButton.IconRightVisible = true;
+            this.manageReservationsButton.IconRightZoom = 0D;
+            this.manageReservationsButton.IconVisible = true;
+            this.manageReservationsButton.IconZoom = 35D;
+            this.manageReservationsButton.IsTab = false;
+            this.manageReservationsButton.Location = new System.Drawing.Point(1, 246);
+            this.manageReservationsButton.Name = "manageReservationsButton";
+            this.manageReservationsButton.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(42)))), ((int)(((byte)(64)))));
+            this.manageReservationsButton.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(19)))), ((int)(((byte)(30)))), ((int)(((byte)(46)))));
+            this.manageReservationsButton.OnHoverTextColor = System.Drawing.Color.White;
+            this.manageReservationsButton.selected = false;
+            this.manageReservationsButton.Size = new System.Drawing.Size(238, 48);
+            this.manageReservationsButton.TabIndex = 192;
+            this.manageReservationsButton.Text = "Manage Reservations";
+            this.manageReservationsButton.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.manageReservationsButton.Textcolor = System.Drawing.Color.White;
+            this.manageReservationsButton.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.manageReservationsButton.Click += new System.EventHandler(this.manageWorkersButton_Click);
             // 
             // label2
             // 
@@ -541,51 +477,6 @@
             this.label2.Text = "Total Entries:";
             this.label2.Click += new System.EventHandler(this.label2_Click);
             // 
-            // dashboardButton
-            // 
-            this.dashboardButton.Activecolor = System.Drawing.Color.FromArgb(((int)(((byte)(19)))), ((int)(((byte)(30)))), ((int)(((byte)(46)))));
-            this.dashboardButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(42)))), ((int)(((byte)(64)))));
-            this.dashboardButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.dashboardButton.BorderRadius = 0;
-            this.dashboardButton.ButtonText = "Dashboard";
-            this.dashboardButton.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.dashboardButton.DisabledColor = System.Drawing.Color.Gray;
-            this.dashboardButton.Iconcolor = System.Drawing.Color.Transparent;
-            this.dashboardButton.Iconimage = ((System.Drawing.Image)(resources.GetObject("dashboardButton.Iconimage")));
-            this.dashboardButton.Iconimage_right = ((System.Drawing.Image)(resources.GetObject("dashboardButton.Iconimage_right")));
-            this.dashboardButton.Iconimage_right_Selected = null;
-            this.dashboardButton.Iconimage_Selected = null;
-            this.dashboardButton.IconMarginLeft = 15;
-            this.dashboardButton.IconMarginRight = 0;
-            this.dashboardButton.IconRightVisible = true;
-            this.dashboardButton.IconRightZoom = 0D;
-            this.dashboardButton.IconVisible = true;
-            this.dashboardButton.IconZoom = 35D;
-            this.dashboardButton.IsTab = false;
-            this.dashboardButton.Location = new System.Drawing.Point(1, 188);
-            this.dashboardButton.Name = "dashboardButton";
-            this.dashboardButton.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(42)))), ((int)(((byte)(64)))));
-            this.dashboardButton.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(19)))), ((int)(((byte)(30)))), ((int)(((byte)(46)))));
-            this.dashboardButton.OnHoverTextColor = System.Drawing.Color.White;
-            this.dashboardButton.selected = false;
-            this.dashboardButton.Size = new System.Drawing.Size(238, 48);
-            this.dashboardButton.TabIndex = 207;
-            this.dashboardButton.Text = "Dashboard";
-            this.dashboardButton.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.dashboardButton.Textcolor = System.Drawing.Color.White;
-            this.dashboardButton.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dashboardButton.Click += new System.EventHandler(this.dashboardButton_Click);
-            // 
-            // dashboardLine
-            // 
-            this.dashboardLine.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(116)))), ((int)(((byte)(166)))));
-            this.dashboardLine.Location = new System.Drawing.Point(-1, 188);
-            this.dashboardLine.Name = "dashboardLine";
-            this.dashboardLine.Size = new System.Drawing.Size(5, 48);
-            this.dashboardLine.TabIndex = 208;
-            this.dashboardLine.TabStop = false;
-            this.dashboardLine.Visible = false;
-            // 
             // panel1
             // 
             this.panel1.Location = new System.Drawing.Point(239, 42);
@@ -593,7 +484,7 @@
             this.panel1.Size = new System.Drawing.Size(1136, 739);
             this.panel1.TabIndex = 209;
             // 
-            // frmMain
+            // frmMainReceptionist
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -601,20 +492,15 @@
             this.ClientSize = new System.Drawing.Size(1370, 772);
             this.Controls.Add(this.activeUserLabel);
             this.Controls.Add(this.panel1);
-            this.Controls.Add(this.dashboardLine);
-            this.Controls.Add(this.dashboardButton);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.manageWorkersLine);
-            this.Controls.Add(this.bunifuFlatButton10);
+            this.Controls.Add(this.manageReservationsLine);
+            this.Controls.Add(this.manageReservationsButton);
             this.Controls.Add(this.manageResidentsLine);
             this.Controls.Add(this.manageResidentsButton);
-            this.Controls.Add(this.viewRoomsStatusLine);
             this.Controls.Add(this.pictureBox6);
-            this.Controls.Add(this.picPatientList);
             this.Controls.Add(this.pictureBox5);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.pictureBox3);
-            this.Controls.Add(this.viewRoomsStatusButton);
             this.Controls.Add(this.time);
             this.Controls.Add(this.date);
             this.Controls.Add(this.label);
@@ -627,7 +513,7 @@
             this.Controls.Add(this.pictureBox1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Name = "frmMain";
+            this.Name = "frmMainReceptionist";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Main";
             this.Load += new System.EventHandler(this.frmMain_Load);
@@ -636,12 +522,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.picPatientList)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.viewRoomsStatusLine)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.manageResidentsLine)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.manageWorkersLine)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dashboardLine)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.manageReservationsLine)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -662,22 +545,17 @@
         private Bunifu.Framework.UI.BunifuFlatButton label;
         private Bunifu.Framework.UI.BunifuFlatButton date;
         private Bunifu.Framework.UI.BunifuFlatButton time;
-        private Bunifu.Framework.UI.BunifuFlatButton viewRoomsStatusButton;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.PictureBox pictureBox5;
-        private System.Windows.Forms.PictureBox picPatientList;
         private System.Windows.Forms.PictureBox pictureBox6;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Label label16;
         private Bunifu.Framework.UI.BunifuCards bunifuCards2;
-        private System.Windows.Forms.PictureBox viewRoomsStatusLine;
         private System.Windows.Forms.PictureBox manageResidentsLine;
         private Bunifu.Framework.UI.BunifuFlatButton manageResidentsButton;
-        private System.Windows.Forms.PictureBox manageWorkersLine;
-        private Bunifu.Framework.UI.BunifuFlatButton bunifuFlatButton10;
+        private System.Windows.Forms.PictureBox manageReservationsLine;
+        private Bunifu.Framework.UI.BunifuFlatButton manageReservationsButton;
         private System.Windows.Forms.Label label2;
-        private Bunifu.Framework.UI.BunifuFlatButton dashboardButton;
-        private System.Windows.Forms.PictureBox dashboardLine;
         private System.Windows.Forms.Panel panel1;
     }
 }
