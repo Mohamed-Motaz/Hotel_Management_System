@@ -17,6 +17,7 @@ namespace Frontend
     {
         ArchivePanel archivePanel = new ArchivePanel();
         ManageClinicPanel clinicPanel = new ManageClinicPanel();
+        Dashboard dashboard = new Dashboard();
         public frmMain()
         {
             InitializeComponent();
@@ -86,7 +87,7 @@ namespace Frontend
             //panel8.Visible = false;
             line5.Visible = false;
             line4.Visible = false;
-            line1.Visible = false;
+            dashboardLine.Visible = false;
             //panelArhive.Visible = false;
             picPatientList.Visible = true;
             line3.Visible = false;
@@ -114,7 +115,7 @@ namespace Frontend
             pictureBox6.Visible = true;
             load();
             line4.Visible = false;
-            line1.Visible = false;
+            dashboardLine.Visible = false;
             //panel7.Visible = false;
             line5.Visible = false;
 
@@ -200,7 +201,7 @@ namespace Frontend
         {
             //panel8.Visible = false;
             line5.Visible = false;
-            line1.Visible = false;
+            dashboardLine.Visible = false;
             line4.Visible = false;
             picPatientList.Visible = false;
             line3.Visible = true;
@@ -468,7 +469,7 @@ namespace Frontend
         {
             line5.Visible = false;
             line4.Visible = true;
-            line1.Visible = false;
+            dashboardLine.Visible = false;
             picPatientList.Visible = false;
             pictureBox6.Visible = false;
             line3.Visible = false;
@@ -487,8 +488,35 @@ namespace Frontend
 
         private void clearAllPanels()
         {
-            archivePanel.Close();
-            clinicPanel.Close();
+            try { this.panel1.Controls.Remove(archivePanel); } catch (Exception e) { }
+            try { this.panel1.Controls.Remove(clinicPanel); } catch (Exception e) { }
+            try { this.panel1.Controls.Remove(dashboard); } catch (Exception e) { }
+
+            try { archivePanel.Close(); }catch(Exception e) { }
+            try { clinicPanel.Close(); } catch (Exception e) { }
+            try { dashboard.Close(); } catch (Exception e) { }
+        }
+
+        private void openDashboard()
+        {
+            //set the correct line
+            line5.Visible = false;
+            line4.Visible = false;
+            dashboardLine.Visible = true;
+            picPatientList.Visible = false;
+            pictureBox6.Visible = false;
+            line3.Visible = false;
+
+            dashboard = new Dashboard();
+            dashboard.TopLevel = false;
+            dashboard.AutoScroll = true;
+            dashboard.TopMost = true;
+            dashboard.Dock = DockStyle.Fill;
+            dashboard.ControlBox = false;
+            dashboard.Text = String.Empty;
+
+            this.panel1.Controls.Add(dashboard);
+            dashboard.Show();
         }
 
         private void bunifuTileButton1_Click(object sender, EventArgs e)
@@ -519,7 +547,7 @@ namespace Frontend
 
 
             //panel8.Visible = true;
-            line1.Visible = false; 
+            dashboardLine.Visible = false; 
             picPatientList.Visible = false;
             pictureBox6.Visible = false;
             line3.Visible = false;
@@ -949,26 +977,18 @@ namespace Frontend
 
         }
 
-        private void bunifuFlatButton2_Click_1(object sender, EventArgs e)
-        {
-            line5.Visible = false;
-            line4.Visible = false;
-            line1.Visible = true;
-            picPatientList.Visible = false;
-            pictureBox6.Visible = false;
-            line3.Visible = false;
-
-            archivePanel.TopLevel = false;
-            archivePanel.AutoScroll = true;
-            archivePanel.TopMost = true;
-            archivePanel.Dock = DockStyle.Fill;
-            this.panel1.Controls.Add(archivePanel);
-            archivePanel.Show();
-
-        }
 
         private void pictureBox2_Click(object sender, EventArgs e)
         {
+
+        }
+
+        private void dashboardButton_Click(object sender, EventArgs e)
+        {
+            clearAllPanels();
+            openDashboard();
+            
+
 
         }
 

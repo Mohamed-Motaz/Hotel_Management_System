@@ -56,8 +56,8 @@
             this.line5 = new System.Windows.Forms.PictureBox();
             this.bunifuFlatButton10 = new Bunifu.Framework.UI.BunifuFlatButton();
             this.label2 = new System.Windows.Forms.Label();
-            this.bunifuFlatButton2 = new Bunifu.Framework.UI.BunifuFlatButton();
-            this.line1 = new System.Windows.Forms.PictureBox();
+            this.dashboardButton = new Bunifu.Framework.UI.BunifuFlatButton();
+            this.dashboardLine = new System.Windows.Forms.PictureBox();
             this.panel1 = new System.Windows.Forms.Panel();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
@@ -69,7 +69,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.line3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.line4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.line5)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.line1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dashboardLine)).BeginInit();
             this.SuspendLayout();
             // 
             // pictureBox1
@@ -541,50 +541,50 @@
             this.label2.Text = "Total Entries:";
             this.label2.Click += new System.EventHandler(this.label2_Click);
             // 
-            // bunifuFlatButton2
+            // dashboardButton
             // 
-            this.bunifuFlatButton2.Activecolor = System.Drawing.Color.FromArgb(((int)(((byte)(19)))), ((int)(((byte)(30)))), ((int)(((byte)(46)))));
-            this.bunifuFlatButton2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(42)))), ((int)(((byte)(64)))));
-            this.bunifuFlatButton2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.bunifuFlatButton2.BorderRadius = 0;
-            this.bunifuFlatButton2.ButtonText = " Clinic Archive";
-            this.bunifuFlatButton2.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.bunifuFlatButton2.DisabledColor = System.Drawing.Color.Gray;
-            this.bunifuFlatButton2.Iconcolor = System.Drawing.Color.Transparent;
-            this.bunifuFlatButton2.Iconimage = ((System.Drawing.Image)(resources.GetObject("bunifuFlatButton2.Iconimage")));
-            this.bunifuFlatButton2.Iconimage_right = ((System.Drawing.Image)(resources.GetObject("bunifuFlatButton2.Iconimage_right")));
-            this.bunifuFlatButton2.Iconimage_right_Selected = null;
-            this.bunifuFlatButton2.Iconimage_Selected = null;
-            this.bunifuFlatButton2.IconMarginLeft = 15;
-            this.bunifuFlatButton2.IconMarginRight = 0;
-            this.bunifuFlatButton2.IconRightVisible = true;
-            this.bunifuFlatButton2.IconRightZoom = 0D;
-            this.bunifuFlatButton2.IconVisible = true;
-            this.bunifuFlatButton2.IconZoom = 35D;
-            this.bunifuFlatButton2.IsTab = false;
-            this.bunifuFlatButton2.Location = new System.Drawing.Point(1, 188);
-            this.bunifuFlatButton2.Name = "bunifuFlatButton2";
-            this.bunifuFlatButton2.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(42)))), ((int)(((byte)(64)))));
-            this.bunifuFlatButton2.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(19)))), ((int)(((byte)(30)))), ((int)(((byte)(46)))));
-            this.bunifuFlatButton2.OnHoverTextColor = System.Drawing.Color.White;
-            this.bunifuFlatButton2.selected = false;
-            this.bunifuFlatButton2.Size = new System.Drawing.Size(238, 48);
-            this.bunifuFlatButton2.TabIndex = 207;
-            this.bunifuFlatButton2.Text = " Clinic Archive";
-            this.bunifuFlatButton2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.bunifuFlatButton2.Textcolor = System.Drawing.Color.White;
-            this.bunifuFlatButton2.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bunifuFlatButton2.Click += new System.EventHandler(this.bunifuFlatButton2_Click_1);
+            this.dashboardButton.Activecolor = System.Drawing.Color.FromArgb(((int)(((byte)(19)))), ((int)(((byte)(30)))), ((int)(((byte)(46)))));
+            this.dashboardButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(42)))), ((int)(((byte)(64)))));
+            this.dashboardButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.dashboardButton.BorderRadius = 0;
+            this.dashboardButton.ButtonText = "Dashboard";
+            this.dashboardButton.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.dashboardButton.DisabledColor = System.Drawing.Color.Gray;
+            this.dashboardButton.Iconcolor = System.Drawing.Color.Transparent;
+            this.dashboardButton.Iconimage = ((System.Drawing.Image)(resources.GetObject("dashboardButton.Iconimage")));
+            this.dashboardButton.Iconimage_right = ((System.Drawing.Image)(resources.GetObject("dashboardButton.Iconimage_right")));
+            this.dashboardButton.Iconimage_right_Selected = null;
+            this.dashboardButton.Iconimage_Selected = null;
+            this.dashboardButton.IconMarginLeft = 15;
+            this.dashboardButton.IconMarginRight = 0;
+            this.dashboardButton.IconRightVisible = true;
+            this.dashboardButton.IconRightZoom = 0D;
+            this.dashboardButton.IconVisible = true;
+            this.dashboardButton.IconZoom = 35D;
+            this.dashboardButton.IsTab = false;
+            this.dashboardButton.Location = new System.Drawing.Point(1, 188);
+            this.dashboardButton.Name = "dashboardButton";
+            this.dashboardButton.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(42)))), ((int)(((byte)(64)))));
+            this.dashboardButton.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(19)))), ((int)(((byte)(30)))), ((int)(((byte)(46)))));
+            this.dashboardButton.OnHoverTextColor = System.Drawing.Color.White;
+            this.dashboardButton.selected = false;
+            this.dashboardButton.Size = new System.Drawing.Size(238, 48);
+            this.dashboardButton.TabIndex = 207;
+            this.dashboardButton.Text = "Dashboard";
+            this.dashboardButton.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.dashboardButton.Textcolor = System.Drawing.Color.White;
+            this.dashboardButton.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dashboardButton.Click += new System.EventHandler(this.dashboardButton_Click);
             // 
-            // line1
+            // dashboardLine
             // 
-            this.line1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(116)))), ((int)(((byte)(166)))));
-            this.line1.Location = new System.Drawing.Point(-1, 188);
-            this.line1.Name = "line1";
-            this.line1.Size = new System.Drawing.Size(5, 48);
-            this.line1.TabIndex = 208;
-            this.line1.TabStop = false;
-            this.line1.Visible = false;
+            this.dashboardLine.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(116)))), ((int)(((byte)(166)))));
+            this.dashboardLine.Location = new System.Drawing.Point(-1, 188);
+            this.dashboardLine.Name = "dashboardLine";
+            this.dashboardLine.Size = new System.Drawing.Size(5, 48);
+            this.dashboardLine.TabIndex = 208;
+            this.dashboardLine.TabStop = false;
+            this.dashboardLine.Visible = false;
             // 
             // panel1
             // 
@@ -600,8 +600,8 @@
             this.BackColor = System.Drawing.SystemColors.ControlLight;
             this.ClientSize = new System.Drawing.Size(1370, 772);
             this.Controls.Add(this.panel1);
-            this.Controls.Add(this.line1);
-            this.Controls.Add(this.bunifuFlatButton2);
+            this.Controls.Add(this.dashboardLine);
+            this.Controls.Add(this.dashboardButton);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.line5);
             this.Controls.Add(this.bunifuFlatButton10);
@@ -641,7 +641,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.line3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.line4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.line5)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.line1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dashboardLine)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -676,8 +676,8 @@
         private System.Windows.Forms.PictureBox line5;
         private Bunifu.Framework.UI.BunifuFlatButton bunifuFlatButton10;
         private System.Windows.Forms.Label label2;
-        private Bunifu.Framework.UI.BunifuFlatButton bunifuFlatButton2;
-        private System.Windows.Forms.PictureBox line1;
+        private Bunifu.Framework.UI.BunifuFlatButton dashboardButton;
+        private System.Windows.Forms.PictureBox dashboardLine;
         private System.Windows.Forms.Panel panel1;
     }
 }

@@ -10,11 +10,12 @@ using System.Windows.Forms;
 
 namespace Frontend.Extras
 {
-    public partial class BasePanel : Form
+    public partial class Dashboard : Form
     {
-        public BasePanel()
+        public Dashboard()
         {
             InitializeComponent();
         }
+
     }
 }

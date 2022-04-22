@@ -85,11 +85,11 @@
     <Compile Include="Extras\ArchivePanel.Designer.cs">
       <DependentUpon>ArchivePanel.cs</DependentUpon>
     </Compile>
-    <Compile Include="Extras\BasePanel.cs">
+    <Compile Include="Extras\Dashboard.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Extras\BasePanel.Designer.cs">
-      <DependentUpon>BasePanel.cs</DependentUpon>
+    <Compile Include="Extras\Dashboard.Designer.cs">
+      <DependentUpon>Dashboard.cs</DependentUpon>
     </Compile>
     <Compile Include="Extras\DiagnosisPanel.cs">
       <SubType>Form</SubType>
@@ -175,8 +175,8 @@
     <EmbeddedResource Include="Extras\ArchivePanel.resx">
       <DependentUpon>ArchivePanel.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Extras\BasePanel.resx">
-      <DependentUpon>BasePanel.cs</DependentUpon>
+    <EmbeddedResource Include="Extras\Dashboard.resx">
+      <DependentUpon>Dashboard.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Extras\DiagnosisPanel.resx">
       <DependentUpon>DiagnosisPanel.cs</DependentUpon>

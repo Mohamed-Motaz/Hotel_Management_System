@@ -44,6 +44,6 @@ C:\Users\Mohamed Motaz\Desktop\HotelManagementSystem\Frontend\obj\Debug\Frontend
 C:\Users\Mohamed Motaz\Desktop\HotelManagementSystem\Frontend\obj\Debug\Frontend.pdb
 C:\Users\Mohamed Motaz\Desktop\HotelManagementSystem\Frontend\obj\Debug\Frontend.MainForms.ManagerForm.resources
 C:\Users\Mohamed Motaz\Desktop\HotelManagementSystem\Frontend\obj\Debug\Frontend.Extras.ArchivePanel.resources
-C:\Users\Mohamed Motaz\Desktop\HotelManagementSystem\Frontend\obj\Debug\Frontend.Extras.BasePanel.resources
 C:\Users\Mohamed Motaz\Desktop\HotelManagementSystem\Frontend\obj\Debug\Frontend.Extras.ManageClinicPanel.resources
 C:\Users\Mohamed Motaz\Desktop\HotelManagementSystem\Frontend\obj\Debug\Frontend.Extras.PatientDiagnosisPanel.resources
+C:\Users\Mohamed Motaz\Desktop\HotelManagementSystem\Frontend\obj\Debug\Frontend.Extras.Dashboard.resources
