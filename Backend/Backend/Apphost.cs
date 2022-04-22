@@ -30,7 +30,13 @@ namespace Backend
     public enum BoardingType
     {
         Full,
-        Hald,
+        Half,
         BedAndBreakfast
+    }
+
+    public enum RoomStatus
+    {
+        Reserved,
+        Available
     }
 }

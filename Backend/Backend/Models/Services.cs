@@ -6,15 +6,11 @@ namespace Backend.Models
 {
     class Services
     {
-        public int MAX_SINGLE_ROOMS = 30;
-        public int MAX_DOUBLE_ROOMS = 30;
-        public int MAX_TRIPLE_ROOMS = 30;
-
         private Services(){ }
 
         private static Services services = null;
 
-        public static Services getInstance() 
+        public static Services GetInstance() 
         {
             if (services == null) 
             {
@@ -24,27 +20,21 @@ namespace Backend.Models
         }
 
 
-        public bool checkIfRoomAvailable(RoomType type)
+        public bool CheckIfRoomAvailable(RoomType type)
         {
-            bool isAvailable = false;
+            if ((type == RoomType.Single) && (Apphost.CURR_SINGLE_ROOMS < Apphost.MAX_SINGLE_ROOMS))
+                return true;
 
-            if ( (type == RoomType.Single) && (MAX_SINGLE_ROOMS > 0) )
-            {
-                isAvailable = true;
-            }
-            else if ((type == RoomType.Double) && (MAX_DOUBLE_ROOMS > 0))
-            {
-                isAvailable = true;
-            }
-            else if ((type == RoomType.Triple) && (MAX_TRIPLE_ROOMS > 0))
-            {
-                isAvailable = true;
-            }
+            if ((type == RoomType.Double) && (Apphost.CURR_DOUBLE_ROOMS < Apphost.MAX_DOUBLE_ROOMS))
+                return true;
 
-            return isAvailable;
+            if ((type == RoomType.Triple) && (Apphost.CURR_TRIPLE_ROOMS < Apphost.MAX_TRIPLE_ROOMS))
+                return true;
+
+            return false;
         }
 
-        public void printDividor()
+        public void PrintDividor()
         {
             Console.WriteLine("==================================================================");
         }

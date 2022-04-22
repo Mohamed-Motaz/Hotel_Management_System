@@ -4,32 +4,28 @@ using System.Text;
 
 namespace Backend.Models.Rooms
 {
-    enum Status{ Reserved, NotReserved }
-    enum RoomType{ Single, Double, Triple }
-
     
-
     abstract class Room
     {
 
-        public int Id;
-        public RoomType type;
-        public double pricePerNight;
-        public Status status;
+        public int Id { get; set; }
+        public RoomType Type { get; set; }
+        public double PricePerNight { get; set; }
+        public RoomStatus Status { get; set; }
 
-        public Room(int id, RoomType type, double pricePerNight, Status status) {
+        public Room(int id, RoomType type, double pricePerNight, RoomStatus status) {
             this.Id = id;
-            this.type = type;
-            this.pricePerNight = pricePerNight;
-            this.status = status;
+            this.Type = type;
+            this.PricePerNight = pricePerNight;
+            this.Status = status;
         }
 
-        public virtual String showRoomInfo() 
+        public virtual String ShowRoomInfo() 
         {
             return "Room #"+Id+":\n"
-                +"Type: "+type+"\n"
-                +"Price Per Night: " + pricePerNight + "\n"
-                +"Status: " + status + "\n";
+                +"Type: "+Type+"\n"
+                +"Price Per Night: " + RricePerNight + "\n"
+                +"Status: " + Status + "\n";
         }
 
     }

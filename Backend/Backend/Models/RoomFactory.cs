@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Backend.Models.Rooms;
+using System;
 using System.Collections.Generic;
 using System.Text;
 
@@ -6,53 +7,58 @@ namespace Backend.Models
 {
     class RoomFactory
     {
-        Services myServices = Services.getInstance();
-
-        public Room getRoom(RoomType type)
+        private Services myServices = Services.GetInstance();
+        //TODO, add and remove from iterator object
+        public Room GetRoom(RoomType type)
         {
-            Room room = null;
-
             if(type == RoomType.Single)
             {
-                if(myServices.checkIfRoomAvailable(type)) 
+                if(myServices.CheckIfRoomAvailable(type)) 
                 {
-                    room = new SingleRoom(
-                        100 + myServices.MAX_SINGLE_ROOMS,
+                    Apphost.CURR_SINGLE_ROOMS++;
+                    return new SingleRoom(
+                        100 + Apphost.CURR_SINGLE_ROOMS,
                         RoomType.Single,
                         2700,
-                        Status.Reserved
+                        RoomStatus.Reserved
                     );
-                    myServices.MAX_SINGLE_ROOMS--;
                 }
-            }
-            else if (type == RoomType.Double)
-            {
-                if (myServices.checkIfRoomAvailable(type))
-                {
-                    room = new DoubleRoom(
-                        200 + myServices.MAX_DOUBLE_ROOMS,
-                        RoomType.Double,
-                        4000,
-                        Status.Reserved
-                    );
-                    myServices.MAX_DOUBLE_ROOMS--;
-                }
-            }
-            else
-            {
-                if (myServices.checkIfRoomAvailable(type))
-                {
-                    room = new TripleRoom(
-                        200 + myServices.MAX_DOUBLE_ROOMS,
-                        RoomType.Triple,
-                        4800,
-                        Status.Reserved
-                    );
-                    myServices.MAX_TRIPLE_ROOMS--;
-                }
+                else
+                    return null;
             }
 
-            return room;
+            if (type == RoomType.Double)
+            {
+                if (myServices.CheckIfRoomAvailable(type))
+                {
+                    Apphost.CURR_DOUBLE_ROOMS++;
+                    return new DoubleRoom(
+                        200 + Apphost.CURR_DOUBLE_ROOMS,
+                        RoomType.Double,
+                        4000,
+                        RoomStatus.Reserved
+                    );
+                }
+                else
+                    return null;
+            }
+            if (type == RoomType.Triple)
+            {
+                if (myServices.CheckIfRoomAvailable(type))
+                {
+                    Apphost.CURR_TRIPLE_ROOMS++;
+                    return new TripleRoom(
+                        200 + Apphost.CURR_TRIPLE_ROOMS,
+                        RoomType.Triple,
+                        4800,
+                        RoomStatus.Reserved
+                    );
+                }
+                else
+                    return null;
+            }
+
+            return null;
         }
     }
 }
