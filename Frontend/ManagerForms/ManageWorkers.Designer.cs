@@ -34,9 +34,8 @@ namespace Frontend.Extras
             this.bunifuSeparator1 = new Bunifu.Framework.UI.BunifuSeparator();
             this.label2 = new System.Windows.Forms.Label();
             this.workersListButton = new Bunifu.Framework.UI.BunifuTileButton();
-            this.bunifuTileButton1 = new Bunifu.Framework.UI.BunifuTileButton();
-            this.bunifuTileButton2 = new Bunifu.Framework.UI.BunifuTileButton();
-            this.bunifuTileButton3 = new Bunifu.Framework.UI.BunifuTileButton();
+            this.editOrDeleteWorkerButton = new Bunifu.Framework.UI.BunifuTileButton();
+            this.addWorkerButton = new Bunifu.Framework.UI.BunifuTileButton();
             this.SuspendLayout();
             // 
             // label1
@@ -91,72 +90,55 @@ namespace Frontend.Extras
             this.workersListButton.Name = "workersListButton";
             this.workersListButton.Size = new System.Drawing.Size(167, 155);
             this.workersListButton.TabIndex = 76;
+            this.workersListButton.Click += new System.EventHandler(this.workersListButton_Click);
             // 
-            // bunifuTileButton1
+            // editOrDeleteWorkerButton
             // 
-            this.bunifuTileButton1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
-            this.bunifuTileButton1.color = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
-            this.bunifuTileButton1.colorActive = System.Drawing.Color.FromArgb(((int)(((byte)(43)))), ((int)(((byte)(179)))), ((int)(((byte)(212)))));
-            this.bunifuTileButton1.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.bunifuTileButton1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F);
-            this.bunifuTileButton1.ForeColor = System.Drawing.Color.White;
-            this.bunifuTileButton1.Image = ((System.Drawing.Image)(resources.GetObject("bunifuTileButton1.Image")));
-            this.bunifuTileButton1.ImagePosition = 20;
-            this.bunifuTileButton1.ImageZoom = 50;
-            this.bunifuTileButton1.LabelPosition = 41;
-            this.bunifuTileButton1.LabelText = "Edit Worker";
-            this.bunifuTileButton1.Location = new System.Drawing.Point(311, 351);
-            this.bunifuTileButton1.Margin = new System.Windows.Forms.Padding(6);
-            this.bunifuTileButton1.Name = "bunifuTileButton1";
-            this.bunifuTileButton1.Size = new System.Drawing.Size(167, 155);
-            this.bunifuTileButton1.TabIndex = 77;
+            this.editOrDeleteWorkerButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
+            this.editOrDeleteWorkerButton.color = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
+            this.editOrDeleteWorkerButton.colorActive = System.Drawing.Color.FromArgb(((int)(((byte)(43)))), ((int)(((byte)(179)))), ((int)(((byte)(212)))));
+            this.editOrDeleteWorkerButton.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.editOrDeleteWorkerButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F);
+            this.editOrDeleteWorkerButton.ForeColor = System.Drawing.Color.White;
+            this.editOrDeleteWorkerButton.Image = ((System.Drawing.Image)(resources.GetObject("editOrDeleteWorkerButton.Image")));
+            this.editOrDeleteWorkerButton.ImagePosition = 20;
+            this.editOrDeleteWorkerButton.ImageZoom = 50;
+            this.editOrDeleteWorkerButton.LabelPosition = 41;
+            this.editOrDeleteWorkerButton.LabelText = "Edit or Delete Worker";
+            this.editOrDeleteWorkerButton.Location = new System.Drawing.Point(186, 344);
+            this.editOrDeleteWorkerButton.Margin = new System.Windows.Forms.Padding(6);
+            this.editOrDeleteWorkerButton.Name = "editOrDeleteWorkerButton";
+            this.editOrDeleteWorkerButton.Size = new System.Drawing.Size(228, 158);
+            this.editOrDeleteWorkerButton.TabIndex = 78;
+            this.editOrDeleteWorkerButton.Click += new System.EventHandler(this.editOrDeleteWorkerButton_Click);
             // 
-            // bunifuTileButton2
+            // addWorkerButton
             // 
-            this.bunifuTileButton2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
-            this.bunifuTileButton2.color = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
-            this.bunifuTileButton2.colorActive = System.Drawing.Color.FromArgb(((int)(((byte)(43)))), ((int)(((byte)(179)))), ((int)(((byte)(212)))));
-            this.bunifuTileButton2.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.bunifuTileButton2.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F);
-            this.bunifuTileButton2.ForeColor = System.Drawing.Color.White;
-            this.bunifuTileButton2.Image = ((System.Drawing.Image)(resources.GetObject("bunifuTileButton2.Image")));
-            this.bunifuTileButton2.ImagePosition = 20;
-            this.bunifuTileButton2.ImageZoom = 50;
-            this.bunifuTileButton2.LabelPosition = 41;
-            this.bunifuTileButton2.LabelText = "Edit Worker";
-            this.bunifuTileButton2.Location = new System.Drawing.Point(84, 351);
-            this.bunifuTileButton2.Margin = new System.Windows.Forms.Padding(6);
-            this.bunifuTileButton2.Name = "bunifuTileButton2";
-            this.bunifuTileButton2.Size = new System.Drawing.Size(167, 155);
-            this.bunifuTileButton2.TabIndex = 78;
-            // 
-            // bunifuTileButton3
-            // 
-            this.bunifuTileButton3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
-            this.bunifuTileButton3.color = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
-            this.bunifuTileButton3.colorActive = System.Drawing.Color.FromArgb(((int)(((byte)(43)))), ((int)(((byte)(179)))), ((int)(((byte)(212)))));
-            this.bunifuTileButton3.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.bunifuTileButton3.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F);
-            this.bunifuTileButton3.ForeColor = System.Drawing.Color.White;
-            this.bunifuTileButton3.Image = ((System.Drawing.Image)(resources.GetObject("bunifuTileButton3.Image")));
-            this.bunifuTileButton3.ImagePosition = 20;
-            this.bunifuTileButton3.ImageZoom = 50;
-            this.bunifuTileButton3.LabelPosition = 41;
-            this.bunifuTileButton3.LabelText = "Add Worker";
-            this.bunifuTileButton3.Location = new System.Drawing.Point(311, 163);
-            this.bunifuTileButton3.Margin = new System.Windows.Forms.Padding(6);
-            this.bunifuTileButton3.Name = "bunifuTileButton3";
-            this.bunifuTileButton3.Size = new System.Drawing.Size(167, 155);
-            this.bunifuTileButton3.TabIndex = 79;
+            this.addWorkerButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
+            this.addWorkerButton.color = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
+            this.addWorkerButton.colorActive = System.Drawing.Color.FromArgb(((int)(((byte)(43)))), ((int)(((byte)(179)))), ((int)(((byte)(212)))));
+            this.addWorkerButton.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.addWorkerButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F);
+            this.addWorkerButton.ForeColor = System.Drawing.Color.White;
+            this.addWorkerButton.Image = ((System.Drawing.Image)(resources.GetObject("addWorkerButton.Image")));
+            this.addWorkerButton.ImagePosition = 20;
+            this.addWorkerButton.ImageZoom = 50;
+            this.addWorkerButton.LabelPosition = 41;
+            this.addWorkerButton.LabelText = "Add Worker";
+            this.addWorkerButton.Location = new System.Drawing.Point(311, 163);
+            this.addWorkerButton.Margin = new System.Windows.Forms.Padding(6);
+            this.addWorkerButton.Name = "addWorkerButton";
+            this.addWorkerButton.Size = new System.Drawing.Size(167, 155);
+            this.addWorkerButton.TabIndex = 79;
+            this.addWorkerButton.Click += new System.EventHandler(this.addWorkerButton_Click);
             // 
             // ManageWorkers
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1146, 744);
-            this.Controls.Add(this.bunifuTileButton3);
-            this.Controls.Add(this.bunifuTileButton2);
-            this.Controls.Add(this.bunifuTileButton1);
+            this.Controls.Add(this.addWorkerButton);
+            this.Controls.Add(this.editOrDeleteWorkerButton);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.bunifuSeparator1);
             this.Controls.Add(this.label2);
@@ -174,8 +156,7 @@ namespace Frontend.Extras
         private Bunifu.Framework.UI.BunifuSeparator bunifuSeparator1;
         private System.Windows.Forms.Label label2;
         private Bunifu.Framework.UI.BunifuTileButton workersListButton;
-        private Bunifu.Framework.UI.BunifuTileButton bunifuTileButton1;
-        private Bunifu.Framework.UI.BunifuTileButton bunifuTileButton2;
-        private Bunifu.Framework.UI.BunifuTileButton bunifuTileButton3;
+        private Bunifu.Framework.UI.BunifuTileButton editOrDeleteWorkerButton;
+        private Bunifu.Framework.UI.BunifuTileButton addWorkerButton;
     }
 }

@@ -109,6 +109,12 @@
     <Compile Include="DoctorList.Designer.cs">
       <DependentUpon>DoctorList.cs</DependentUpon>
     </Compile>
+    <Compile Include="ManagerForms\EditOrDeleteWorker.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ManagerForms\EditOrDeleteWorker.Designer.cs">
+      <DependentUpon>EditOrDeleteWorker.cs</DependentUpon>
+    </Compile>
     <Compile Include="ManagerForms\ManageResidents.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -139,6 +145,12 @@
     <Compile Include="ManagerForms\AddWorker.Designer.cs">
       <DependentUpon>AddWorker.cs</DependentUpon>
     </Compile>
+    <Compile Include="ManagerForms\ResidentsList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ManagerForms\ResidentsList.Designer.cs">
+      <DependentUpon>ResidentsList.cs</DependentUpon>
+    </Compile>
     <Compile Include="ManagerForms\RoomsStatus.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -156,6 +168,12 @@
     </Compile>
     <Compile Include="Main.Designer.cs">
       <DependentUpon>Main.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ManagerForms\WorkersList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ManagerForms\WorkersList.Designer.cs">
+      <DependentUpon>WorkersList.cs</DependentUpon>
     </Compile>
     <Compile Include="Models\TestClass.cs" />
     <Compile Include="Patients.cs">
@@ -199,6 +217,9 @@
     <EmbeddedResource Include="DoctorList.resx">
       <DependentUpon>DoctorList.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="ManagerForms\EditOrDeleteWorker.resx">
+      <DependentUpon>EditOrDeleteWorker.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="ManagerForms\ManageResidents.resx">
       <DependentUpon>ManageResidents.cs</DependentUpon>
     </EmbeddedResource>
@@ -214,6 +235,9 @@
     <EmbeddedResource Include="ManagerForms\AddWorker.resx">
       <DependentUpon>AddWorker.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="ManagerForms\ResidentsList.resx">
+      <DependentUpon>ResidentsList.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="ManagerForms\RoomsStatus.resx">
       <DependentUpon>RoomsStatus.cs</DependentUpon>
     </EmbeddedResource>
@@ -222,6 +246,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Main.resx">
       <DependentUpon>Main.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ManagerForms\WorkersList.resx">
+      <DependentUpon>WorkersList.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Patients.resx">
       <DependentUpon>Patients.cs</DependentUpon>

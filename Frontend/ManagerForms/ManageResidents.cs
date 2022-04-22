@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Frontend.ManagerForms;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -19,7 +20,8 @@ namespace Frontend.Extras
 
         private void residentsListButton_Click(object sender, EventArgs e)
         {
-
+            ResidentsList residentsList = new ResidentsList();
+            residentsList.Show();
         }
     }
 }
