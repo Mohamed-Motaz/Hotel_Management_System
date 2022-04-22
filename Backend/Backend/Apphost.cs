@@ -1,6 +1,7 @@
 ﻿using Backend.Models;
 using Backend.Models.BoardTypes;
 using Backend.Models.Loggers;
+using Backend.Models.Rooms;
 using System;
 using System.Collections.Generic;
 using System.IO;
@@ -29,6 +30,13 @@ namespace Backend
         public static int CURR_DOUBLE_ROOMS = 0;
         public static int CURR_TRIPLE_ROOMS = 0;
 
+        public static ListRepositry ListOfResidents = new ListRepositry();
+        public static ListRepositry ListOfPrivilegedWorkers = new ListRepositry();
+        public static ListRepositry ListOfRoomServices = new ListRepositry();
+        public static ListRepositry ListOfBookingInformation = new ListRepositry();
+        public static ListRepositry ListOfAvailableRooms = new ListRepositry();
+        public static ListRepositry ListOfReservedRooms = new ListRepositry();
+
         private static Logger GetChainOfLoggers()
         {
             Logger fileLogger = new FileLogger(Logger.FileLogger);
@@ -36,11 +44,46 @@ namespace Backend
             consoleLogger.SetNextLogger(fileLogger);
             return consoleLogger;
         }
-
+        public static void InitializeAllRooms()
+        {
+            int NumberOfRoom = 0;
+            for(int room = 0; room < 90; room++)
+            {
+                if (room < 30)
+                {
+                    ListOfAvailableRooms.list.Add((Room)new SingleRoom(
+                            100 + NumberOfRoom,
+                            RoomTypes.Single,
+                            2700,
+                            RoomStatus.Available
+                        ));
+                }
+                else if (room < 60 && room >= 30)
+                {
+                    ListOfAvailableRooms.list.Add((Room)new SingleRoom(
+                            100 + NumberOfRoom,
+                            RoomTypes.Double,
+                            2700,
+                            RoomStatus.Available
+                        ));
+                }
+                else if (room < 90 && room >= 60)
+                {
+                    ListOfAvailableRooms.list.Add((Room)new SingleRoom(
+                            100 + NumberOfRoom,
+                            RoomTypes.Double,
+                            2700,
+                            RoomStatus.Available
+                        ));
+                }
+                NumberOfRoom %= 30;
+            }
+        }
         public static void InitializeApp()
         {
             logger = GetChainOfLoggers();
             BoardingTypesCache.LoadCache();
+            InitializeAllRooms();
         }
     }
 
