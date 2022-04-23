@@ -21,36 +21,22 @@ namespace Backend.Models
         }
 
 
-        public bool CheckIfRoomTypeAvailable(RoomTypes type)
+        public bool CheckIfRoomAvailable(Room room, long startDate, long endDate)
         {
-            if ((type == RoomTypes.Single) && (Apphost.CURR_SINGLE_ROOMS < Apphost.MAX_SINGLE_ROOMS))
-                return true;
-
-            if ((type == RoomTypes.Double) && (Apphost.CURR_DOUBLE_ROOMS < Apphost.MAX_DOUBLE_ROOMS))
-                return true;
-
-            if ((type == RoomTypes.Triple) && (Apphost.CURR_TRIPLE_ROOMS < Apphost.MAX_TRIPLE_ROOMS))
-                return true;
-
-            return false;
+            for (Iterator bookingIterator = Apphost.ListOfBookingInformation.GetIterator(); bookingIterator.hasNext();)
+            {
+                BookingInformation booking = bookingIterator.getNext() as BookingInformation;
+                if (booking.roomId == room.Id)
+                {
+                    if((booking.startDate <= startDate && booking.endDate >= startDate) || (booking.startDate <= endDate && booking.endDate >= endDate) || (booking.startDate >= startDate && booking.endDate <= endDate))
+                    {
+                        return false;
+                    }
+                }
+            }
+            return true;
         }
 
-        public void ChangeRoomStatus(Room room)
-        {
-            Apphost.ListOfReservedRooms.list.Add(room);
-            Apphost.ListOfAvailableRooms.list.Remove(room);
-            if (room.Type == RoomTypes.Single) Apphost.CURR_SINGLE_ROOMS++;
-
-            else if (room.Type == RoomTypes.Double) Apphost.CURR_DOUBLE_ROOMS++;
-
-            else if (room.Type == RoomTypes.Triple) Apphost.CURR_TRIPLE_ROOMS++;
-
-        }
-
-
-        public void PrintDividor()
-        {
-            Console.WriteLine("==================================================================");
-        }
+       
     }
 }

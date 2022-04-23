@@ -7,20 +7,16 @@ namespace Backend.Models
 {
     public class Receptionist : AbstractPrivilegedWorker
     {
-        private string password;
+        public Receptionist(string userName, int age, string email, string phoneNumber, int salary, JobTitle jobTitle, string incomeType, string password) :
+            base(userName, age, email, phoneNumber, salary, jobTitle, incomeType, password) { }
 
-        public Receptionist(string userName, int age, string email, int salary, string incomeType, string password)
+
+        public double checkOut(BookingInformation booking)
         {
-            this.userName = userName;
-            this.age = age;
-            this.email = email;
-            this.salary = salary;
-            this.incomeType = incomeType;
-            this.password = password;
+            booking.endDate = TimeHandler.GetDateInEpoch(DateTime.Today.Day, DateTime.Today.Month, DateTime.Today.Year);
+            BookingServices.EditBooking(booking);
+            return booking.totalPrice;
         }
-
-        ////public Receptionist(string userName, int age, string email, string phoneNumber, int salary, JobTitle jobTitle, string incomeType, string password) :
-          //  base(userName, age, email, phoneNumber, salary, jobTitle, incomeType, password) { }
 
     }
 }

@@ -22,7 +22,7 @@ namespace Backend.Models.BoardTypes
 
         public static BoardingType GetBoardingType(BoardingTypes boardingType)
         {
-            return (BoardingType)dict[boardingType];
+            return dict[boardingType];
         }
 
     }

@@ -16,23 +16,32 @@ public static class TimeHandler
         return (int)differnce.Days;
     }
 
-    public static long GetDayInEpoch()
+    public static long GetLastDayInEpoch()
     {
-        DateTime differenceDate = new DateTime(1970, 1, 2, 0, 0, 0, 0);
+        DateTime differenceDate = DateTime.Today.AddDays(-1);
         TimeSpan differnce = differenceDate.Subtract(DateTime.Parse("01-Jan-1970"));
         return (long)differnce.TotalSeconds;
     }
 
-    public static long GetMonthInEpoch()
+    public static long GetLastWeekInEpoch()
     {
-        DateTime differenceDate = new DateTime(1970, 2, 1, 0, 0, 0, 0);
+        DateTime differenceDate = DateTime.Today.AddDays(-7);
         TimeSpan differnce = differenceDate.Subtract(DateTime.Parse("01-Jan-1970"));
         return (long)differnce.TotalSeconds;
     }
 
-    public static long GetYearInEpoch()
+
+
+    public static long GetLastMonthInEpoch()
     {
-        DateTime differenceDate = new DateTime(1971, 1, 1, 0, 0, 0, 0);
+        DateTime differenceDate = DateTime.Today.AddMonths(-1);
+        TimeSpan differnce = differenceDate.Subtract(DateTime.Parse("01-Jan-1970"));
+        return (long)differnce.TotalSeconds;
+    }
+
+    public static long GetLastYearInEpoch()
+    {
+        DateTime differenceDate = DateTime.Today.AddYears(-1);
         TimeSpan differnce = differenceDate.Subtract(DateTime.Parse("01-Jan-1970"));
         return (long)differnce.TotalSeconds;
     }

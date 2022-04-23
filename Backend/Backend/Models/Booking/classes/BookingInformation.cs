@@ -11,7 +11,7 @@ namespace Backend.Models
         public static int BookingIds = 1; 
         public int id { get; set; }
         public int roomId { get; set; }
-        public int boardId { get; set; }
+        public BoardingTypes boardType { get; set; }
         public int residentId { get; set; }
         public long startDate { get; set; }
         public long endDate { get; set; }
@@ -21,7 +21,7 @@ namespace Backend.Models
         public BookingInformation(Room room, BoardingType board, int residentId, long startDate, long endDate)
         {
             roomId = room.Id;
-            boardId = board.id;
+            boardType = board.type;
             this.residentId = residentId;
             this.startDate = startDate;
             this.endDate = endDate;

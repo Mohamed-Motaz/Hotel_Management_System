@@ -29,5 +29,18 @@ namespace Backend.Models.Rooms
                 +"Status: " + Status + "\n";
         }
 
+        public static Room getRoomById(int id)
+        {
+            for (Iterator roomIterator = Apphost.ListOfRooms.GetIterator(); roomIterator.hasNext();)
+            {
+                Room room = roomIterator.getNext() as Room;
+                if (room.Id == id)
+                {
+                    return room;
+                }
+            }
+            return null;
+        }
+
     }
 }

@@ -5,23 +5,17 @@ using System.Text;
 
 namespace Backend.Models
 {
-    class RoomFactory
+    public class RoomFactory
     {
         private RoomServices myServices = RoomServices.GetInstance();
 
-        public Room GetRoom(RoomTypes type)
+        public Room GetRoom(RoomTypes type, long startDate,long endDate)
         {
-            if (!myServices.CheckIfRoomTypeAvailable(type))
-            {
-                return null;
-            }
-
-            for (Iterator roomIterator = Apphost.ListOfAvailableRooms.GetIterator(); roomIterator.hasNext();)
+            for (Iterator roomIterator = Apphost.ListOfRooms.GetIterator(); roomIterator.hasNext();)
             {
                 Room room = roomIterator.getNext() as Room;
-                if (room.Type == type)
+                if (room.Type == type && myServices.CheckIfRoomAvailable(room, startDate, endDate))
                 {
-                    myServices.ChangeRoomStatus(room);
                     return room;
                 }
             }
