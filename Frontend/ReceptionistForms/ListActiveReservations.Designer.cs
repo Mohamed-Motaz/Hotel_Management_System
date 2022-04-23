@@ -1,7 +1,7 @@
 ﻿
-namespace Frontend.ManagerForms
+namespace Frontend.ReceptionistForms
 {
-    partial class WorkersList
+    partial class ListActiveReservations
     {
         /// <summary>
         /// Required designer variable.
@@ -29,7 +29,8 @@ namespace Frontend.ManagerForms
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(WorkersList));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ListActiveReservations));
+            this.WorkersListGridView = new System.Windows.Forms.DataGridView();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.bunifuFlatButton1 = new Bunifu.Framework.UI.BunifuFlatButton();
@@ -37,9 +38,16 @@ namespace Frontend.ManagerForms
             this.label4 = new System.Windows.Forms.Label();
             this.bunifuSeparator2 = new Bunifu.Framework.UI.BunifuSeparator();
             this.label5 = new System.Windows.Forms.Label();
-            this.WorkersListGridView = new System.Windows.Forms.DataGridView();
             ((System.ComponentModel.ISupportInitialize)(this.WorkersListGridView)).BeginInit();
             this.SuspendLayout();
+            // 
+            // WorkersListGridView
+            // 
+            this.WorkersListGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.WorkersListGridView.Location = new System.Drawing.Point(38, 116);
+            this.WorkersListGridView.Name = "WorkersListGridView";
+            this.WorkersListGridView.Size = new System.Drawing.Size(739, 324);
+            this.WorkersListGridView.TabIndex = 227;
             // 
             // label1
             // 
@@ -49,7 +57,7 @@ namespace Frontend.ManagerForms
             this.label1.Location = new System.Drawing.Point(158, 475);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(15, 16);
-            this.label1.TabIndex = 218;
+            this.label1.TabIndex = 226;
             this.label1.Text = "0";
             // 
             // label2
@@ -59,7 +67,7 @@ namespace Frontend.ManagerForms
             this.label2.Location = new System.Drawing.Point(66, 475);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(86, 16);
-            this.label2.TabIndex = 217;
+            this.label2.TabIndex = 225;
             this.label2.Text = "Total Entries:";
             // 
             // bunifuFlatButton1
@@ -90,7 +98,7 @@ namespace Frontend.ManagerForms
             this.bunifuFlatButton1.OnHoverTextColor = System.Drawing.Color.White;
             this.bunifuFlatButton1.selected = false;
             this.bunifuFlatButton1.Size = new System.Drawing.Size(30, 28);
-            this.bunifuFlatButton1.TabIndex = 214;
+            this.bunifuFlatButton1.TabIndex = 223;
             this.bunifuFlatButton1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.bunifuFlatButton1.Textcolor = System.Drawing.Color.White;
             this.bunifuFlatButton1.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 6.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -109,9 +117,8 @@ namespace Frontend.ManagerForms
             this.bunifuMetroTextbox1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.bunifuMetroTextbox1.Name = "bunifuMetroTextbox1";
             this.bunifuMetroTextbox1.Size = new System.Drawing.Size(142, 28);
-            this.bunifuMetroTextbox1.TabIndex = 215;
+            this.bunifuMetroTextbox1.TabIndex = 224;
             this.bunifuMetroTextbox1.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.bunifuMetroTextbox1.OnValueChanged += new System.EventHandler(this.bunifuMetroTextbox1_OnValueChanged);
             // 
             // label4
             // 
@@ -121,7 +128,7 @@ namespace Frontend.ManagerForms
             this.label4.Location = new System.Drawing.Point(12, 9);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(132, 25);
-            this.label4.TabIndex = 207;
+            this.label4.TabIndex = 220;
             this.label4.Text = "Workers List";
             // 
             // bunifuSeparator2
@@ -132,7 +139,7 @@ namespace Frontend.ManagerForms
             this.bunifuSeparator2.Location = new System.Drawing.Point(12, 35);
             this.bunifuSeparator2.Name = "bunifuSeparator2";
             this.bunifuSeparator2.Size = new System.Drawing.Size(742, 18);
-            this.bunifuSeparator2.TabIndex = 208;
+            this.bunifuSeparator2.TabIndex = 221;
             this.bunifuSeparator2.Transparency = 255;
             this.bunifuSeparator2.Vertical = false;
             // 
@@ -144,18 +151,10 @@ namespace Frontend.ManagerForms
             this.label5.Location = new System.Drawing.Point(149, 16);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(30, 16);
-            this.label5.TabIndex = 209;
+            this.label5.TabIndex = 222;
             this.label5.Text = "List";
             // 
-            // WorkersListGridView
-            // 
-            this.WorkersListGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.WorkersListGridView.Location = new System.Drawing.Point(38, 116);
-            this.WorkersListGridView.Name = "WorkersListGridView";
-            this.WorkersListGridView.Size = new System.Drawing.Size(739, 324);
-            this.WorkersListGridView.TabIndex = 219;
-            // 
-            // WorkersList
+            // ListActiveReservations
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -168,9 +167,8 @@ namespace Frontend.ManagerForms
             this.Controls.Add(this.label4);
             this.Controls.Add(this.bunifuSeparator2);
             this.Controls.Add(this.label5);
-            this.Name = "WorkersList";
-            this.Text = "WorkersList";
-            this.Load += new System.EventHandler(this.WorkersList_Load);
+            this.Name = "ListActiveReservations";
+            this.Text = "ListActiveReservations";
             ((System.ComponentModel.ISupportInitialize)(this.WorkersListGridView)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -179,6 +177,7 @@ namespace Frontend.ManagerForms
 
         #endregion
 
+        private System.Windows.Forms.DataGridView WorkersListGridView;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private Bunifu.Framework.UI.BunifuFlatButton bunifuFlatButton1;
@@ -186,6 +185,5 @@ namespace Frontend.ManagerForms
         private System.Windows.Forms.Label label4;
         private Bunifu.Framework.UI.BunifuSeparator bunifuSeparator2;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.DataGridView WorkersListGridView;
     }
 }

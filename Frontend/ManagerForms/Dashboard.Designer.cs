@@ -152,6 +152,7 @@ namespace Frontend.Extras
             this.label1.Size = new System.Drawing.Size(41, 45);
             this.label1.TabIndex = 83;
             this.label1.Text = "0";
+            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // label11
             // 
@@ -647,6 +648,7 @@ namespace Frontend.Extras
             this.Controls.Add(this.bunifuFlatButton1);
             this.Name = "Dashboard";
             this.Text = "BasePanel";
+            this.Load += new System.EventHandler(this.Dashboard_Load);
             ((System.ComponentModel.ISupportInitialize)(this.bunifuImageButton4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.bunifuImageButton1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.bunifuImageButton3)).EndInit();
