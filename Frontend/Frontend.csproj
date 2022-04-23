@@ -203,6 +203,12 @@
     <Compile Include="ReceptionistForms\EditOrDeleteReservation.Designer.cs">
       <DependentUpon>EditOrDeleteReservation.cs</DependentUpon>
     </Compile>
+    <Compile Include="ReceptionistForms\ListActiveReservations.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ReceptionistForms\ListActiveReservations.Designer.cs">
+      <DependentUpon>ListActiveReservations.cs</DependentUpon>
+    </Compile>
     <Compile Include="ReceptionistForms\MainReceptionistForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -220,6 +226,12 @@
     </Compile>
     <Compile Include="ReceptionistForms\ManageResidents.Designer.cs">
       <DependentUpon>ManageResidents.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ResidentForms\ResidentDashboard.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ResidentForms\ResidentDashboard.Designer.cs">
+      <DependentUpon>ResidentDashboard.cs</DependentUpon>
     </Compile>
     <Compile Include="ViewPatient.cs">
       <SubType>Form</SubType>
@@ -308,6 +320,9 @@
     <EmbeddedResource Include="ReceptionistForms\EditOrDeleteReservation.resx">
       <DependentUpon>EditOrDeleteReservation.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="ReceptionistForms\ListActiveReservations.resx">
+      <DependentUpon>ListActiveReservations.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="ReceptionistForms\MainReceptionistForm.resx">
       <DependentUpon>MainReceptionistForm.cs</DependentUpon>
     </EmbeddedResource>
@@ -316,6 +331,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="ReceptionistForms\ManageResidents.resx">
       <DependentUpon>ManageResidents.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ResidentForms\ResidentDashboard.resx">
+      <DependentUpon>ResidentDashboard.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ViewPatient.resx">
       <DependentUpon>ViewPatient.cs</DependentUpon>
@@ -336,8 +354,6 @@
   <ItemGroup>
     <Content Include="national_u_logo.ico" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="ResidentForms\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

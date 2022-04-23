@@ -28,5 +28,11 @@ namespace Frontend.ReceptionistForms
             EditOrDeleteReservation editOrDeleteReservation = new EditOrDeleteReservation();
             editOrDeleteReservation.Show();
         }
+
+        private void ActiveReservationButton_Click(object sender, EventArgs e)
+        {
+            ListActiveReservations listActiveReservations = new ListActiveReservations();
+            listActiveReservations.Show();
+        }
     }
 }

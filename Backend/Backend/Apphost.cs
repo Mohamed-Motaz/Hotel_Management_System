@@ -21,21 +21,11 @@ namespace Backend
         public static string CUR_DIRECTORY = AppDomain.CurrentDomain.BaseDirectory;
         public static string DB_PATH = Path.Combine(CUR_DIRECTORY, "db.sqlite");
 
-
-        public static int MAX_SINGLE_ROOMS = 30;
-        public static int MAX_DOUBLE_ROOMS = 30;
-        public static int MAX_TRIPLE_ROOMS = 30;
-
-        public static int CURR_SINGLE_ROOMS = 0;
-        public static int CURR_DOUBLE_ROOMS = 0;
-        public static int CURR_TRIPLE_ROOMS = 0;
-
         public static ListRepositry ListOfResidents = new ListRepositry();
         public static ListRepositry ListOfPrivilegedWorkers = new ListRepositry();
         public static ListRepositry ListOfRoomServices = new ListRepositry();
         public static ListRepositry ListOfBookingInformation = new ListRepositry();
-        public static ListRepositry ListOfAvailableRooms = new ListRepositry();
-        public static ListRepositry ListOfReservedRooms = new ListRepositry();
+        public static ListRepositry ListOfRooms = new ListRepositry();
 
         private static Logger GetChainOfLoggers()
         {
@@ -46,13 +36,11 @@ namespace Backend
         }
         public static void InitializeAllRooms()
         {
-            int NumberOfRoom = 0;
             for(int room = 0; room < 90; room++)
             {
                 if (room < 30)
                 {
-                    ListOfAvailableRooms.list.Add((Room)new SingleRoom(
-                            100 + NumberOfRoom,
+                    ListOfRooms.list.Add((Room)new SingleRoom(
                             RoomTypes.Single,
                             2700,
                             RoomStatus.Available
@@ -60,8 +48,7 @@ namespace Backend
                 }
                 else if (room < 60 && room >= 30)
                 {
-                    ListOfAvailableRooms.list.Add((Room)new DoubleRoom(
-                            200 + NumberOfRoom,
+                    ListOfRooms.list.Add((Room)new DoubleRoom(
                             RoomTypes.Double,
                             4000,
                             RoomStatus.Available
@@ -69,14 +56,12 @@ namespace Backend
                 }
                 else if (room < 90 && room >= 60)
                 {
-                    ListOfAvailableRooms.list.Add((Room)new TripleRoom(
-                            300 + NumberOfRoom,
+                    ListOfRooms.list.Add((Room)new TripleRoom(
                             RoomTypes.Triple,
                             4800,
                             RoomStatus.Available
                         ));
                 }
-                NumberOfRoom %= 30;
             }
         }
         public static void InitializeApp()
@@ -87,7 +72,12 @@ namespace Backend
         }
     }
 
-   
+    public enum JobTitle
+    {
+        Manager,
+        Receptionist,
+        RoomService
+    }
 
     public enum RoomTypes
     {
@@ -107,6 +97,13 @@ namespace Backend
     {
         Reserved, 
         Available
+    }
+
+    public enum Duration
+    {
+        Weekly,
+        Monthly,
+        Annualy
     }
 
 }

@@ -19,11 +19,14 @@ namespace Backend.Models
             try
             {
                 newType = base.MemberwiseClone();
-            }catch(NotSupportedException ex)
+
+            }
+            catch(NotSupportedException ex)
             {
                 Console.WriteLine( new System.Diagnostics.StackTrace() );
             }
             return newType;
         }
+
     }
 }
