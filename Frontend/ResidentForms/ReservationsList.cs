@@ -8,7 +8,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-
+using Frontend.HttpService;
 namespace Frontend.ResidentForms
 {
     public partial class ReservationsList : Form
@@ -19,9 +19,9 @@ namespace Frontend.ResidentForms
         }
         public List<dynamic> GetReservations()
         {
-            List<dynamic> Reservations = new List<dynamic>();
+            List<dynamic> Reservations = Service.GetAllReservations();
 
-            dynamic res = new ExpandoObject();
+           /* dynamic res = new ExpandoObject();
             res.id = "1";
             res.RoomId = "1";
             res.BoardId = "2";
@@ -41,7 +41,7 @@ namespace Frontend.ResidentForms
             res1.EndDate = "13/8";
             res1.TotalPrice = "2600";
 
-            Reservations.Add(res1);
+            Reservations.Add(res1);*/
 
             return Reservations;
         }

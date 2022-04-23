@@ -207,6 +207,12 @@
     <Compile Include="ReceptionistForms\AddResident.Designer.cs">
       <DependentUpon>AddResident.cs</DependentUpon>
     </Compile>
+    <Compile Include="ReceptionistForms\CheckOutForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ReceptionistForms\CheckOutForm.Designer.cs">
+      <DependentUpon>CheckOutForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="ReceptionistForms\EditOrDeleteReservation.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -273,11 +279,29 @@
     <Compile Include="ResidentForms\ResidentDashboard.Designer.cs">
       <DependentUpon>ResidentDashboard.cs</DependentUpon>
     </Compile>
+    <Compile Include="ResidentForms\ResidentLoginForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ResidentForms\ResidentLoginForm.Designer.cs">
+      <DependentUpon>ResidentLoginForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ResidentForms\ResidentSignUpForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ResidentForms\ResidentSignUpForm.Designer.cs">
+      <DependentUpon>ResidentSignUpForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="ViewPatient.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="ViewPatient.Designer.cs">
       <DependentUpon>ViewPatient.cs</DependentUpon>
+    </Compile>
+    <Compile Include="WorkerLoginForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="WorkerLoginForm.Designer.cs">
+      <DependentUpon>WorkerLoginForm.cs</DependentUpon>
     </Compile>
     <EmbeddedResource Include="AddResident.resx">
       <DependentUpon>AddResident.cs</DependentUpon>
@@ -360,6 +384,9 @@
     <EmbeddedResource Include="ReceptionistForms\AddResident.resx">
       <DependentUpon>AddResident.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="ReceptionistForms\CheckOutForm.resx">
+      <DependentUpon>CheckOutForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="ReceptionistForms\EditOrDeleteReservation.resx">
       <DependentUpon>EditOrDeleteReservation.cs</DependentUpon>
     </EmbeddedResource>
@@ -393,8 +420,17 @@
     <EmbeddedResource Include="ResidentForms\ResidentDashboard.resx">
       <DependentUpon>ResidentDashboard.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="ResidentForms\ResidentLoginForm.resx">
+      <DependentUpon>ResidentLoginForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ResidentForms\ResidentSignUpForm.resx">
+      <DependentUpon>ResidentSignUpForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="ViewPatient.resx">
       <DependentUpon>ViewPatient.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WorkerLoginForm.resx">
+      <DependentUpon>WorkerLoginForm.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
