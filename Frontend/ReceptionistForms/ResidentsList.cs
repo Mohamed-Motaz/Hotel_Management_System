@@ -8,7 +8,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-
+using Frontend.HttpService;
 namespace Frontend.ReceptionistForms
 {
     public partial class ResidentsList : Form
@@ -20,7 +20,7 @@ namespace Frontend.ReceptionistForms
         public List<dynamic> GetResidentList()
         {
 
-            List<dynamic> residents = new List<dynamic>();
+            List<dynamic> residents = Service.GetAllResidents();
             dynamic resident = new ExpandoObject();
 
             resident.id = "1";
