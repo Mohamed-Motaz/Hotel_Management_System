@@ -104,3 +104,17 @@ C:\Users\Mohamed Motaz\Desktop\HotelManagementSystem\Frontend\obj\Debug\Frontend
 C:\Users\Mohamed Motaz\Desktop\HotelManagementSystem\Frontend\obj\Debug\Frontend.ResidentForms.MainResidentForm.resources
 C:\Users\Mohamed Motaz\Desktop\HotelManagementSystem\Frontend\obj\Debug\Frontend.ResidentForms.ManageReservations.resources
 C:\Users\Mohamed Motaz\Desktop\HotelManagementSystem\Frontend\obj\Debug\Frontend.ResidentForms.ReservationsList.resources
+C:\Users\Mohamed Motaz\Desktop\HotelManagementSystem\Frontend\bin\Debug\Newtonsoft.Json.dll
+C:\Users\Mohamed Motaz\Desktop\HotelManagementSystem\Frontend\bin\Debug\Newtonsoft.Json.xml
+C:\Users\Mohamed Motaz\Desktop\HotelManagementSystem\Frontend\obj\Debug\Frontend.ReceptionistForms.AddResident.resources
+C:\Users\Mohamed Motaz\Desktop\HotelManagementSystem\Frontend\obj\Debug\Frontend.ReceptionistForms.EditOrDeleteResident.resources
+C:\Users\Mohamed Motaz\Desktop\HotelManagementSystem\Frontend\obj\Debug\Frontend.ReceptionistForms.ResidentsList.resources
+D:\Hotel_Management_System\Frontend\bin\Debug\Newtonsoft.Json.dll
+D:\Hotel_Management_System\Frontend\bin\Debug\Newtonsoft.Json.xml
+D:\Hotel_Management_System\Frontend\obj\Debug\Frontend.ReceptionistForms.AddResident.resources
+D:\Hotel_Management_System\Frontend\obj\Debug\Frontend.ReceptionistForms.EditOrDeleteResident.resources
+D:\Hotel_Management_System\Frontend\obj\Debug\Frontend.ReceptionistForms.ResidentsList.resources
+D:\Hotel_Management_System\Frontend\obj\Debug\Frontend.ResidentForms.MainResidentForm.resources
+D:\Hotel_Management_System\Frontend\obj\Debug\Frontend.ResidentForms.ManageReservations.resources
+D:\Hotel_Management_System\Frontend\obj\Debug\Frontend.ResidentForms.ReservationsList.resources
+D:\Hotel_Management_System\Frontend\obj\Debug\Frontend.ResidentForms.ResidentDashboard.resources

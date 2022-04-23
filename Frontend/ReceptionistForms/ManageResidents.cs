@@ -19,20 +19,20 @@ namespace Frontend.ReceptionistForms
 
         private void residentsListButton_Click(object sender, EventArgs e)
         {
-            //ResidentsList residentsList = new ResidentsList();
-            //residentsList.Show();
+            ResidentsList residentsList = new ResidentsList();
+            residentsList.Show();
         }
 
         private void addResidentButton_Click(object sender, EventArgs e)
         {
-            //AddResident addResident = new AddResident();
-            //addResident.Show();
+            AddResident addResident = new AddResident();
+            addResident.Show();
         }
 
         private void editOrDeleteResidentButton_Click(object sender, EventArgs e)
         {
-            //EditOrDeleteResident editOrDeleteResident = new EditOrDeleteResident();
-            //editOrDeleteResident.Show();
+            EditOrDeleteResident editOrDeleteResident = new EditOrDeleteResident();
+            editOrDeleteResident.Show();
         }
     }
 }

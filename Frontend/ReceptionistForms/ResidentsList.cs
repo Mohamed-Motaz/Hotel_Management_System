@@ -8,8 +8,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using Frontend.HttpService;
-namespace Frontend.ManagerForms
+
+namespace Frontend.ReceptionistForms
 {
     public partial class ResidentsList : Form
     {
@@ -20,10 +20,10 @@ namespace Frontend.ManagerForms
         public List<dynamic> GetResidentList()
         {
 
-            List<dynamic> residents = Service.GetAllResidents();
-            
+            List<dynamic> residents = new List<dynamic>();
+            dynamic resident = new ExpandoObject();
 
-         /*   resident.id = "1";
+            resident.id = "1";
             resident.age = "35";
             resident.Name = "Salma";
             resident.Email = "salma@hotmail.com";
@@ -39,7 +39,7 @@ namespace Frontend.ManagerForms
             res.PhoneNumber = "0111215651111";
             res.password = "6666";
 
-            residents.Add(res);*/
+            residents.Add(res);
 
             return residents;
         }

@@ -8,7 +8,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-
+using Frontend.HttpService;
 namespace Frontend.ReceptionistForms
 {
     public partial class AddReservation : Form
@@ -48,6 +48,10 @@ namespace Frontend.ReceptionistForms
             Reservation.RoomType = RoomTypeComboBox.GetItemText(RoomTypeComboBox.SelectedItem);
             Reservation.NumberofNights = NumberofNightsTextBox.Text;
             Reservation.StartDate = StartDateDatepicker.Value;
+
+            // calling Api to add resident by id;
+            Service.AddReservation(Reservation);
+
             clear();
         }
     }

@@ -1,5 +1,4 @@
-﻿using Frontend.HttpService;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -9,9 +8,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-
-
-namespace Frontend.Extras
+using Frontend.HttpService;
+namespace Frontend.ReceptionistForms
 {
     public partial class AddResident : Form
     {
