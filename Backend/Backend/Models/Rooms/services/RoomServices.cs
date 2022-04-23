@@ -20,7 +20,7 @@ namespace Backend.Models
             return services;
         }
 
-
+        //todo rage3 ya mo3taz 3ashan dema3'y lafet -bedo
         public bool CheckIfRoomAvailable(Room room, long startDate, long endDate)
         {
             for (Iterator bookingIterator = Apphost.ListOfBookingInformation.GetIterator(); bookingIterator.hasNext();)

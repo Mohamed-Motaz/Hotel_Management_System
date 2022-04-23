@@ -29,8 +29,10 @@ namespace Backend.Models
             }
         }
 
+        //todo take care of pointer issue
         public void deleteWorker(AbstractWorker worker)
         {
+
             if(worker.jobTitle == JobTitle.RoomService)
             {
                 Apphost.ListOfRoomServices.list.Remove(worker);
@@ -59,6 +61,7 @@ namespace Backend.Models
                 for (Iterator workerIterator = Apphost.ListOfPrivilegedWorkers.GetIterator(); workerIterator.hasNext();)
                 {
                     AbstractPrivilegedWorker worker = workerIterator.getNext() as AbstractPrivilegedWorker;
+                    worker.password = password;
                     if (worker.id == editedWorker.id)
                     {
                         worker = (AbstractPrivilegedWorker)editedWorker;

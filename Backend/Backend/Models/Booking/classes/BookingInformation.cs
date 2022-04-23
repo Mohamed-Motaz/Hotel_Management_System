@@ -11,21 +11,21 @@ namespace Backend.Models
         public static int BookingIds = 1; 
         public int id { get; set; }
         public int roomId { get; set; }
-        public BoardingTypes boardType { get; set; }
+        public BoardingTypes boardingType { get; set; }
         public int residentId { get; set; }
         public long startDate { get; set; }
         public long endDate { get; set; }
         public double totalPrice { get; set; }
 
 
-        public BookingInformation(Room room, BoardingType board, int residentId, long startDate, long endDate)
+        public BookingInformation(Room room, BoardingType boarding, int residentId, long startDate, long endDate)
         {
             roomId = room.Id;
-            boardType = board.type;
+            boardingType = boarding.type;
             this.residentId = residentId;
             this.startDate = startDate;
             this.endDate = endDate;
-            totalPrice = BookingServices.GetBookingPrice(board, room,startDate,endDate); 
+            totalPrice = BookingServices.GetBookingPrice(boarding, room,startDate,endDate); 
         }
 
     

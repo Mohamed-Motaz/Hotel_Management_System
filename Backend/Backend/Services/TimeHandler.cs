@@ -16,7 +16,7 @@ public static class TimeHandler
         return (int)differnce.Days;
     }
 
-    public static long GetLastDayInEpoch()
+    public static long GetYesterdayInEpoch()
     {
         DateTime differenceDate = DateTime.Today.AddDays(-1);
         TimeSpan differnce = differenceDate.Subtract(DateTime.Parse("01-Jan-1970"));

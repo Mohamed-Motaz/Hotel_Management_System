@@ -1,7 +1,7 @@
 ﻿
 using Backend;
 
-public class RoomAndBoard
+public class RoomAndBoarding
 {
 
     public RoomTypes roomType { get; set; }

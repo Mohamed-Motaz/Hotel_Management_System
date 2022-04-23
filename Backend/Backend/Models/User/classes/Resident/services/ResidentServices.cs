@@ -15,7 +15,7 @@ namespace Backend.Models.User.classes
                 Resident resident = ResidentsIterator.getNext() as Resident;
                 if (editedResident.id == resident.id)
                 {  
-                    resident = editedResident;
+                    resident = editedResident;  //change the pointer
                     break;
                 }
             }
