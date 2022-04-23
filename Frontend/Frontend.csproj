@@ -203,6 +203,12 @@
     <Compile Include="ReceptionistForms\EditOrDeleteReservation.Designer.cs">
       <DependentUpon>EditOrDeleteReservation.cs</DependentUpon>
     </Compile>
+    <Compile Include="ReceptionistForms\ListActiveReservations.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ReceptionistForms\ListActiveReservations.Designer.cs">
+      <DependentUpon>ListActiveReservations.cs</DependentUpon>
+    </Compile>
     <Compile Include="ReceptionistForms\MainReceptionistForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -313,6 +319,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="ReceptionistForms\EditOrDeleteReservation.resx">
       <DependentUpon>EditOrDeleteReservation.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ReceptionistForms\ListActiveReservations.resx">
+      <DependentUpon>ListActiveReservations.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ReceptionistForms\MainReceptionistForm.resx">
       <DependentUpon>MainReceptionistForm.cs</DependentUpon>
