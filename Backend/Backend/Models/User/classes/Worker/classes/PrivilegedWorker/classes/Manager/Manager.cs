@@ -10,7 +10,7 @@ namespace Backend.Models
         public Manager(string userName, int age, string email, string phoneNumber, int salary, JobTitle jobTitle, string incomeType, string password) : 
             base(userName, age, email, phoneNumber, salary, jobTitle, incomeType, password) {}
 
-        public void addWorker(AbstractWorker newWorker, string password)
+        public static void addWorker(AbstractWorker newWorker, string password)
         {
             if(newWorker.jobTitle == JobTitle.Receptionist)
             {
@@ -29,21 +29,43 @@ namespace Backend.Models
             }
         }
 
-        //todo take care of pointer issue
-        public void deleteWorker(AbstractWorker worker)
+        public static void deleteWorker(int id)
         {
-
-            if(worker.jobTitle == JobTitle.RoomService)
+            for (Iterator workerIterator = Apphost.ListOfRoomServices.GetIterator(); workerIterator.hasNext();)
             {
-                Apphost.ListOfRoomServices.list.Remove(worker);
-            }
-            else
-            {
-                Apphost.ListOfPrivilegedWorkers.list.Remove(worker);
+                RoomService worker = workerIterator.getNext() as RoomService;
+                if (worker.id == id)
+                {
+                    if (worker.jobTitle == JobTitle.RoomService)
+                        Apphost.ListOfRoomServices.list.Remove(worker);
+                    else
+                        Apphost.ListOfPrivilegedWorkers.list.Remove(worker);
+                }
             }
         }
 
-        public void editWorker(AbstractWorker editedWorker, string password)
+        public static AbstractWorker getWorker(int id)
+        {
+            for (Iterator workerIterator = Apphost.ListOfRoomServices.GetIterator(); workerIterator.hasNext();)
+            {
+                AbstractWorker worker = workerIterator.getNext() as AbstractWorker;
+                if (worker.id == id)
+                {
+                    return worker;
+                }
+            }
+            for (Iterator workerIterator = Apphost.ListOfPrivilegedWorkers.GetIterator(); workerIterator.hasNext();)
+            {
+                AbstractPrivilegedWorker worker = workerIterator.getNext() as AbstractPrivilegedWorker;
+                if (worker.id == id)
+                {
+                    return worker;
+                }
+            }
+            return null;
+        }
+
+        public static void editWorker(AbstractWorker editedWorker, string password)
         {
             if (editedWorker.jobTitle == JobTitle.RoomService)
             {
@@ -70,16 +92,16 @@ namespace Backend.Models
             }
         }
 
-        public List<object> viewAllWorkers()
+        public static List<object> viewAllWorkers()
         {
             return (List<object>)Apphost.ListOfRoomServices.list.Concat(Apphost.ListOfPrivilegedWorkers.list);
         }
-        public List<object> viewAllResidents()
+        public static List<object> viewAllResidents()
         {
 
             return Apphost.ListOfResidents.list;  
         }
-        public double getIncome(Duration duration)
+        public static double getIncome(Duration duration)
         {
             long targetedDuration;
             double totalIncome = 0;
@@ -110,7 +132,7 @@ namespace Backend.Models
             return totalIncome;
         }
 
-        public List<object> showDetailsOfAllRooms(string typeOfTheRoom)
+        public static List<object> showDetailsOfAllRooms(string typeOfTheRoom)
         {
             return Apphost.ListOfRooms.list;
         }

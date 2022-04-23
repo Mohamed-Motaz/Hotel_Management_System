@@ -37,19 +37,19 @@ namespace Backend.Controllers
         }
 
         [HttpPost]
-        public string get(string json) //api/resident/get
-        {
-            dynamic obj = JsonConvert.DeserializeObject(json);
-            string res = JsonConvert.SerializeObject(Resident.getResident(obj.id));
-            return res;
-        }
-
-        [HttpPost]
         public string delete(string json) //api/resident/delete
         {
             dynamic obj = JsonConvert.DeserializeObject(json);
             Resident.deleteResident(obj.id);
             string res = JsonConvert.SerializeObject(true);
+            return res;
+        }
+
+        [HttpPost]
+        public string get(string json) //api/resident/get
+        {
+            dynamic obj = JsonConvert.DeserializeObject(json);
+            string res = JsonConvert.SerializeObject(Resident.getResident(obj.id));
             return res;
         }
 
