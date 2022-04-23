@@ -118,3 +118,7 @@ D:\Hotel_Management_System\Frontend\obj\Debug\Frontend.ResidentForms.MainResiden
 D:\Hotel_Management_System\Frontend\obj\Debug\Frontend.ResidentForms.ManageReservations.resources
 D:\Hotel_Management_System\Frontend\obj\Debug\Frontend.ResidentForms.ReservationsList.resources
 D:\Hotel_Management_System\Frontend\obj\Debug\Frontend.ResidentForms.ResidentDashboard.resources
+C:\Users\Mohamed Motaz\Desktop\HotelManagementSystem\Frontend\obj\Debug\Frontend.ReceptionistForms.CheckOutForm.resources
+C:\Users\Mohamed Motaz\Desktop\HotelManagementSystem\Frontend\obj\Debug\Frontend.ResidentLoginForm.resources
+C:\Users\Mohamed Motaz\Desktop\HotelManagementSystem\Frontend\obj\Debug\Frontend.ResidentSignUpForm.resources
+C:\Users\Mohamed Motaz\Desktop\HotelManagementSystem\Frontend\obj\Debug\Frontend.WorkerLoginForm.resources
