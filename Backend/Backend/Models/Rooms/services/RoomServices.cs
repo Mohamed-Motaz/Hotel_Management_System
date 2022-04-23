@@ -1,26 +1,27 @@
-﻿using System;
+﻿using Backend.Models.Rooms;
+using System;
 using System.Collections.Generic;
 using System.Text;
 
 namespace Backend.Models
 {
-    class Services
+    class RoomServices
     {
-        private Services(){ }
+        private RoomServices(){ }
 
-        private static Services services = null;
+        private static RoomServices services = null;
 
-        public static Services GetInstance() 
+        public static RoomServices GetInstance() 
         {
             if (services == null) 
             {
-                services = new Services();
+                services = new RoomServices();
             }
             return services;
         }
 
 
-        public bool CheckIfRoomAvailable(RoomTypes type)
+        public bool CheckIfRoomTypeAvailable(RoomTypes type)
         {
             if ((type == RoomTypes.Single) && (Apphost.CURR_SINGLE_ROOMS < Apphost.MAX_SINGLE_ROOMS))
                 return true;
@@ -33,6 +34,19 @@ namespace Backend.Models
 
             return false;
         }
+
+        public void ChangeRoomStatus(Room room)
+        {
+            Apphost.ListOfReservedRooms.list.Add(room);
+            Apphost.ListOfAvailableRooms.list.Remove(room);
+            if (room.Type == RoomTypes.Single) Apphost.CURR_SINGLE_ROOMS++;
+
+            else if (room.Type == RoomTypes.Double) Apphost.CURR_DOUBLE_ROOMS++;
+
+            else if (room.Type == RoomTypes.Triple) Apphost.CURR_TRIPLE_ROOMS++;
+
+        }
+
 
         public void PrintDividor()
         {

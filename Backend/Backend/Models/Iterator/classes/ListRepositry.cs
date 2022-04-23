@@ -11,8 +11,8 @@ namespace Backend.Models
         private Iterator iterator;
         public override Iterator GetIterator()
         {
-           iterator = new ListIterator(list);
-           return iterator;
+            iterator = new ListIterator(list);
+            return iterator;
         }
     }
 }
