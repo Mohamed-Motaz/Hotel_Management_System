@@ -9,17 +9,17 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace Frontend.ReceptionistForms
+namespace Frontend.ResidentForms
 {
-    public partial class ListActiveReservations : Form
+    public partial class ReservationsList : Form
     {
-        public ListActiveReservations()
+        public ReservationsList()
         {
             InitializeComponent();
         }
-        public List<dynamic> GetActiveReservations()
+        public List<dynamic> GetReservations()
         {
-            List<dynamic> ActiveReservations = new List<dynamic>();
+            List<dynamic> Reservations = new List<dynamic>();
 
             dynamic res = new ExpandoObject();
             res.id = "1";
@@ -30,7 +30,7 @@ namespace Frontend.ReceptionistForms
             res.EndDate = "8/9";
             res.TotalPrice = "26000";
 
-            ActiveReservations.Add(res);
+            Reservations.Add(res);
 
             dynamic res1 = new ExpandoObject();
             res1.id = "2";
@@ -38,37 +38,37 @@ namespace Frontend.ReceptionistForms
             res1.BoardId = "7";
             res1.ResidentId = "5";
             res1.StartDate = "7/8";
-            res1.EndDate = "3/9";
+            res1.EndDate = "13/8";
             res1.TotalPrice = "2600";
 
-            ActiveReservations.Add(res1);
+            Reservations.Add(res1);
 
-            return ActiveReservations;
+            return Reservations;
         }
-        private void ListActiveReservations_Load(object sender, EventArgs e)
+        private void ReservationsList_Load(object sender, EventArgs e)
         {
             setUpDataGridView();
-
         }
+
         public void setUpDataGridView()
         {
-            ActiveReservationsGV.ColumnCount = 7;
-            ActiveReservationsGV.Columns[0].Name = "ID";
-            ActiveReservationsGV.Columns[1].Name = "RoomID";
-            ActiveReservationsGV.Columns[2].Name = "BoardID";
-            ActiveReservationsGV.Columns[3].Name = "ResidentID";
-            ActiveReservationsGV.Columns[4].Name = "Start Date";
-            ActiveReservationsGV.Columns[5].Name = "End Date";
-            ActiveReservationsGV.Columns[6].Name = "Total price";
+            ReservationsGV.ColumnCount = 7;
+            ReservationsGV.Columns[0].Name = "ID";
+            ReservationsGV.Columns[1].Name = "RoomID";
+            ReservationsGV.Columns[2].Name = "BoardID";
+            ReservationsGV.Columns[3].Name = "ResidentID";
+            ReservationsGV.Columns[4].Name = "Start Date";
+            ReservationsGV.Columns[5].Name = "End Date";
+            ReservationsGV.Columns[6].Name = "Total price";
 
-            List<dynamic> reservations = GetActiveReservations();
+            List<dynamic> reservations = GetReservations();
 
             label1.Text = reservations.Count.ToString();
 
 
             foreach (dynamic res in reservations)
             {
-                DataGridViewRow row = (DataGridViewRow)ActiveReservationsGV.Rows[0].Clone();
+                DataGridViewRow row = (DataGridViewRow)ReservationsGV.Rows[0].Clone();
                 row.Cells[0].Value = res.id;
                 row.Cells[1].Value = res.RoomId;
                 row.Cells[2].Value = res.BoardId;
@@ -77,24 +77,8 @@ namespace Frontend.ReceptionistForms
                 row.Cells[5].Value = res.EndDate;
                 row.Cells[6].Value = res.TotalPrice;
 
-                ActiveReservationsGV.Rows.Add(row);
+                ReservationsGV.Rows.Add(row);
             }
-
-
-        }
-
-        private void label2_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label5_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label4_Click(object sender, EventArgs e)
-        {
 
         }
 
@@ -105,7 +89,7 @@ namespace Frontend.ReceptionistForms
             {
                 try
                 {
-                    foreach (DataGridViewRow row in ActiveReservationsGV.Rows)
+                    foreach (DataGridViewRow row in ReservationsGV.Rows)
                     {
                         if (row.Cells[1].Value != null && row.Cells[1].Value.ToString().ToLower().Contains(bunifuMetroTextbox1.Text.ToLower()))
                         {
@@ -125,7 +109,7 @@ namespace Frontend.ReceptionistForms
             }
             else
             {
-                foreach (DataGridViewRow row in ActiveReservationsGV.Rows)
+                foreach (DataGridViewRow row in ReservationsGV.Rows)
                 {
                     cnt++;
                     if (row.Visible != true)
