@@ -20,7 +20,7 @@ namespace Frontend.Extras
 
         private void addResidentBtn_Click(object sender, EventArgs e)
         {
-            dynamic resident = new  ExpandoObject();
+            dynamic resident = new ExpandoObject();
             resident.id = idTextBox.Text;
             resident.name = nameTextBox.Text;
             resident.age = ageTextBox.Text;
@@ -32,7 +32,6 @@ namespace Frontend.Extras
             //send to api addResident
 
         }
-
         private void clearBtn_Click(object sender, EventArgs e)
         {
             idTextBox.Text = "";
