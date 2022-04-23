@@ -32,12 +32,32 @@ namespace Backend.Models
             Apphost.ListOfResidents.list.Add(resident);
         }
 
-        //get all reservations --
-        //make reservation --
-        //edit reservation --
-        //cancel reservation --
+        public static bool isResident(int id)
+        {
+            for (Iterator ResidentsIterator = Apphost.ListOfResidents.GetIterator(); ResidentsIterator.hasNext();)
+            {
+                Resident resident = ResidentsIterator.getNext() as Resident;
+                if (id == resident.id)
+                {
+                    return true;
+                }
+            }
+            return false;
+        }
 
 
+        public static void deleteResident(int id)
+        {
+            for (Iterator ResidentsIterator = Apphost.ListOfResidents.GetIterator(); ResidentsIterator.hasNext();)
+            {
+                Resident resident = ResidentsIterator.getNext() as Resident;
+                if (id == resident.id)
+                {
+                    Apphost.ListOfResidents.list.Remove(resident);
+                    break;
+                }
+            }
+        }
 
     }
 }

@@ -12,3 +12,7 @@ Log Entry : 9:25:23 PM Friday, April 22, 2022
 Log Entry : 4:12:21 PM Saturday, April 23, 2022
    :App Startup Successfull
 ----------------------------------------------
+
+Log Entry : 5:24:52 PM Saturday, April 23, 2022
+   :App Startup Successfull
+----------------------------------------------
