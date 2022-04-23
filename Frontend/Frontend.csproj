@@ -201,11 +201,23 @@
     <Compile Include="ReceptionistForms\AddReservation.Designer.cs">
       <DependentUpon>AddReservation.cs</DependentUpon>
     </Compile>
+    <Compile Include="ReceptionistForms\AddResident.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ReceptionistForms\AddResident.Designer.cs">
+      <DependentUpon>AddResident.cs</DependentUpon>
+    </Compile>
     <Compile Include="ReceptionistForms\EditOrDeleteReservation.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="ReceptionistForms\EditOrDeleteReservation.Designer.cs">
       <DependentUpon>EditOrDeleteReservation.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ReceptionistForms\EditOrDeleteResident.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ReceptionistForms\EditOrDeleteResident.Designer.cs">
+      <DependentUpon>EditOrDeleteResident.cs</DependentUpon>
     </Compile>
     <Compile Include="ReceptionistForms\ListActiveReservations.cs">
       <SubType>Form</SubType>
@@ -230,6 +242,12 @@
     </Compile>
     <Compile Include="ReceptionistForms\ManageResidents.Designer.cs">
       <DependentUpon>ManageResidents.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ReceptionistForms\ResidentsList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ReceptionistForms\ResidentsList.Designer.cs">
+      <DependentUpon>ResidentsList.cs</DependentUpon>
     </Compile>
     <Compile Include="ResidentForms\MainResidentForm.cs">
       <SubType>Form</SubType>
@@ -339,8 +357,14 @@
     <EmbeddedResource Include="ReceptionistForms\AddReservation.resx">
       <DependentUpon>AddReservation.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="ReceptionistForms\AddResident.resx">
+      <DependentUpon>AddResident.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="ReceptionistForms\EditOrDeleteReservation.resx">
       <DependentUpon>EditOrDeleteReservation.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ReceptionistForms\EditOrDeleteResident.resx">
+      <DependentUpon>EditOrDeleteResident.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ReceptionistForms\ListActiveReservations.resx">
       <DependentUpon>ListActiveReservations.cs</DependentUpon>
@@ -353,6 +377,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="ReceptionistForms\ManageResidents.resx">
       <DependentUpon>ManageResidents.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ReceptionistForms\ResidentsList.resx">
+      <DependentUpon>ResidentsList.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ResidentForms\MainResidentForm.resx">
       <DependentUpon>MainResidentForm.cs</DependentUpon>

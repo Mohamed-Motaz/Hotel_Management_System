@@ -1,5 +1,5 @@
 ﻿
-namespace Frontend.Extras
+namespace Frontend.ReceptionistForms
 {
     partial class AddResident
     {

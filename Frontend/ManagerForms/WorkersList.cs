@@ -20,9 +20,7 @@ namespace Frontend.ManagerForms
         public List<dynamic> getWorkers()
         {
             List<dynamic> workers = new List<dynamic>();
-            
-            
-            
+                  
             dynamic worker = new ExpandoObject();
             worker.name = "Rawan";
             worker.id = "1";
