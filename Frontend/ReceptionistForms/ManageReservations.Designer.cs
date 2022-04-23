@@ -35,6 +35,7 @@ namespace Frontend.ReceptionistForms
             this.label1 = new System.Windows.Forms.Label();
             this.bunifuSeparator1 = new Bunifu.Framework.UI.BunifuSeparator();
             this.label2 = new System.Windows.Forms.Label();
+            this.ActiveReservationButton = new Bunifu.Framework.UI.BunifuTileButton();
             this.SuspendLayout();
             // 
             // addReservationButton
@@ -111,11 +112,32 @@ namespace Frontend.ReceptionistForms
             this.label2.TabIndex = 88;
             this.label2.Text = "Control";
             // 
+            // ActiveReservationButton
+            // 
+            this.ActiveReservationButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
+            this.ActiveReservationButton.color = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
+            this.ActiveReservationButton.colorActive = System.Drawing.Color.FromArgb(((int)(((byte)(43)))), ((int)(((byte)(179)))), ((int)(((byte)(212)))));
+            this.ActiveReservationButton.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.ActiveReservationButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F);
+            this.ActiveReservationButton.ForeColor = System.Drawing.Color.White;
+            this.ActiveReservationButton.Image = ((System.Drawing.Image)(resources.GetObject("ActiveReservationButton.Image")));
+            this.ActiveReservationButton.ImagePosition = 20;
+            this.ActiveReservationButton.ImageZoom = 50;
+            this.ActiveReservationButton.LabelPosition = 41;
+            this.ActiveReservationButton.LabelText = "View Active Reservations";
+            this.ActiveReservationButton.Location = new System.Drawing.Point(264, 329);
+            this.ActiveReservationButton.Margin = new System.Windows.Forms.Padding(6);
+            this.ActiveReservationButton.Name = "ActiveReservationButton";
+            this.ActiveReservationButton.Size = new System.Drawing.Size(273, 168);
+            this.ActiveReservationButton.TabIndex = 92;
+            this.ActiveReservationButton.Click += new System.EventHandler(this.ActiveReservationButton_Click);
+            // 
             // ManageReservations
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1146, 744);
+            this.Controls.Add(this.ActiveReservationButton);
             this.Controls.Add(this.addReservationButton);
             this.Controls.Add(this.editOrDeleteReservationButton);
             this.Controls.Add(this.label1);
@@ -135,5 +157,6 @@ namespace Frontend.ReceptionistForms
         private System.Windows.Forms.Label label1;
         private Bunifu.Framework.UI.BunifuSeparator bunifuSeparator1;
         private System.Windows.Forms.Label label2;
+        private Bunifu.Framework.UI.BunifuTileButton ActiveReservationButton;
     }
 }
