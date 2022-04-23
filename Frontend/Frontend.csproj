@@ -80,10 +80,16 @@
     <Compile Include="Diagnosis.Designer.cs">
       <DependentUpon>Diagnosis.cs</DependentUpon>
     </Compile>
-    <Compile Include="Extras\ResidentLoginForm.cs">
+    <Compile Include="ResidentForms\ResidentSignUpForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Extras\ResidentLoginForm.Designer.cs">
+    <Compile Include="ResidentForms\ResidentSignUpForm.Designer.cs">
+      <DependentUpon>ResidentSignUpForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ResidentForms\ResidentLoginForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ResidentForms\ResidentLoginForm.Designer.cs">
       <DependentUpon>ResidentLoginForm.cs</DependentUpon>
     </Compile>
     <Compile Include="ManagerForms\AddResident.cs">
@@ -281,7 +287,10 @@
     <EmbeddedResource Include="Diagnosis.resx">
       <DependentUpon>Diagnosis.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Extras\ResidentLoginForm.resx">
+    <EmbeddedResource Include="ResidentForms\ResidentSignUpForm.resx">
+      <DependentUpon>ResidentSignUpForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ResidentForms\ResidentLoginForm.resx">
       <DependentUpon>ResidentLoginForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ManagerForms\AddResident.resx">

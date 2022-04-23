@@ -60,5 +60,12 @@ namespace Frontend
             MainResidentForm residentForm = new MainResidentForm();
             residentForm.Show();
         }
+
+        private void ResidentSignUpButton_Click(object sender, EventArgs e)
+        {
+            ResidentSignUpForm residentSignUpForm = new ResidentSignUpForm();
+            residentSignUpForm.Show();
+
+        }
     }
 }

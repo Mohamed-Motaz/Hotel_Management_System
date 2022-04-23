@@ -1,6 +1,6 @@
 ﻿namespace Frontend
 {
-    partial class ResidentLoginForm
+    partial class ResidentSignUpForm
     {
         /// <summary>
         /// Required designer variable.
@@ -29,9 +29,9 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ResidentLoginForm));
-            this.txtUser = new System.Windows.Forms.TextBox();
-            this.txtPass = new System.Windows.Forms.TextBox();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ResidentSignUpForm));
+            this.UserNameTextBox = new System.Windows.Forms.TextBox();
+            this.PasswordTextBox = new System.Windows.Forms.TextBox();
             this.lblWarning = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
@@ -39,35 +39,42 @@
             this.bunifuTileButton1 = new Bunifu.Framework.UI.BunifuTileButton();
             this.label24 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.bunifuFlatButton2 = new Bunifu.Framework.UI.BunifuFlatButton();
             this.bunifuFlatButton1 = new Bunifu.Framework.UI.BunifuFlatButton();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.GenderTextBox = new System.Windows.Forms.TextBox();
+            this.EmailTextBox = new System.Windows.Forms.TextBox();
+            this.label5 = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
+            this.AgeTextBox = new System.Windows.Forms.TextBox();
+            this.PhoneNumberTextBox = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
-            // txtUser
+            // UserNameTextBox
             // 
-            this.txtUser.BackColor = System.Drawing.Color.Silver;
-            this.txtUser.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txtUser.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtUser.ForeColor = System.Drawing.Color.Black;
-            this.txtUser.Location = new System.Drawing.Point(104, 89);
-            this.txtUser.Multiline = true;
-            this.txtUser.Name = "txtUser";
-            this.txtUser.Size = new System.Drawing.Size(251, 23);
-            this.txtUser.TabIndex = 6;
+            this.UserNameTextBox.BackColor = System.Drawing.Color.Silver;
+            this.UserNameTextBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.UserNameTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.UserNameTextBox.ForeColor = System.Drawing.Color.Black;
+            this.UserNameTextBox.Location = new System.Drawing.Point(135, 89);
+            this.UserNameTextBox.Multiline = true;
+            this.UserNameTextBox.Name = "UserNameTextBox";
+            this.UserNameTextBox.Size = new System.Drawing.Size(251, 23);
+            this.UserNameTextBox.TabIndex = 6;
             // 
-            // txtPass
+            // PasswordTextBox
             // 
-            this.txtPass.BackColor = System.Drawing.Color.Silver;
-            this.txtPass.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txtPass.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtPass.ForeColor = System.Drawing.SystemColors.InactiveCaptionText;
-            this.txtPass.Location = new System.Drawing.Point(104, 118);
-            this.txtPass.Multiline = true;
-            this.txtPass.Name = "txtPass";
-            this.txtPass.PasswordChar = '•';
-            this.txtPass.Size = new System.Drawing.Size(251, 23);
-            this.txtPass.TabIndex = 7;
+            this.PasswordTextBox.BackColor = System.Drawing.Color.Silver;
+            this.PasswordTextBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.PasswordTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.PasswordTextBox.ForeColor = System.Drawing.SystemColors.InactiveCaptionText;
+            this.PasswordTextBox.Location = new System.Drawing.Point(135, 118);
+            this.PasswordTextBox.Multiline = true;
+            this.PasswordTextBox.Name = "PasswordTextBox";
+            this.PasswordTextBox.PasswordChar = '•';
+            this.PasswordTextBox.Size = new System.Drawing.Size(251, 23);
+            this.PasswordTextBox.TabIndex = 7;
             // 
             // lblWarning
             // 
@@ -149,43 +156,6 @@
             this.label2.TabIndex = 494;
             this.label2.Text = "Password:";
             // 
-            // bunifuFlatButton2
-            // 
-            this.bunifuFlatButton2.Activecolor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(116)))), ((int)(((byte)(166)))));
-            this.bunifuFlatButton2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(116)))), ((int)(((byte)(166)))));
-            this.bunifuFlatButton2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.bunifuFlatButton2.BorderRadius = 2;
-            this.bunifuFlatButton2.ButtonText = "Login";
-            this.bunifuFlatButton2.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.bunifuFlatButton2.DisabledColor = System.Drawing.Color.Gray;
-            this.bunifuFlatButton2.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bunifuFlatButton2.Iconcolor = System.Drawing.Color.Transparent;
-            this.bunifuFlatButton2.Iconimage = ((System.Drawing.Image)(resources.GetObject("bunifuFlatButton2.Iconimage")));
-            this.bunifuFlatButton2.Iconimage_right = null;
-            this.bunifuFlatButton2.Iconimage_right_Selected = null;
-            this.bunifuFlatButton2.Iconimage_Selected = null;
-            this.bunifuFlatButton2.IconMarginLeft = 0;
-            this.bunifuFlatButton2.IconMarginRight = 0;
-            this.bunifuFlatButton2.IconRightVisible = true;
-            this.bunifuFlatButton2.IconRightZoom = 0D;
-            this.bunifuFlatButton2.IconVisible = true;
-            this.bunifuFlatButton2.IconZoom = 50D;
-            this.bunifuFlatButton2.IsTab = false;
-            this.bunifuFlatButton2.Location = new System.Drawing.Point(122, 181);
-            this.bunifuFlatButton2.Margin = new System.Windows.Forms.Padding(2);
-            this.bunifuFlatButton2.Name = "bunifuFlatButton2";
-            this.bunifuFlatButton2.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(116)))), ((int)(((byte)(166)))));
-            this.bunifuFlatButton2.OnHovercolor = System.Drawing.Color.Navy;
-            this.bunifuFlatButton2.OnHoverTextColor = System.Drawing.SystemColors.ControlLight;
-            this.bunifuFlatButton2.selected = false;
-            this.bunifuFlatButton2.Size = new System.Drawing.Size(198, 51);
-            this.bunifuFlatButton2.TabIndex = 495;
-            this.bunifuFlatButton2.Text = "Login";
-            this.bunifuFlatButton2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.bunifuFlatButton2.Textcolor = System.Drawing.Color.White;
-            this.bunifuFlatButton2.TextFont = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bunifuFlatButton2.Click += new System.EventHandler(this.ResidentLoginButton_Click);
-            // 
             // bunifuFlatButton1
             // 
             this.bunifuFlatButton1.Activecolor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(116)))), ((int)(((byte)(166)))));
@@ -208,7 +178,7 @@
             this.bunifuFlatButton1.IconVisible = true;
             this.bunifuFlatButton1.IconZoom = 50D;
             this.bunifuFlatButton1.IsTab = false;
-            this.bunifuFlatButton1.Location = new System.Drawing.Point(122, 257);
+            this.bunifuFlatButton1.Location = new System.Drawing.Point(135, 296);
             this.bunifuFlatButton1.Margin = new System.Windows.Forms.Padding(2);
             this.bunifuFlatButton1.Name = "bunifuFlatButton1";
             this.bunifuFlatButton1.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(116)))), ((int)(((byte)(166)))));
@@ -221,28 +191,130 @@
             this.bunifuFlatButton1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.bunifuFlatButton1.Textcolor = System.Drawing.Color.White;
             this.bunifuFlatButton1.TextFont = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bunifuFlatButton1.Click += new System.EventHandler(this.ResidentSignUpButton_Click);
             // 
-            // ResidentLoginForm
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.ForeColor = System.Drawing.Color.DimGray;
+            this.label3.Location = new System.Drawing.Point(11, 176);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(66, 18);
+            this.label3.TabIndex = 500;
+            this.label3.Text = "Gender:";
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.ForeColor = System.Drawing.Color.DimGray;
+            this.label4.Location = new System.Drawing.Point(11, 147);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(50, 18);
+            this.label4.TabIndex = 499;
+            this.label4.Text = "Email:";
+            // 
+            // GenderTextBox
+            // 
+            this.GenderTextBox.BackColor = System.Drawing.Color.Silver;
+            this.GenderTextBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.GenderTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.GenderTextBox.ForeColor = System.Drawing.SystemColors.InactiveCaptionText;
+            this.GenderTextBox.Location = new System.Drawing.Point(135, 176);
+            this.GenderTextBox.Multiline = true;
+            this.GenderTextBox.Name = "GenderTextBox";
+            this.GenderTextBox.PasswordChar = '•';
+            this.GenderTextBox.Size = new System.Drawing.Size(251, 23);
+            this.GenderTextBox.TabIndex = 498;
+            // 
+            // EmailTextBox
+            // 
+            this.EmailTextBox.BackColor = System.Drawing.Color.Silver;
+            this.EmailTextBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.EmailTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.EmailTextBox.ForeColor = System.Drawing.Color.Black;
+            this.EmailTextBox.Location = new System.Drawing.Point(135, 148);
+            this.EmailTextBox.Multiline = true;
+            this.EmailTextBox.Name = "EmailTextBox";
+            this.EmailTextBox.Size = new System.Drawing.Size(251, 23);
+            this.EmailTextBox.TabIndex = 497;
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.ForeColor = System.Drawing.Color.DimGray;
+            this.label5.Location = new System.Drawing.Point(11, 236);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(39, 18);
+            this.label5.TabIndex = 504;
+            this.label5.Text = "Age:";
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.ForeColor = System.Drawing.Color.DimGray;
+            this.label6.Location = new System.Drawing.Point(11, 207);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(118, 18);
+            this.label6.TabIndex = 503;
+            this.label6.Text = "Phone Number:";
+            // 
+            // AgeTextBox
+            // 
+            this.AgeTextBox.BackColor = System.Drawing.Color.Silver;
+            this.AgeTextBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.AgeTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.AgeTextBox.ForeColor = System.Drawing.SystemColors.InactiveCaptionText;
+            this.AgeTextBox.Location = new System.Drawing.Point(135, 237);
+            this.AgeTextBox.Multiline = true;
+            this.AgeTextBox.Name = "AgeTextBox";
+            this.AgeTextBox.PasswordChar = '•';
+            this.AgeTextBox.Size = new System.Drawing.Size(251, 23);
+            this.AgeTextBox.TabIndex = 502;
+            // 
+            // PhoneNumberTextBox
+            // 
+            this.PhoneNumberTextBox.BackColor = System.Drawing.Color.Silver;
+            this.PhoneNumberTextBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.PhoneNumberTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.PhoneNumberTextBox.ForeColor = System.Drawing.Color.Black;
+            this.PhoneNumberTextBox.Location = new System.Drawing.Point(135, 207);
+            this.PhoneNumberTextBox.Multiline = true;
+            this.PhoneNumberTextBox.Name = "PhoneNumberTextBox";
+            this.PhoneNumberTextBox.Size = new System.Drawing.Size(251, 23);
+            this.PhoneNumberTextBox.TabIndex = 501;
+            // 
+            // ResidentSignUpForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Silver;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(471, 335);
+            this.ClientSize = new System.Drawing.Size(471, 378);
+            this.Controls.Add(this.label5);
+            this.Controls.Add(this.label6);
+            this.Controls.Add(this.AgeTextBox);
+            this.Controls.Add(this.PhoneNumberTextBox);
+            this.Controls.Add(this.label3);
+            this.Controls.Add(this.label4);
+            this.Controls.Add(this.GenderTextBox);
+            this.Controls.Add(this.EmailTextBox);
             this.Controls.Add(this.bunifuFlatButton1);
-            this.Controls.Add(this.bunifuFlatButton2);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label24);
             this.Controls.Add(this.bunifuTileButton1);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.lblWarning);
-            this.Controls.Add(this.txtPass);
-            this.Controls.Add(this.txtUser);
+            this.Controls.Add(this.PasswordTextBox);
+            this.Controls.Add(this.UserNameTextBox);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.KeyPreview = true;
-            this.Name = "ResidentLoginForm";
+            this.Name = "ResidentSignUpForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Form1";
             this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.frmLogin_KeyDown);
@@ -253,8 +325,8 @@
         }
 
         #endregion
-        private System.Windows.Forms.TextBox txtUser;
-        private System.Windows.Forms.TextBox txtPass;
+        private System.Windows.Forms.TextBox UserNameTextBox;
+        private System.Windows.Forms.TextBox PasswordTextBox;
         private System.Windows.Forms.Label lblWarning;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.PictureBox pictureBox1;
@@ -262,8 +334,15 @@
         private Bunifu.Framework.UI.BunifuTileButton bunifuTileButton1;
         private System.Windows.Forms.Label label24;
         private System.Windows.Forms.Label label2;
-        private Bunifu.Framework.UI.BunifuFlatButton bunifuFlatButton2;
         private Bunifu.Framework.UI.BunifuFlatButton bunifuFlatButton1;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.TextBox GenderTextBox;
+        private System.Windows.Forms.TextBox EmailTextBox;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.TextBox AgeTextBox;
+        private System.Windows.Forms.TextBox PhoneNumberTextBox;
     }
 }
 

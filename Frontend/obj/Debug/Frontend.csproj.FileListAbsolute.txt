@@ -151,3 +151,4 @@ D:\My projects\Hotel_Management_System\Frontend\obj\Debug\Frontend.csproj.CopyCo
 D:\My projects\Hotel_Management_System\Frontend\obj\Debug\Frontend.exe
 D:\My projects\Hotel_Management_System\Frontend\obj\Debug\Frontend.pdb
 D:\My projects\Hotel_Management_System\Frontend\obj\Debug\Frontend.ResidentLoginForm.resources
+D:\My projects\Hotel_Management_System\Frontend\obj\Debug\Frontend.ResidentSignUpForm.resources
