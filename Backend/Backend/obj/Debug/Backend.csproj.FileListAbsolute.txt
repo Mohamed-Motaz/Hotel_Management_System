@@ -229,3 +229,7 @@ D:\My projects\Hotel_Management_System\Backend\Backend\bin\System.Web.WebPages.R
 D:\My projects\Hotel_Management_System\Backend\Backend\bin\Antlr3.Runtime.pdb
 D:\My projects\Hotel_Management_System\Backend\Backend\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
 D:\My projects\Hotel_Management_System\Backend\Backend\obj\Debug\Backend.csproj.CopyComplete
+C:\Users\abdelazim\Documents\GitHub\Hotel_Management_System_Design_Patterns\Backend\Backend\obj\Debug\Backend.csproj.AssemblyReference.cache
+C:\Users\abdelazim\Documents\GitHub\Hotel_Management_System_Design_Patterns\Backend\Backend\obj\Debug\Backend.csproj.CoreCompileInputs.cache
+C:\Users\abdelazim\Documents\GitHub\Hotel_Management_System_Design_Patterns\Backend\Backend\obj\Debug\Backend.dll
+C:\Users\abdelazim\Documents\GitHub\Hotel_Management_System_Design_Patterns\Backend\Backend\obj\Debug\Backend.pdb

@@ -7,15 +7,16 @@ namespace Backend.Models
 {
     public class AbstractUser
     {
+        public static int UserIds = 1;
         public int id { set; get; }
         public string userName { set; get; }
         public int age { set; get; }
         public string email { set; get; }
         public string phoneNumber { set; get; }
 
-        public AbstractUser(int id, string userName, int age, string email, string phoneNumber)
+        public AbstractUser(string userName, int age, string email, string phoneNumber)
         {
-            this.id = id;
+            id = UserIds++;
             this.userName = userName;
             this.age = age;
             this.email = email;
