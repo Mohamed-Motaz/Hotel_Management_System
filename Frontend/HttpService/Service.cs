@@ -13,7 +13,7 @@ namespace Frontend.HttpService
     {
         private static string url = "http://localhost:62377/";
 
-        public static HttpResponseMessage Post(string action, string document)
+        public static HttpResponseMessage Post(string action, string json)
         {
             using (var client = new HttpClient())
             {
@@ -21,7 +21,7 @@ namespace Frontend.HttpService
                 client.Timeout = new TimeSpan(0, 2, 0);
                 client.BaseAddress = new Uri(url);
                 var response = client.PostAsync(action,
-                new StringContent(document, Encoding.UTF8, "application/json")).Result;
+                new StringContent(json, Encoding.UTF8, "application/json")).Result;
 
                 if (response.IsSuccessStatusCode)
                     Console.WriteLine("Success");
@@ -35,11 +35,18 @@ namespace Frontend.HttpService
 
         public static dynamic GetAllResidents()
         {
-            HttpResponseMessage response = Post("getResidents", "");
+            HttpResponseMessage response = Post("api/getResidents", "");
             string responseStr = response.Content.ReadAsStringAsync().Result;
             dynamic obj = JsonConvert.DeserializeObject(responseStr);
+            return obj;
+        }
 
-            
+        public static dynamic GetResidentById(dynamic input)
+        {
+            string json = JsonConvert.SerializeObject(input);
+            HttpResponseMessage response = Post("api/getResidents", json);
+            string responseStr = response.Content.ReadAsStringAsync().Result;
+            dynamic obj = JsonConvert.DeserializeObject(responseStr);
             return obj;
         }
     }
