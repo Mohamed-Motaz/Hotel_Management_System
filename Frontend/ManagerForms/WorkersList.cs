@@ -8,7 +8,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-
+using Frontend.HttpService;
 namespace Frontend.ManagerForms
 {
     public partial class WorkersList : Form
@@ -19,9 +19,9 @@ namespace Frontend.ManagerForms
         }
         public List<dynamic> getWorkers()
         {
-            List<dynamic> workers = new List<dynamic>();
+            List<dynamic> workers = Service.GetAllWorkers();
                   
-            dynamic worker = new ExpandoObject();
+            /*dynamic worker = new ExpandoObject();
             worker.name = "Rawan";
             worker.id = "1";
             worker.age = "50";
@@ -39,8 +39,7 @@ namespace Frontend.ManagerForms
             worker1.phoneNumber = "012351111111";
             worker1.salary = "15000";
             worker1.jobTitle = "Manager";
-            workers.Add(worker1);
-
+            workers.Add(worker1);*/
 
             return workers;
         }

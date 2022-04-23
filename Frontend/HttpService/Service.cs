@@ -139,11 +139,16 @@ namespace Frontend.HttpService
 
         public static List<dynamic> GetAllReservations()
         {
-            HttpResponseMessage response = Post("api/reservation/getAll", "");
+            HttpResponseMessage response = Post("api/reservation/get", "");
             string responseStr = response.Content.ReadAsStringAsync().Result;
             dynamic obj = JsonConvert.DeserializeObject(responseStr);
             List<dynamic> Reservations = JsonConvert.DeserializeObject<List<dynamic>>(obj);
             return Reservations;
+        }
+        public static void AddReservation(dynamic input)
+        {
+            string json = JsonConvert.SerializeObject(input);
+            HttpResponseMessage response = Post("api/reservation/add", json);
         }
         public static void DeleteReservations(dynamic input)
         {
@@ -151,10 +156,10 @@ namespace Frontend.HttpService
             HttpResponseMessage response = Post("api/reservation/delete", json);
         }
 
-        public static bool ChangeReservation(dynamic input)
+        public static bool EditReservation(dynamic input)
         {
             string json = JsonConvert.SerializeObject(input);
-            HttpResponseMessage response = Post("api/reservation/change", json);
+            HttpResponseMessage response = Post("api/reservation/Edit", json);
             string responseStr = response.Content.ReadAsStringAsync().Result;
             dynamic obj = JsonConvert.DeserializeObject(responseStr);
             bool succeed = Convert.ToBoolean(obj.boolName);

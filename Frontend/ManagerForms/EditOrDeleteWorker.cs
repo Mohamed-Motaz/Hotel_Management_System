@@ -8,7 +8,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-
+using Frontend.HttpService;
 namespace Frontend.ManagerForms
 {
     public partial class EditOrDeleteWorker : Form
@@ -32,16 +32,16 @@ namespace Frontend.ManagerForms
             worker.id = searchbyIdTextbox.Text;
 
             //TODO: api set worker to the api returend worker
-
-            nameTextBox.Text = worker.name;
-            ageTextBox.Text = worker.age;
-            emailTextBox.Text = worker.email;
-            if (isRoomService.Checked) { worker.password = ""; }
-            else { passwordTextBox.Text = worker.password; }
-            phoneTextBox.Text = worker.phoneNumber;
-            salaryTextBox.Text = worker.salary;
-            jobTitleTextBox.Text = worker.jobType;
-            incomeTypeTextBox.Text = worker.incomeType;
+            dynamic work = Service.GetWorkerById(worker.id);
+            nameTextBox.Text = work.name;
+            ageTextBox.Text = work.age;
+            emailTextBox.Text = work.email;
+            if (isRoomService.Checked) { work.password = ""; }
+            else { passwordTextBox.Text = work.password; }
+            phoneTextBox.Text = work.phoneNumber;
+            salaryTextBox.Text = work.salary;
+            jobTitleTextBox.Text = work.jobType;
+            incomeTypeTextBox.Text = work.incomeType;
         }
 
         private void isRoomService_CheckedChanged(object sender, EventArgs e)
@@ -51,16 +51,30 @@ namespace Frontend.ManagerForms
 
         private void editWorkerBtn_Click(object sender, EventArgs e)
         {
-            //api takes all data and edit it 
-            // and clear it
+            //api takes all data and edit it
+            dynamic obj = new ExpandoObject();
+            obj.id = searchbyIdTextbox.Text;
+            obj.name = nameTextBox.Text;
+            obj.age = ageTextBox.Text;
+            obj.email = emailTextBox.Text;
+            obj.password = passwordTextBox.Text;
+            obj.phoneNumber = phoneTextBox.Text;
+            obj.salary = salaryTextBox.Text;
+            obj.jobTitle = jobTitleTextBox.Text;
+            obj.income = incomeTypeTextBox.Text;
+
+            Service.EditResident(obj);
+
+            // and delete it
             clearBtn_Click(sender, e);
         }
 
         private void deleteWorkerBtn_Click(object sender, EventArgs e)
         {
-            //api takes searchbyIdTextbox.Text , jobTitleTextBox.Text 
-            // and clear it
-            clearBtn_Click(sender,e);
+            dynamic obj = new ExpandoObject();
+            obj.id = searchbyIdTextbox.Text;
+
+            Service.DeleteResident(obj);
         }
 
         private void clearBtn_Click(object sender, EventArgs e)

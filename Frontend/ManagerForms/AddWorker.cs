@@ -8,7 +8,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-
+using Frontend.HttpService;
 namespace Frontend.Extras
 {
     public partial class AddWorker : Form
@@ -42,6 +42,7 @@ namespace Frontend.Extras
             if (isRoomService.Checked) { worker.password = ""; }
 
             //TODO: send to api addWorker
+            Service.AddWorker(worker);
 
             clearBtn_Click(sender, e);
         }

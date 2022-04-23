@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Frontend.HttpService;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -8,6 +9,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+
 
 namespace Frontend.Extras
 {
@@ -29,6 +31,7 @@ namespace Frontend.Extras
 
 
             //send to api addResident
+            Service.AddResident(resident);
 
         }
         private void clearBtn_Click(object sender, EventArgs e)

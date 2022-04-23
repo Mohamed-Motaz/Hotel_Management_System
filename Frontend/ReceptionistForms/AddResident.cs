@@ -8,7 +8,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-
+using Frontend.HttpService;
 namespace Frontend.ReceptionistForms
 {
     public partial class AddResident : Form
@@ -29,6 +29,7 @@ namespace Frontend.ReceptionistForms
 
 
             //send to api addResident
+            Service.AddResident(resident);
 
         }
         private void clearBtn_Click(object sender, EventArgs e)
