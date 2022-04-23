@@ -15,21 +15,22 @@ using Frontend.ResidentForms;
 
 namespace Frontend
 {
-    public partial class frmLogin : Form
+    public partial class ResidentLoginForm : Form
     {
-        public frmLogin()
+        public ResidentLoginForm()
         {
-            InitializeComponent();   
+            InitializeComponent();
+            this.ActiveControl = txtUser;
+            txtUser.Focus();
+        
         }
-
         private void btnLogin_Click(object sender, EventArgs e)
         {
-            //login();
-            frmMain managerMainForm = new frmMain();
+
+           frmMain managerMainForm = new frmMain();
             this.Hide();
             managerMainForm.Show();
         }
-
         private void frmLogin_KeyDown(object sender, KeyEventArgs e)
         {
             if (e.KeyCode == Keys.Enter)
@@ -40,7 +41,6 @@ namespace Frontend
         {
             lblWarning.Text = "";
         }
-
         private void CloseButton_Click(object sender, EventArgs e)
         {
             Application.Exit();
@@ -57,14 +57,15 @@ namespace Frontend
 
         private void ResidentLoginButton_Click(object sender, EventArgs e)
         {
-            ResidentLoginForm residentForm = new ResidentLoginForm();
+            MainResidentForm residentForm = new MainResidentForm();
             residentForm.Show();
         }
 
-        private void WorkerLoginButton_Click(object sender, EventArgs e)
+        private void ResidentSignUpButton_Click(object sender, EventArgs e)
         {
-            WorkerLoginForm workerLoginForm = new WorkerLoginForm();
-            workerLoginForm.Show();
+            ResidentSignUpForm residentSignUpForm = new ResidentSignUpForm();
+            residentSignUpForm.Show();
+
         }
     }
 }

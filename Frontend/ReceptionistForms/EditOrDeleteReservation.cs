@@ -8,7 +8,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using Frontend.HttpService;
+
 namespace Frontend.ReceptionistForms
 {
     public partial class EditOrDeleteReservation : Form
@@ -21,47 +21,62 @@ namespace Frontend.ReceptionistForms
 
         private void EditOrDeleteReservation_Load(object sender, EventArgs e)
         {
-            Reservation = new ExpandoObject();
-            RoomTypeComboBox.Items.Add("Single Room");
-            RoomTypeComboBox.Items.Add("Double Room");
-            RoomTypeComboBox.Items.Add("Triple Room");
+            dynamic AvailableRooms = new ExpandoObject();
+            foreach (dynamic room in AvailableRooms)
+            {
+                // api returns all available rooms to display it in combo box
+                RoomTypeComboBox.Items.Add(room);
+            }
             StartDateDatepicker.Value = DateTime.Today;
+            EndDateDatepicker.Value = DateTime.Today.AddDays(1);
         }
 
         private void EditReservationBtn_Click(object sender, EventArgs e)
         {
-            // api takes all data and edit it 
-            // and clear it
+            dynamic Reservation = new ExpandoObject();
             Reservation.ResidentID = ResidentIDTextBox.Text;
-            Reservation.RoomID = RoomIDTextBox.Text;
-            Reservation.TotalPrice = TotalPriceTextBox.Text;
             Reservation.RoomType = RoomTypeComboBox.GetItemText(RoomTypeComboBox.SelectedItem);
-            Reservation.NumberofNights = NumberofNightsTextBox.Text;
             Reservation.StartDate = StartDateDatepicker.Value;
-
-            Service.EditReservation(Reservation);
-
-            ClearBtn_Click(sender, e);
+            Reservation.EndDate = EndDateDatepicker.Value;
+            if ((EndDateDatepicker.Value < StartDateDatepicker.Value))
+                MessageBox.Show("Please Enter a valid end date");
+            else if (!CheckForResidentID(int.Parse(ResidentIDTextBox.Text)))
+                MessageBox.Show("Please Enter a valid resident id");
+            else
+            {
+                // api takes [ ResidentID with new( RoomType, startDate, EndDate) ]
+                // and delete reservation of ResidentID 
+                // returns bool 1 -> success deleteReservation or 0-> fail deleteReservation
+                MessageBox.Show("Reservation has been edited successfully!");
+            }
+            Clear();
         }
-
-        private void ClearBtn_Click(object sender, EventArgs e)
+        private void Clear()
         {
-            RoomIDTextBox.Text = "";
             RoomTypeComboBox.SelectedItem = "";
-            NumberofNightsTextBox.Text = "";
-            TotalPriceTextBox.Text = "";
             ResidentIDTextBox.Text = "";
             StartDateDatepicker.Value = DateTime.Today;
-
+            EndDateDatepicker.Value = DateTime.Today.AddDays(1);
+        }
+        private void ClearBtn_Click(object sender, EventArgs e)
+        {
+            Clear();
         }
 
         private void DeleteReservationBtn_Click(object sender, EventArgs e)
         {
-            // api takes all data and delete it 
-            Service.DeleteReservations(Reservation.ResidentID);
-            // and clear it
-            ClearBtn_Click(sender, e);
+            if (!CheckForResidentID(int.Parse(ResidentIDTextBox.Text)))
+                MessageBox.Show("Please Enter a valid resident id");
+            else
+            {
+                MessageBox.Show("Reservation has been deleted successfully!");
+            }
+            Clear();
         }
-
+        private bool CheckForResidentID(int ResidentID)
+        {
+            // api call send resident id and check if it's found return true
+            return false;
+        }
     }
 }
