@@ -79,6 +79,7 @@ namespace Frontend.ManagerForms
 
         private void bunifuMetroTextbox1_OnValueChanged(object sender, EventArgs e)
         {
+            int cnt = 0;
             if (this.bunifuMetroTextbox1.Text != string.Empty)
             {
                 try
@@ -88,6 +89,7 @@ namespace Frontend.ManagerForms
                         if (row.Cells[1].Value != null && row.Cells[1].Value.ToString().ToLower().Contains(bunifuMetroTextbox1.Text.ToLower()))
                         {
                             row.Visible = true;
+                            cnt++;
                         }
                         else
                             row.Visible = false;
@@ -104,13 +106,15 @@ namespace Frontend.ManagerForms
             {
                 foreach (DataGridViewRow row in WorkersListGridView.Rows)
                 {
+                    cnt++;
                     if (row.Visible != true)
                     {
                         row.Visible = true;
                     }
                 }
+                cnt--;
             }
-        
+            label1.Text = cnt.ToString();
         }
     }
 }
