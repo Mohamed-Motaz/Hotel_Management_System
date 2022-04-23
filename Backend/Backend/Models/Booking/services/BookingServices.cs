@@ -68,26 +68,25 @@ public static class BookingServices
         return Apphost.ListOfBookingInformation.list;
     }  
     
-    //TODO watch out for this function
-    public static bool deleteBooking(BookingInformation booking)
+    public static bool deleteBooking(int id)
     {
-        DateTime now = DateTime.Now;
-        if (booking.startDate < TimeHandler.GetDateInEpoch(now.Day, now.Month, now.Year))
-        {
-            return false;
-        }
 
-        //loop to delete by reference
-        BookingInformation oldBooking = null;
         for (Iterator bookingIterator = Apphost.ListOfBookingInformation.GetIterator(); bookingIterator.hasNext();)
         {
-            BookingInformation curBooking = bookingIterator.getNext() as BookingInformation;
-            if (booking.id == curBooking.id)
-                oldBooking = curBooking;
+            BookingInformation booking = bookingIterator.getNext() as BookingInformation;
+            if (id == booking.id)
+            {
+                DateTime now = DateTime.Now;
+                if (booking.startDate < TimeHandler.GetDateInEpoch(now.Day, now.Month, now.Year))
+                {
+                    return false;
+                }
+                Apphost.ListOfBookingInformation.list.Remove(booking);
+                return true;
+            }
 
         }
-        Apphost.ListOfBookingInformation.list.Remove(oldBooking);
-        return true;
+        return false;
     }
     
 
