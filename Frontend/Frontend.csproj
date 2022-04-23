@@ -80,6 +80,12 @@
     <Compile Include="Diagnosis.Designer.cs">
       <DependentUpon>Diagnosis.cs</DependentUpon>
     </Compile>
+    <Compile Include="Extras\ResidentLoginForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Extras\ResidentLoginForm.Designer.cs">
+      <DependentUpon>ResidentLoginForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="ManagerForms\AddResident.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -164,12 +170,6 @@
     <Compile Include="ManagerForms\RoomsStatus.Designer.cs">
       <DependentUpon>RoomsStatus.cs</DependentUpon>
     </Compile>
-    <Compile Include="LoginForm.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="LoginForm.Designer.cs">
-      <DependentUpon>LoginForm.cs</DependentUpon>
-    </Compile>
     <Compile Include="ManagerForms\MainManagerForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -227,6 +227,18 @@
     <Compile Include="ReceptionistForms\ManageResidents.Designer.cs">
       <DependentUpon>ManageResidents.cs</DependentUpon>
     </Compile>
+    <Compile Include="LoginForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LoginForm.Designer.cs">
+      <DependentUpon>LoginForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="WorkerLoginForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="WorkerLoginForm.Designer.cs">
+      <DependentUpon>WorkerLoginForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="ResidentForms\MainResidentForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -268,6 +280,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Diagnosis.resx">
       <DependentUpon>Diagnosis.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Extras\ResidentLoginForm.resx">
+      <DependentUpon>ResidentLoginForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ManagerForms\AddResident.resx">
       <DependentUpon>AddResident.cs</DependentUpon>
@@ -311,9 +326,6 @@
     <EmbeddedResource Include="ManagerForms\RoomsStatus.resx">
       <DependentUpon>RoomsStatus.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="LoginForm.resx">
-      <DependentUpon>LoginForm.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="ManagerForms\MainManagerForm.resx">
       <DependentUpon>MainManagerForm.cs</DependentUpon>
     </EmbeddedResource>
@@ -349,6 +361,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="ReceptionistForms\ManageResidents.resx">
       <DependentUpon>ManageResidents.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LoginForm.resx">
+      <DependentUpon>LoginForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WorkerLoginForm.resx">
+      <DependentUpon>WorkerLoginForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ResidentForms\MainResidentForm.resx">
       <DependentUpon>MainResidentForm.cs</DependentUpon>
