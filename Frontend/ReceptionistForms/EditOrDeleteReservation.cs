@@ -8,7 +8,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-
+using Frontend.HttpService;
 namespace Frontend.ReceptionistForms
 {
     public partial class EditOrDeleteReservation : Form
@@ -38,6 +38,9 @@ namespace Frontend.ReceptionistForms
             Reservation.RoomType = RoomTypeComboBox.GetItemText(RoomTypeComboBox.SelectedItem);
             Reservation.NumberofNights = NumberofNightsTextBox.Text;
             Reservation.StartDate = StartDateDatepicker.Value;
+
+            Service.EditReservation(Reservation);
+
             ClearBtn_Click(sender, e);
         }
 
@@ -55,13 +58,10 @@ namespace Frontend.ReceptionistForms
         private void DeleteReservationBtn_Click(object sender, EventArgs e)
         {
             // api takes all data and delete it 
+            Service.DeleteReservations(Reservation.ResidentID);
             // and clear it
             ClearBtn_Click(sender, e);
         }
 
-        private void deleteReservationBtn_Click(object sender, EventArgs e)
-        {
-
-        }
     }
 }
