@@ -11,7 +11,7 @@ using MySql.Data.MySqlClient;
 using System.Data.SqlClient;
 using Frontend.ManagerForms;
 using Frontend.ReceptionistForms;
-
+using Frontend.ResidentForms;
 
 namespace Frontend
 {
@@ -143,6 +143,12 @@ namespace Frontend
             //{
             //    //do something else
             //}
+        }
+
+        private void bunifuFlatButton2_Click(object sender, EventArgs e)
+        {
+            MainResidentForm residentForm = new MainResidentForm();
+            residentForm.Show();
         }
 
         private void bunifuFlatButton1_Click_1(object sender, EventArgs e)
