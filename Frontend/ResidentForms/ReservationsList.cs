@@ -17,34 +17,7 @@ namespace Frontend.ResidentForms
         {
             InitializeComponent();
         }
-        public List<dynamic> GetReservations()
-        {
-            List<dynamic> Reservations = Service.GetAllReservations();
-
-           /* dynamic res = new ExpandoObject();
-            res.id = "1";
-            res.RoomId = "1";
-            res.BoardId = "2";
-            res.ResidentId = "3";
-            res.StartDate = "23/8";
-            res.EndDate = "8/9";
-            res.TotalPrice = "26000";
-
-            Reservations.Add(res);
-
-            dynamic res1 = new ExpandoObject();
-            res1.id = "2";
-            res1.RoomId = "5";
-            res1.BoardId = "7";
-            res1.ResidentId = "5";
-            res1.StartDate = "7/8";
-            res1.EndDate = "13/8";
-            res1.TotalPrice = "2600";
-
-            Reservations.Add(res1);*/
-
-            return Reservations;
-        }
+      
         private void ReservationsList_Load(object sender, EventArgs e)
         {
             setUpDataGridView();
@@ -61,7 +34,7 @@ namespace Frontend.ResidentForms
             ReservationsGV.Columns[5].Name = "End Date";
             ReservationsGV.Columns[6].Name = "Total price";
 
-            List<dynamic> reservations = GetReservations();
+            List<dynamic> reservations = Service.GetAllReservations();
 
             label1.Text = reservations.Count.ToString();
 
@@ -69,13 +42,13 @@ namespace Frontend.ResidentForms
             foreach (dynamic res in reservations)
             {
                 DataGridViewRow row = (DataGridViewRow)ReservationsGV.Rows[0].Clone();
-                row.Cells[0].Value = res.id;
-                row.Cells[1].Value = res.RoomId;
-                row.Cells[2].Value = res.BoardId;
-                row.Cells[3].Value = res.ResidentId;
-                row.Cells[4].Value = res.StartDate;
-                row.Cells[5].Value = res.EndDate;
-                row.Cells[6].Value = res.TotalPrice;
+                row.Cells[0].Value = res.id.ToString();
+                row.Cells[1].Value = res.roomId.ToString();
+                row.Cells[2].Value = res.boardingType.ToString();
+                row.Cells[3].Value = res.residentId.ToString();
+                row.Cells[4].Value = res.startDate.ToString();
+                row.Cells[5].Value = res.endDate.ToString();
+                row.Cells[6].Value = res.totalPrice.ToString();
 
                 ReservationsGV.Rows.Add(row);
             }

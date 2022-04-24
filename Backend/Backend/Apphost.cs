@@ -121,21 +121,21 @@ namespace Backend
     {
         public static string Manager = "Manager";
         public static string Receptionist = "Receptionist";
-        public static string RoomService = "RoomService";
+        public static string RoomService = "Room Service";
     }
 
     public struct RoomTypes
     {
-        public static string Single = "Single";
-        public static string Double = "Double";
-        public static string Triple = "Triple";
+        public static string Single = "Single Room";
+        public static string Double = "Double Room";
+        public static string Triple = "Triple Room";
     }
 
     public struct BoardingTypes
     {
-        public static string Full = "Full";
-        public static string Half = "Half";
-        public static string BedAndBreakfast = "BedAndBreakfast";
+        public static string Full = "Full Board";
+        public static string Half = "Half Board";
+        public static string BedAndBreakfast = "BedAndBreakfast Board";
     }
 
     public struct RoomStatus

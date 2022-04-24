@@ -61,7 +61,6 @@ C:\Users\Mohamed Motaz\Desktop\HotelManagementSystem\Frontend\obj\Debug\Frontend
 D:\Hotel_Management_System\Frontend\bin\Debug\Frontend.exe.config
 D:\Hotel_Management_System\Frontend\bin\Debug\Frontend.exe
 D:\Hotel_Management_System\Frontend\bin\Debug\Frontend.pdb
-D:\Hotel_Management_System\Frontend\bin\Debug\Bunifu_UI_v1.52.dll
 D:\Hotel_Management_System\Frontend\bin\Debug\MySql.Data.xml
 D:\Hotel_Management_System\Frontend\obj\Debug\Frontend.csproj.AssemblyReference.cache
 D:\Hotel_Management_System\Frontend\obj\Debug\Frontend.frmAddPatient.resources
@@ -109,7 +108,6 @@ C:\Users\Mohamed Motaz\Desktop\HotelManagementSystem\Frontend\bin\Debug\Newtonso
 C:\Users\Mohamed Motaz\Desktop\HotelManagementSystem\Frontend\obj\Debug\Frontend.ReceptionistForms.AddResident.resources
 C:\Users\Mohamed Motaz\Desktop\HotelManagementSystem\Frontend\obj\Debug\Frontend.ReceptionistForms.EditOrDeleteResident.resources
 C:\Users\Mohamed Motaz\Desktop\HotelManagementSystem\Frontend\obj\Debug\Frontend.ReceptionistForms.ResidentsList.resources
-D:\Hotel_Management_System\Frontend\bin\Debug\Newtonsoft.Json.dll
 D:\Hotel_Management_System\Frontend\bin\Debug\Newtonsoft.Json.xml
 D:\Hotel_Management_System\Frontend\obj\Debug\Frontend.ReceptionistForms.AddResident.resources
 D:\Hotel_Management_System\Frontend\obj\Debug\Frontend.ReceptionistForms.EditOrDeleteResident.resources

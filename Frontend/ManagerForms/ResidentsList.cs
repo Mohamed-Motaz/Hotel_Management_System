@@ -17,32 +17,7 @@ namespace Frontend.ManagerForms
         {
             InitializeComponent();
         }
-        public List<dynamic> GetResidentList()
-        {
-
-            List<dynamic> residents = Service.GetAllResidents();
-            
-
-         /*   resident.id = "1";
-            resident.age = "35";
-            resident.Name = "Salma";
-            resident.Email = "salma@hotmail.com";
-            resident.PhoneNumber = "011111111";
-            resident.password = "4444";
-
-            residents.Add(resident);
-            dynamic res = new ExpandoObject();
-            res.id = "2";
-            res.age = "40";
-            res.Name = "Ay haga";
-            res.Email = "ay haga@hotmail.com";
-            res.PhoneNumber = "0111215651111";
-            res.password = "6666";
-
-            residents.Add(res);*/
-
-            return residents;
-        }
+       
 
         private void ResidentsList_Load(object sender, EventArgs e)
         {

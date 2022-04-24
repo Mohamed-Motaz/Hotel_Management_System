@@ -43,11 +43,11 @@ namespace Frontend.ManagerForms
             //TODO: api set resident to the api returend resident
             dynamic res = Service.GetResident(resident.id);
              
-            nameTextBox.Text = res.name;
-            ageTextBox.Text = res.age;
-            emailTextBox.Text = res.email;
-            passwordTextBox.Text = res.password;
-            phoneTextBox.Text = res.phoneNumber;
+            nameTextBox.Text = res.name.ToString();
+            ageTextBox.Text = res.age.ToString();
+            emailTextBox.Text = res.email.ToString();
+            passwordTextBox.Text = res.password.ToString();
+            phoneTextBox.Text = res.phoneNumber.ToString();
         }
 
         private void editResidentBtn_Click(object sender, EventArgs e)
@@ -55,7 +55,7 @@ namespace Frontend.ManagerForms
             //api takes all data and edit it
             dynamic obj = new ExpandoObject();
             obj.id = searchbyIdTextbox.Text;
-            obj.name = nameTextBox.Text;
+            obj.username = nameTextBox.Text;
             obj.age = ageTextBox.Text;
             obj.email = emailTextBox.Text;
             obj.password = passwordTextBox.Text;

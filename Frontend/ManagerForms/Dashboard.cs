@@ -24,33 +24,7 @@ namespace Frontend.Extras
 
         }
         // call for number of residents 
-        public int  getNewResidentsNumber()
-        {
-            return 5;
-        }
-        public int getWeeklyIncome()
-        {
-            return 150;
-        }
-
-        public int getNumOfWorkers()
-        {
-            return 1500;
-        }
-
-        public int getMonthlyIncome()
-        {
-            return 8000;
-        }
-        public int getCurrentStayingResidents()
-        {
-            return 8000;
-        }
-
-        public int getYearlyIncome()
-        {
-            return 180000;
-        }
+       
 
         
 

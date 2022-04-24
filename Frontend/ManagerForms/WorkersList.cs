@@ -17,32 +17,7 @@ namespace Frontend.ManagerForms
         {
             InitializeComponent();
         }
-        public List<dynamic> getWorkers()
-        {
-            List<dynamic> workers = Service.GetAllWorkers();
-                  
-            /*dynamic worker = new ExpandoObject();
-            worker.name = "Rawan";
-            worker.id = "1";
-            worker.age = "50";
-            worker.email = "rawan@gmail.com";
-            worker.phoneNumber = "01111111111";
-            worker.salary = "10000";
-            worker.jobTitle = "Manager";
-            workers.Add(worker);
-
-            dynamic worker1 = new ExpandoObject();
-            worker1.name = "Salma";
-            worker1.id = "2";
-            worker1.age = "20";
-            worker1.email = "salma@gmail.com";
-            worker1.phoneNumber = "012351111111";
-            worker1.salary = "15000";
-            worker1.jobTitle = "Manager";
-            workers.Add(worker1);*/
-
-            return workers;
-        }
+        
 
         private void WorkersList_Load(object sender, EventArgs e)
         {

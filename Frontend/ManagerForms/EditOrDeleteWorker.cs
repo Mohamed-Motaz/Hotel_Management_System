@@ -32,16 +32,18 @@ namespace Frontend.ManagerForms
             worker.id = searchbyIdTextbox.Text;
 
             //TODO: api set worker to the api returend worker
-            dynamic work = Service.GetWorkerById(worker.id);
-            nameTextBox.Text = work.name;
-            ageTextBox.Text = work.age;
-            emailTextBox.Text = work.email;
+            dynamic obj = new ExpandoObject();
+            obj.id = worker.id;
+            dynamic work = Service.GetWorkerById(obj);
+            nameTextBox.Text = work.name.ToString();
+            ageTextBox.Text = work.age.ToString();
+            emailTextBox.Text = work.email.ToString();
             if (isRoomService.Checked) { work.password = ""; }
             else { passwordTextBox.Text = work.password; }
-            phoneTextBox.Text = work.phoneNumber;
-            salaryTextBox.Text = work.salary;
-            jobTitleTextBox.Text = work.jobType;
-            incomeTypeTextBox.Text = work.incomeType;
+            phoneTextBox.Text = work.phoneNumber.ToString();
+            salaryTextBox.Text = work.salary.ToString();
+            jobTitleTextBox.Text = work.jobType.ToString();
+            incomeTypeTextBox.Text = work.incomeType.ToString();
         }
 
         private void isRoomService_CheckedChanged(object sender, EventArgs e)
@@ -54,14 +56,14 @@ namespace Frontend.ManagerForms
             //api takes all data and edit it
             dynamic obj = new ExpandoObject();
             obj.id = searchbyIdTextbox.Text;
-            obj.name = nameTextBox.Text;
+            obj.username = nameTextBox.Text;
             obj.age = ageTextBox.Text;
             obj.email = emailTextBox.Text;
             obj.password = passwordTextBox.Text;
             obj.phoneNumber = phoneTextBox.Text;
             obj.salary = salaryTextBox.Text;
             obj.jobTitle = jobTitleTextBox.Text;
-            obj.income = incomeTypeTextBox.Text;
+            obj.incomeType = incomeTypeTextBox.Text;
 
             Service.EditResident(obj);
 

@@ -30,7 +30,7 @@ namespace Frontend.Extras
         {
             dynamic worker = new ExpandoObject();
 
-            worker.name = nameTextBox.Text;
+            worker.username = nameTextBox.Text;
             worker.age = ageTextBox.Text;
             worker.email = emailTextBox.Text;
             worker.phoneNumber = phoneTextBox.Text;

@@ -23,7 +23,7 @@ namespace Frontend.HttpService
                 client.Timeout = new TimeSpan(0, 2, 0);
                 client.BaseAddress = new Uri(url);
                 var response = client.PostAsync(action,
-                new StringContent(json, Encoding.UTF8, "text/plain")).Result;
+                new StringContent(json, Encoding.UTF8, "application/json")).Result;
 
                 if (response.IsSuccessStatusCode)
                     Console.WriteLine("Success");
@@ -160,7 +160,7 @@ namespace Frontend.HttpService
 
         public static List<dynamic> GetAllReservations()
         {
-            HttpResponseMessage response = Post("api/reservation/get", "");
+            HttpResponseMessage response = Post("api/reservation/getAll", "");
             string responseStr = response.Content.ReadAsStringAsync().Result;
             dynamic obj = JsonConvert.DeserializeObject<ExpandoObject>(responseStr, converter);
             List<dynamic> Reservations = JsonConvert.DeserializeObject<List<dynamic>>(obj, converter);
