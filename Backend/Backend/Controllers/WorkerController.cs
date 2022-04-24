@@ -20,20 +20,16 @@ namespace Backend.Controllers
     {
         private static ExpandoObjectConverter converter = new ExpandoObjectConverter();
         [HttpPost]
-        public dynamic add([FromBody] dynamic json) //api/worker/add
+        public dynamic add([FromBody] dynamic obj) //api/worker/add
         {
-            /* Stream req = HttpContext ;
-             req.Seek(0, System.IO.SeekOrigin.Begin);
-             json = new StreamReader(req).ReadToEnd();*/
-            dynamic obj = json;// JsonConvert.DeserializeObject <ExpandoObject> (json, converter);
             AbstractWorker worker;
             if (obj.jobTitle == JobTitle.RoomService)
             {
-                worker = new RoomService(obj.username, obj.age, obj.email, obj.phoneNumber, obj.salary, obj.jobTitle, obj.incomeType);
+                worker = new RoomService(Convert.ToString(obj.username), Convert.ToInt32(obj.age), Convert.ToString(obj.email), Convert.ToString(obj.phoneNumber), Convert.ToInt32(obj.salary), Convert.ToString(obj.jobTitle), Convert.ToString(obj.incomeType));
             }
             else if (obj.jobTitle == JobTitle.Receptionist)
             {
-                worker = new Receptionist(obj.username, obj.age, obj.email, obj.phoneNumber, obj.salary, obj.jobTitle, obj.incomeType, obj.password);
+                worker = new Receptionist(Convert.ToString(obj.username), Convert.ToInt32(obj.age), Convert.ToString(obj.email), Convert.ToString(obj.phoneNumber), Convert.ToInt32(obj.salary), Convert.ToString(obj.jobTitle), Convert.ToString(obj.incomeType), Convert.ToString(obj.password));
             }
             else
             {
@@ -46,33 +42,31 @@ namespace Backend.Controllers
         }
 
         [HttpPost]
-        public dynamic edit([FromBody] string json) //api/worker/edit
+        public dynamic edit([FromBody] dynamic obj) //api/worker/edit
         {
-            dynamic obj = JsonConvert.DeserializeObject(json);
             AbstractWorker worker;
-            if (obj.jobTitle == JobTitle.RoomService)
+            if (Convert.ToString(obj.jobTitle) == JobTitle.RoomService)
             {
-                worker = new RoomService(obj.username, obj.age, obj.email, obj.phoneNumber, obj.salary, obj.jobTitle, obj.incomeType);
+                worker = new RoomService(Convert.ToString(obj.username), Convert.ToInt32(obj.age), Convert.ToString(obj.email), Convert.ToString(obj.phoneNumber), Convert.ToInt32(obj.salary), Convert.ToString(obj.jobTitle), Convert.ToString(obj.incomeType));
             }
-            else if(obj.jobTitle == JobTitle.Receptionist)
+            else if(Convert.ToString(obj.jobTitle) == JobTitle.Receptionist)
             {
-                worker = new Receptionist(obj.username, obj.age, obj.email, obj.phoneNumber, obj.salary, obj.jobTitle, obj.incomeType, obj.password);
+                worker = new Receptionist(Convert.ToString(obj.username), Convert.ToInt32(obj.age), Convert.ToString(obj.email), Convert.ToString(obj.phoneNumber), Convert.ToInt32(obj.salary), Convert.ToString(obj.jobTitle), Convert.ToString(obj.incomeType), Convert.ToString(obj.password));
             }
             else
             {
-                worker = new Manager(obj.username, obj.age, obj.email, obj.phoneNumber, obj.salary, obj.jobTitle, obj.incomeType, obj.password);
+                worker = new Manager(Convert.ToString(obj.username), Convert.ToInt32(obj.age), Convert.ToString(obj.email), Convert.ToString(obj.phoneNumber), Convert.ToInt32(obj.salary), Convert.ToString(obj.jobTitle), Convert.ToString(obj.incomeType), Convert.ToString(obj.password));
             }
-            Manager.editWorker(worker, obj.password);
+            Manager.editWorker(worker, Convert.ToString(obj.password));
             dynamic resp = new ExpandoObject();
             resp.Success = true;
             return resp;
         }
 
         [HttpPost]
-        public dynamic delete([FromBody] string json) //api/worker/delete
+        public dynamic delete([FromBody] dynamic obj) //api/worker/delete
         {
-            dynamic obj = JsonConvert.DeserializeObject(json);
-            Manager.deleteWorker(obj.id);
+            Manager.deleteWorker(Convert.ToInt32(obj.id));
             dynamic resp = new ExpandoObject();
             resp.Success = true;
 
@@ -80,10 +74,9 @@ namespace Backend.Controllers
         }
 
         [HttpPost]
-        public dynamic get([FromBody] string json) //api/worker/get
+        public dynamic get([FromBody] dynamic obj) //api/worker/get
         {
-            dynamic obj = JsonConvert.DeserializeObject(json);
-            dynamic resp = JsonConvert.DeserializeObject(Manager.getWorker(obj.id));
+            dynamic resp = JsonConvert.DeserializeObject(Manager.getWorker(Convert.ToInt32(obj.id)));
             return resp;
         }
 
