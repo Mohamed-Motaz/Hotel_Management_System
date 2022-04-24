@@ -27,7 +27,6 @@ namespace Backend.Models
             this.endDate = endDate;
             totalPrice = BookingServices.GetBookingPrice(boarding, room,startDate,endDate); 
         }
-
     
     }
 

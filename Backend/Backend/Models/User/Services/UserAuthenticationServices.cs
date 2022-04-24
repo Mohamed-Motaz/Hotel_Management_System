@@ -6,7 +6,7 @@ using System;
 public static class UserAuthenticationServices
 {
 
-    public static bool Signin(string Password, string username, bool IsWorker)
+    public static string Signin(string Password, string username, bool IsWorker)
     {
 
         if (IsWorker)
@@ -16,7 +16,7 @@ public static class UserAuthenticationServices
                 AbstractPrivilegedWorker Worker = WorkerIterator.getNext() as AbstractPrivilegedWorker;
                 if (Worker.userName == username)
                 {
-                    return (Worker.password == Password); 
+                    return (Worker.password == Password) ? ( (Worker.jobTitle == JobTitle.Manager) ? "Manager" : "Receptionist") : "Failed"; 
                 }
             }
         }
@@ -27,11 +27,11 @@ public static class UserAuthenticationServices
                 Resident Residents = ResidentsIterator.getNext() as Resident;
                 if (Residents.userName == username)
                 {
-                    return (Residents.password == Password);
+                    return (Residents.password == Password) ? "Resident" : "Failed";
                 }
             }
         }
-        return false;
+        return "Failed";
     }
 
 }

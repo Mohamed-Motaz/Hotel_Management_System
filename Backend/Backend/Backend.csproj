@@ -175,7 +175,12 @@
     <Compile Include="Areas\HelpPage\SampleGeneration\TextSample.cs" />
     <Compile Include="Areas\HelpPage\XmlDocumentationProvider.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\MainController.cs" />
+    <Compile Include="Controllers\ManagerController.cs" />
+    <Compile Include="Controllers\ReservationController.cs" />
     <Compile Include="Controllers\ResidentController.cs" />
+    <Compile Include="Controllers\RoomController.cs" />
+    <Compile Include="Controllers\WorkerController.cs" />
     <Compile Include="Database\Context.cs" />
     <Compile Include="Database\DbOperations.cs" />
     <Compile Include="Global.asax.cs">
@@ -184,7 +189,6 @@
     <Compile Include="Models\Booking\Builder\RoomAndBoardingBuilder.cs" />
     <Compile Include="Models\Booking\services\BookingServices.cs" />
     <Compile Include="Models\Booking\classes\RoomAndBoarding.cs" />
-    <Compile Include="Models\User\classes\Resident\services\ResidentServices.cs" />
     <Compile Include="Models\User\classes\Worker\classes\PrivilegedWorker\classes\AbstractPrivilegedWorker.cs" />
     <Compile Include="Models\User\classes\AbstractUser.cs" />
     <Compile Include="Models\User\classes\Worker\classes\AbstractWorker.cs" />

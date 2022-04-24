@@ -32,12 +32,62 @@ namespace Backend.Models
             Apphost.ListOfResidents.list.Add(resident);
         }
 
-        //get all reservations --
-        //make reservation --
-        //edit reservation --
-        //cancel reservation --
+        public static Resident getResident(int id)
+        {
+            for (Iterator ResidentsIterator = Apphost.ListOfResidents.GetIterator(); ResidentsIterator.hasNext();)
+            {
+                Resident resident = ResidentsIterator.getNext() as Resident;
+                if (id == resident.id)
+                {
+                    return resident;
+                }
+            }
+            return null;
+        }
 
 
+        public static void deleteResident(int id)
+        {
+            for (Iterator ResidentsIterator = Apphost.ListOfResidents.GetIterator(); ResidentsIterator.hasNext();)
+            {
+                Resident resident = ResidentsIterator.getNext() as Resident;
+                if (id == resident.id)
+                {
+                    Apphost.ListOfResidents.list.Remove(resident);
+                    break;
+                }
+            }
+        }
+
+        public static int getTodayResidents()
+        {
+            HashSet<int> residents = new HashSet<int>();
+            for (Iterator bookingIterator = Apphost.ListOfBookingInformation.GetIterator(); bookingIterator.hasNext();)
+            {
+                BookingInformation booking = bookingIterator.getNext() as BookingInformation;
+
+                if (booking.startDate == TimeHandler.GetTodayInEpoch())
+                {
+                    residents.Add(booking.residentId);
+                }
+            }
+            return residents.Count;
+        }
+
+        public static int getCurrentResidents()
+        {
+            HashSet<int> residents = new HashSet<int>();
+            for (Iterator bookingIterator = Apphost.ListOfBookingInformation.GetIterator(); bookingIterator.hasNext();)
+            {
+                BookingInformation booking = bookingIterator.getNext() as BookingInformation;
+
+                if (booking.endDate > TimeHandler.GetTodayInEpoch())
+                {
+                    residents.Add(booking.residentId);
+                }
+            }
+            return residents.Count;
+        }
 
     }
 }
