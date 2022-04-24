@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Frontend.HttpService;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -8,6 +9,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+
 
 namespace Frontend.Extras
 {
@@ -21,7 +23,6 @@ namespace Frontend.Extras
         private void addResidentBtn_Click(object sender, EventArgs e)
         {
             dynamic resident = new ExpandoObject();
-            resident.id = idTextBox.Text;
             resident.name = nameTextBox.Text;
             resident.age = ageTextBox.Text;
             resident.email = emailTextBox.Text;
@@ -30,11 +31,11 @@ namespace Frontend.Extras
 
 
             //send to api addResident
+            Service.AddResident(resident);
 
         }
         private void clearBtn_Click(object sender, EventArgs e)
         {
-            idTextBox.Text = "";
             nameTextBox.Text = "";
             ageTextBox.Text = "";
             emailTextBox.Text = "";

@@ -8,7 +8,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-
+using Frontend.HttpService;
 namespace Frontend.ManagerForms
 {
     public partial class EditOrDeleteResident : Form
@@ -25,17 +25,6 @@ namespace Frontend.ManagerForms
             resident = new ExpandoObject();
         }
 
-        private void editWorkerBtn_Click(object sender, EventArgs e)
-        {
-            //api takes all data and edit it 
-            // and delete it
-            clearBtn_Click(sender, e);
-        }
-
-        private void deleteWorkerBtn_Click(object sender, EventArgs e)
-        {
-
-        }
 
         private void clearBtn_Click(object sender, EventArgs e)
         {
@@ -52,26 +41,38 @@ namespace Frontend.ManagerForms
             resident.id = searchbyIdTextbox.Text;
 
             //TODO: api set resident to the api returend resident
-
-            nameTextBox.Text = resident.name;
-            ageTextBox.Text = resident.age;
-            emailTextBox.Text = resident.email;
-            passwordTextBox.Text = resident.password;
-            phoneTextBox.Text = resident.phoneNumber;
+            dynamic res = Service.GetResident(resident.id);
+             
+            nameTextBox.Text = res.name;
+            ageTextBox.Text = res.age;
+            emailTextBox.Text = res.email;
+            passwordTextBox.Text = res.password;
+            phoneTextBox.Text = res.phoneNumber;
         }
 
         private void editResidentBtn_Click(object sender, EventArgs e)
         {
-            //api takes all data and edit it 
-            // and clear it
+            //api takes all data and edit it
+            dynamic obj = new ExpandoObject();
+            obj.id = searchbyIdTextbox.Text;
+            obj.name = nameTextBox.Text;
+            obj.age = ageTextBox.Text;
+            obj.email = emailTextBox.Text;
+            obj.password = passwordTextBox.Text;
+            obj.phoneNumber = phoneTextBox.Text;
+
+            Service.EditResident(obj);
+
+            // and delete it
             clearBtn_Click(sender, e);
         }
 
         private void deleteResidentBtn_Click(object sender, EventArgs e)
         {
-            //api takes searchbyIdTextbox.Text , jobTitleTextBox.Text 
-            // and clear it
-            clearBtn_Click(sender, e);
+            dynamic obj = new ExpandoObject();
+            obj.id = searchbyIdTextbox.Text;
+
+            Service.DeleteResident(obj);
         }
     }
 }

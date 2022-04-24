@@ -47,7 +47,6 @@
             this.label3 = new System.Windows.Forms.Label();
             this.pictureBox5 = new System.Windows.Forms.PictureBox();
             this.picPatientList = new System.Windows.Forms.PictureBox();
-            this.pictureBox6 = new System.Windows.Forms.PictureBox();
             this.label16 = new System.Windows.Forms.Label();
             this.bunifuCards2 = new Bunifu.Framework.UI.BunifuCards();
             this.viewRoomsStatusLine = new System.Windows.Forms.PictureBox();
@@ -65,7 +64,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picPatientList)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.viewRoomsStatusLine)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.manageResidentsLine)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.manageWorkersLine)).BeginInit();
@@ -83,7 +81,7 @@
             // 
             // btnLogout
             // 
-            this.btnLogout.Activecolor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(116)))), ((int)(((byte)(166)))));
+            this.btnLogout.Activecolor = System.Drawing.Color.FromArgb(((int)(((byte)(19)))), ((int)(((byte)(30)))), ((int)(((byte)(46)))));
             this.btnLogout.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(141)))), ((int)(((byte)(188)))));
             this.btnLogout.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnLogout.BorderRadius = 0;
@@ -104,6 +102,7 @@
             this.btnLogout.IconZoom = 30D;
             this.btnLogout.IsTab = false;
             this.btnLogout.Location = new System.Drawing.Point(1263, 0);
+            this.btnLogout.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.btnLogout.Name = "btnLogout";
             this.btnLogout.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(141)))), ((int)(((byte)(188)))));
             this.btnLogout.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(116)))), ((int)(((byte)(166)))));
@@ -120,12 +119,12 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(116)))), ((int)(((byte)(166)))));
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
-            this.label1.Location = new System.Drawing.Point(146, 627);
+            this.label1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(42)))), ((int)(((byte)(64)))));
+            this.label1.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Bold);
+            this.label1.ForeColor = System.Drawing.Color.LightSteelBlue;
+            this.label1.Location = new System.Drawing.Point(166, 703);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(15, 16);
+            this.label1.Size = new System.Drawing.Size(25, 30);
             this.label1.TabIndex = 206;
             this.label1.Text = "0";
             this.label1.Click += new System.EventHandler(this.label1_Click);
@@ -134,9 +133,9 @@
             // 
             this.pictureBox3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(42)))), ((int)(((byte)(64)))));
             this.pictureBox3.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox3.Image")));
-            this.pictureBox3.Location = new System.Drawing.Point(15, 73);
+            this.pictureBox3.Location = new System.Drawing.Point(12, 58);
             this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(43, 44);
+            this.pictureBox3.Size = new System.Drawing.Size(93, 80);
             this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox3.TabIndex = 4;
             this.pictureBox3.TabStop = false;
@@ -146,7 +145,7 @@
             this.pictureBox4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(116)))), ((int)(((byte)(166)))));
             this.pictureBox4.Location = new System.Drawing.Point(-1, -4);
             this.pictureBox4.Name = "pictureBox4";
-            this.pictureBox4.Size = new System.Drawing.Size(240, 46);
+            this.pictureBox4.Size = new System.Drawing.Size(286, 46);
             this.pictureBox4.TabIndex = 5;
             this.pictureBox4.TabStop = false;
             // 
@@ -168,7 +167,7 @@
             this.pictureBox2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(42)))), ((int)(((byte)(64)))));
             this.pictureBox2.Location = new System.Drawing.Point(0, 42);
             this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(239, 739);
+            this.pictureBox2.Size = new System.Drawing.Size(285, 739);
             this.pictureBox2.TabIndex = 3;
             this.pictureBox2.TabStop = false;
             this.pictureBox2.Click += new System.EventHandler(this.pictureBox2_Click);
@@ -216,13 +215,13 @@
             // 
             this.activeUserLabel.AutoSize = true;
             this.activeUserLabel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(42)))), ((int)(((byte)(64)))));
-            this.activeUserLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.activeUserLabel.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Bold);
             this.activeUserLabel.ForeColor = System.Drawing.SystemColors.Control;
-            this.activeUserLabel.Location = new System.Drawing.Point(62, 79);
+            this.activeUserLabel.Location = new System.Drawing.Point(111, 72);
             this.activeUserLabel.Name = "activeUserLabel";
-            this.activeUserLabel.Size = new System.Drawing.Size(112, 16);
+            this.activeUserLabel.Size = new System.Drawing.Size(61, 25);
             this.activeUserLabel.TabIndex = 14;
-            this.activeUserLabel.Text = "De Vera, Jeremy ";
+            this.activeUserLabel.Text = "Mezo";
             this.activeUserLabel.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // label
@@ -281,7 +280,7 @@
             this.date.IconVisible = true;
             this.date.IconZoom = 50D;
             this.date.IsTab = false;
-            this.date.Location = new System.Drawing.Point(374, -1);
+            this.date.Location = new System.Drawing.Point(421, 0);
             this.date.Name = "date";
             this.date.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(141)))), ((int)(((byte)(188)))));
             this.date.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(116)))), ((int)(((byte)(166)))));
@@ -314,7 +313,7 @@
             this.time.IconVisible = true;
             this.time.IconZoom = 50D;
             this.time.IsTab = false;
-            this.time.Location = new System.Drawing.Point(239, 0);
+            this.time.Location = new System.Drawing.Point(281, 0);
             this.time.Name = "time";
             this.time.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(141)))), ((int)(((byte)(188)))));
             this.time.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(116)))), ((int)(((byte)(166)))));
@@ -329,18 +328,19 @@
             // viewRoomsStatusButton
             // 
             this.viewRoomsStatusButton.Activecolor = System.Drawing.Color.FromArgb(((int)(((byte)(19)))), ((int)(((byte)(30)))), ((int)(((byte)(46)))));
-            this.viewRoomsStatusButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(42)))), ((int)(((byte)(64)))));
+            this.viewRoomsStatusButton.BackColor = System.Drawing.Color.LightSteelBlue;
             this.viewRoomsStatusButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.viewRoomsStatusButton.BorderRadius = 0;
             this.viewRoomsStatusButton.ButtonText = "View Rooms Status";
             this.viewRoomsStatusButton.Cursor = System.Windows.Forms.Cursors.Hand;
             this.viewRoomsStatusButton.DisabledColor = System.Drawing.Color.Gray;
+            this.viewRoomsStatusButton.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Bold);
             this.viewRoomsStatusButton.Iconcolor = System.Drawing.Color.Transparent;
             this.viewRoomsStatusButton.Iconimage = ((System.Drawing.Image)(resources.GetObject("viewRoomsStatusButton.Iconimage")));
             this.viewRoomsStatusButton.Iconimage_right = ((System.Drawing.Image)(resources.GetObject("viewRoomsStatusButton.Iconimage_right")));
             this.viewRoomsStatusButton.Iconimage_right_Selected = null;
             this.viewRoomsStatusButton.Iconimage_Selected = null;
-            this.viewRoomsStatusButton.IconMarginLeft = 15;
+            this.viewRoomsStatusButton.IconMarginLeft = 8;
             this.viewRoomsStatusButton.IconMarginRight = 0;
             this.viewRoomsStatusButton.IconRightVisible = true;
             this.viewRoomsStatusButton.IconRightZoom = 0D;
@@ -348,17 +348,18 @@
             this.viewRoomsStatusButton.IconZoom = 35D;
             this.viewRoomsStatusButton.IsTab = false;
             this.viewRoomsStatusButton.Location = new System.Drawing.Point(1, 239);
+            this.viewRoomsStatusButton.Margin = new System.Windows.Forms.Padding(6, 7, 6, 7);
             this.viewRoomsStatusButton.Name = "viewRoomsStatusButton";
-            this.viewRoomsStatusButton.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(42)))), ((int)(((byte)(64)))));
+            this.viewRoomsStatusButton.Normalcolor = System.Drawing.Color.LightSteelBlue;
             this.viewRoomsStatusButton.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(19)))), ((int)(((byte)(30)))), ((int)(((byte)(46)))));
             this.viewRoomsStatusButton.OnHoverTextColor = System.Drawing.Color.White;
             this.viewRoomsStatusButton.selected = false;
-            this.viewRoomsStatusButton.Size = new System.Drawing.Size(238, 48);
+            this.viewRoomsStatusButton.Size = new System.Drawing.Size(284, 48);
             this.viewRoomsStatusButton.TabIndex = 22;
             this.viewRoomsStatusButton.Text = "View Rooms Status";
             this.viewRoomsStatusButton.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.viewRoomsStatusButton.Textcolor = System.Drawing.Color.White;
-            this.viewRoomsStatusButton.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.viewRoomsStatusButton.TextFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.viewRoomsStatusButton.Click += new System.EventHandler(this.viewRoomsStatus_Click);
             // 
             // label3
@@ -377,7 +378,7 @@
             // 
             this.pictureBox5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(42)))), ((int)(((byte)(64)))));
             this.pictureBox5.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox5.Image")));
-            this.pictureBox5.Location = new System.Drawing.Point(65, 102);
+            this.pictureBox5.Location = new System.Drawing.Point(114, 100);
             this.pictureBox5.Name = "pictureBox5";
             this.pictureBox5.Size = new System.Drawing.Size(10, 10);
             this.pictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -393,15 +394,6 @@
             this.picPatientList.TabIndex = 1;
             this.picPatientList.TabStop = false;
             this.picPatientList.Visible = false;
-            // 
-            // pictureBox6
-            // 
-            this.pictureBox6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(116)))), ((int)(((byte)(166)))));
-            this.pictureBox6.Location = new System.Drawing.Point(-1, 141);
-            this.pictureBox6.Name = "pictureBox6";
-            this.pictureBox6.Size = new System.Drawing.Size(5, 48);
-            this.pictureBox6.TabIndex = 2;
-            this.pictureBox6.TabStop = false;
             // 
             // label16
             // 
@@ -451,18 +443,19 @@
             // manageResidentsButton
             // 
             this.manageResidentsButton.Activecolor = System.Drawing.Color.FromArgb(((int)(((byte)(19)))), ((int)(((byte)(30)))), ((int)(((byte)(46)))));
-            this.manageResidentsButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(42)))), ((int)(((byte)(64)))));
+            this.manageResidentsButton.BackColor = System.Drawing.Color.LightSteelBlue;
             this.manageResidentsButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.manageResidentsButton.BorderRadius = 0;
             this.manageResidentsButton.ButtonText = " Manage Residents";
             this.manageResidentsButton.Cursor = System.Windows.Forms.Cursors.Hand;
             this.manageResidentsButton.DisabledColor = System.Drawing.Color.Gray;
+            this.manageResidentsButton.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Bold);
             this.manageResidentsButton.Iconcolor = System.Drawing.Color.Transparent;
             this.manageResidentsButton.Iconimage = ((System.Drawing.Image)(resources.GetObject("manageResidentsButton.Iconimage")));
             this.manageResidentsButton.Iconimage_right = ((System.Drawing.Image)(resources.GetObject("manageResidentsButton.Iconimage_right")));
             this.manageResidentsButton.Iconimage_right_Selected = null;
             this.manageResidentsButton.Iconimage_Selected = null;
-            this.manageResidentsButton.IconMarginLeft = 15;
+            this.manageResidentsButton.IconMarginLeft = 8;
             this.manageResidentsButton.IconMarginRight = 0;
             this.manageResidentsButton.IconRightVisible = true;
             this.manageResidentsButton.IconRightZoom = 0D;
@@ -470,17 +463,18 @@
             this.manageResidentsButton.IconZoom = 35D;
             this.manageResidentsButton.IsTab = false;
             this.manageResidentsButton.Location = new System.Drawing.Point(1, 290);
+            this.manageResidentsButton.Margin = new System.Windows.Forms.Padding(6, 7, 6, 7);
             this.manageResidentsButton.Name = "manageResidentsButton";
-            this.manageResidentsButton.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(42)))), ((int)(((byte)(64)))));
+            this.manageResidentsButton.Normalcolor = System.Drawing.Color.LightSteelBlue;
             this.manageResidentsButton.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(19)))), ((int)(((byte)(30)))), ((int)(((byte)(46)))));
             this.manageResidentsButton.OnHoverTextColor = System.Drawing.Color.White;
             this.manageResidentsButton.selected = false;
-            this.manageResidentsButton.Size = new System.Drawing.Size(238, 48);
+            this.manageResidentsButton.Size = new System.Drawing.Size(284, 48);
             this.manageResidentsButton.TabIndex = 63;
             this.manageResidentsButton.Text = " Manage Residents";
             this.manageResidentsButton.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.manageResidentsButton.Textcolor = System.Drawing.Color.White;
-            this.manageResidentsButton.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.manageResidentsButton.TextFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.manageResidentsButton.Click += new System.EventHandler(this.manageResidentsButton_Click);
             // 
             // manageWorkersLine
@@ -496,18 +490,19 @@
             // bunifuFlatButton10
             // 
             this.bunifuFlatButton10.Activecolor = System.Drawing.Color.FromArgb(((int)(((byte)(19)))), ((int)(((byte)(30)))), ((int)(((byte)(46)))));
-            this.bunifuFlatButton10.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(42)))), ((int)(((byte)(64)))));
+            this.bunifuFlatButton10.BackColor = System.Drawing.Color.LightSteelBlue;
             this.bunifuFlatButton10.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.bunifuFlatButton10.BorderRadius = 0;
             this.bunifuFlatButton10.ButtonText = "Manage Workers";
             this.bunifuFlatButton10.Cursor = System.Windows.Forms.Cursors.Hand;
             this.bunifuFlatButton10.DisabledColor = System.Drawing.Color.Gray;
+            this.bunifuFlatButton10.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Bold);
             this.bunifuFlatButton10.Iconcolor = System.Drawing.Color.Transparent;
             this.bunifuFlatButton10.Iconimage = ((System.Drawing.Image)(resources.GetObject("bunifuFlatButton10.Iconimage")));
             this.bunifuFlatButton10.Iconimage_right = ((System.Drawing.Image)(resources.GetObject("bunifuFlatButton10.Iconimage_right")));
             this.bunifuFlatButton10.Iconimage_right_Selected = null;
             this.bunifuFlatButton10.Iconimage_Selected = null;
-            this.bunifuFlatButton10.IconMarginLeft = 15;
+            this.bunifuFlatButton10.IconMarginLeft = 8;
             this.bunifuFlatButton10.IconMarginRight = 0;
             this.bunifuFlatButton10.IconRightVisible = true;
             this.bunifuFlatButton10.IconRightZoom = 0D;
@@ -515,28 +510,29 @@
             this.bunifuFlatButton10.IconZoom = 35D;
             this.bunifuFlatButton10.IsTab = false;
             this.bunifuFlatButton10.Location = new System.Drawing.Point(1, 341);
+            this.bunifuFlatButton10.Margin = new System.Windows.Forms.Padding(6, 7, 6, 7);
             this.bunifuFlatButton10.Name = "bunifuFlatButton10";
-            this.bunifuFlatButton10.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(42)))), ((int)(((byte)(64)))));
+            this.bunifuFlatButton10.Normalcolor = System.Drawing.Color.LightSteelBlue;
             this.bunifuFlatButton10.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(19)))), ((int)(((byte)(30)))), ((int)(((byte)(46)))));
             this.bunifuFlatButton10.OnHoverTextColor = System.Drawing.Color.White;
             this.bunifuFlatButton10.selected = false;
-            this.bunifuFlatButton10.Size = new System.Drawing.Size(238, 48);
+            this.bunifuFlatButton10.Size = new System.Drawing.Size(284, 48);
             this.bunifuFlatButton10.TabIndex = 192;
             this.bunifuFlatButton10.Text = "Manage Workers";
             this.bunifuFlatButton10.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.bunifuFlatButton10.Textcolor = System.Drawing.Color.White;
-            this.bunifuFlatButton10.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bunifuFlatButton10.TextFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bunifuFlatButton10.Click += new System.EventHandler(this.manageWorkersButton_Click);
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(116)))), ((int)(((byte)(166)))));
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(42)))), ((int)(((byte)(64)))));
+            this.label2.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Bold);
             this.label2.ForeColor = System.Drawing.Color.Gray;
-            this.label2.Location = new System.Drawing.Point(64, 627);
+            this.label2.Location = new System.Drawing.Point(33, 703);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(86, 16);
+            this.label2.Size = new System.Drawing.Size(139, 30);
             this.label2.TabIndex = 205;
             this.label2.Text = "Total Entries:";
             this.label2.Click += new System.EventHandler(this.label2_Click);
@@ -544,36 +540,38 @@
             // dashboardButton
             // 
             this.dashboardButton.Activecolor = System.Drawing.Color.FromArgb(((int)(((byte)(19)))), ((int)(((byte)(30)))), ((int)(((byte)(46)))));
-            this.dashboardButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(42)))), ((int)(((byte)(64)))));
+            this.dashboardButton.BackColor = System.Drawing.Color.LightSteelBlue;
             this.dashboardButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.dashboardButton.BorderRadius = 0;
             this.dashboardButton.ButtonText = "Dashboard";
             this.dashboardButton.Cursor = System.Windows.Forms.Cursors.Hand;
             this.dashboardButton.DisabledColor = System.Drawing.Color.Gray;
+            this.dashboardButton.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dashboardButton.Iconcolor = System.Drawing.Color.Transparent;
             this.dashboardButton.Iconimage = ((System.Drawing.Image)(resources.GetObject("dashboardButton.Iconimage")));
             this.dashboardButton.Iconimage_right = ((System.Drawing.Image)(resources.GetObject("dashboardButton.Iconimage_right")));
             this.dashboardButton.Iconimage_right_Selected = null;
             this.dashboardButton.Iconimage_Selected = null;
-            this.dashboardButton.IconMarginLeft = 15;
+            this.dashboardButton.IconMarginLeft = 8;
             this.dashboardButton.IconMarginRight = 0;
             this.dashboardButton.IconRightVisible = true;
             this.dashboardButton.IconRightZoom = 0D;
             this.dashboardButton.IconVisible = true;
             this.dashboardButton.IconZoom = 35D;
             this.dashboardButton.IsTab = false;
-            this.dashboardButton.Location = new System.Drawing.Point(1, 188);
+            this.dashboardButton.Location = new System.Drawing.Point(1, 185);
+            this.dashboardButton.Margin = new System.Windows.Forms.Padding(6, 7, 6, 7);
             this.dashboardButton.Name = "dashboardButton";
-            this.dashboardButton.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(42)))), ((int)(((byte)(64)))));
+            this.dashboardButton.Normalcolor = System.Drawing.Color.LightSteelBlue;
             this.dashboardButton.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(19)))), ((int)(((byte)(30)))), ((int)(((byte)(46)))));
             this.dashboardButton.OnHoverTextColor = System.Drawing.Color.White;
             this.dashboardButton.selected = false;
-            this.dashboardButton.Size = new System.Drawing.Size(238, 48);
+            this.dashboardButton.Size = new System.Drawing.Size(284, 48);
             this.dashboardButton.TabIndex = 207;
             this.dashboardButton.Text = "Dashboard";
             this.dashboardButton.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.dashboardButton.Textcolor = System.Drawing.Color.White;
-            this.dashboardButton.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dashboardButton.TextFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dashboardButton.Click += new System.EventHandler(this.dashboardButton_Click);
             // 
             // dashboardLine
@@ -588,9 +586,9 @@
             // 
             // panel1
             // 
-            this.panel1.Location = new System.Drawing.Point(239, 42);
+            this.panel1.Location = new System.Drawing.Point(281, 42);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1136, 739);
+            this.panel1.Size = new System.Drawing.Size(1094, 739);
             this.panel1.TabIndex = 209;
             // 
             // frmMain
@@ -609,7 +607,6 @@
             this.Controls.Add(this.manageResidentsLine);
             this.Controls.Add(this.manageResidentsButton);
             this.Controls.Add(this.viewRoomsStatusLine);
-            this.Controls.Add(this.pictureBox6);
             this.Controls.Add(this.picPatientList);
             this.Controls.Add(this.pictureBox5);
             this.Controls.Add(this.label3);
@@ -637,7 +634,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.picPatientList)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.viewRoomsStatusLine)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.manageResidentsLine)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.manageWorkersLine)).EndInit();
@@ -666,7 +662,6 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.PictureBox pictureBox5;
         private System.Windows.Forms.PictureBox picPatientList;
-        private System.Windows.Forms.PictureBox pictureBox6;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Label label16;
         private Bunifu.Framework.UI.BunifuCards bunifuCards2;

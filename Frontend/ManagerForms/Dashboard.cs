@@ -9,7 +9,7 @@ using System.Net;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-
+using Frontend.HttpService;
 namespace Frontend.Extras
 {
     public partial class Dashboard : Form
@@ -52,19 +52,24 @@ namespace Frontend.Extras
             return 180000;
         }
 
+        
+
         private void Dashboard_Load(object sender, EventArgs e)
         {
-            label1.Text = getNewResidentsNumber().ToString();
 
-            label16.Text = getWeeklyIncome().ToString();
+            dynamic obj = Service.DashBoard();
 
-            label7.Text = getNumOfWorkers().ToString();
+            label1.Text = obj.newResidents;
 
-            label8.Text = getMonthlyIncome().ToString();
+            label16.Text = obj.weeklyIncome;
 
-            label6.Text = getCurrentStayingResidents().ToString();
+            label7.Text = obj.numOfWorkers ;
 
-            label20.Text = getYearlyIncome().ToString();
+            label8.Text = obj.monthlyIncome;
+
+            label6.Text = obj.currentResidents;
+
+            label20.Text = obj.yearlyIncome;
 
         }
     }

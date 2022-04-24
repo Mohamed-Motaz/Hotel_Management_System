@@ -8,7 +8,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-
+using Frontend.HttpService;
 namespace Frontend.ManagerForms
 {
     public partial class ResidentsList : Form
@@ -20,10 +20,10 @@ namespace Frontend.ManagerForms
         public List<dynamic> GetResidentList()
         {
 
-            List<dynamic> residents = new List<dynamic>();
-            dynamic resident = new ExpandoObject();
+            List<dynamic> residents = Service.GetAllResidents();
+            
 
-            resident.id = "1";
+         /*   resident.id = "1";
             resident.age = "35";
             resident.Name = "Salma";
             resident.Email = "salma@hotmail.com";
@@ -39,7 +39,7 @@ namespace Frontend.ManagerForms
             res.PhoneNumber = "0111215651111";
             res.password = "6666";
 
-            residents.Add(res);
+            residents.Add(res);*/
 
             return residents;
         }
@@ -81,18 +81,9 @@ namespace Frontend.ManagerForms
 
         }
 
-        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-            
-        }
-
-        private void label1_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void bunifuMetroTextbox1_OnValueChanged(object sender, EventArgs e)
         {
+            int cnt = 0;
             if (this.bunifuMetroTextbox1.Text != string.Empty)
             {
                 try
@@ -102,6 +93,7 @@ namespace Frontend.ManagerForms
                         if (row.Cells[3].Value != null && row.Cells[3].Value.ToString().ToLower().Contains(bunifuMetroTextbox1.Text.ToLower()))
                         {
                             row.Visible = true;
+                            cnt++;
                         }
                         else
                             row.Visible = false; 
@@ -118,13 +110,15 @@ namespace Frontend.ManagerForms
             {
                 foreach (DataGridViewRow row in dataGridView1.Rows)
                 {
+                    cnt++;
                     if (row.Visible != true)
                     {
                         row.Visible = true;
                     }
                 }
+                cnt--;
             }
-
+            label1.Text = cnt.ToString();
         }
     }
 }

@@ -41,6 +41,9 @@
       <HintPath>.\Bunifu_UI_v1.52.dll</HintPath>
     </Reference>
     <Reference Include="MySql.Data, Version=6.9.9.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL" />
+    <Reference Include="Newtonsoft.Json, Version=13.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>packages\Newtonsoft.Json.13.0.1\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.DirectoryServices" />
@@ -80,6 +83,7 @@
     <Compile Include="Diagnosis.Designer.cs">
       <DependentUpon>Diagnosis.cs</DependentUpon>
     </Compile>
+    <Compile Include="HttpService\Service.cs" />
     <Compile Include="ManagerForms\AddResident.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -197,11 +201,29 @@
     <Compile Include="ReceptionistForms\AddReservation.Designer.cs">
       <DependentUpon>AddReservation.cs</DependentUpon>
     </Compile>
+    <Compile Include="ReceptionistForms\AddResident.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ReceptionistForms\AddResident.Designer.cs">
+      <DependentUpon>AddResident.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ReceptionistForms\CheckOutForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ReceptionistForms\CheckOutForm.Designer.cs">
+      <DependentUpon>CheckOutForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="ReceptionistForms\EditOrDeleteReservation.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="ReceptionistForms\EditOrDeleteReservation.Designer.cs">
       <DependentUpon>EditOrDeleteReservation.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ReceptionistForms\EditOrDeleteResident.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ReceptionistForms\EditOrDeleteResident.Designer.cs">
+      <DependentUpon>EditOrDeleteResident.cs</DependentUpon>
     </Compile>
     <Compile Include="ReceptionistForms\ListActiveReservations.cs">
       <SubType>Form</SubType>
@@ -227,17 +249,59 @@
     <Compile Include="ReceptionistForms\ManageResidents.Designer.cs">
       <DependentUpon>ManageResidents.cs</DependentUpon>
     </Compile>
+    <Compile Include="ReceptionistForms\ResidentsList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ReceptionistForms\ResidentsList.Designer.cs">
+      <DependentUpon>ResidentsList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ResidentForms\MainResidentForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ResidentForms\MainResidentForm.Designer.cs">
+      <DependentUpon>MainResidentForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ResidentForms\ManageReservations.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ResidentForms\ManageReservations.Designer.cs">
+      <DependentUpon>ManageReservations.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ResidentForms\ReservationsList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ResidentForms\ReservationsList.Designer.cs">
+      <DependentUpon>ReservationsList.cs</DependentUpon>
+    </Compile>
     <Compile Include="ResidentForms\ResidentDashboard.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="ResidentForms\ResidentDashboard.Designer.cs">
       <DependentUpon>ResidentDashboard.cs</DependentUpon>
     </Compile>
+    <Compile Include="ResidentForms\ResidentLoginForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ResidentForms\ResidentLoginForm.Designer.cs">
+      <DependentUpon>ResidentLoginForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ResidentForms\ResidentSignUpForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ResidentForms\ResidentSignUpForm.Designer.cs">
+      <DependentUpon>ResidentSignUpForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="ViewPatient.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="ViewPatient.Designer.cs">
       <DependentUpon>ViewPatient.cs</DependentUpon>
+    </Compile>
+    <Compile Include="WorkerLoginForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="WorkerLoginForm.Designer.cs">
+      <DependentUpon>WorkerLoginForm.cs</DependentUpon>
     </Compile>
     <EmbeddedResource Include="AddResident.resx">
       <DependentUpon>AddResident.cs</DependentUpon>
@@ -317,8 +381,17 @@
     <EmbeddedResource Include="ReceptionistForms\AddReservation.resx">
       <DependentUpon>AddReservation.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="ReceptionistForms\AddResident.resx">
+      <DependentUpon>AddResident.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ReceptionistForms\CheckOutForm.resx">
+      <DependentUpon>CheckOutForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="ReceptionistForms\EditOrDeleteReservation.resx">
       <DependentUpon>EditOrDeleteReservation.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ReceptionistForms\EditOrDeleteResident.resx">
+      <DependentUpon>EditOrDeleteResident.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ReceptionistForms\ListActiveReservations.resx">
       <DependentUpon>ListActiveReservations.cs</DependentUpon>
@@ -332,12 +405,34 @@
     <EmbeddedResource Include="ReceptionistForms\ManageResidents.resx">
       <DependentUpon>ManageResidents.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="ReceptionistForms\ResidentsList.resx">
+      <DependentUpon>ResidentsList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ResidentForms\MainResidentForm.resx">
+      <DependentUpon>MainResidentForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ResidentForms\ManageReservations.resx">
+      <DependentUpon>ManageReservations.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ResidentForms\ReservationsList.resx">
+      <DependentUpon>ReservationsList.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="ResidentForms\ResidentDashboard.resx">
       <DependentUpon>ResidentDashboard.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ResidentForms\ResidentLoginForm.resx">
+      <DependentUpon>ResidentLoginForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ResidentForms\ResidentSignUpForm.resx">
+      <DependentUpon>ResidentSignUpForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ViewPatient.resx">
       <DependentUpon>ViewPatient.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="WorkerLoginForm.resx">
+      <DependentUpon>WorkerLoginForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -352,6 +447,19 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="ICONS\BedIcon.png" />
+    <Content Include="ICONS\BedIcon2.png" />
+    <Content Include="ICONS\ClearIcon.png" />
+    <Content Include="ICONS\HotelIcon.png" />
+    <Content Include="ICONS\LoginIcon.png" />
+    <Content Include="ICONS\ManagerIcon.png" />
+    <Content Include="ICONS\ReceptionistIcon.png" />
+    <Content Include="ICONS\ResidentIcon.png" />
+    <Content Include="ICONS\RoomKey.png" />
+    <Content Include="ICONS\SaveIcon.png" />
+    <Content Include="ICONS\SignUpIcon.png" />
+    <Content Include="ICONS\SignUpIcon2.png" />
+    <Content Include="ICONS\WorkersIcon.png" />
     <Content Include="national_u_logo.ico" />
   </ItemGroup>
   <ItemGroup />

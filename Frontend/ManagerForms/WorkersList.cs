@@ -8,7 +8,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-
+using Frontend.HttpService;
 namespace Frontend.ManagerForms
 {
     public partial class WorkersList : Form
@@ -19,11 +19,9 @@ namespace Frontend.ManagerForms
         }
         public List<dynamic> getWorkers()
         {
-            List<dynamic> workers = new List<dynamic>();
-            
-            
-            
-            dynamic worker = new ExpandoObject();
+            List<dynamic> workers = Service.GetAllWorkers();
+                  
+            /*dynamic worker = new ExpandoObject();
             worker.name = "Rawan";
             worker.id = "1";
             worker.age = "50";
@@ -41,8 +39,7 @@ namespace Frontend.ManagerForms
             worker1.phoneNumber = "012351111111";
             worker1.salary = "15000";
             worker1.jobTitle = "Manager";
-            workers.Add(worker1);
-
+            workers.Add(worker1);*/
 
             return workers;
         }
@@ -82,6 +79,7 @@ namespace Frontend.ManagerForms
 
         private void bunifuMetroTextbox1_OnValueChanged(object sender, EventArgs e)
         {
+            int cnt = 0;
             if (this.bunifuMetroTextbox1.Text != string.Empty)
             {
                 try
@@ -91,6 +89,7 @@ namespace Frontend.ManagerForms
                         if (row.Cells[1].Value != null && row.Cells[1].Value.ToString().ToLower().Contains(bunifuMetroTextbox1.Text.ToLower()))
                         {
                             row.Visible = true;
+                            cnt++;
                         }
                         else
                             row.Visible = false;
@@ -107,13 +106,15 @@ namespace Frontend.ManagerForms
             {
                 foreach (DataGridViewRow row in WorkersListGridView.Rows)
                 {
+                    cnt++;
                     if (row.Visible != true)
                     {
                         row.Visible = true;
                     }
                 }
+                cnt--;
             }
-        
+            label1.Text = cnt.ToString();
         }
     }
 }
