@@ -40,52 +40,52 @@ namespace Frontend.ReceptionistForms
             // 
             // addReservationButton
             // 
-            this.addReservationButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
-            this.addReservationButton.color = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
-            this.addReservationButton.colorActive = System.Drawing.Color.FromArgb(((int)(((byte)(43)))), ((int)(((byte)(179)))), ((int)(((byte)(212)))));
+            this.addReservationButton.BackColor = System.Drawing.Color.LightSteelBlue;
+            this.addReservationButton.color = System.Drawing.Color.LightSteelBlue;
+            this.addReservationButton.colorActive = System.Drawing.Color.FromArgb(((int)(((byte)(19)))), ((int)(((byte)(30)))), ((int)(((byte)(46)))));
             this.addReservationButton.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.addReservationButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F);
+            this.addReservationButton.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Bold);
             this.addReservationButton.ForeColor = System.Drawing.Color.White;
             this.addReservationButton.Image = ((System.Drawing.Image)(resources.GetObject("addReservationButton.Image")));
-            this.addReservationButton.ImagePosition = 20;
-            this.addReservationButton.ImageZoom = 50;
-            this.addReservationButton.LabelPosition = 41;
+            this.addReservationButton.ImagePosition = 24;
+            this.addReservationButton.ImageZoom = 40;
+            this.addReservationButton.LabelPosition = 49;
             this.addReservationButton.LabelText = "Add Reservation";
             this.addReservationButton.Location = new System.Drawing.Point(87, 105);
             this.addReservationButton.Margin = new System.Windows.Forms.Padding(6);
             this.addReservationButton.Name = "addReservationButton";
-            this.addReservationButton.Size = new System.Drawing.Size(273, 168);
+            this.addReservationButton.Size = new System.Drawing.Size(267, 186);
             this.addReservationButton.TabIndex = 91;
             this.addReservationButton.Click += new System.EventHandler(this.addReservationButton_Click);
             // 
             // editOrDeleteReservationButton
             // 
-            this.editOrDeleteReservationButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
-            this.editOrDeleteReservationButton.color = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
-            this.editOrDeleteReservationButton.colorActive = System.Drawing.Color.FromArgb(((int)(((byte)(43)))), ((int)(((byte)(179)))), ((int)(((byte)(212)))));
+            this.editOrDeleteReservationButton.BackColor = System.Drawing.Color.LightSteelBlue;
+            this.editOrDeleteReservationButton.color = System.Drawing.Color.LightSteelBlue;
+            this.editOrDeleteReservationButton.colorActive = System.Drawing.Color.FromArgb(((int)(((byte)(19)))), ((int)(((byte)(30)))), ((int)(((byte)(46)))));
             this.editOrDeleteReservationButton.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.editOrDeleteReservationButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F);
+            this.editOrDeleteReservationButton.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Bold);
             this.editOrDeleteReservationButton.ForeColor = System.Drawing.Color.White;
             this.editOrDeleteReservationButton.Image = ((System.Drawing.Image)(resources.GetObject("editOrDeleteReservationButton.Image")));
-            this.editOrDeleteReservationButton.ImagePosition = 20;
-            this.editOrDeleteReservationButton.ImageZoom = 50;
-            this.editOrDeleteReservationButton.LabelPosition = 41;
+            this.editOrDeleteReservationButton.ImagePosition = 24;
+            this.editOrDeleteReservationButton.ImageZoom = 40;
+            this.editOrDeleteReservationButton.LabelPosition = 49;
             this.editOrDeleteReservationButton.LabelText = "Edit or Delete Reservation";
             this.editOrDeleteReservationButton.Location = new System.Drawing.Point(372, 105);
             this.editOrDeleteReservationButton.Margin = new System.Windows.Forms.Padding(6);
             this.editOrDeleteReservationButton.Name = "editOrDeleteReservationButton";
-            this.editOrDeleteReservationButton.Size = new System.Drawing.Size(265, 168);
+            this.editOrDeleteReservationButton.Size = new System.Drawing.Size(267, 186);
             this.editOrDeleteReservationButton.TabIndex = 90;
             this.editOrDeleteReservationButton.Click += new System.EventHandler(this.editOrDeleteReservationButton_Click);
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Bold);
             this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.label1.Location = new System.Drawing.Point(12, 9);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(222, 25);
+            this.label1.Size = new System.Drawing.Size(222, 30);
             this.label1.TabIndex = 86;
             this.label1.Text = "Manage Reservations";
             // 
@@ -104,31 +104,31 @@ namespace Frontend.ReceptionistForms
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.Gray;
-            this.label2.Location = new System.Drawing.Point(240, 18);
+            this.label2.Location = new System.Drawing.Point(229, 9);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(54, 16);
+            this.label2.Size = new System.Drawing.Size(67, 21);
             this.label2.TabIndex = 88;
             this.label2.Text = "Control";
             // 
             // ActiveReservationButton
             // 
-            this.ActiveReservationButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
-            this.ActiveReservationButton.color = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
-            this.ActiveReservationButton.colorActive = System.Drawing.Color.FromArgb(((int)(((byte)(43)))), ((int)(((byte)(179)))), ((int)(((byte)(212)))));
+            this.ActiveReservationButton.BackColor = System.Drawing.Color.LightSteelBlue;
+            this.ActiveReservationButton.color = System.Drawing.Color.LightSteelBlue;
+            this.ActiveReservationButton.colorActive = System.Drawing.Color.FromArgb(((int)(((byte)(19)))), ((int)(((byte)(30)))), ((int)(((byte)(46)))));
             this.ActiveReservationButton.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.ActiveReservationButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F);
+            this.ActiveReservationButton.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Bold);
             this.ActiveReservationButton.ForeColor = System.Drawing.Color.White;
             this.ActiveReservationButton.Image = ((System.Drawing.Image)(resources.GetObject("ActiveReservationButton.Image")));
-            this.ActiveReservationButton.ImagePosition = 20;
-            this.ActiveReservationButton.ImageZoom = 50;
-            this.ActiveReservationButton.LabelPosition = 41;
+            this.ActiveReservationButton.ImagePosition = 24;
+            this.ActiveReservationButton.ImageZoom = 40;
+            this.ActiveReservationButton.LabelPosition = 49;
             this.ActiveReservationButton.LabelText = "View Active Reservations";
-            this.ActiveReservationButton.Location = new System.Drawing.Point(264, 329);
+            this.ActiveReservationButton.Location = new System.Drawing.Point(243, 325);
             this.ActiveReservationButton.Margin = new System.Windows.Forms.Padding(6);
             this.ActiveReservationButton.Name = "ActiveReservationButton";
-            this.ActiveReservationButton.Size = new System.Drawing.Size(273, 168);
+            this.ActiveReservationButton.Size = new System.Drawing.Size(267, 186);
             this.ActiveReservationButton.TabIndex = 92;
             this.ActiveReservationButton.Click += new System.EventHandler(this.ActiveReservationButton_Click);
             // 

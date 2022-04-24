@@ -32,7 +32,6 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmMainReceptionist));
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.btnLogout = new Bunifu.Framework.UI.BunifuFlatButton();
-            this.label1 = new System.Windows.Forms.Label();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.bunifuSeparator1 = new Bunifu.Framework.UI.BunifuSeparator();
@@ -45,21 +44,20 @@
             this.time = new Bunifu.Framework.UI.BunifuFlatButton();
             this.label3 = new System.Windows.Forms.Label();
             this.pictureBox5 = new System.Windows.Forms.PictureBox();
-            this.pictureBox6 = new System.Windows.Forms.PictureBox();
             this.label16 = new System.Windows.Forms.Label();
             this.bunifuCards2 = new Bunifu.Framework.UI.BunifuCards();
             this.manageResidentsLine = new System.Windows.Forms.PictureBox();
             this.manageResidentsButton = new Bunifu.Framework.UI.BunifuFlatButton();
             this.manageReservationsLine = new System.Windows.Forms.PictureBox();
             this.manageReservationsButton = new Bunifu.Framework.UI.BunifuFlatButton();
-            this.label2 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.manageResidentsLine)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.manageReservationsLine)).BeginInit();
             this.SuspendLayout();
@@ -96,6 +94,7 @@
             this.btnLogout.IconZoom = 30D;
             this.btnLogout.IsTab = false;
             this.btnLogout.Location = new System.Drawing.Point(1263, 0);
+            this.btnLogout.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.btnLogout.Name = "btnLogout";
             this.btnLogout.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(141)))), ((int)(((byte)(188)))));
             this.btnLogout.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(116)))), ((int)(((byte)(166)))));
@@ -109,26 +108,13 @@
             this.btnLogout.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnLogout.Click += new System.EventHandler(this.btnLogout_Click_1);
             // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(116)))), ((int)(((byte)(166)))));
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
-            this.label1.Location = new System.Drawing.Point(146, 627);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(15, 16);
-            this.label1.TabIndex = 206;
-            this.label1.Text = "0";
-            this.label1.Click += new System.EventHandler(this.label1_Click);
-            // 
             // pictureBox3
             // 
             this.pictureBox3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(42)))), ((int)(((byte)(64)))));
             this.pictureBox3.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox3.Image")));
-            this.pictureBox3.Location = new System.Drawing.Point(15, 73);
+            this.pictureBox3.Location = new System.Drawing.Point(12, 60);
             this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(43, 44);
+            this.pictureBox3.Size = new System.Drawing.Size(75, 74);
             this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox3.TabIndex = 4;
             this.pictureBox3.TabStop = false;
@@ -138,7 +124,7 @@
             this.pictureBox4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(116)))), ((int)(((byte)(166)))));
             this.pictureBox4.Location = new System.Drawing.Point(-1, -4);
             this.pictureBox4.Name = "pictureBox4";
-            this.pictureBox4.Size = new System.Drawing.Size(240, 46);
+            this.pictureBox4.Size = new System.Drawing.Size(299, 46);
             this.pictureBox4.TabIndex = 5;
             this.pictureBox4.TabStop = false;
             // 
@@ -160,7 +146,7 @@
             this.pictureBox2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(42)))), ((int)(((byte)(64)))));
             this.pictureBox2.Location = new System.Drawing.Point(0, 42);
             this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(239, 739);
+            this.pictureBox2.Size = new System.Drawing.Size(298, 739);
             this.pictureBox2.TabIndex = 3;
             this.pictureBox2.TabStop = false;
             this.pictureBox2.Click += new System.EventHandler(this.pictureBox2_Click);
@@ -207,13 +193,13 @@
             // 
             this.activeUserLabel.AutoSize = true;
             this.activeUserLabel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(42)))), ((int)(((byte)(64)))));
-            this.activeUserLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.activeUserLabel.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Bold);
             this.activeUserLabel.ForeColor = System.Drawing.SystemColors.Control;
-            this.activeUserLabel.Location = new System.Drawing.Point(62, 79);
+            this.activeUserLabel.Location = new System.Drawing.Point(96, 64);
             this.activeUserLabel.Name = "activeUserLabel";
-            this.activeUserLabel.Size = new System.Drawing.Size(112, 16);
+            this.activeUserLabel.Size = new System.Drawing.Size(90, 30);
             this.activeUserLabel.TabIndex = 14;
-            this.activeUserLabel.Text = "De Vera, Jeremy ";
+            this.activeUserLabel.Text = "Rewrew";
             this.activeUserLabel.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // label
@@ -272,7 +258,7 @@
             this.date.IconVisible = true;
             this.date.IconZoom = 50D;
             this.date.IsTab = false;
-            this.date.Location = new System.Drawing.Point(374, -1);
+            this.date.Location = new System.Drawing.Point(452, -1);
             this.date.Name = "date";
             this.date.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(141)))), ((int)(((byte)(188)))));
             this.date.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(116)))), ((int)(((byte)(166)))));
@@ -305,7 +291,7 @@
             this.time.IconVisible = true;
             this.time.IconZoom = 50D;
             this.time.IsTab = false;
-            this.time.Location = new System.Drawing.Point(239, 0);
+            this.time.Location = new System.Drawing.Point(312, 0);
             this.time.Name = "time";
             this.time.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(141)))), ((int)(((byte)(188)))));
             this.time.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(116)))), ((int)(((byte)(166)))));
@@ -333,21 +319,12 @@
             // 
             this.pictureBox5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(42)))), ((int)(((byte)(64)))));
             this.pictureBox5.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox5.Image")));
-            this.pictureBox5.Location = new System.Drawing.Point(65, 102);
+            this.pictureBox5.Location = new System.Drawing.Point(109, 97);
             this.pictureBox5.Name = "pictureBox5";
             this.pictureBox5.Size = new System.Drawing.Size(10, 10);
             this.pictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox5.TabIndex = 25;
             this.pictureBox5.TabStop = false;
-            // 
-            // pictureBox6
-            // 
-            this.pictureBox6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(116)))), ((int)(((byte)(166)))));
-            this.pictureBox6.Location = new System.Drawing.Point(-1, 141);
-            this.pictureBox6.Name = "pictureBox6";
-            this.pictureBox6.Size = new System.Drawing.Size(5, 48);
-            this.pictureBox6.TabIndex = 2;
-            this.pictureBox6.TabStop = false;
             // 
             // label16
             // 
@@ -387,18 +364,19 @@
             // manageResidentsButton
             // 
             this.manageResidentsButton.Activecolor = System.Drawing.Color.FromArgb(((int)(((byte)(19)))), ((int)(((byte)(30)))), ((int)(((byte)(46)))));
-            this.manageResidentsButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(42)))), ((int)(((byte)(64)))));
+            this.manageResidentsButton.BackColor = System.Drawing.Color.LightSteelBlue;
             this.manageResidentsButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.manageResidentsButton.BorderRadius = 0;
             this.manageResidentsButton.ButtonText = " Manage Residents";
             this.manageResidentsButton.Cursor = System.Windows.Forms.Cursors.Hand;
             this.manageResidentsButton.DisabledColor = System.Drawing.Color.Gray;
+            this.manageResidentsButton.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Bold);
             this.manageResidentsButton.Iconcolor = System.Drawing.Color.Transparent;
             this.manageResidentsButton.Iconimage = ((System.Drawing.Image)(resources.GetObject("manageResidentsButton.Iconimage")));
             this.manageResidentsButton.Iconimage_right = ((System.Drawing.Image)(resources.GetObject("manageResidentsButton.Iconimage_right")));
             this.manageResidentsButton.Iconimage_right_Selected = null;
             this.manageResidentsButton.Iconimage_Selected = null;
-            this.manageResidentsButton.IconMarginLeft = 15;
+            this.manageResidentsButton.IconMarginLeft = 8;
             this.manageResidentsButton.IconMarginRight = 0;
             this.manageResidentsButton.IconRightVisible = true;
             this.manageResidentsButton.IconRightZoom = 0D;
@@ -407,16 +385,16 @@
             this.manageResidentsButton.IsTab = false;
             this.manageResidentsButton.Location = new System.Drawing.Point(1, 195);
             this.manageResidentsButton.Name = "manageResidentsButton";
-            this.manageResidentsButton.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(42)))), ((int)(((byte)(64)))));
+            this.manageResidentsButton.Normalcolor = System.Drawing.Color.LightSteelBlue;
             this.manageResidentsButton.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(19)))), ((int)(((byte)(30)))), ((int)(((byte)(46)))));
             this.manageResidentsButton.OnHoverTextColor = System.Drawing.Color.White;
             this.manageResidentsButton.selected = false;
-            this.manageResidentsButton.Size = new System.Drawing.Size(238, 48);
+            this.manageResidentsButton.Size = new System.Drawing.Size(297, 48);
             this.manageResidentsButton.TabIndex = 63;
             this.manageResidentsButton.Text = " Manage Residents";
             this.manageResidentsButton.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.manageResidentsButton.Textcolor = System.Drawing.Color.White;
-            this.manageResidentsButton.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.manageResidentsButton.TextFont = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Bold);
             this.manageResidentsButton.Click += new System.EventHandler(this.manageResidentsButton_Click);
             // 
             // manageReservationsLine
@@ -432,18 +410,19 @@
             // manageReservationsButton
             // 
             this.manageReservationsButton.Activecolor = System.Drawing.Color.FromArgb(((int)(((byte)(19)))), ((int)(((byte)(30)))), ((int)(((byte)(46)))));
-            this.manageReservationsButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(42)))), ((int)(((byte)(64)))));
+            this.manageReservationsButton.BackColor = System.Drawing.Color.LightSteelBlue;
             this.manageReservationsButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.manageReservationsButton.BorderRadius = 0;
             this.manageReservationsButton.ButtonText = "Manage Reservations";
             this.manageReservationsButton.Cursor = System.Windows.Forms.Cursors.Hand;
             this.manageReservationsButton.DisabledColor = System.Drawing.Color.Gray;
+            this.manageReservationsButton.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Bold);
             this.manageReservationsButton.Iconcolor = System.Drawing.Color.Transparent;
             this.manageReservationsButton.Iconimage = ((System.Drawing.Image)(resources.GetObject("manageReservationsButton.Iconimage")));
             this.manageReservationsButton.Iconimage_right = ((System.Drawing.Image)(resources.GetObject("manageReservationsButton.Iconimage_right")));
             this.manageReservationsButton.Iconimage_right_Selected = null;
             this.manageReservationsButton.Iconimage_Selected = null;
-            this.manageReservationsButton.IconMarginLeft = 15;
+            this.manageReservationsButton.IconMarginLeft = 8;
             this.manageReservationsButton.IconMarginRight = 0;
             this.manageReservationsButton.IconRightVisible = true;
             this.manageReservationsButton.IconRightZoom = 0D;
@@ -452,37 +431,48 @@
             this.manageReservationsButton.IsTab = false;
             this.manageReservationsButton.Location = new System.Drawing.Point(1, 246);
             this.manageReservationsButton.Name = "manageReservationsButton";
-            this.manageReservationsButton.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(42)))), ((int)(((byte)(64)))));
+            this.manageReservationsButton.Normalcolor = System.Drawing.Color.LightSteelBlue;
             this.manageReservationsButton.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(19)))), ((int)(((byte)(30)))), ((int)(((byte)(46)))));
             this.manageReservationsButton.OnHoverTextColor = System.Drawing.Color.White;
             this.manageReservationsButton.selected = false;
-            this.manageReservationsButton.Size = new System.Drawing.Size(238, 48);
+            this.manageReservationsButton.Size = new System.Drawing.Size(297, 48);
             this.manageReservationsButton.TabIndex = 192;
             this.manageReservationsButton.Text = "Manage Reservations";
             this.manageReservationsButton.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.manageReservationsButton.Textcolor = System.Drawing.Color.White;
-            this.manageReservationsButton.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.manageReservationsButton.TextFont = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Bold);
             this.manageReservationsButton.Click += new System.EventHandler(this.manageReservationsButton_Click);
+            // 
+            // panel1
+            // 
+            this.panel1.Location = new System.Drawing.Point(296, 42);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(1085, 739);
+            this.panel1.TabIndex = 209;
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(116)))), ((int)(((byte)(166)))));
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(42)))), ((int)(((byte)(64)))));
+            this.label2.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Bold);
             this.label2.ForeColor = System.Drawing.Color.Gray;
-            this.label2.Location = new System.Drawing.Point(64, 627);
+            this.label2.Location = new System.Drawing.Point(28, 679);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(86, 16);
-            this.label2.TabIndex = 205;
+            this.label2.Size = new System.Drawing.Size(139, 30);
+            this.label2.TabIndex = 210;
             this.label2.Text = "Total Entries:";
-            this.label2.Click += new System.EventHandler(this.label2_Click);
             // 
-            // panel1
+            // label1
             // 
-            this.panel1.Location = new System.Drawing.Point(239, 42);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1136, 739);
-            this.panel1.TabIndex = 209;
+            this.label1.AutoSize = true;
+            this.label1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(42)))), ((int)(((byte)(64)))));
+            this.label1.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Bold);
+            this.label1.ForeColor = System.Drawing.Color.LightSteelBlue;
+            this.label1.Location = new System.Drawing.Point(161, 679);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(25, 30);
+            this.label1.TabIndex = 211;
+            this.label1.Text = "0";
             // 
             // frmMainReceptionist
             // 
@@ -490,14 +480,14 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ControlLight;
             this.ClientSize = new System.Drawing.Size(1370, 772);
+            this.Controls.Add(this.label2);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.activeUserLabel);
             this.Controls.Add(this.panel1);
-            this.Controls.Add(this.label2);
             this.Controls.Add(this.manageReservationsLine);
             this.Controls.Add(this.manageReservationsButton);
             this.Controls.Add(this.manageResidentsLine);
             this.Controls.Add(this.manageResidentsButton);
-            this.Controls.Add(this.pictureBox6);
             this.Controls.Add(this.pictureBox5);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.pictureBox3);
@@ -507,7 +497,6 @@
             this.Controls.Add(this.bunifuFlatButton1);
             this.Controls.Add(this.btnLogout);
             this.Controls.Add(this.bunifuSeparator1);
-            this.Controls.Add(this.label1);
             this.Controls.Add(this.pictureBox4);
             this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.pictureBox1);
@@ -522,7 +511,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.manageResidentsLine)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.manageReservationsLine)).EndInit();
             this.ResumeLayout(false);
@@ -534,7 +522,6 @@
 
         private System.Windows.Forms.PictureBox pictureBox1;
         private Bunifu.Framework.UI.BunifuFlatButton btnLogout;
-        private System.Windows.Forms.Label label1;
         private System.Windows.Forms.PictureBox pictureBox3;
         private System.Windows.Forms.PictureBox pictureBox4;
         private Bunifu.Framework.UI.BunifuSeparator bunifuSeparator1;
@@ -547,7 +534,6 @@
         private Bunifu.Framework.UI.BunifuFlatButton time;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.PictureBox pictureBox5;
-        private System.Windows.Forms.PictureBox pictureBox6;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Label label16;
         private Bunifu.Framework.UI.BunifuCards bunifuCards2;
@@ -555,7 +541,8 @@
         private Bunifu.Framework.UI.BunifuFlatButton manageResidentsButton;
         private System.Windows.Forms.PictureBox manageReservationsLine;
         private Bunifu.Framework.UI.BunifuFlatButton manageReservationsButton;
-        private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label label1;
     }
 }

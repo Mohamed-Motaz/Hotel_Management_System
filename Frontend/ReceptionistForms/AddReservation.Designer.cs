@@ -29,6 +29,7 @@ namespace Frontend.ReceptionistForms
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(AddReservation));
             this.ClearBtn = new Bunifu.Framework.UI.BunifuFlatButton();
             this.SaveButton = new Bunifu.Framework.UI.BunifuFlatButton();
             this.bunifuSeparator43 = new Bunifu.Framework.UI.BunifuSeparator();
@@ -47,15 +48,15 @@ namespace Frontend.ReceptionistForms
             // 
             // ClearBtn
             // 
-            this.ClearBtn.Activecolor = System.Drawing.Color.FromArgb(((int)(((byte)(221)))), ((int)(((byte)(75)))), ((int)(((byte)(57)))));
-            this.ClearBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(221)))), ((int)(((byte)(75)))), ((int)(((byte)(57)))));
+            this.ClearBtn.Activecolor = System.Drawing.Color.LightSteelBlue;
+            this.ClearBtn.BackColor = System.Drawing.Color.LightSteelBlue;
             this.ClearBtn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClearBtn.BorderRadius = 2;
             this.ClearBtn.ButtonText = "Clear";
             this.ClearBtn.Cursor = System.Windows.Forms.Cursors.Hand;
             this.ClearBtn.DisabledColor = System.Drawing.Color.Gray;
             this.ClearBtn.Iconcolor = System.Drawing.Color.Transparent;
-            this.ClearBtn.Iconimage = null;
+            this.ClearBtn.Iconimage = ((System.Drawing.Image)(resources.GetObject("ClearBtn.Iconimage")));
             this.ClearBtn.Iconimage_right = null;
             this.ClearBtn.Iconimage_right_Selected = null;
             this.ClearBtn.Iconimage_Selected = null;
@@ -66,31 +67,31 @@ namespace Frontend.ReceptionistForms
             this.ClearBtn.IconVisible = true;
             this.ClearBtn.IconZoom = 90D;
             this.ClearBtn.IsTab = false;
-            this.ClearBtn.Location = new System.Drawing.Point(511, 327);
+            this.ClearBtn.Location = new System.Drawing.Point(509, 401);
             this.ClearBtn.Name = "ClearBtn";
-            this.ClearBtn.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(221)))), ((int)(((byte)(75)))), ((int)(((byte)(57)))));
-            this.ClearBtn.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(172)))), ((int)(((byte)(41)))), ((int)(((byte)(37)))));
+            this.ClearBtn.Normalcolor = System.Drawing.Color.LightSteelBlue;
+            this.ClearBtn.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(19)))), ((int)(((byte)(30)))), ((int)(((byte)(46)))));
             this.ClearBtn.OnHoverTextColor = System.Drawing.Color.White;
             this.ClearBtn.selected = false;
-            this.ClearBtn.Size = new System.Drawing.Size(92, 33);
+            this.ClearBtn.Size = new System.Drawing.Size(164, 54);
             this.ClearBtn.TabIndex = 486;
             this.ClearBtn.Text = "Clear";
             this.ClearBtn.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.ClearBtn.Textcolor = System.Drawing.Color.White;
-            this.ClearBtn.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ClearBtn.TextFont = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Bold);
             this.ClearBtn.Click += new System.EventHandler(this.ClearBtn_Click);
             // 
             // SaveButton
             // 
-            this.SaveButton.Activecolor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(156)))), ((int)(((byte)(18)))));
-            this.SaveButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(166)))), ((int)(((byte)(90)))));
+            this.SaveButton.Activecolor = System.Drawing.Color.LightSteelBlue;
+            this.SaveButton.BackColor = System.Drawing.Color.LightSteelBlue;
             this.SaveButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.SaveButton.BorderRadius = 2;
             this.SaveButton.ButtonText = "Save";
             this.SaveButton.Cursor = System.Windows.Forms.Cursors.Hand;
             this.SaveButton.DisabledColor = System.Drawing.Color.Gray;
             this.SaveButton.Iconcolor = System.Drawing.Color.Transparent;
-            this.SaveButton.Iconimage = null;
+            this.SaveButton.Iconimage = ((System.Drawing.Image)(resources.GetObject("SaveButton.Iconimage")));
             this.SaveButton.Iconimage_right = null;
             this.SaveButton.Iconimage_right_Selected = null;
             this.SaveButton.Iconimage_Selected = null;
@@ -101,18 +102,18 @@ namespace Frontend.ReceptionistForms
             this.SaveButton.IconVisible = true;
             this.SaveButton.IconZoom = 90D;
             this.SaveButton.IsTab = false;
-            this.SaveButton.Location = new System.Drawing.Point(169, 327);
+            this.SaveButton.Location = new System.Drawing.Point(149, 401);
             this.SaveButton.Name = "SaveButton";
-            this.SaveButton.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(166)))), ((int)(((byte)(90)))));
-            this.SaveButton.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(141)))), ((int)(((byte)(76)))));
+            this.SaveButton.Normalcolor = System.Drawing.Color.LightSteelBlue;
+            this.SaveButton.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(19)))), ((int)(((byte)(30)))), ((int)(((byte)(46)))));
             this.SaveButton.OnHoverTextColor = System.Drawing.Color.White;
             this.SaveButton.selected = false;
-            this.SaveButton.Size = new System.Drawing.Size(92, 33);
+            this.SaveButton.Size = new System.Drawing.Size(164, 54);
             this.SaveButton.TabIndex = 485;
             this.SaveButton.Text = "Save";
             this.SaveButton.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.SaveButton.Textcolor = System.Drawing.Color.White;
-            this.SaveButton.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.SaveButton.TextFont = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Bold);
             this.SaveButton.Click += new System.EventHandler(this.SaveButton_Click);
             // 
             // bunifuSeparator43
@@ -130,33 +131,33 @@ namespace Frontend.ReceptionistForms
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold);
             this.label1.ForeColor = System.Drawing.Color.DimGray;
             this.label1.Location = new System.Drawing.Point(257, 57);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(95, 18);
+            this.label1.Size = new System.Drawing.Size(101, 21);
             this.label1.TabIndex = 495;
             this.label1.Text = "Resident ID:";
             // 
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold);
             this.label4.ForeColor = System.Drawing.Color.DimGray;
-            this.label4.Location = new System.Drawing.Point(8, 183);
+            this.label4.Location = new System.Drawing.Point(1, 180);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(91, 18);
+            this.label4.Size = new System.Drawing.Size(99, 21);
             this.label4.TabIndex = 498;
             this.label4.Text = "Room Type:";
             // 
             // label24
             // 
             this.label24.AutoSize = true;
-            this.label24.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label24.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold);
             this.label24.ForeColor = System.Drawing.Color.DimGray;
-            this.label24.Location = new System.Drawing.Point(8, 101);
+            this.label24.Location = new System.Drawing.Point(1, 101);
             this.label24.Name = "label24";
-            this.label24.Size = new System.Drawing.Size(87, 18);
+            this.label24.Size = new System.Drawing.Size(94, 21);
             this.label24.TabIndex = 492;
             this.label24.Text = "Start Date: ";
             // 
@@ -170,7 +171,7 @@ namespace Frontend.ReceptionistForms
             // 
             // StartDateDatepicker
             // 
-            this.StartDateDatepicker.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(166)))), ((int)(((byte)(90)))));
+            this.StartDateDatepicker.BackColor = System.Drawing.Color.LightSteelBlue;
             this.StartDateDatepicker.BorderRadius = 0;
             this.StartDateDatepicker.ForeColor = System.Drawing.Color.White;
             this.StartDateDatepicker.Format = System.Windows.Forms.DateTimePickerFormat.Long;
@@ -187,7 +188,7 @@ namespace Frontend.ReceptionistForms
             this.RoomTypeComboBox.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.RoomTypeComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.RoomTypeComboBox.FormattingEnabled = true;
-            this.RoomTypeComboBox.Location = new System.Drawing.Point(101, 183);
+            this.RoomTypeComboBox.Location = new System.Drawing.Point(106, 180);
             this.RoomTypeComboBox.Name = "RoomTypeComboBox";
             this.RoomTypeComboBox.Size = new System.Drawing.Size(284, 21);
             this.RoomTypeComboBox.TabIndex = 500;
@@ -204,17 +205,17 @@ namespace Frontend.ReceptionistForms
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold);
             this.label3.ForeColor = System.Drawing.Color.DimGray;
             this.label3.Location = new System.Drawing.Point(402, 101);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(81, 18);
+            this.label3.Size = new System.Drawing.Size(87, 21);
             this.label3.TabIndex = 504;
             this.label3.Text = "End Date: ";
             // 
             // EndDateDatepicker
             // 
-            this.EndDateDatepicker.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(221)))), ((int)(((byte)(75)))), ((int)(((byte)(57)))));
+            this.EndDateDatepicker.BackColor = System.Drawing.Color.LightSteelBlue;
             this.EndDateDatepicker.BorderRadius = 0;
             this.EndDateDatepicker.ForeColor = System.Drawing.Color.White;
             this.EndDateDatepicker.Format = System.Windows.Forms.DateTimePickerFormat.Long;
@@ -236,11 +237,11 @@ namespace Frontend.ReceptionistForms
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.DimGray;
             this.label2.Location = new System.Drawing.Point(355, 18);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(126, 18);
+            this.label2.Size = new System.Drawing.Size(159, 25);
             this.label2.TabIndex = 505;
             this.label2.Text = "Add Reservation";
             // 

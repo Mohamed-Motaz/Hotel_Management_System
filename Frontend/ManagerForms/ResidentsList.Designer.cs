@@ -30,14 +30,12 @@ namespace Frontend.ManagerForms
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ResidentsList));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle11 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle12 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
             this.bunifuFlatButton1 = new Bunifu.Framework.UI.BunifuFlatButton();
             this.bunifuMetroTextbox1 = new Bunifu.Framework.UI.BunifuMetroTextbox();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
@@ -46,30 +44,10 @@ namespace Frontend.ManagerForms
             this.label4 = new System.Windows.Forms.Label();
             this.bunifuSeparator2 = new Bunifu.Framework.UI.BunifuSeparator();
             this.label5 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
-            this.label1.Location = new System.Drawing.Point(185, 475);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(15, 16);
-            this.label1.TabIndex = 227;
-            this.label1.Text = "0";
-            this.label1.Click += new System.EventHandler(this.label1_Click);
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(93, 475);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(86, 16);
-            this.label2.TabIndex = 226;
-            this.label2.Text = "Total Entries:";
             // 
             // bunifuFlatButton1
             // 
@@ -125,66 +103,65 @@ namespace Frontend.ManagerForms
             // dataGridView1
             // 
             this.dataGridView1.AllowUserToOrderColumns = true;
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
-            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle1.Padding = new System.Windows.Forms.Padding(10, 5, 5, 5);
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.Black;
-            this.dataGridView1.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle7.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle7.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
+            dataGridViewCellStyle7.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle7.Padding = new System.Windows.Forms.Padding(10, 5, 5, 5);
+            dataGridViewCellStyle7.SelectionForeColor = System.Drawing.Color.Black;
+            this.dataGridView1.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle7;
             this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
             this.dataGridView1.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
             this.dataGridView1.BackgroundColor = System.Drawing.Color.White;
             this.dataGridView1.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dataGridView1.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
             this.dataGridView1.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle2.Padding = new System.Windows.Forms.Padding(5);
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.Silver;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.Desktop;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle8.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle8.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle8.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle8.Padding = new System.Windows.Forms.Padding(5);
+            dataGridViewCellStyle8.SelectionBackColor = System.Drawing.Color.Silver;
+            dataGridViewCellStyle8.SelectionForeColor = System.Drawing.SystemColors.Desktop;
+            dataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle8;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.dataGridViewButtonColumn1,
             this.dataGridViewButtonColumn2});
-            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle4.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle4.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle4.Padding = new System.Windows.Forms.Padding(5);
-            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dataGridView1.DefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle10.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle10.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle10.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle10.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle10.Padding = new System.Windows.Forms.Padding(5);
+            dataGridViewCellStyle10.SelectionBackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle10.SelectionForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle10.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dataGridView1.DefaultCellStyle = dataGridViewCellStyle10;
             this.dataGridView1.GridColor = System.Drawing.Color.White;
             this.dataGridView1.Location = new System.Drawing.Point(83, 88);
             this.dataGridView1.Margin = new System.Windows.Forms.Padding(5);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.ReadOnly = true;
             this.dataGridView1.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
-            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle5.BackColor = System.Drawing.Color.Transparent;
-            dataGridViewCellStyle5.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle5.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle5.Padding = new System.Windows.Forms.Padding(5);
-            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridView1.RowHeadersDefaultCellStyle = dataGridViewCellStyle5;
+            dataGridViewCellStyle11.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle11.BackColor = System.Drawing.Color.Transparent;
+            dataGridViewCellStyle11.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle11.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle11.Padding = new System.Windows.Forms.Padding(5);
+            dataGridViewCellStyle11.SelectionBackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle11.SelectionForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle11.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridView1.RowHeadersDefaultCellStyle = dataGridViewCellStyle11;
             this.dataGridView1.RowHeadersVisible = false;
-            dataGridViewCellStyle6.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle6.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle6.Padding = new System.Windows.Forms.Padding(10, 5, 5, 5);
-            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.Color.Black;
-            this.dataGridView1.RowsDefaultCellStyle = dataGridViewCellStyle6;
+            dataGridViewCellStyle12.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle12.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle12.Padding = new System.Windows.Forms.Padding(10, 5, 5, 5);
+            dataGridViewCellStyle12.SelectionBackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle12.SelectionForeColor = System.Drawing.Color.Black;
+            this.dataGridView1.RowsDefaultCellStyle = dataGridViewCellStyle12;
             this.dataGridView1.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
             this.dataGridView1.Size = new System.Drawing.Size(681, 371);
             this.dataGridView1.TabIndex = 222;
-            this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
             // dataGridViewButtonColumn1
             // 
@@ -198,10 +175,10 @@ namespace Frontend.ManagerForms
             // 
             // dataGridViewButtonColumn2
             // 
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            dataGridViewCellStyle3.Padding = new System.Windows.Forms.Padding(5);
-            this.dataGridViewButtonColumn2.DefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle9.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            dataGridViewCellStyle9.Padding = new System.Windows.Forms.Padding(5);
+            this.dataGridViewButtonColumn2.DefaultCellStyle = dataGridViewCellStyle9;
             this.dataGridViewButtonColumn2.HeaderText = "";
             this.dataGridViewButtonColumn2.Name = "dataGridViewButtonColumn2";
             this.dataGridViewButtonColumn2.ReadOnly = true;
@@ -215,11 +192,11 @@ namespace Frontend.ManagerForms
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Bold);
             this.label4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.label4.Location = new System.Drawing.Point(39, 9);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(148, 25);
+            this.label4.Size = new System.Drawing.Size(146, 30);
             this.label4.TabIndex = 219;
             this.label4.Text = "Residents List";
             // 
@@ -238,21 +215,45 @@ namespace Frontend.ManagerForms
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.ForeColor = System.Drawing.Color.Gray;
-            this.label5.Location = new System.Drawing.Point(193, 16);
+            this.label5.Location = new System.Drawing.Point(181, 9);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(30, 16);
+            this.label5.Size = new System.Drawing.Size(36, 21);
             this.label5.TabIndex = 221;
             this.label5.Text = "List";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.BackColor = System.Drawing.Color.Transparent;
+            this.label2.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Bold);
+            this.label2.ForeColor = System.Drawing.Color.Gray;
+            this.label2.Location = new System.Drawing.Point(78, 468);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(139, 30);
+            this.label2.TabIndex = 225;
+            this.label2.Text = "Total Entries:";
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.BackColor = System.Drawing.Color.Transparent;
+            this.label1.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Bold);
+            this.label1.ForeColor = System.Drawing.Color.LightSteelBlue;
+            this.label1.Location = new System.Drawing.Point(211, 468);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(25, 30);
+            this.label1.TabIndex = 226;
+            this.label1.Text = "0";
             // 
             // ResidentsList
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(821, 507);
-            this.Controls.Add(this.label1);
             this.Controls.Add(this.label2);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.bunifuFlatButton1);
             this.Controls.Add(this.bunifuMetroTextbox1);
             this.Controls.Add(this.dataGridView1);
@@ -269,9 +270,6 @@ namespace Frontend.ManagerForms
         }
 
         #endregion
-
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label2;
         private Bunifu.Framework.UI.BunifuFlatButton bunifuFlatButton1;
         private Bunifu.Framework.UI.BunifuMetroTextbox bunifuMetroTextbox1;
         private System.Windows.Forms.DataGridView dataGridView1;
@@ -280,5 +278,7 @@ namespace Frontend.ManagerForms
         private System.Windows.Forms.Label label4;
         private Bunifu.Framework.UI.BunifuSeparator bunifuSeparator2;
         private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label label1;
     }
 }

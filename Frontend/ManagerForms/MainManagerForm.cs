@@ -90,7 +90,6 @@ namespace Frontend.ManagerForms
             //panel1.Visible = false;
             viewRoomsStatusLine.Visible = false;
             picPatientList.Visible = false;
-            pictureBox6.Visible = true;
             load();
             manageResidentsLine.Visible = false;
             dashboardLine.Visible = false;

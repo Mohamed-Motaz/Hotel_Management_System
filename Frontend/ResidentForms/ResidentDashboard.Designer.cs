@@ -104,11 +104,11 @@ namespace Frontend.ResidentForms
             // 
             this.boardingType.AutoSize = true;
             this.boardingType.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(115)))), ((int)(((byte)(183)))));
-            this.boardingType.Font = new System.Drawing.Font("Arial Black", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.boardingType.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.boardingType.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.boardingType.Location = new System.Drawing.Point(306, 410);
             this.boardingType.Name = "boardingType";
-            this.boardingType.Size = new System.Drawing.Size(342, 45);
+            this.boardingType.Size = new System.Drawing.Size(254, 31);
             this.boardingType.TabIndex = 135;
             this.boardingType.Text = "Bed and Breakfast";
             // 
@@ -174,6 +174,7 @@ namespace Frontend.ResidentForms
             // bunifuImageButton5
             // 
             this.bunifuImageButton5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(115)))), ((int)(((byte)(183)))));
+            this.bunifuImageButton5.ErrorImage = ((System.Drawing.Image)(resources.GetObject("bunifuImageButton5.ErrorImage")));
             this.bunifuImageButton5.Image = ((System.Drawing.Image)(resources.GetObject("bunifuImageButton5.Image")));
             this.bunifuImageButton5.ImageActive = null;
             this.bunifuImageButton5.Location = new System.Drawing.Point(636, 98);
@@ -234,11 +235,11 @@ namespace Frontend.ResidentForms
             // label13
             // 
             this.label13.AutoSize = true;
-            this.label13.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label13.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Bold);
             this.label13.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.label13.Location = new System.Drawing.Point(12, 7);
             this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(208, 25);
+            this.label13.Size = new System.Drawing.Size(209, 30);
             this.label13.TabIndex = 126;
             this.label13.Text = "Resident Dashboard";
             // 
@@ -248,7 +249,7 @@ namespace Frontend.ResidentForms
             this.bunifuSeparator3.LineColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
             this.bunifuSeparator3.LineThickness = 1;
             this.bunifuSeparator3.Location = new System.Drawing.Point(10, 26);
-            this.bunifuSeparator3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.bunifuSeparator3.Margin = new System.Windows.Forms.Padding(4);
             this.bunifuSeparator3.Name = "bunifuSeparator3";
             this.bunifuSeparator3.Size = new System.Drawing.Size(1025, 18);
             this.bunifuSeparator3.TabIndex = 124;
