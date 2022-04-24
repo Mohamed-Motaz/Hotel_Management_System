@@ -19,41 +19,36 @@ namespace Backend.Controllers
     {
 
         [HttpPost]
-        public dynamic builder([FromBody] string json) //api/reservation/builder    
+        public dynamic builder([FromBody] dynamic obj) //api/reservation/builder    
         {
-            dynamic obj = JsonConvert.DeserializeObject(json);
-            List<object> singleRooms = RoomAndBoardingBuilder.GetSingleRoomBookings(obj.startDate, obj.endDate);
-            List<object> doubleRooms = RoomAndBoardingBuilder.GetDoubleRoomBookings(obj.startDate, obj.endDate);
-            List<object> tripleRooms = RoomAndBoardingBuilder.GetTripleRoomBookings(obj.startDate, obj.endDate);
+            List<object> singleRooms = RoomAndBoardingBuilder.GetSingleRoomBookings(Convert.ToInt64(obj.startDate), Convert.ToInt64(obj.endDate));
+            List<object> doubleRooms = RoomAndBoardingBuilder.GetDoubleRoomBookings(Convert.ToInt64(obj.startDate), Convert.ToInt64(obj.endDate));
+            List<object> tripleRooms = RoomAndBoardingBuilder.GetTripleRoomBookings(Convert.ToInt64(obj.startDate), Convert.ToInt64(obj.endDate));
 
             List<object> mixedRooms = singleRooms
                 .Concat(doubleRooms)
                 .Concat(tripleRooms)
-                .ToList();
-           
-           
+                .ToList();      
 
             return obj.lst = mixedRooms;
         }
 
         [HttpPost]
-        public dynamic add([FromBody] string json) //api/reservation/add
+        public dynamic add([FromBody] dynamic obj) //api/reservation/add
         {
-            dynamic obj = JsonConvert.DeserializeObject(json);
-            RoomAndBoarding roomAndBoarding = new RoomAndBoarding(obj.roomType,obj.boardingType);
+            RoomAndBoarding roomAndBoarding = new RoomAndBoarding(Convert.ToString(obj.roomType), Convert.ToString(obj.boardingType));
             dynamic resp = new ExpandoObject();
-            resp.TotalPrice = BookingServices.MakeBooking(roomAndBoarding, obj.startDate, obj.endDate, obj.residentId);
+            resp.TotalPrice = BookingServices.MakeBooking(roomAndBoarding, Convert.ToInt64(obj.startDate), Convert.ToInt64(obj.endDate), Convert.ToInt32(obj.residentId));
             
             return resp;
         }
 
         [HttpPost]
-        public dynamic edit([FromBody] string json) //api/reservation/edit
+        public dynamic edit([FromBody] dynamic obj) //api/reservation/edit
         {
-            dynamic obj = JsonConvert.DeserializeObject(json);
-            Room room = RoomServices.GetRoomById(obj.roomId);
-            BoardingType boardingType = BoardingTypesCache.GetBoardingType(obj.boardingType);
-            BookingInformation booking = new BookingInformation(room, boardingType, obj.residentId, obj.startDate, obj.endDate);
+            Room room = RoomServices.GetRoomById(Convert.ToInt32(obj.roomId));
+            BoardingType boardingType = BoardingTypesCache.GetBoardingType(Convert.ToString(obj.boardingType));
+            BookingInformation booking = new BookingInformation(room, boardingType, Convert.ToInt32(obj.residentId), Convert.ToInt64(obj.startDate), Convert.ToInt64(obj.endDate));
             dynamic resp = new ExpandoObject();
             resp.TotalPrice = BookingServices.EditBooking(booking);
             
@@ -61,32 +56,29 @@ namespace Backend.Controllers
         }
 
         [HttpPost]
-        public dynamic delete([FromBody] string json) //api/reservation/delete
+        public dynamic delete([FromBody] dynamic obj) //api/reservation/delete
         {
-            dynamic obj = JsonConvert.DeserializeObject(json);
             dynamic resp = new ExpandoObject();
-            resp.Success = BookingServices.deleteBooking(obj.id);
+            resp.Success = BookingServices.deleteBooking(Convert.ToInt32(obj.id));
             
             return resp;
         }
 
         [HttpPost]
-        public dynamic checkout([FromBody] string json) //api/reservation/checkout
+        public dynamic checkout([FromBody] dynamic obj) //api/reservation/checkout
         {
-            dynamic obj = JsonConvert.DeserializeObject(json);
             dynamic resp = new ExpandoObject();
-            resp.lst = new List<object>(Receptionist.checkOut(obj.roomId));
+            resp.lst = new List<object>(Receptionist.checkOut(Convert.ToInt32(obj.roomId)));
             
             return resp;
         }
 
 
         [HttpPost]
-        public dynamic get([FromBody] string json) //api/reservation/get
+        public dynamic get([FromBody] dynamic obj) //api/reservation/get
         {
-            dynamic obj = JsonConvert.DeserializeObject(json);
             dynamic resp = new ExpandoObject();
-            resp.lst = new List<object>(BookingServices.GetBookingInformations(obj.id));
+            resp.lst = new List<object>(BookingServices.GetBookingInformations(Convert.ToInt32(obj.id)));
             
             return resp;
         }

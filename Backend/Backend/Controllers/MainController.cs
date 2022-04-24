@@ -16,12 +16,10 @@ namespace Backend.Controllers
     public class MainController : ApiController
     {
         [HttpPost]
-        public dynamic signIn([FromBody] string json) //api/main/signIn
+        public dynamic signIn([FromBody] dynamic obj) //api/main/signIn
         {
-            dynamic obj = JsonConvert.DeserializeObject(json);
             dynamic resp = new ExpandoObject();
-            resp.Type = UserAuthenticationServices.Signin(obj.userName, obj.password, obj.worker);
-
+            resp.Type = UserAuthenticationServices.Signin(Convert.ToString(obj.username), Convert.ToString(obj.password), Convert.ToBoolean(obj.worker));
             return resp;
         }
 
