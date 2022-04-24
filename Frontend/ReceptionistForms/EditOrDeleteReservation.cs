@@ -8,7 +8,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-
+using Frontend.HttpService;
 namespace Frontend.ReceptionistForms
 {
     public partial class EditOrDeleteReservation : Form
@@ -21,7 +21,7 @@ namespace Frontend.ReceptionistForms
 
         private void EditOrDeleteReservation_Load(object sender, EventArgs e)
         {
-            dynamic AvailableRooms = new ExpandoObject();
+            dynamic AvailableRooms = Service.GetAvailableRooms();
             foreach (dynamic room in AvailableRooms)
             {
                 // api returns all available rooms to display it in combo box
@@ -34,16 +34,17 @@ namespace Frontend.ReceptionistForms
         private void EditReservationBtn_Click(object sender, EventArgs e)
         {
             dynamic Reservation = new ExpandoObject();
-            Reservation.ResidentID = ResidentIDTextBox.Text;
-            Reservation.RoomType = RoomTypeComboBox.GetItemText(RoomTypeComboBox.SelectedItem);
-            Reservation.StartDate = StartDateDatepicker.Value;
-            Reservation.EndDate = EndDateDatepicker.Value;
+            Reservation.residentId = ResidentIDTextBox.Text;
+            Reservation.boardingType = RoomTypeComboBox.GetItemText(RoomTypeComboBox.SelectedItem); // room tye wla boarding type
+            Reservation.startDate = StartDateDatepicker.Value;
+            Reservation.endDate = EndDateDatepicker.Value;
             if ((EndDateDatepicker.Value < StartDateDatepicker.Value))
                 MessageBox.Show("Please Enter a valid end date");
             else if (!CheckForResidentID(int.Parse(ResidentIDTextBox.Text)))
                 MessageBox.Show("Please Enter a valid resident id");
             else
             {
+                Service.EditReservation(Reservation);
                 // api takes [ ResidentID with new( RoomType, startDate, EndDate) ]
                 // and delete reservation of ResidentID 
                 // returns bool 1 -> success deleteReservation or 0-> fail deleteReservation
@@ -69,6 +70,10 @@ namespace Frontend.ReceptionistForms
                 MessageBox.Show("Please Enter a valid resident id");
             else
             {
+                dynamic obj = new ExpandoObject();
+                obj.id = ResidentIDTextBox.Text;
+                Service.DeleteReservation(obj);
+
                 MessageBox.Show("Reservation has been deleted successfully!");
             }
             Clear();

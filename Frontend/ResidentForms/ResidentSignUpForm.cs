@@ -14,7 +14,7 @@ using Frontend.ReceptionistForms;
 using Frontend.ResidentForms;
 using System.Dynamic;
 using System.Text.RegularExpressions;
-
+using Frontend.HttpService;
 namespace Frontend
 {
     public partial class ResidentSignUpForm : Form
@@ -60,7 +60,7 @@ namespace Frontend
         private void ResidentSignUpButton_Click(object sender, EventArgs e)
         {
             dynamic resident = new ExpandoObject();
-            resident.name = UserNameTextBox.Text;
+            resident.username = UserNameTextBox.Text;
             resident.password = PasswordTextBox.Text;
             resident.email = EmailTextBox.Text;
             resident.age = AgeTextBox.Text;
@@ -69,6 +69,7 @@ namespace Frontend
             if (Validate())
             {
                 // send to api addResident after validation
+                Service.AddResident(resident);
                 MainResidentForm residentForm = new MainResidentForm();
                 residentForm.Show();
             }

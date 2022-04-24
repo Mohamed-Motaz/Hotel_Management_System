@@ -17,34 +17,7 @@ namespace Frontend.ReceptionistForms
         {
             InitializeComponent();
         }
-        public List<dynamic> GetActiveReservations()
-        {
-            List<dynamic> ActiveReservations = Service.GetActiveReservations() ;
-
-            dynamic res = new ExpandoObject();
-            res.id = "1";
-            res.RoomId = "1";
-            res.BoardId = "2";
-            res.ResidentId = "3";
-            res.StartDate = "23/8";
-            res.EndDate = "8/9";
-            res.TotalPrice = "26000";
-
-            ActiveReservations.Add(res);
-
-            dynamic res1 = new ExpandoObject();
-            res1.id = "2";
-            res1.RoomId = "5";
-            res1.BoardId = "7";
-            res1.ResidentId = "5";
-            res1.StartDate = "7/8";
-            res1.EndDate = "3/9";
-            res1.TotalPrice = "2600";
-
-            ActiveReservations.Add(res1);
-
-            return ActiveReservations;
-        }
+       
         private void ListActiveReservations_Load(object sender, EventArgs e)
         {
             setUpDataGridView();
@@ -61,7 +34,7 @@ namespace Frontend.ReceptionistForms
             ActiveReservationsGV.Columns[5].Name = "End Date";
             ActiveReservationsGV.Columns[6].Name = "Total price";
 
-            List<dynamic> reservations = GetActiveReservations();
+            List<dynamic> reservations = Service.GetActiveReservations();
 
             label1.Text = reservations.Count.ToString();
 

@@ -17,32 +17,7 @@ namespace Frontend.ReceptionistForms
         {
             InitializeComponent();
         }
-        public List<dynamic> GetResidentList()
-        {
-
-            List<dynamic> residents = Service.GetAllResidents();
-            dynamic resident = new ExpandoObject();
-
-            resident.id = "1";
-            resident.age = "35";
-            resident.Name = "Salma";
-            resident.Email = "salma@hotmail.com";
-            resident.PhoneNumber = "011111111";
-            resident.password = "4444";
-
-            residents.Add(resident);
-            dynamic res = new ExpandoObject();
-            res.id = "2";
-            res.age = "40";
-            res.Name = "Ay haga";
-            res.Email = "ay haga@hotmail.com";
-            res.PhoneNumber = "0111215651111";
-            res.password = "6666";
-
-            residents.Add(res);
-
-            return residents;
-        }
+      
 
         private void ResidentsList_Load(object sender, EventArgs e)
         {
@@ -60,8 +35,8 @@ namespace Frontend.ReceptionistForms
             dataGridView1.Columns[6].Name = "Email";
             dataGridView1.Columns[7].Name = "Password";
            
-            List<dynamic> residents = GetResidentList();
-            
+            List<dynamic> residents = Service.GetAllResidents();
+
             label1.Text = residents.Count.ToString();
 
             foreach (dynamic res in residents)

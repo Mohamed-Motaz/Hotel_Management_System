@@ -30,7 +30,7 @@ namespace Frontend.ReceptionistForms
             //api takes all data and edit it
             dynamic obj = new ExpandoObject();
             obj.id = searchbyIdTextbox.Text;
-            obj.name = nameTextBox.Text;
+            obj.username = nameTextBox.Text;
             obj.age = ageTextBox.Text;
             obj.email = emailTextBox.Text;
             obj.password = passwordTextBox.Text;
@@ -66,7 +66,7 @@ namespace Frontend.ReceptionistForms
 
             //TODO: api set resident to the api returend resident
             dynamic res = Service.GetResident(resident.id);
-            nameTextBox.Text = res.name;
+            nameTextBox.Text = res.username;
             ageTextBox.Text = res.age;
             emailTextBox.Text = res.email;
             passwordTextBox.Text = res.password;
@@ -78,7 +78,7 @@ namespace Frontend.ReceptionistForms
             //api takes all data and edit it
             dynamic obj = new ExpandoObject();
             obj.id = searchbyIdTextbox.Text;
-            obj.name = nameTextBox.Text;
+            obj.username = nameTextBox.Text;
             obj.age = ageTextBox.Text;
             obj.email = emailTextBox.Text;
             obj.password = passwordTextBox.Text;
