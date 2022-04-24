@@ -19,7 +19,7 @@ namespace Frontend.ReceptionistForms
         }
         public List<dynamic> GetActiveReservations()
         {
-            List<dynamic> ActiveReservations = new List<dynamic>();
+            List<dynamic> ActiveReservations = Service.GetActiveReservations() ;
 
             dynamic res = new ExpandoObject();
             res.id = "1";

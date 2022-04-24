@@ -121,9 +121,18 @@ namespace Frontend.HttpService
             HttpResponseMessage response = Post("api/main/signIn", json);
             string responseStr = response.Content.ReadAsStringAsync().Result;
             dynamic obj = JsonConvert.DeserializeObject(responseStr);
-            bool succeed = Convert.ToBoolean(obj);
+            if (obj.type != "")
+                return true;
+            else
+                return false;
+        }
 
-            return succeed;
+        public static dynamic DashBoard()
+        {
+            HttpResponseMessage response = Post("api/main/dashboard", "");
+            string responseStr = response.Content.ReadAsStringAsync().Result;
+            dynamic obj = JsonConvert.DeserializeObject(responseStr);
+            return obj;
         }
 
 
@@ -165,7 +174,7 @@ namespace Frontend.HttpService
             bool succeed = Convert.ToBoolean(obj.boolName);
             return succeed;
         }
-
+        
         //Rooms
         public static List<string> GetAvailableRooms()
         {
