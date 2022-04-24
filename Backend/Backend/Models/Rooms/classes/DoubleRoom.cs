@@ -6,7 +6,7 @@ namespace Backend.Models.Rooms
 {
     class DoubleRoom : Room
     {
-        public DoubleRoom(RoomTypes type, double pricePerNight, RoomStatus status) :
+        public DoubleRoom(string type, double pricePerNight, string status) :
             base(type, pricePerNight, status){ }
     }
 }

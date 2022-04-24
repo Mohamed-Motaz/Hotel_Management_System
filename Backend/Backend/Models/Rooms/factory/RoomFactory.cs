@@ -8,7 +8,7 @@ namespace Backend.Models
     public class RoomFactory
     {
 
-        public static Room GetRoom(RoomTypes type, long startDate,long endDate)
+        public static Room GetRoom(string type, long startDate,long endDate)
         {
             for (Iterator roomIterator = Apphost.ListOfRooms.GetIterator(); roomIterator.hasNext();)
             {

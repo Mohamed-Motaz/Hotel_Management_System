@@ -11,7 +11,7 @@ namespace Backend.Models
         public static int BookingIds = 1; 
         public int id { get; set; }
         public int roomId { get; set; }
-        public BoardingTypes boardingType { get; set; }
+        public string boardingType { get; set; }
         public int residentId { get; set; }
         public long startDate { get; set; }
         public long endDate { get; set; }

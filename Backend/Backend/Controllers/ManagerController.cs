@@ -26,7 +26,7 @@ namespace Backend.Controllers
             resp.numOfWorkers = workers.Count;
             resp.weeklyIncome = Manager.getIncome(Duration.Weekly);
             resp.monthlyIncome = Manager.getIncome(Duration.Monthly);
-            resp.yearlyIncome = Manager.getIncome(Duration.Annualy);
+            resp.yearlyIncome = Manager.getIncome(Duration.Yearly);
             
             return resp;
         }
@@ -37,7 +37,7 @@ namespace Backend.Controllers
             dynamic resp = new ExpandoObject();
             resp.weeklyIncome = Manager.getIncome(Duration.Weekly);
             resp.monthlyIncome = Manager.getIncome(Duration.Monthly);
-            resp.yearlyIncome = Manager.getIncome(Duration.Annualy);
+            resp.yearlyIncome = Manager.getIncome(Duration.Yearly);
             
             return resp;
         }

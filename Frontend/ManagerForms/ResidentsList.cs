@@ -60,19 +60,19 @@ namespace Frontend.ManagerForms
             dataGridView1.Columns[6].Name = "Email";
             dataGridView1.Columns[7].Name = "Password";
            
-            List<dynamic> residents = GetResidentList();
+            List<dynamic> residents = Service.GetAllResidents();
             
             label1.Text = residents.Count.ToString();
 
             foreach (dynamic res in residents)
             {
                 DataGridViewRow row = (DataGridViewRow)dataGridView1.Rows[0].Clone();
-                row.Cells[2].Value = res.id;
-                row.Cells[3].Value = res.Name;
-                row.Cells[4].Value = res.age;
-                row.Cells[5].Value = res.Email;
-                row.Cells[6].Value = res.PhoneNumber;
-                row.Cells[7].Value = res.password;
+                row.Cells[2].Value = res.id.ToString();
+                row.Cells[3].Value = res.userName.ToString();
+                row.Cells[4].Value = res.age.ToString();
+                row.Cells[5].Value = res.email.ToString();
+                row.Cells[6].Value = res.phoneNumber.ToString();
+                row.Cells[7].Value = res.password.ToString();
 
                 dataGridView1.Rows.Add(row);
             }

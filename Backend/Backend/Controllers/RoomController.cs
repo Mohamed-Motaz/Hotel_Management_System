@@ -16,30 +16,30 @@ namespace Backend.Controllers
     public class RoomController : ApiController
     {
         [HttpPost]
-        public string getAvailable() //api/room/getActive
+        public dynamic getAvailable() //api/room/getActive
         {
             dynamic resp = new ExpandoObject();
             resp.lst = new List<object>(RoomServices.GetAvailableRooms());
-            string res = JsonConvert.SerializeObject(resp);
-            return res;
+            
+            return resp;
         }
 
         [HttpPost]
-        public string getReserved() //api/room/getBusy
+        public dynamic getReserved() //api/room/getBusy
         {
             dynamic resp = new ExpandoObject();
             resp.lst = new List<object>(RoomServices.GetReservedRooms());
-            string res = JsonConvert.SerializeObject(resp);
-            return res;
+            
+            return resp;
         }
 
         [HttpPost]
-        public string getAll() //api/room/getAll
+        public dynamic getAll() //api/room/getAll
         {
             dynamic resp = new ExpandoObject();
             resp.lst = new List<object>(RoomServices.GetAllRooms());
-            string res = JsonConvert.SerializeObject(resp);
-            return res;
+            
+            return resp;
         }
 
 

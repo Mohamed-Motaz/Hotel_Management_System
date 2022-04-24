@@ -7,7 +7,7 @@ namespace Backend.Models
 {
     public class RoomService : AbstractWorker
     {
-        public RoomService(string userName, int age, string email, string phoneNumber, int salary, JobTitle jobTitle, string incomeType) : 
+        public RoomService(string userName, int age, string email, string phoneNumber, int salary, string jobTitle, string incomeType) : 
             base(userName, age, email, phoneNumber, salary, jobTitle, incomeType) {}
 
     }

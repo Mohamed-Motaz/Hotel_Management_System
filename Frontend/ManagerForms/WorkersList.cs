@@ -50,7 +50,7 @@ namespace Frontend.ManagerForms
         }
         private void setupWorkersListGridView()
         {
-            WorkersListGridView.ColumnCount = 7;
+            WorkersListGridView.ColumnCount = 9;
             WorkersListGridView.Columns[0].Name = "ID";
             WorkersListGridView.Columns[1].Name = "Name";
             WorkersListGridView.Columns[2].Name = "Age";
@@ -58,19 +58,27 @@ namespace Frontend.ManagerForms
             WorkersListGridView.Columns[4].Name = "PhoneNumber";
             WorkersListGridView.Columns[5].Name = "Salary";
             WorkersListGridView.Columns[6].Name = "Job Title";
-            List<dynamic> workers = getWorkers();
+            WorkersListGridView.Columns[7].Name = "Income Type";
+            WorkersListGridView.Columns[8].Name = "Password";
+            List<dynamic> workers = Service.GetAllWorkers();
             label1.Text = workers.Count.ToString();
             foreach (dynamic worker in workers)
             {
                 DataGridViewRow row = (DataGridViewRow)WorkersListGridView.Rows[0].Clone();
-                row.Cells[0].Value = worker.id;
-                row.Cells[1].Value = worker.name;
-                row.Cells[2].Value = worker.age; 
-                row.Cells[3].Value = worker.email;
-                row.Cells[4].Value = worker.phoneNumber;
-                row.Cells[5].Value = worker.salary;
-                row.Cells[6].Value = worker.jobTitle;
-
+                row.Cells[0].Value = worker.id.ToString();
+                row.Cells[1].Value = worker.userName.ToString();
+                row.Cells[2].Value = worker.age.ToString(); 
+                row.Cells[3].Value = worker.email.ToString();
+                row.Cells[4].Value = worker.phoneNumber.ToString();
+                row.Cells[5].Value = worker.salary.ToString();
+                row.Cells[6].Value = worker.jobTitle.ToString();
+                row.Cells[7].Value = worker.incomeType.ToString();
+                try
+                {
+                    row.Cells[8].Value = worker.password.ToString();
+                }
+                catch (Exception) { }
+                
                 WorkersListGridView.Rows.Add(row);
 
             }
