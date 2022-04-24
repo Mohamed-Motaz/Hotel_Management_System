@@ -123,7 +123,7 @@ namespace Frontend.Extras
             // ageTextBox
             // 
             this.ageTextBox.BackColor = System.Drawing.SystemColors.Control;
-            this.ageTextBox.Location = new System.Drawing.Point(291, 161);
+            this.ageTextBox.Location = new System.Drawing.Point(291, 153);
             this.ageTextBox.Name = "ageTextBox";
             this.ageTextBox.Size = new System.Drawing.Size(298, 20);
             this.ageTextBox.TabIndex = 347;
