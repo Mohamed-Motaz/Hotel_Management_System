@@ -23,15 +23,15 @@ namespace Backend.Controllers
             AbstractWorker worker;
             if (obj.jobTitle == JobTitle.RoomService)
             {
-                worker = new RoomService(obj.username, obj.age, obj.email, obj.phoneNumber, obj.salary, obj.Title, obj.incomeType);
+                worker = new RoomService(obj.username, obj.age, obj.email, obj.phoneNumber, obj.salary, obj.jobTitle, obj.incomeType);
             }
             else if (obj.jobTitle == JobTitle.Receptionist)
             {
-                worker = new Receptionist(obj.username, obj.age, obj.email, obj.phoneNumber, obj.salary, obj.Title, obj.incomeType, obj.password);
+                worker = new Receptionist(obj.username, obj.age, obj.email, obj.phoneNumber, obj.salary, obj.jobTitle, obj.incomeType, obj.password);
             }
             else
             {
-                worker = new Manager(obj.username, obj.age, obj.email, obj.phoneNumber, obj.salary, obj.Title, obj.incomeType, obj.password);
+                worker = new Manager(obj.username, obj.age, obj.email, obj.phoneNumber, obj.salary, obj.jobTitle, obj.incomeType, obj.password);
             }
             Manager.addWorker(worker, obj.password);
             dynamic resp = new ExpandoObject();
@@ -46,15 +46,15 @@ namespace Backend.Controllers
             AbstractWorker worker;
             if (obj.jobTitle == JobTitle.RoomService)
             {
-                worker = new RoomService(obj.username, obj.age, obj.email, obj.phoneNumber, obj.salary, obj.Title, obj.incomeType);
+                worker = new RoomService(obj.username, obj.age, obj.email, obj.phoneNumber, obj.salary, obj.jobTitle, obj.incomeType);
             }
             else if(obj.jobTitle == JobTitle.Receptionist)
             {
-                worker = new Receptionist(obj.username, obj.age, obj.email, obj.phoneNumber, obj.salary, obj.Title, obj.incomeType, obj.password);
+                worker = new Receptionist(obj.username, obj.age, obj.email, obj.phoneNumber, obj.salary, obj.jobTitle, obj.incomeType, obj.password);
             }
             else
             {
-                worker = new Manager(obj.username, obj.age, obj.email, obj.phoneNumber, obj.salary, obj.Title, obj.incomeType, obj.password);
+                worker = new Manager(obj.username, obj.age, obj.email, obj.phoneNumber, obj.salary, obj.jobTitle, obj.incomeType, obj.password);
             }
             Manager.editWorker(worker, obj.password);
             dynamic resp = new ExpandoObject();

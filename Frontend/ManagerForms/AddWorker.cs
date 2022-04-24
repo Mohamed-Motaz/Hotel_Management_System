@@ -58,14 +58,19 @@ namespace Frontend.Extras
         private void AddWorkerBtn_Click(object sender, EventArgs e)
         {
             dynamic worker = new ExpandoObject();
-
-            worker.name = nameTextBox.Text;
-            worker.age = ageTextBox.Text;
+            try
+            {
+                worker.age = Convert.ToInt32(ageTextBox.Text);
+                worker.salary = Convert.ToDouble(salaryTextBox.Text);
+                worker.username = nameTextBox.Text;
+            }catch(Exception ex)
+            {
+                // do Nothing
+            }
             worker.email = emailTextBox.Text;
             worker.phoneNumber = phoneTextBox.Text;
-            worker.salary = salaryTextBox.Text;
             worker.jobTitle = JobTitleComboBox.GetItemText(JobTitleComboBox.SelectedItem);
-            worker.incomeType = incomeTypeTextBox.Text;
+            worker.incomeType = " ";
             // Pass password as null if the jobtype is Room Service
             if (CheckIfWorkerIsPrivileged())
             {
@@ -73,7 +78,7 @@ namespace Frontend.Extras
                 passwordTextBox.Enabled = true;
             }
             else
-                worker.password = "";
+                worker.password = " ";
 
             //TODO: send to api addWorker
             Service.AddWorker(worker);
