@@ -132,10 +132,5 @@ namespace Backend.Models
             return totalIncome;
         }
 
-        public static List<object> showDetailsOfAllRooms(string typeOfTheRoom)
-        {
-            return Apphost.ListOfRooms.list;
-        }
-
     }
 }

@@ -11,12 +11,19 @@ namespace Backend.Models
             base(userName, age, email, phoneNumber, salary, jobTitle, incomeType, password) { }
 
 
-        public double checkOut(BookingInformation booking)
+        public static double checkOut(int roomId)
         {
-            booking.endDate = TimeHandler.GetDateInEpoch(DateTime.Today.Day, DateTime.Today.Month, DateTime.Today.Year);
-            BookingServices.EditBooking(booking);
-            return booking.totalPrice;
+            for (Iterator bookingIterator = Apphost.ListOfBookingInformation.GetIterator(); bookingIterator.hasNext();)
+            {
+                BookingInformation booking = bookingIterator.getNext() as BookingInformation;
+                if (booking.roomId == roomId)
+                {
+                    booking.endDate = TimeHandler.GetDateInEpoch(DateTime.Today.Day, DateTime.Today.Month, DateTime.Today.Year);
+                    BookingServices.EditBooking(booking);
+                    return booking.totalPrice;
+                }
+            }
+            return -1;
         }
-
     }
 }

@@ -7,20 +7,8 @@ namespace Backend.Models
 {
     class RoomServices
     {
-        private RoomServices(){ }
 
-        private static RoomServices services = null;
-
-        public static RoomServices GetInstance() 
-        {
-            if (services == null) 
-            {
-                services = new RoomServices();
-            }
-            return services;
-        }
-
-        public bool CheckIfRoomAvailable(Room room, long startDate, long endDate)
+        public static bool CheckIfRoomAvailable(Room room, long startDate, long endDate)
         {
             for (Iterator bookingIterator = Apphost.ListOfBookingInformation.GetIterator(); bookingIterator.hasNext();)
             {
@@ -36,7 +24,7 @@ namespace Backend.Models
             return true;
         }
 
-        public Room GetRoomById(int roomId)
+        public static Room GetRoomById(int roomId)
         {
             for (Iterator roomIterator = Apphost.ListOfRooms.GetIterator(); roomIterator.hasNext();)
             {
@@ -48,6 +36,42 @@ namespace Backend.Models
             }
             return null;
         }
-       
+
+        public static List<object> GetReservedRooms()
+        {
+            List<object> reservedRooms = new List<object>();
+
+            for (Iterator roomIterator = Apphost.ListOfRooms.GetIterator(); roomIterator.hasNext();)
+            {
+                Room room = roomIterator.getNext() as Room;
+                if (!CheckIfRoomAvailable(room, TimeHandler.GetTodayInEpoch(), TimeHandler.GetTodayInEpoch()))
+                {
+                    reservedRooms.Add(room);
+                }
+            }
+            return reservedRooms;
+        }
+
+        public static List<object> GetAvailableRooms()
+        {
+            List<object> availableRooms = new List<object>();
+
+            for (Iterator roomIterator = Apphost.ListOfRooms.GetIterator(); roomIterator.hasNext();)
+            {
+                Room room = roomIterator.getNext() as Room;
+                if (CheckIfRoomAvailable(room, TimeHandler.GetTodayInEpoch(), TimeHandler.GetTodayInEpoch()))
+                {
+                    availableRooms.Add(room);
+                }
+            }
+            return availableRooms;
+        }
+
+
+        public static List<object> GetAllRooms()
+        {
+            return Apphost.ListOfRooms.list;
+        }
+
     }
 }

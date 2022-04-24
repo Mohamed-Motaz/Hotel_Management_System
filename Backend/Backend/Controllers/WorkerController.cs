@@ -2,6 +2,7 @@
 using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
+using System.Dynamic;
 using System.Linq;
 using System.Net;
 using System.Net.Http;
@@ -15,9 +16,8 @@ namespace Backend.Controllers
     public class WorkerController : ApiController
     {
 
-
         [HttpPost]
-        public string add(string json) //api/worker/add
+        public string add([FromBody]string json) //api/worker/add
         {
             dynamic obj = JsonConvert.DeserializeObject(json);
             AbstractWorker worker;
@@ -34,12 +34,14 @@ namespace Backend.Controllers
                 worker = new Manager(obj.username, obj.age, obj.email, obj.phoneNumber, obj.salary, obj.Title, obj.incomeType, obj.password);
             }
             Manager.addWorker(worker, obj.password);
-            string res = JsonConvert.SerializeObject(true);
+            dynamic resp = new ExpandoObject();
+            resp.Success = true;
+            string res = JsonConvert.SerializeObject(resp);
             return res;
         }
 
         [HttpPost]
-        public string edit(string json) //api/worker/edit
+        public string edit([FromBody] string json) //api/worker/edit
         {
             dynamic obj = JsonConvert.DeserializeObject(json);
             AbstractWorker worker;
@@ -56,12 +58,25 @@ namespace Backend.Controllers
                 worker = new Manager(obj.username, obj.age, obj.email, obj.phoneNumber, obj.salary, obj.Title, obj.incomeType, obj.password);
             }
             Manager.editWorker(worker, obj.password);
-            string res = JsonConvert.SerializeObject(true);
+            dynamic resp = new ExpandoObject();
+            resp.Success = true;
+            string res = JsonConvert.SerializeObject(resp);
             return res;
         }
 
         [HttpPost]
-        public string get(string json) //api/worker/get
+        public string delete([FromBody] string json) //api/worker/delete
+        {
+            dynamic obj = JsonConvert.DeserializeObject(json);
+            Manager.deleteWorker(obj.id);
+            dynamic resp = new ExpandoObject();
+            resp.Success = true;
+            string res = JsonConvert.SerializeObject(resp);
+            return res;
+        }
+
+        [HttpPost]
+        public string get([FromBody] string json) //api/worker/get
         {
             dynamic obj = JsonConvert.DeserializeObject(json);
             string res = JsonConvert.SerializeObject(Manager.getWorker(obj.id));
@@ -69,19 +84,11 @@ namespace Backend.Controllers
         }
 
         [HttpPost]
-        public string delete(string json) //api/worker/delete
+        public string getAll() //api/worker/getAll
         {
-            dynamic obj = JsonConvert.DeserializeObject(json);
-            Manager.deleteWorker(obj.id);
-            string res = JsonConvert.SerializeObject(true);
-            return res;
-        }
-
-        [HttpPost]
-        public string getAll(string json) //api/worker/getAll
-        {
-            dynamic obj = JsonConvert.DeserializeObject(json);
-            string res = JsonConvert.SerializeObject(Manager.viewAllWorkers());
+            dynamic resp = new ExpandoObject();
+            resp.lst = new List<object>(Manager.viewAllWorkers());
+            string res = JsonConvert.SerializeObject(resp);
             return res;
         }
 

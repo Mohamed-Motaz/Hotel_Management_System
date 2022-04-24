@@ -9,9 +9,7 @@ public static class RoomAndBoardingBuilder
     {
         List<RoomAndBoarding> RoomAndBoardings = new List<RoomAndBoarding>();
 
-        RoomFactory roomFactory = new RoomFactory ();
-
-        if (!(roomFactory.GetRoom(RoomTypes.Single,startDate,endDate) is null))
+        if (!(RoomFactory.GetRoom(RoomTypes.Single,startDate,endDate) is null))
         {
             RoomAndBoarding SingleAndFull = new RoomAndBoarding();
             SingleAndFull.boardingType = BoardingTypes.Full;
@@ -34,9 +32,7 @@ public static class RoomAndBoardingBuilder
     {
         List<RoomAndBoarding> RoomAndBoardings = new List<RoomAndBoarding>();
 
-        RoomFactory roomFactory = new RoomFactory();
-
-        if (!(roomFactory.GetRoom(RoomTypes.Double, startDate, endDate) is null))
+        if (!(RoomFactory.GetRoom(RoomTypes.Double, startDate, endDate) is null))
         {
             RoomAndBoarding DoubleAndFull = new RoomAndBoarding();
             DoubleAndFull.boardingType = BoardingTypes.Full;
@@ -54,13 +50,11 @@ public static class RoomAndBoardingBuilder
         return RoomAndBoardings;
     }
 
-    public static List<RoomAndBoarding> GetTripleBookings(long startDate, long endDate)
+    public static List<RoomAndBoarding> GetTripleRoomBookings(long startDate, long endDate)
     {
         List<RoomAndBoarding> RoomAndBoardings = new List<RoomAndBoarding>();
 
-        RoomFactory roomFactory = new RoomFactory();
-
-        if (!(roomFactory.GetRoom(RoomTypes.Triple, startDate, endDate) is null))
+        if (!(RoomFactory.GetRoom(RoomTypes.Triple, startDate, endDate) is null))
         {
             RoomAndBoarding TripleAndFull = new RoomAndBoarding();
             TripleAndFull.boardingType = BoardingTypes.Full;

@@ -46,5 +46,10 @@ public static class TimeHandler
         return (long)differnce.TotalSeconds;
     }
 
+    public static long GetTodayInEpoch()
+    {
+        return TimeHandler.GetDateInEpoch(DateTime.Today.Day, DateTime.Today.Month, DateTime.Today.Year);
+    }
+
 
 }

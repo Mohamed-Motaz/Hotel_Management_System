@@ -32,17 +32,17 @@ namespace Backend.Models
             Apphost.ListOfResidents.list.Add(resident);
         }
 
-        public static bool isResident(int id)
+        public static Resident getResident(int id)
         {
             for (Iterator ResidentsIterator = Apphost.ListOfResidents.GetIterator(); ResidentsIterator.hasNext();)
             {
                 Resident resident = ResidentsIterator.getNext() as Resident;
                 if (id == resident.id)
                 {
-                    return true;
+                    return resident;
                 }
             }
-            return false;
+            return null;
         }
 
 
@@ -57,6 +57,36 @@ namespace Backend.Models
                     break;
                 }
             }
+        }
+
+        public static int getTodayResidents()
+        {
+            HashSet<int> residents = new HashSet<int>();
+            for (Iterator bookingIterator = Apphost.ListOfBookingInformation.GetIterator(); bookingIterator.hasNext();)
+            {
+                BookingInformation booking = bookingIterator.getNext() as BookingInformation;
+
+                if (booking.startDate == TimeHandler.GetTodayInEpoch())
+                {
+                    residents.Add(booking.residentId);
+                }
+            }
+            return residents.Count;
+        }
+
+        public static int getCurrentResidents()
+        {
+            HashSet<int> residents = new HashSet<int>();
+            for (Iterator bookingIterator = Apphost.ListOfBookingInformation.GetIterator(); bookingIterator.hasNext();)
+            {
+                BookingInformation booking = bookingIterator.getNext() as BookingInformation;
+
+                if (booking.endDate > TimeHandler.GetTodayInEpoch())
+                {
+                    residents.Add(booking.residentId);
+                }
+            }
+            return residents.Count;
         }
 
     }

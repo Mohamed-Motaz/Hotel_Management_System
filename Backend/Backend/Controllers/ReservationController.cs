@@ -4,6 +4,7 @@ using Backend.Models.Rooms;
 using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
+using System.Dynamic;
 using System.Linq;
 using System.Net;
 using System.Net.Http;
@@ -18,7 +19,7 @@ namespace Backend.Controllers
     {
 
         [HttpPost]
-        public string builder(string json) //api/reservation/builder    
+        public string builder([FromBody] string json) //api/reservation/builder    
         {
             dynamic obj = JsonConvert.DeserializeObject(json);
             List<object> singleRooms = RoomAndBoardingBuilder.GetSingleRoomBookings(obj.startDate, obj.endDate);
@@ -32,67 +33,75 @@ namespace Backend.Controllers
         }
 
         [HttpPost]
-        public string add(string json) //api/reservation/add
+        public string add([FromBody] string json) //api/reservation/add
         {
             dynamic obj = JsonConvert.DeserializeObject(json);
             RoomAndBoarding roomAndBoarding = new RoomAndBoarding(obj.roomType,obj.boardingType);
-            string res = JsonConvert.SerializeObject(BookingServices.MakeBooking(roomAndBoarding, obj.startDate, obj.endDate, obj.residentId));
+            dynamic resp = new ExpandoObject();
+            resp.TotalPrice = BookingServices.MakeBooking(roomAndBoarding, obj.startDate, obj.endDate, obj.residentId);
+            string res = JsonConvert.SerializeObject(resp);
             return res;
         }
 
         [HttpPost]
-        public string edit(string json) //api/reservation/edit
+        public string edit([FromBody] string json) //api/reservation/edit
         {
             dynamic obj = JsonConvert.DeserializeObject(json);
-            Room room = RoomServices.GetInstance().GetRoomById(obj.roomId);
+            Room room = RoomServices.GetRoomById(obj.roomId);
             BoardingType boardingType = BoardingTypesCache.GetBoardingType(obj.boardingType);
             BookingInformation booking = new BookingInformation(room, boardingType, obj.residentId, obj.startDate, obj.endDate);
-            string res = JsonConvert.SerializeObject(BookingServices.EditBooking(booking));
+            dynamic resp = new ExpandoObject();
+            resp.TotalPrice = BookingServices.EditBooking(booking);
+            string res = JsonConvert.SerializeObject(resp);
             return res;
         }
 
         [HttpPost]
-        public string delete(string json) //api/reservation/delete
+        public string delete([FromBody] string json) //api/reservation/delete
         {
             dynamic obj = JsonConvert.DeserializeObject(json);
-            string res = JsonConvert.SerializeObject(BookingServices.deleteBooking(obj.id));
+            dynamic resp = new ExpandoObject();
+            resp.Success = BookingServices.deleteBooking(obj.id);
+            string res = JsonConvert.SerializeObject(resp);
             return res;
         }
 
         [HttpPost]
-        public string checkout(string json) //api/reservation/checkout
+        public string checkout([FromBody] string json) //api/reservation/checkout
         {
             dynamic obj = JsonConvert.DeserializeObject(json);
-            obj.lst = new List<object>(Receptionist.checkOut(obj.roomId));
-            string res = JsonConvert.SerializeObject(obj);
+            dynamic resp = new ExpandoObject();
+            resp.lst = new List<object>(Receptionist.checkOut(obj.roomId));
+            string res = JsonConvert.SerializeObject(resp);
             return res;
         }
 
 
         [HttpPost]
-        public string get(string json) //api/reservation/get
+        public string get([FromBody] string json) //api/reservation/get
         {
             dynamic obj = JsonConvert.DeserializeObject(json);
-            obj.lst = new List<object>(BookingServices.GetBookingInformations(obj.id));
-            string res = JsonConvert.SerializeObject(obj);
+            dynamic resp = new ExpandoObject();
+            resp.lst = new List<object>(BookingServices.GetBookingInformations(obj.id));
+            string res = JsonConvert.SerializeObject(resp);
             return res;
         }
 
         [HttpPost]
-        public string getActive(string json) //api/reservation/getActive
+        public string getActive() //api/reservation/getActive
         {
-            dynamic obj = JsonConvert.DeserializeObject(json);
-            obj.lst = new List<object>(BookingServices.GetActiveBookingInformation());
-            string res = JsonConvert.SerializeObject(obj);
+            dynamic resp = new ExpandoObject();
+            resp.lst = new List<object>(BookingServices.GetActiveBookingInformation());
+            string res = JsonConvert.SerializeObject(resp);
             return res;
         }
 
         [HttpPost]
-        public string getAll(string json) //api/reservation/getAll
+        public string getAll() //api/reservation/getAll
         {
-            dynamic obj = JsonConvert.DeserializeObject(json);
-            obj.lst = new List<object>(BookingServices.GetAllBookingInformation());
-            string res = JsonConvert.SerializeObject(obj);
+            dynamic resp = new ExpandoObject();
+            resp.lst = new List<object>(BookingServices.GetAllBookingInformation());
+            string res = JsonConvert.SerializeObject(resp);
             return res;
         }
 

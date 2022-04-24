@@ -7,14 +7,13 @@ namespace Backend.Models
 {
     public class RoomFactory
     {
-        private RoomServices myServices = RoomServices.GetInstance();
 
-        public Room GetRoom(RoomTypes type, long startDate,long endDate)
+        public static Room GetRoom(RoomTypes type, long startDate,long endDate)
         {
             for (Iterator roomIterator = Apphost.ListOfRooms.GetIterator(); roomIterator.hasNext();)
             {
                 Room room = roomIterator.getNext() as Room;
-                if (room.Type == type && myServices.CheckIfRoomAvailable(room, startDate, endDate))
+                if (room.Type == type && RoomServices.CheckIfRoomAvailable(room, startDate, endDate))
                 {
                     return room;
                 }
