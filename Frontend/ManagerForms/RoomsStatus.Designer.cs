@@ -54,7 +54,8 @@ namespace Frontend.Extras
             this.chart1.ChartAreas.Add(chartArea1);
             legend1.Name = "Legend1";
             this.chart1.Legends.Add(legend1);
-            this.chart1.Location = new System.Drawing.Point(514, 12);
+            this.chart1.Location = new System.Drawing.Point(454, 11);
+            this.chart1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.chart1.Name = "chart1";
             series1.ChartArea = "ChartArea1";
             series1.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Pie;
@@ -62,7 +63,7 @@ namespace Frontend.Extras
             series1.Name = "S1";
             series1.YValuesPerPoint = 6;
             this.chart1.Series.Add(series1);
-            this.chart1.Size = new System.Drawing.Size(503, 440);
+            this.chart1.Size = new System.Drawing.Size(393, 289);
             this.chart1.TabIndex = 0;
             this.chart1.Text = "chart1";
             // 
@@ -72,7 +73,8 @@ namespace Frontend.Extras
             this.chart2.ChartAreas.Add(chartArea2);
             legend2.Name = "Legend1";
             this.chart2.Legends.Add(legend2);
-            this.chart2.Location = new System.Drawing.Point(12, 12);
+            this.chart2.Location = new System.Drawing.Point(25, 11);
+            this.chart2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.chart2.Name = "chart2";
             this.chart2.Palette = System.Windows.Forms.DataVisualization.Charting.ChartColorPalette.Fire;
             series2.ChartArea = "ChartArea1";
@@ -83,7 +85,7 @@ namespace Frontend.Extras
             series3.Name = "Busy";
             this.chart2.Series.Add(series2);
             this.chart2.Series.Add(series3);
-            this.chart2.Size = new System.Drawing.Size(496, 440);
+            this.chart2.Size = new System.Drawing.Size(393, 289);
             this.chart2.TabIndex = 1;
             this.chart2.Text = "chart2";
             this.chart2.Click += new System.EventHandler(this.chart2_Click);
@@ -94,7 +96,8 @@ namespace Frontend.Extras
             this.chart3.ChartAreas.Add(chartArea3);
             legend3.Name = "Legend1";
             this.chart3.Legends.Add(legend3);
-            this.chart3.Location = new System.Drawing.Point(1023, 12);
+            this.chart3.Location = new System.Drawing.Point(233, 339);
+            this.chart3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.chart3.Name = "chart3";
             this.chart3.Palette = System.Windows.Forms.DataVisualization.Charting.ChartColorPalette.Fire;
             series4.ChartArea = "ChartArea1";
@@ -105,19 +108,18 @@ namespace Frontend.Extras
             series5.Name = "Busy";
             this.chart3.Series.Add(series4);
             this.chart3.Series.Add(series5);
-            this.chart3.Size = new System.Drawing.Size(486, 440);
+            this.chart3.Size = new System.Drawing.Size(393, 289);
             this.chart3.TabIndex = 2;
             this.chart3.Text = "chart3";
             // 
             // RoomsStatus
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1528, 916);
+            this.ClientSize = new System.Drawing.Size(924, 628);
             this.Controls.Add(this.chart3);
             this.Controls.Add(this.chart2);
             this.Controls.Add(this.chart1);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "RoomsStatus";
             this.Text = "RoomsStatus";
             this.Load += new System.EventHandler(this.RoomsStatus_Load);

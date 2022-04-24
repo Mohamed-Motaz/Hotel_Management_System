@@ -71,8 +71,8 @@
             // 
             // btnLogin
             // 
-            this.btnLogin.Activecolor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
-            this.btnLogin.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(116)))), ((int)(((byte)(166)))));
+            this.btnLogin.Activecolor = System.Drawing.Color.LightSteelBlue;
+            this.btnLogin.BackColor = System.Drawing.Color.LightSteelBlue;
             this.btnLogin.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnLogin.BorderRadius = 2;
             this.btnLogin.ButtonText = "Manager Login";
@@ -89,21 +89,21 @@
             this.btnLogin.IconRightVisible = true;
             this.btnLogin.IconRightZoom = 0D;
             this.btnLogin.IconVisible = true;
-            this.btnLogin.IconZoom = 50D;
+            this.btnLogin.IconZoom = 80D;
             this.btnLogin.IsTab = false;
-            this.btnLogin.Location = new System.Drawing.Point(146, 171);
+            this.btnLogin.Location = new System.Drawing.Point(127, 173);
             this.btnLogin.Margin = new System.Windows.Forms.Padding(2);
             this.btnLogin.Name = "btnLogin";
-            this.btnLogin.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(116)))), ((int)(((byte)(166)))));
-            this.btnLogin.OnHovercolor = System.Drawing.Color.Navy;
+            this.btnLogin.Normalcolor = System.Drawing.Color.LightSteelBlue;
+            this.btnLogin.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(19)))), ((int)(((byte)(30)))), ((int)(((byte)(46)))));
             this.btnLogin.OnHoverTextColor = System.Drawing.SystemColors.ControlLight;
             this.btnLogin.selected = false;
-            this.btnLogin.Size = new System.Drawing.Size(173, 54);
+            this.btnLogin.Size = new System.Drawing.Size(199, 62);
             this.btnLogin.TabIndex = 0;
             this.btnLogin.Text = "Manager Login";
             this.btnLogin.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.btnLogin.Textcolor = System.Drawing.Color.White;
-            this.btnLogin.TextFont = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnLogin.TextFont = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnLogin.Click += new System.EventHandler(this.btnLogin_Click);
             // 
             // lblWarning
@@ -132,6 +132,7 @@
             // pictureBox1
             // 
             this.pictureBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(116)))), ((int)(((byte)(166)))));
+            this.pictureBox1.Enabled = false;
             this.pictureBox1.Location = new System.Drawing.Point(0, -1);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(473, 47);
@@ -166,8 +167,8 @@
             // 
             // bunifuFlatButton1
             // 
-            this.bunifuFlatButton1.Activecolor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
-            this.bunifuFlatButton1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(116)))), ((int)(((byte)(166)))));
+            this.bunifuFlatButton1.Activecolor = System.Drawing.Color.LightSteelBlue;
+            this.bunifuFlatButton1.BackColor = System.Drawing.Color.LightSteelBlue;
             this.bunifuFlatButton1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.bunifuFlatButton1.BorderRadius = 2;
             this.bunifuFlatButton1.ButtonText = "Receptionist Login";
@@ -184,21 +185,21 @@
             this.bunifuFlatButton1.IconRightVisible = true;
             this.bunifuFlatButton1.IconRightZoom = 0D;
             this.bunifuFlatButton1.IconVisible = true;
-            this.bunifuFlatButton1.IconZoom = 50D;
+            this.bunifuFlatButton1.IconZoom = 80D;
             this.bunifuFlatButton1.IsTab = false;
-            this.bunifuFlatButton1.Location = new System.Drawing.Point(146, 244);
+            this.bunifuFlatButton1.Location = new System.Drawing.Point(127, 246);
             this.bunifuFlatButton1.Margin = new System.Windows.Forms.Padding(2);
             this.bunifuFlatButton1.Name = "bunifuFlatButton1";
-            this.bunifuFlatButton1.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(116)))), ((int)(((byte)(166)))));
-            this.bunifuFlatButton1.OnHovercolor = System.Drawing.Color.Navy;
+            this.bunifuFlatButton1.Normalcolor = System.Drawing.Color.LightSteelBlue;
+            this.bunifuFlatButton1.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(19)))), ((int)(((byte)(30)))), ((int)(((byte)(46)))));
             this.bunifuFlatButton1.OnHoverTextColor = System.Drawing.SystemColors.ControlLight;
             this.bunifuFlatButton1.selected = false;
-            this.bunifuFlatButton1.Size = new System.Drawing.Size(173, 56);
+            this.bunifuFlatButton1.Size = new System.Drawing.Size(199, 64);
             this.bunifuFlatButton1.TabIndex = 20;
             this.bunifuFlatButton1.Text = "Receptionist Login";
             this.bunifuFlatButton1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.bunifuFlatButton1.Textcolor = System.Drawing.Color.White;
-            this.bunifuFlatButton1.TextFont = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bunifuFlatButton1.TextFont = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bunifuFlatButton1.Click += new System.EventHandler(this.bunifuFlatButton1_Click_1);
             // 
             // label24

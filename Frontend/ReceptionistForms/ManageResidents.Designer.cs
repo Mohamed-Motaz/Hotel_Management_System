@@ -40,38 +40,38 @@ namespace Frontend.ReceptionistForms
             // 
             // addResidentButton
             // 
-            this.addResidentButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
-            this.addResidentButton.color = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
-            this.addResidentButton.colorActive = System.Drawing.Color.FromArgb(((int)(((byte)(43)))), ((int)(((byte)(179)))), ((int)(((byte)(212)))));
+            this.addResidentButton.BackColor = System.Drawing.Color.LightSteelBlue;
+            this.addResidentButton.color = System.Drawing.Color.LightSteelBlue;
+            this.addResidentButton.colorActive = System.Drawing.Color.FromArgb(((int)(((byte)(19)))), ((int)(((byte)(30)))), ((int)(((byte)(46)))));
             this.addResidentButton.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.addResidentButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F);
+            this.addResidentButton.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Bold);
             this.addResidentButton.ForeColor = System.Drawing.Color.White;
             this.addResidentButton.Image = ((System.Drawing.Image)(resources.GetObject("addResidentButton.Image")));
-            this.addResidentButton.ImagePosition = 20;
-            this.addResidentButton.ImageZoom = 50;
-            this.addResidentButton.LabelPosition = 41;
+            this.addResidentButton.ImagePosition = 24;
+            this.addResidentButton.ImageZoom = 40;
+            this.addResidentButton.LabelPosition = 49;
             this.addResidentButton.LabelText = "Add Resident";
-            this.addResidentButton.Location = new System.Drawing.Point(310, 119);
+            this.addResidentButton.Location = new System.Drawing.Point(350, 119);
             this.addResidentButton.Margin = new System.Windows.Forms.Padding(6);
             this.addResidentButton.Name = "addResidentButton";
-            this.addResidentButton.Size = new System.Drawing.Size(167, 155);
+            this.addResidentButton.Size = new System.Drawing.Size(236, 168);
             this.addResidentButton.TabIndex = 85;
             this.addResidentButton.Click += new System.EventHandler(this.addResidentButton_Click);
             // 
             // editOrDeleteResidentButton
             // 
-            this.editOrDeleteResidentButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
-            this.editOrDeleteResidentButton.color = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
-            this.editOrDeleteResidentButton.colorActive = System.Drawing.Color.FromArgb(((int)(((byte)(43)))), ((int)(((byte)(179)))), ((int)(((byte)(212)))));
+            this.editOrDeleteResidentButton.BackColor = System.Drawing.Color.LightSteelBlue;
+            this.editOrDeleteResidentButton.color = System.Drawing.Color.LightSteelBlue;
+            this.editOrDeleteResidentButton.colorActive = System.Drawing.Color.FromArgb(((int)(((byte)(19)))), ((int)(((byte)(30)))), ((int)(((byte)(46)))));
             this.editOrDeleteResidentButton.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.editOrDeleteResidentButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F);
+            this.editOrDeleteResidentButton.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Bold);
             this.editOrDeleteResidentButton.ForeColor = System.Drawing.Color.White;
             this.editOrDeleteResidentButton.Image = ((System.Drawing.Image)(resources.GetObject("editOrDeleteResidentButton.Image")));
-            this.editOrDeleteResidentButton.ImagePosition = 20;
-            this.editOrDeleteResidentButton.ImageZoom = 50;
-            this.editOrDeleteResidentButton.LabelPosition = 41;
+            this.editOrDeleteResidentButton.ImagePosition = 24;
+            this.editOrDeleteResidentButton.ImageZoom = 40;
+            this.editOrDeleteResidentButton.LabelPosition = 49;
             this.editOrDeleteResidentButton.LabelText = "Edit or Delete Resident";
-            this.editOrDeleteResidentButton.Location = new System.Drawing.Point(185, 300);
+            this.editOrDeleteResidentButton.Location = new System.Drawing.Point(206, 299);
             this.editOrDeleteResidentButton.Margin = new System.Windows.Forms.Padding(6);
             this.editOrDeleteResidentButton.Name = "editOrDeleteResidentButton";
             this.editOrDeleteResidentButton.Size = new System.Drawing.Size(236, 168);
@@ -81,11 +81,11 @@ namespace Frontend.ReceptionistForms
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Bold);
             this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.label1.Location = new System.Drawing.Point(38, 9);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(192, 25);
+            this.label1.Size = new System.Drawing.Size(191, 30);
             this.label1.TabIndex = 80;
             this.label1.Text = "Manage Residents";
             // 
@@ -104,31 +104,31 @@ namespace Frontend.ReceptionistForms
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.Gray;
-            this.label2.Location = new System.Drawing.Point(236, 18);
+            this.label2.Location = new System.Drawing.Point(224, 9);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(54, 16);
+            this.label2.Size = new System.Drawing.Size(67, 21);
             this.label2.TabIndex = 82;
             this.label2.Text = "Control";
             // 
             // residentsListButton
             // 
-            this.residentsListButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
-            this.residentsListButton.color = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
-            this.residentsListButton.colorActive = System.Drawing.Color.FromArgb(((int)(((byte)(43)))), ((int)(((byte)(179)))), ((int)(((byte)(212)))));
+            this.residentsListButton.BackColor = System.Drawing.Color.LightSteelBlue;
+            this.residentsListButton.color = System.Drawing.Color.LightSteelBlue;
+            this.residentsListButton.colorActive = System.Drawing.Color.FromArgb(((int)(((byte)(19)))), ((int)(((byte)(30)))), ((int)(((byte)(46)))));
             this.residentsListButton.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.residentsListButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F);
+            this.residentsListButton.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Bold);
             this.residentsListButton.ForeColor = System.Drawing.Color.White;
             this.residentsListButton.Image = ((System.Drawing.Image)(resources.GetObject("residentsListButton.Image")));
-            this.residentsListButton.ImagePosition = 20;
-            this.residentsListButton.ImageZoom = 50;
-            this.residentsListButton.LabelPosition = 41;
+            this.residentsListButton.ImagePosition = 24;
+            this.residentsListButton.ImageZoom = 40;
+            this.residentsListButton.LabelPosition = 49;
             this.residentsListButton.LabelText = "Residents List";
             this.residentsListButton.Location = new System.Drawing.Point(83, 119);
             this.residentsListButton.Margin = new System.Windows.Forms.Padding(6);
             this.residentsListButton.Name = "residentsListButton";
-            this.residentsListButton.Size = new System.Drawing.Size(167, 155);
+            this.residentsListButton.Size = new System.Drawing.Size(236, 168);
             this.residentsListButton.TabIndex = 83;
             this.residentsListButton.Click += new System.EventHandler(this.residentsListButton_Click);
             // 

@@ -447,6 +447,19 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="ICONS\BedIcon.png" />
+    <Content Include="ICONS\BedIcon2.png" />
+    <Content Include="ICONS\ClearIcon.png" />
+    <Content Include="ICONS\HotelIcon.png" />
+    <Content Include="ICONS\LoginIcon.png" />
+    <Content Include="ICONS\ManagerIcon.png" />
+    <Content Include="ICONS\ReceptionistIcon.png" />
+    <Content Include="ICONS\ResidentIcon.png" />
+    <Content Include="ICONS\RoomKey.png" />
+    <Content Include="ICONS\SaveIcon.png" />
+    <Content Include="ICONS\SignUpIcon.png" />
+    <Content Include="ICONS\SignUpIcon2.png" />
+    <Content Include="ICONS\WorkersIcon.png" />
     <Content Include="national_u_logo.ico" />
   </ItemGroup>
   <ItemGroup />
