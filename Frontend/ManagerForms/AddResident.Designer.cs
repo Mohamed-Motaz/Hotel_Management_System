@@ -48,8 +48,8 @@ namespace Frontend.Extras
             // 
             // bunifuFlatButton2
             // 
-            this.bunifuFlatButton2.Activecolor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(116)))), ((int)(((byte)(166)))));
-            this.bunifuFlatButton2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(116)))), ((int)(((byte)(166)))));
+            this.bunifuFlatButton2.Activecolor = System.Drawing.Color.LightSteelBlue;
+            this.bunifuFlatButton2.BackColor = System.Drawing.Color.LightSteelBlue;
             this.bunifuFlatButton2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.bunifuFlatButton2.BorderRadius = 2;
             this.bunifuFlatButton2.ButtonText = "Clear";
@@ -71,8 +71,8 @@ namespace Frontend.Extras
             this.bunifuFlatButton2.Location = new System.Drawing.Point(502, 338);
             this.bunifuFlatButton2.Margin = new System.Windows.Forms.Padding(4);
             this.bunifuFlatButton2.Name = "bunifuFlatButton2";
-            this.bunifuFlatButton2.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(116)))), ((int)(((byte)(166)))));
-            this.bunifuFlatButton2.OnHovercolor = System.Drawing.Color.Navy;
+            this.bunifuFlatButton2.Normalcolor = System.Drawing.Color.LightSteelBlue;
+            this.bunifuFlatButton2.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(19)))), ((int)(((byte)(30)))), ((int)(((byte)(46)))));
             this.bunifuFlatButton2.OnHoverTextColor = System.Drawing.Color.White;
             this.bunifuFlatButton2.selected = false;
             this.bunifuFlatButton2.Size = new System.Drawing.Size(163, 52);
@@ -85,8 +85,8 @@ namespace Frontend.Extras
             // 
             // addResidentBtn
             // 
-            this.addResidentBtn.Activecolor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(116)))), ((int)(((byte)(166)))));
-            this.addResidentBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(116)))), ((int)(((byte)(166)))));
+            this.addResidentBtn.Activecolor = System.Drawing.Color.LightSteelBlue;
+            this.addResidentBtn.BackColor = System.Drawing.Color.LightSteelBlue;
             this.addResidentBtn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.addResidentBtn.BorderRadius = 2;
             this.addResidentBtn.ButtonText = "Add";
@@ -108,8 +108,8 @@ namespace Frontend.Extras
             this.addResidentBtn.Location = new System.Drawing.Point(101, 338);
             this.addResidentBtn.Margin = new System.Windows.Forms.Padding(4);
             this.addResidentBtn.Name = "addResidentBtn";
-            this.addResidentBtn.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(116)))), ((int)(((byte)(166)))));
-            this.addResidentBtn.OnHovercolor = System.Drawing.Color.Navy;
+            this.addResidentBtn.Normalcolor = System.Drawing.Color.LightSteelBlue;
+            this.addResidentBtn.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(19)))), ((int)(((byte)(30)))), ((int)(((byte)(46)))));
             this.addResidentBtn.OnHoverTextColor = System.Drawing.Color.White;
             this.addResidentBtn.selected = false;
             this.addResidentBtn.Size = new System.Drawing.Size(163, 52);

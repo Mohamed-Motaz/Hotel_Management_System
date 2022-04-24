@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(CheckOutForm));
             this.label2 = new System.Windows.Forms.Label();
             this.RoomIDTextBox = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
@@ -38,13 +39,13 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.DimGray;
-            this.label2.Location = new System.Drawing.Point(272, 9);
+            this.label2.Location = new System.Drawing.Point(236, 2);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(80, 18);
+            this.label2.Size = new System.Drawing.Size(96, 25);
             this.label2.TabIndex = 561;
-            this.label2.Text = "Check out";
+            this.label2.Text = "Checkout";
             // 
             // RoomIDTextBox
             // 
@@ -58,11 +59,11 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.DimGray;
-            this.label1.Location = new System.Drawing.Point(100, 61);
+            this.label1.Location = new System.Drawing.Point(89, 53);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(72, 18);
+            this.label1.Size = new System.Drawing.Size(95, 25);
             this.label1.TabIndex = 559;
             this.label1.Text = "Room ID:";
             // 
@@ -80,15 +81,16 @@
             // 
             // CheckOutBtn
             // 
-            this.CheckOutBtn.Activecolor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(156)))), ((int)(((byte)(18)))));
-            this.CheckOutBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(166)))), ((int)(((byte)(90)))));
+            this.CheckOutBtn.Activecolor = System.Drawing.Color.LightSteelBlue;
+            this.CheckOutBtn.BackColor = System.Drawing.Color.LightSteelBlue;
             this.CheckOutBtn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.CheckOutBtn.BorderRadius = 2;
-            this.CheckOutBtn.ButtonText = "Check out";
+            this.CheckOutBtn.ButtonText = "Checkout";
             this.CheckOutBtn.Cursor = System.Windows.Forms.Cursors.Hand;
             this.CheckOutBtn.DisabledColor = System.Drawing.Color.Gray;
+            this.CheckOutBtn.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Bold);
             this.CheckOutBtn.Iconcolor = System.Drawing.Color.Transparent;
-            this.CheckOutBtn.Iconimage = null;
+            this.CheckOutBtn.Iconimage = ((System.Drawing.Image)(resources.GetObject("CheckOutBtn.Iconimage")));
             this.CheckOutBtn.Iconimage_right = null;
             this.CheckOutBtn.Iconimage_right_Selected = null;
             this.CheckOutBtn.Iconimage_Selected = null;
@@ -97,21 +99,21 @@
             this.CheckOutBtn.IconRightVisible = true;
             this.CheckOutBtn.IconRightZoom = 0D;
             this.CheckOutBtn.IconVisible = true;
-            this.CheckOutBtn.IconZoom = 90D;
+            this.CheckOutBtn.IconZoom = 80D;
             this.CheckOutBtn.IsTab = false;
-            this.CheckOutBtn.Location = new System.Drawing.Point(260, 161);
+            this.CheckOutBtn.Location = new System.Drawing.Point(161, 243);
             this.CheckOutBtn.Margin = new System.Windows.Forms.Padding(4);
             this.CheckOutBtn.Name = "CheckOutBtn";
-            this.CheckOutBtn.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(166)))), ((int)(((byte)(90)))));
-            this.CheckOutBtn.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(141)))), ((int)(((byte)(76)))));
+            this.CheckOutBtn.Normalcolor = System.Drawing.Color.LightSteelBlue;
+            this.CheckOutBtn.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(19)))), ((int)(((byte)(30)))), ((int)(((byte)(46)))));
             this.CheckOutBtn.OnHoverTextColor = System.Drawing.Color.White;
             this.CheckOutBtn.selected = false;
-            this.CheckOutBtn.Size = new System.Drawing.Size(92, 33);
+            this.CheckOutBtn.Size = new System.Drawing.Size(283, 95);
             this.CheckOutBtn.TabIndex = 562;
-            this.CheckOutBtn.Text = "Check out";
+            this.CheckOutBtn.Text = "Checkout";
             this.CheckOutBtn.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.CheckOutBtn.Textcolor = System.Drawing.Color.White;
-            this.CheckOutBtn.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.CheckOutBtn.TextFont = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Bold);
             this.CheckOutBtn.Click += new System.EventHandler(this.CheckOutBtn_Click);
             // 
             // CheckOutForm

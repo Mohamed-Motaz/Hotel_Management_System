@@ -29,6 +29,7 @@ namespace Frontend.ReceptionistForms
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(EditOrDeleteReservation));
             this.bunifuSeparator43 = new Bunifu.Framework.UI.BunifuSeparator();
             this.DeleteReservationBtn = new Bunifu.Framework.UI.BunifuFlatButton();
             this.ClearBtn = new Bunifu.Framework.UI.BunifuFlatButton();
@@ -60,15 +61,15 @@ namespace Frontend.ReceptionistForms
             // 
             // DeleteReservationBtn
             // 
-            this.DeleteReservationBtn.Activecolor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(156)))), ((int)(((byte)(18)))));
-            this.DeleteReservationBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(166)))), ((int)(((byte)(90)))));
+            this.DeleteReservationBtn.Activecolor = System.Drawing.Color.LightSteelBlue;
+            this.DeleteReservationBtn.BackColor = System.Drawing.Color.LightSteelBlue;
             this.DeleteReservationBtn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.DeleteReservationBtn.BorderRadius = 2;
             this.DeleteReservationBtn.ButtonText = "Delete";
             this.DeleteReservationBtn.Cursor = System.Windows.Forms.Cursors.Hand;
             this.DeleteReservationBtn.DisabledColor = System.Drawing.Color.Gray;
             this.DeleteReservationBtn.Iconcolor = System.Drawing.Color.Transparent;
-            this.DeleteReservationBtn.Iconimage = null;
+            this.DeleteReservationBtn.Iconimage = ((System.Drawing.Image)(resources.GetObject("DeleteReservationBtn.Iconimage")));
             this.DeleteReservationBtn.Iconimage_right = null;
             this.DeleteReservationBtn.Iconimage_right_Selected = null;
             this.DeleteReservationBtn.Iconimage_Selected = null;
@@ -79,32 +80,32 @@ namespace Frontend.ReceptionistForms
             this.DeleteReservationBtn.IconVisible = true;
             this.DeleteReservationBtn.IconZoom = 90D;
             this.DeleteReservationBtn.IsTab = false;
-            this.DeleteReservationBtn.Location = new System.Drawing.Point(370, 454);
+            this.DeleteReservationBtn.Location = new System.Drawing.Point(313, 416);
             this.DeleteReservationBtn.Margin = new System.Windows.Forms.Padding(4);
             this.DeleteReservationBtn.Name = "DeleteReservationBtn";
-            this.DeleteReservationBtn.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(166)))), ((int)(((byte)(90)))));
-            this.DeleteReservationBtn.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(141)))), ((int)(((byte)(76)))));
+            this.DeleteReservationBtn.Normalcolor = System.Drawing.Color.LightSteelBlue;
+            this.DeleteReservationBtn.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(19)))), ((int)(((byte)(30)))), ((int)(((byte)(46)))));
             this.DeleteReservationBtn.OnHoverTextColor = System.Drawing.Color.White;
             this.DeleteReservationBtn.selected = false;
-            this.DeleteReservationBtn.Size = new System.Drawing.Size(92, 33);
+            this.DeleteReservationBtn.Size = new System.Drawing.Size(156, 49);
             this.DeleteReservationBtn.TabIndex = 546;
             this.DeleteReservationBtn.Text = "Delete";
             this.DeleteReservationBtn.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.DeleteReservationBtn.Textcolor = System.Drawing.Color.White;
-            this.DeleteReservationBtn.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.DeleteReservationBtn.TextFont = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Bold);
             this.DeleteReservationBtn.Click += new System.EventHandler(this.DeleteReservationBtn_Click);
             // 
             // ClearBtn
             // 
-            this.ClearBtn.Activecolor = System.Drawing.Color.FromArgb(((int)(((byte)(221)))), ((int)(((byte)(75)))), ((int)(((byte)(57)))));
-            this.ClearBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(221)))), ((int)(((byte)(75)))), ((int)(((byte)(57)))));
+            this.ClearBtn.Activecolor = System.Drawing.Color.LightSteelBlue;
+            this.ClearBtn.BackColor = System.Drawing.Color.LightSteelBlue;
             this.ClearBtn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClearBtn.BorderRadius = 2;
             this.ClearBtn.ButtonText = "Clear";
             this.ClearBtn.Cursor = System.Windows.Forms.Cursors.Hand;
             this.ClearBtn.DisabledColor = System.Drawing.Color.Gray;
             this.ClearBtn.Iconcolor = System.Drawing.Color.Transparent;
-            this.ClearBtn.Iconimage = null;
+            this.ClearBtn.Iconimage = ((System.Drawing.Image)(resources.GetObject("ClearBtn.Iconimage")));
             this.ClearBtn.Iconimage_right = null;
             this.ClearBtn.Iconimage_right_Selected = null;
             this.ClearBtn.Iconimage_Selected = null;
@@ -115,32 +116,32 @@ namespace Frontend.ReceptionistForms
             this.ClearBtn.IconVisible = true;
             this.ClearBtn.IconZoom = 90D;
             this.ClearBtn.IsTab = false;
-            this.ClearBtn.Location = new System.Drawing.Point(510, 454);
+            this.ClearBtn.Location = new System.Drawing.Point(542, 416);
             this.ClearBtn.Margin = new System.Windows.Forms.Padding(4);
             this.ClearBtn.Name = "ClearBtn";
-            this.ClearBtn.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(221)))), ((int)(((byte)(75)))), ((int)(((byte)(57)))));
-            this.ClearBtn.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(172)))), ((int)(((byte)(41)))), ((int)(((byte)(37)))));
+            this.ClearBtn.Normalcolor = System.Drawing.Color.LightSteelBlue;
+            this.ClearBtn.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(19)))), ((int)(((byte)(30)))), ((int)(((byte)(46)))));
             this.ClearBtn.OnHoverTextColor = System.Drawing.Color.White;
             this.ClearBtn.selected = false;
-            this.ClearBtn.Size = new System.Drawing.Size(92, 33);
+            this.ClearBtn.Size = new System.Drawing.Size(156, 49);
             this.ClearBtn.TabIndex = 545;
             this.ClearBtn.Text = "Clear";
             this.ClearBtn.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.ClearBtn.Textcolor = System.Drawing.Color.White;
-            this.ClearBtn.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ClearBtn.TextFont = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Bold);
             this.ClearBtn.Click += new System.EventHandler(this.ClearBtn_Click);
             // 
             // EditReservationBtn
             // 
-            this.EditReservationBtn.Activecolor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(156)))), ((int)(((byte)(18)))));
-            this.EditReservationBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(166)))), ((int)(((byte)(90)))));
+            this.EditReservationBtn.Activecolor = System.Drawing.Color.LightSteelBlue;
+            this.EditReservationBtn.BackColor = System.Drawing.Color.LightSteelBlue;
             this.EditReservationBtn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.EditReservationBtn.BorderRadius = 2;
             this.EditReservationBtn.ButtonText = "Edit";
             this.EditReservationBtn.Cursor = System.Windows.Forms.Cursors.Hand;
             this.EditReservationBtn.DisabledColor = System.Drawing.Color.Gray;
             this.EditReservationBtn.Iconcolor = System.Drawing.Color.Transparent;
-            this.EditReservationBtn.Iconimage = null;
+            this.EditReservationBtn.Iconimage = ((System.Drawing.Image)(resources.GetObject("EditReservationBtn.Iconimage")));
             this.EditReservationBtn.Iconimage_right = null;
             this.EditReservationBtn.Iconimage_right_Selected = null;
             this.EditReservationBtn.Iconimage_Selected = null;
@@ -151,35 +152,35 @@ namespace Frontend.ReceptionistForms
             this.EditReservationBtn.IconVisible = true;
             this.EditReservationBtn.IconZoom = 90D;
             this.EditReservationBtn.IsTab = false;
-            this.EditReservationBtn.Location = new System.Drawing.Point(233, 454);
+            this.EditReservationBtn.Location = new System.Drawing.Point(85, 416);
             this.EditReservationBtn.Margin = new System.Windows.Forms.Padding(4);
             this.EditReservationBtn.Name = "EditReservationBtn";
-            this.EditReservationBtn.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(166)))), ((int)(((byte)(90)))));
-            this.EditReservationBtn.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(141)))), ((int)(((byte)(76)))));
+            this.EditReservationBtn.Normalcolor = System.Drawing.Color.LightSteelBlue;
+            this.EditReservationBtn.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(19)))), ((int)(((byte)(30)))), ((int)(((byte)(46)))));
             this.EditReservationBtn.OnHoverTextColor = System.Drawing.Color.White;
             this.EditReservationBtn.selected = false;
-            this.EditReservationBtn.Size = new System.Drawing.Size(92, 33);
+            this.EditReservationBtn.Size = new System.Drawing.Size(156, 49);
             this.EditReservationBtn.TabIndex = 544;
             this.EditReservationBtn.Text = "Edit";
             this.EditReservationBtn.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.EditReservationBtn.Textcolor = System.Drawing.Color.White;
-            this.EditReservationBtn.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.EditReservationBtn.TextFont = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Bold);
             this.EditReservationBtn.Click += new System.EventHandler(this.EditReservationBtn_Click);
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.DimGray;
             this.label3.Location = new System.Drawing.Point(414, 114);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(81, 18);
+            this.label3.Size = new System.Drawing.Size(87, 21);
             this.label3.TabIndex = 556;
             this.label3.Text = "End Date: ";
             // 
             // EndDateDatepicker
             // 
-            this.EndDateDatepicker.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(221)))), ((int)(((byte)(75)))), ((int)(((byte)(57)))));
+            this.EndDateDatepicker.BackColor = System.Drawing.Color.LightSteelBlue;
             this.EndDateDatepicker.BorderRadius = 0;
             this.EndDateDatepicker.ForeColor = System.Drawing.Color.White;
             this.EndDateDatepicker.Format = System.Windows.Forms.DateTimePickerFormat.Long;
@@ -213,7 +214,7 @@ namespace Frontend.ReceptionistForms
             this.RoomTypeComboBox.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.RoomTypeComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.RoomTypeComboBox.FormattingEnabled = true;
-            this.RoomTypeComboBox.Location = new System.Drawing.Point(113, 196);
+            this.RoomTypeComboBox.Location = new System.Drawing.Point(125, 196);
             this.RoomTypeComboBox.Name = "RoomTypeComboBox";
             this.RoomTypeComboBox.Size = new System.Drawing.Size(284, 21);
             this.RoomTypeComboBox.TabIndex = 552;
@@ -221,39 +222,39 @@ namespace Frontend.ReceptionistForms
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.Color.DimGray;
-            this.label4.Location = new System.Drawing.Point(20, 196);
+            this.label4.Location = new System.Drawing.Point(8, 196);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(91, 18);
+            this.label4.Size = new System.Drawing.Size(99, 21);
             this.label4.TabIndex = 551;
             this.label4.Text = "Room Type:";
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.DimGray;
             this.label1.Location = new System.Drawing.Point(269, 70);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(95, 18);
+            this.label1.Size = new System.Drawing.Size(101, 21);
             this.label1.TabIndex = 550;
             this.label1.Text = "Resident ID:";
             // 
             // label24
             // 
             this.label24.AutoSize = true;
-            this.label24.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label24.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label24.ForeColor = System.Drawing.Color.DimGray;
-            this.label24.Location = new System.Drawing.Point(20, 114);
+            this.label24.Location = new System.Drawing.Point(13, 114);
             this.label24.Name = "label24";
-            this.label24.Size = new System.Drawing.Size(87, 18);
+            this.label24.Size = new System.Drawing.Size(94, 21);
             this.label24.TabIndex = 549;
             this.label24.Text = "Start Date: ";
             // 
             // StartDateDatepicker
             // 
-            this.StartDateDatepicker.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(166)))), ((int)(((byte)(90)))));
+            this.StartDateDatepicker.BackColor = System.Drawing.Color.LightSteelBlue;
             this.StartDateDatepicker.BorderRadius = 0;
             this.StartDateDatepicker.ForeColor = System.Drawing.Color.White;
             this.StartDateDatepicker.Format = System.Windows.Forms.DateTimePickerFormat.Long;
@@ -275,11 +276,11 @@ namespace Frontend.ReceptionistForms
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.DimGray;
             this.label2.Location = new System.Drawing.Point(348, 18);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(127, 18);
+            this.label2.Size = new System.Drawing.Size(156, 25);
             this.label2.TabIndex = 557;
             this.label2.Text = "Edit Reservation";
             // 

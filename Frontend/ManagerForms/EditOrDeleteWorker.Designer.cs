@@ -63,7 +63,7 @@ namespace Frontend.ManagerForms
             this.bunifuSeparator43.LineColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(116)))), ((int)(((byte)(166)))));
             this.bunifuSeparator43.LineThickness = 2;
             this.bunifuSeparator43.Location = new System.Drawing.Point(48, 33);
-            this.bunifuSeparator43.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.bunifuSeparator43.Margin = new System.Windows.Forms.Padding(4);
             this.bunifuSeparator43.Name = "bunifuSeparator43";
             this.bunifuSeparator43.Size = new System.Drawing.Size(725, 10);
             this.bunifuSeparator43.TabIndex = 313;
@@ -76,7 +76,7 @@ namespace Frontend.ManagerForms
             this.isRoomService.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold);
             this.isRoomService.ForeColor = System.Drawing.Color.DimGray;
             this.isRoomService.Location = new System.Drawing.Point(590, 227);
-            this.isRoomService.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.isRoomService.Margin = new System.Windows.Forms.Padding(2);
             this.isRoomService.Name = "isRoomService";
             this.isRoomService.Size = new System.Drawing.Size(134, 25);
             this.isRoomService.TabIndex = 441;
@@ -156,8 +156,8 @@ namespace Frontend.ManagerForms
             // 
             // clearBtn
             // 
-            this.clearBtn.Activecolor = System.Drawing.Color.FromArgb(((int)(((byte)(221)))), ((int)(((byte)(75)))), ((int)(((byte)(57)))));
-            this.clearBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(166)))), ((int)(((byte)(90)))));
+            this.clearBtn.Activecolor = System.Drawing.Color.LightSteelBlue;
+            this.clearBtn.BackColor = System.Drawing.Color.LightSteelBlue;
             this.clearBtn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.clearBtn.BorderRadius = 2;
             this.clearBtn.ButtonText = "Clear";
@@ -175,14 +175,14 @@ namespace Frontend.ManagerForms
             this.clearBtn.IconVisible = true;
             this.clearBtn.IconZoom = 90D;
             this.clearBtn.IsTab = false;
-            this.clearBtn.Location = new System.Drawing.Point(562, 492);
-            this.clearBtn.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.clearBtn.Location = new System.Drawing.Point(608, 492);
+            this.clearBtn.Margin = new System.Windows.Forms.Padding(4);
             this.clearBtn.Name = "clearBtn";
-            this.clearBtn.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(166)))), ((int)(((byte)(90)))));
-            this.clearBtn.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(141)))), ((int)(((byte)(76)))));
+            this.clearBtn.Normalcolor = System.Drawing.Color.LightSteelBlue;
+            this.clearBtn.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(19)))), ((int)(((byte)(30)))), ((int)(((byte)(46)))));
             this.clearBtn.OnHoverTextColor = System.Drawing.Color.White;
             this.clearBtn.selected = false;
-            this.clearBtn.Size = new System.Drawing.Size(151, 50);
+            this.clearBtn.Size = new System.Drawing.Size(156, 49);
             this.clearBtn.TabIndex = 422;
             this.clearBtn.Text = "Clear";
             this.clearBtn.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -192,8 +192,8 @@ namespace Frontend.ManagerForms
             // 
             // editWorkerBtn
             // 
-            this.editWorkerBtn.Activecolor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(156)))), ((int)(((byte)(18)))));
-            this.editWorkerBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(166)))), ((int)(((byte)(90)))));
+            this.editWorkerBtn.Activecolor = System.Drawing.Color.LightSteelBlue;
+            this.editWorkerBtn.BackColor = System.Drawing.Color.LightSteelBlue;
             this.editWorkerBtn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.editWorkerBtn.BorderRadius = 2;
             this.editWorkerBtn.ButtonText = "Edit";
@@ -211,14 +211,14 @@ namespace Frontend.ManagerForms
             this.editWorkerBtn.IconVisible = true;
             this.editWorkerBtn.IconZoom = 90D;
             this.editWorkerBtn.IsTab = false;
-            this.editWorkerBtn.Location = new System.Drawing.Point(164, 492);
-            this.editWorkerBtn.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.editWorkerBtn.Location = new System.Drawing.Point(66, 492);
+            this.editWorkerBtn.Margin = new System.Windows.Forms.Padding(4);
             this.editWorkerBtn.Name = "editWorkerBtn";
-            this.editWorkerBtn.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(166)))), ((int)(((byte)(90)))));
-            this.editWorkerBtn.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(141)))), ((int)(((byte)(76)))));
+            this.editWorkerBtn.Normalcolor = System.Drawing.Color.LightSteelBlue;
+            this.editWorkerBtn.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(19)))), ((int)(((byte)(30)))), ((int)(((byte)(46)))));
             this.editWorkerBtn.OnHoverTextColor = System.Drawing.Color.White;
             this.editWorkerBtn.selected = false;
-            this.editWorkerBtn.Size = new System.Drawing.Size(151, 50);
+            this.editWorkerBtn.Size = new System.Drawing.Size(156, 49);
             this.editWorkerBtn.TabIndex = 421;
             this.editWorkerBtn.Text = "Edit";
             this.editWorkerBtn.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -248,7 +248,7 @@ namespace Frontend.ManagerForms
             this.bunifuFlatButton1.IconZoom = 25D;
             this.bunifuFlatButton1.IsTab = false;
             this.bunifuFlatButton1.Location = new System.Drawing.Point(532, 95);
-            this.bunifuFlatButton1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.bunifuFlatButton1.Margin = new System.Windows.Forms.Padding(4);
             this.bunifuFlatButton1.Name = "bunifuFlatButton1";
             this.bunifuFlatButton1.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(141)))), ((int)(((byte)(188)))));
             this.bunifuFlatButton1.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(116)))), ((int)(((byte)(166)))));
@@ -280,8 +280,8 @@ namespace Frontend.ManagerForms
             // 
             // deleteWorkerBtn
             // 
-            this.deleteWorkerBtn.Activecolor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(156)))), ((int)(((byte)(18)))));
-            this.deleteWorkerBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(166)))), ((int)(((byte)(90)))));
+            this.deleteWorkerBtn.Activecolor = System.Drawing.Color.LightSteelBlue;
+            this.deleteWorkerBtn.BackColor = System.Drawing.Color.LightSteelBlue;
             this.deleteWorkerBtn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.deleteWorkerBtn.BorderRadius = 2;
             this.deleteWorkerBtn.ButtonText = "Delete";
@@ -299,14 +299,14 @@ namespace Frontend.ManagerForms
             this.deleteWorkerBtn.IconVisible = true;
             this.deleteWorkerBtn.IconZoom = 90D;
             this.deleteWorkerBtn.IsTab = false;
-            this.deleteWorkerBtn.Location = new System.Drawing.Point(365, 492);
-            this.deleteWorkerBtn.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.deleteWorkerBtn.Location = new System.Drawing.Point(334, 492);
+            this.deleteWorkerBtn.Margin = new System.Windows.Forms.Padding(4);
             this.deleteWorkerBtn.Name = "deleteWorkerBtn";
-            this.deleteWorkerBtn.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(166)))), ((int)(((byte)(90)))));
-            this.deleteWorkerBtn.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(141)))), ((int)(((byte)(76)))));
+            this.deleteWorkerBtn.Normalcolor = System.Drawing.Color.LightSteelBlue;
+            this.deleteWorkerBtn.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(19)))), ((int)(((byte)(30)))), ((int)(((byte)(46)))));
             this.deleteWorkerBtn.OnHoverTextColor = System.Drawing.Color.White;
             this.deleteWorkerBtn.selected = false;
-            this.deleteWorkerBtn.Size = new System.Drawing.Size(151, 50);
+            this.deleteWorkerBtn.Size = new System.Drawing.Size(156, 49);
             this.deleteWorkerBtn.TabIndex = 444;
             this.deleteWorkerBtn.Text = "Delete";
             this.deleteWorkerBtn.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
