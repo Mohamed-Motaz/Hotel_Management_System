@@ -23,7 +23,7 @@ namespace Frontend.HttpService
                 client.Timeout = new TimeSpan(0, 2, 0);
                 client.BaseAddress = new Uri(url);
                 var response = client.PostAsync(action,
-                new StringContent(json, Encoding.UTF8, "application/json")).Result;
+                new StringContent(json, Encoding.UTF8, "text/plain")).Result;
 
                 if (response.IsSuccessStatusCode)
                     Console.WriteLine("Success");
@@ -52,6 +52,15 @@ namespace Frontend.HttpService
             string responseStr = response.Content.ReadAsStringAsync().Result;
             dynamic obj = JsonConvert.DeserializeObject<ExpandoObject>(responseStr, converter);
             return obj;
+        }
+
+        public static bool checkForResident(dynamic input)
+        {
+            dynamic obj = GetResident(input);
+            if (obj is null)
+                return false;
+            else
+                return true;
         }
     
         public static void EditResident(dynamic input)
@@ -142,10 +151,10 @@ namespace Frontend.HttpService
         // Reservations
         public static List<dynamic> GetActiveReservations()
         {
-            HttpResponseMessage response = Post("api/reseravtion/getActive", "");
+            HttpResponseMessage response = Post("api/reservation/getActive", "");
             string responseStr = response.Content.ReadAsStringAsync().Result;
             dynamic obj = JsonConvert.DeserializeObject<ExpandoObject>(responseStr, converter);
-            List<dynamic> activeReservations = JsonConvert.DeserializeObject<List<dynamic>>(obj, converter);
+            List<dynamic> activeReservations = obj.lst;
             return activeReservations;
         }
 
@@ -179,12 +188,12 @@ namespace Frontend.HttpService
         }
         
         //Rooms
-        public static List<string> GetAvailableRooms()
+        public static List<object> GetAvailableRooms()
         {
-            HttpResponseMessage response = Post("api/room/getAvailable", "");
+            HttpResponseMessage response = Post("api/reservation/builder", "");
             string responseStr = response.Content.ReadAsStringAsync().Result;
             dynamic obj = JsonConvert.DeserializeObject<ExpandoObject>(responseStr, converter);
-            List<string> availableRooms = JsonConvert.DeserializeObject<List<string>>(obj, converter);
+            List<object> availableRooms = obj.lst;
             return availableRooms;
         }
 
@@ -194,7 +203,7 @@ namespace Frontend.HttpService
             HttpResponseMessage response = Post("api/room/getReserved", json);
             string responseStr = response.Content.ReadAsStringAsync().Result;
             dynamic obj = JsonConvert.DeserializeObject<ExpandoObject>(responseStr, converter);
-            List<string> reservedRooms = JsonConvert.DeserializeObject<List<string>>(obj, converter);
+            List<object> reservedRooms = obj.lst;
             return reservedRooms;
         }
 

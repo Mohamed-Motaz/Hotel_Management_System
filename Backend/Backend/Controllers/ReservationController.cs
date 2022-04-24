@@ -25,12 +25,15 @@ namespace Backend.Controllers
             List<object> singleRooms = RoomAndBoardingBuilder.GetSingleRoomBookings(obj.startDate, obj.endDate);
             List<object> doubleRooms = RoomAndBoardingBuilder.GetDoubleRoomBookings(obj.startDate, obj.endDate);
             List<object> tripleRooms = RoomAndBoardingBuilder.GetTripleRoomBookings(obj.startDate, obj.endDate);
-            obj.singleRooms = singleRooms;
-            obj.doubleRooms = doubleRooms;
-            obj.tripleRooms = tripleRooms;
 
+            List<object> mixedRooms = singleRooms
+                .Concat(doubleRooms)
+                .Concat(tripleRooms)
+                .ToList();
+           
+           
 
-            return obj;
+            return obj.lst = mixedRooms;
         }
 
         [HttpPost]

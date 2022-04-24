@@ -1,11 +1,14 @@
 ﻿using Backend.Models;
 using Newtonsoft.Json;
+using Newtonsoft.Json.Converters;
 using System;
 using System.Collections.Generic;
 using System.Dynamic;
+using System.IO;
 using System.Linq;
 using System.Net;
 using System.Net.Http;
+using System.Web;
 using System.Web.Helpers;
 using System.Web.Http;
 using System.Web.Routing;
@@ -15,11 +18,14 @@ namespace Backend.Controllers
 
     public class WorkerController : ApiController
     {
-
+        private static ExpandoObjectConverter converter = new ExpandoObjectConverter();
         [HttpPost]
-        public dynamic add([FromBody]string json) //api/worker/add
+        public dynamic add([FromBody] dynamic json) //api/worker/add
         {
-            dynamic obj = JsonConvert.DeserializeObject(json);
+            /* Stream req = HttpContext ;
+             req.Seek(0, System.IO.SeekOrigin.Begin);
+             json = new StreamReader(req).ReadToEnd();*/
+            dynamic obj = json;// JsonConvert.DeserializeObject <ExpandoObject> (json, converter);
             AbstractWorker worker;
             if (obj.jobTitle == JobTitle.RoomService)
             {
@@ -31,9 +37,9 @@ namespace Backend.Controllers
             }
             else
             {
-                worker = new Manager(obj.username, obj.age, obj.email, obj.phoneNumber, obj.salary, obj.jobTitle, obj.incomeType, obj.password);
+                worker = new Manager(Convert.ToString(obj.username), Convert.ToInt32(obj.age), Convert.ToString(obj.email), Convert.ToString(obj.phoneNumber), Convert.ToInt32(obj.salary), Convert.ToString( obj.jobTitle), Convert.ToString(obj.incomeType), Convert.ToString(obj.password));
             }
-            Manager.addWorker(worker, obj.password);
+            Manager.addWorker(worker, Convert.ToString(obj.password));
             dynamic resp = new ExpandoObject();
             resp.Success = true;
             return resp;

@@ -59,10 +59,9 @@ namespace Backend.Models
             for (Iterator roomIterator = Apphost.ListOfRooms.GetIterator(); roomIterator.hasNext();)
             {
                 Room room = roomIterator.getNext() as Room;
-                if (CheckIfRoomAvailable(room, TimeHandler.GetTodayInEpoch(), TimeHandler.GetTodayInEpoch()))
-                {
+               
                     availableRooms.Add(room);
-                }
+
             }
             return availableRooms;
         }

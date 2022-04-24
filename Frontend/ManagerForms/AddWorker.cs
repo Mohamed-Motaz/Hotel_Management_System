@@ -78,7 +78,7 @@ namespace Frontend.Extras
                 passwordTextBox.Enabled = true;
             }
             else
-                worker.password = " ";
+                worker.password = null;
 
             //TODO: send to api addWorker
             Service.AddWorker(worker);

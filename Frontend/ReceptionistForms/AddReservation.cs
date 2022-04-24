@@ -8,7 +8,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-
+using Frontend.HttpService;
 namespace Frontend.ReceptionistForms
 {
     public partial class AddReservation : Form
@@ -20,11 +20,12 @@ namespace Frontend.ReceptionistForms
 
         private void AddReservation_Load(object sender, EventArgs e)
         {
-            dynamic AvailableRooms = new ExpandoObject();
+            dynamic AvailableRooms = Service.GetAvailableRooms();
             foreach(dynamic room in AvailableRooms)
             {
                 // api returns all available rooms to display it in combo box
-                RoomTypeComboBox.Items.Add(room);
+
+                RoomTypeComboBox.Items.Add(room.roomType + " " + room.boardingType);
             }
             StartDateDatepicker.Value = DateTime.Today;
             EndDateDatepicker.Value = DateTime.Today.AddDays(1);
@@ -57,6 +58,7 @@ namespace Frontend.ReceptionistForms
                 // api call takes [ResidentID, RoomType, startDate, EndDate]
                 // returns[RoomID and TotalPrice] in case success reservation then add it to reservationsList
                 // else return failed reservation
+                Service.AddReservation(Reservation);
                 MessageBox.Show("Reservation has been added successfully!");
                 // MessageBox.Show();
             }
@@ -65,7 +67,10 @@ namespace Frontend.ReceptionistForms
         private bool CheckForResidentID(int ResidentID)
         {
             // api call send resident id and check if it's found return true
-            return false;
+            dynamic obj = new ExpandoObject();
+            obj.id = ResidentID;
+
+            return Service.checkForResident(obj);
         }
     }
 }
