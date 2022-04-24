@@ -17,7 +17,7 @@ namespace Backend.Controllers
     {
         
         [HttpPost]
-        public string add([FromBody] string json) //api/resident/add
+        public dynamic add([FromBody] string json) //api/resident/add
         {
             dynamic obj = JsonConvert.DeserializeObject(json);
 
@@ -25,48 +25,48 @@ namespace Backend.Controllers
             resident.AddResident(resident);
             dynamic resp = new ExpandoObject();
             resp.Success = true;
-            string res = JsonConvert.SerializeObject(resp);
-            return res;
+            
+            return resp;
         }
 
         [HttpPost]
-        public string edit([FromBody] string json) //api/resident/edit
+        public dynamic edit([FromBody] string json) //api/resident/edit
         {
             dynamic obj = JsonConvert.DeserializeObject(json);
             Resident resident = new Resident(obj.username, obj.age, obj.email, obj.phoneNumber, obj.password);
             resident.EditResident(resident);
             dynamic resp = new ExpandoObject();
             resp.Success = true;
-            string res = JsonConvert.SerializeObject(resp);
-            return res;
+            
+            return resp;
         }
 
         [HttpPost]
-        public string delete([FromBody] string json) //api/resident/delete
+        public dynamic delete([FromBody] string json) //api/resident/delete
         {
             dynamic obj = JsonConvert.DeserializeObject(json);
             Resident.deleteResident(obj.id);
             dynamic resp = new ExpandoObject();
             resp.Success = true;
-            string res = JsonConvert.SerializeObject(resp);
-            return res;
+            
+            return resp;
         }
 
         [HttpPost]
-        public string get([FromBody] string json) //api/resident/get
+        public dynamic get([FromBody] string json) //api/resident/get
         {
             dynamic obj = JsonConvert.DeserializeObject(json);
-            string res = JsonConvert.SerializeObject(Resident.getResident(obj.id));
-            return res;
+            dynamic resp = JsonConvert.DeserializeObject(Resident.getResident(obj.id));
+            return resp;
         }
 
         [HttpPost]
-        public string getAll() //api/resident/getAll
+        public dynamic getAll() //api/resident/getAll
         {
             dynamic resp = new ExpandoObject();
             resp.lst = new List<object>(Manager.viewAllResidents());
-            string res = JsonConvert.SerializeObject(resp);
-            return res;
+            
+            return resp;
         }
 
     }

@@ -10,7 +10,7 @@ namespace Backend.Models
     
         public int id { get; set; } 
         public int price { get; set; }
-        public BoardingTypes type { get; set; }
+        public string type { get; set; }
 
 
         public object Clone()

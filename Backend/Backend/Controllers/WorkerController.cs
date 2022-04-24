@@ -17,7 +17,7 @@ namespace Backend.Controllers
     {
 
         [HttpPost]
-        public string add([FromBody]string json) //api/worker/add
+        public dynamic add([FromBody]string json) //api/worker/add
         {
             dynamic obj = JsonConvert.DeserializeObject(json);
             AbstractWorker worker;
@@ -36,12 +36,11 @@ namespace Backend.Controllers
             Manager.addWorker(worker, obj.password);
             dynamic resp = new ExpandoObject();
             resp.Success = true;
-            string res = JsonConvert.SerializeObject(resp);
-            return res;
+            return resp;
         }
 
         [HttpPost]
-        public string edit([FromBody] string json) //api/worker/edit
+        public dynamic edit([FromBody] string json) //api/worker/edit
         {
             dynamic obj = JsonConvert.DeserializeObject(json);
             AbstractWorker worker;
@@ -60,36 +59,34 @@ namespace Backend.Controllers
             Manager.editWorker(worker, obj.password);
             dynamic resp = new ExpandoObject();
             resp.Success = true;
-            string res = JsonConvert.SerializeObject(resp);
-            return res;
+            return resp;
         }
 
         [HttpPost]
-        public string delete([FromBody] string json) //api/worker/delete
+        public dynamic delete([FromBody] string json) //api/worker/delete
         {
             dynamic obj = JsonConvert.DeserializeObject(json);
             Manager.deleteWorker(obj.id);
             dynamic resp = new ExpandoObject();
             resp.Success = true;
-            string res = JsonConvert.SerializeObject(resp);
-            return res;
+
+            return resp;
         }
 
         [HttpPost]
-        public string get([FromBody] string json) //api/worker/get
+        public dynamic get([FromBody] string json) //api/worker/get
         {
             dynamic obj = JsonConvert.DeserializeObject(json);
-            string res = JsonConvert.SerializeObject(Manager.getWorker(obj.id));
-            return res;
+            dynamic resp = JsonConvert.DeserializeObject(Manager.getWorker(obj.id));
+            return resp;
         }
 
         [HttpPost]
-        public string getAll() //api/worker/getAll
+        public dynamic getAll() //api/worker/getAll
         {
             dynamic resp = new ExpandoObject();
             resp.lst = new List<object>(Manager.viewAllWorkers());
-            string res = JsonConvert.SerializeObject(resp);
-            return res;
+            return resp;
         }
 
     }

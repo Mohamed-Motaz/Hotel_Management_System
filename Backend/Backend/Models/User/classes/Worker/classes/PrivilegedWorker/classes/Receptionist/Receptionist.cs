@@ -7,7 +7,7 @@ namespace Backend.Models
 {
     public class Receptionist : AbstractPrivilegedWorker
     {
-        public Receptionist(string userName, int age, string email, string phoneNumber, int salary, JobTitle jobTitle, string incomeType, string password) :
+        public Receptionist(string userName, int age, string email, string phoneNumber, int salary, string jobTitle, string incomeType, string password) :
             base(userName, age, email, phoneNumber, salary, jobTitle, incomeType, password) { }
 
 

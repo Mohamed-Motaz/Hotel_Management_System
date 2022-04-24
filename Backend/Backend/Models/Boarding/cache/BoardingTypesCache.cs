@@ -7,7 +7,7 @@ namespace Backend.Models.BoardTypes
 {
     public class BoardingTypesCache
     {
-        public static Dictionary<BoardingTypes, BoardingType> dict = new Dictionary<BoardingTypes, BoardingType>();
+        public static Dictionary<string, BoardingType> dict = new Dictionary<string, BoardingType>();
         public static void LoadCache()
         {
             FullBoard fullBoard = new FullBoard();
@@ -20,7 +20,7 @@ namespace Backend.Models.BoardTypes
             dict.Add(bedAndBreakfast.type, bedAndBreakfast);
         }
 
-        public static BoardingType GetBoardingType(BoardingTypes boardingType)
+        public static BoardingType GetBoardingType(string boardingType)
         {
             return dict[boardingType];
         }

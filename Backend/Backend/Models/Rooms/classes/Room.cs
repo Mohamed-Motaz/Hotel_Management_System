@@ -10,11 +10,11 @@ namespace Backend.Models.Rooms
 
         public static int roomsIds = 1;
         public int Id { get; set; }
-        public RoomTypes Type { get; set; }
+        public string Type { get; set; }
         public double PricePerNight { get; set; }
-        public RoomStatus Status { get; set; }
+        public string Status { get; set; }
 
-        public Room(RoomTypes type, double pricePerNight, RoomStatus status) {
+        public Room(string type, double pricePerNight, string status) {
             this.Id = roomsIds++;
             this.Type = type;
             this.PricePerNight = pricePerNight;

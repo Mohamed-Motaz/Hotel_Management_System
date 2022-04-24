@@ -7,7 +7,7 @@ namespace Backend.Models
 {
     public class Manager : AbstractPrivilegedWorker
     {
-        public Manager(string userName, int age, string email, string phoneNumber, int salary, JobTitle jobTitle, string incomeType, string password) : 
+        public Manager(string userName, int age, string email, string phoneNumber, int salary, string jobTitle, string incomeType, string password) : 
             base(userName, age, email, phoneNumber, salary, jobTitle, incomeType, password) {}
 
         public static void addWorker(AbstractWorker newWorker, string password)
@@ -101,7 +101,7 @@ namespace Backend.Models
 
             return Apphost.ListOfResidents.list;  
         }
-        public static double getIncome(Duration duration)
+        public static double getIncome(string duration)
         {
             long targetedDuration;
             double totalIncome = 0;

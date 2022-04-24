@@ -4,12 +4,12 @@ using Backend;
 public class RoomAndBoarding
 {
 
-    public RoomTypes roomType { get; set; }
-    public BoardingTypes boardingType { get; set; }
+    public string roomType { get; set; }
+    public string boardingType { get; set; }
     public dynamic RoomType { get; }
     public dynamic BoardingType { get; }
 
-    public RoomAndBoarding(RoomTypes roomType, BoardingTypes boardingType)
+    public RoomAndBoarding(string roomType, string boardingType)
     {
         this.roomType = roomType;
         this.boardingType = boardingType;

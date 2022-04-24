@@ -50,7 +50,7 @@ namespace Frontend.HttpService
             string json = JsonConvert.SerializeObject(input);
             HttpResponseMessage response = Post("api/resident/get", json);
             string responseStr = response.Content.ReadAsStringAsync().Result;
-            dynamic obj = JsonConvert.DeserializeObject<ExpandoObject>(responseStr);
+            dynamic obj = JsonConvert.DeserializeObject<ExpandoObject>(responseStr, converter);
             return obj;
         }
     
@@ -73,8 +73,8 @@ namespace Frontend.HttpService
         {
             HttpResponseMessage response = Post("api/resident/getAll", "");
             string responseStr = response.Content.ReadAsStringAsync().Result;
-            dynamic obj = JsonConvert.DeserializeObject<ExpandoObject>(responseStr);
-            List<dynamic> workers = JsonConvert.DeserializeObject<List<dynamic>>(obj);
+            dynamic obj = JsonConvert.DeserializeObject<ExpandoObject>(responseStr, converter);
+            List<dynamic> workers = obj.lst;
             return workers;
         }
 
@@ -87,14 +87,14 @@ namespace Frontend.HttpService
             string json = JsonConvert.SerializeObject(input);
             HttpResponseMessage response = Post("api/worker/get", json);
             string responseStr = response.Content.ReadAsStringAsync().Result;
-            dynamic obj = JsonConvert.DeserializeObject<ExpandoObject>(responseStr);
+            dynamic obj = JsonConvert.DeserializeObject<ExpandoObject>(responseStr, converter);
             return obj;
         }
         public static List<dynamic> GetAllWorkers()
         {
             HttpResponseMessage response = Post("api/worker/getAll", "");
             string responseStr = response.Content.ReadAsStringAsync().Result;
-            List <dynamic> workers = JsonConvert.DeserializeObject<List<dynamic>>(responseStr);
+            List <dynamic> workers = JsonConvert.DeserializeObject<List<dynamic>>(responseStr, converter);
             return workers;
         }
         public static void DeleteWorker(dynamic input)
@@ -122,7 +122,7 @@ namespace Frontend.HttpService
             string json = JsonConvert.SerializeObject(input);
             HttpResponseMessage response = Post("api/main/signIn", json);
             string responseStr = response.Content.ReadAsStringAsync().Result;
-            dynamic obj = JsonConvert.DeserializeObject<ExpandoObject>(responseStr);
+            dynamic obj = JsonConvert.DeserializeObject<ExpandoObject>(responseStr, converter);
             if (obj.type != "")
                 return true;
             else
@@ -143,8 +143,8 @@ namespace Frontend.HttpService
         {
             HttpResponseMessage response = Post("api/reseravtion/getActive", "");
             string responseStr = response.Content.ReadAsStringAsync().Result;
-            dynamic obj = JsonConvert.DeserializeObject<ExpandoObject>(responseStr);
-            List<dynamic> activeReservations = JsonConvert.DeserializeObject<List<dynamic>>(obj);
+            dynamic obj = JsonConvert.DeserializeObject<ExpandoObject>(responseStr, converter);
+            List<dynamic> activeReservations = JsonConvert.DeserializeObject<List<dynamic>>(obj, converter);
             return activeReservations;
         }
 
@@ -152,8 +152,8 @@ namespace Frontend.HttpService
         {
             HttpResponseMessage response = Post("api/reservation/get", "");
             string responseStr = response.Content.ReadAsStringAsync().Result;
-            dynamic obj = JsonConvert.DeserializeObject<ExpandoObject>(responseStr);
-            List<dynamic> Reservations = JsonConvert.DeserializeObject<List<dynamic>>(obj);
+            dynamic obj = JsonConvert.DeserializeObject<ExpandoObject>(responseStr, converter);
+            List<dynamic> Reservations = JsonConvert.DeserializeObject<List<dynamic>>(obj, converter);
             return Reservations;
         }
         public static void AddReservation(dynamic input)
@@ -172,7 +172,7 @@ namespace Frontend.HttpService
             string json = JsonConvert.SerializeObject(input);
             HttpResponseMessage response = Post("api/reservation/Edit", json);
             string responseStr = response.Content.ReadAsStringAsync().Result;
-            dynamic obj = JsonConvert.DeserializeObject<ExpandoObject>(responseStr);
+            dynamic obj = JsonConvert.DeserializeObject<ExpandoObject>(responseStr, converter);
             bool succeed = Convert.ToBoolean(obj.boolName);
             return succeed;
         }
@@ -182,8 +182,8 @@ namespace Frontend.HttpService
         {
             HttpResponseMessage response = Post("api/room/getAvailable", "");
             string responseStr = response.Content.ReadAsStringAsync().Result;
-            dynamic obj = JsonConvert.DeserializeObject<ExpandoObject>(responseStr);
-            List<string> availableRooms = JsonConvert.DeserializeObject<List<string>>(obj);
+            dynamic obj = JsonConvert.DeserializeObject<ExpandoObject>(responseStr, converter);
+            List<string> availableRooms = JsonConvert.DeserializeObject<List<string>>(obj, converter);
             return availableRooms;
         }
 
@@ -192,8 +192,8 @@ namespace Frontend.HttpService
             string json = JsonConvert.SerializeObject(input);
             HttpResponseMessage response = Post("api/room/getReserved", json);
             string responseStr = response.Content.ReadAsStringAsync().Result;
-            dynamic obj = JsonConvert.DeserializeObject<ExpandoObject>(responseStr);
-            List<string> reservedRooms = JsonConvert.DeserializeObject<List<string>>(obj);
+            dynamic obj = JsonConvert.DeserializeObject<ExpandoObject>(responseStr, converter);
+            List<string> reservedRooms = JsonConvert.DeserializeObject<List<string>>(obj, converter);
             return reservedRooms;
         }
 
