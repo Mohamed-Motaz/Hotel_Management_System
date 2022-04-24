@@ -31,13 +31,13 @@ namespace Frontend.ResidentForms
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ReservationsList));
             this.ReservationsGV = new System.Windows.Forms.DataGridView();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
             this.bunifuFlatButton1 = new Bunifu.Framework.UI.BunifuFlatButton();
             this.bunifuMetroTextbox1 = new Bunifu.Framework.UI.BunifuMetroTextbox();
-            this.label4 = new System.Windows.Forms.Label();
             this.bunifuSeparator2 = new Bunifu.Framework.UI.BunifuSeparator();
+            this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.ReservationsGV)).BeginInit();
             this.SuspendLayout();
             // 
@@ -45,31 +45,10 @@ namespace Frontend.ResidentForms
             // 
             this.ReservationsGV.BackgroundColor = System.Drawing.SystemColors.Control;
             this.ReservationsGV.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.ReservationsGV.Location = new System.Drawing.Point(111, 126);
+            this.ReservationsGV.Location = new System.Drawing.Point(34, 120);
             this.ReservationsGV.Name = "ReservationsGV";
             this.ReservationsGV.Size = new System.Drawing.Size(761, 401);
             this.ReservationsGV.TabIndex = 235;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
-            this.label1.Location = new System.Drawing.Point(222, 606);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(15, 16);
-            this.label1.TabIndex = 234;
-            this.label1.Text = "0";
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(130, 606);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(86, 16);
-            this.label2.TabIndex = 233;
-            this.label2.Text = "Total Entries:";
             // 
             // bunifuFlatButton1
             // 
@@ -122,17 +101,6 @@ namespace Frontend.ResidentForms
             this.bunifuMetroTextbox1.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.bunifuMetroTextbox1.OnValueChanged += new System.EventHandler(this.bunifuMetroTextbox1_OnValueChanged);
             // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.label4.Location = new System.Drawing.Point(128, 18);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(178, 25);
-            this.label4.TabIndex = 228;
-            this.label4.Text = "Reservations List";
-            // 
             // bunifuSeparator2
             // 
             this.bunifuSeparator2.BackColor = System.Drawing.Color.Transparent;
@@ -145,30 +113,65 @@ namespace Frontend.ResidentForms
             this.bunifuSeparator2.Transparency = 255;
             this.bunifuSeparator2.Vertical = false;
             // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Bold);
+            this.label4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.label4.Location = new System.Drawing.Point(106, 13);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(177, 30);
+            this.label4.TabIndex = 236;
+            this.label4.Text = "Reservations List";
+            // 
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.ForeColor = System.Drawing.Color.Gray;
-            this.label5.Location = new System.Drawing.Point(361, 25);
+            this.label5.Location = new System.Drawing.Point(248, 13);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(30, 16);
-            this.label5.TabIndex = 230;
+            this.label5.Size = new System.Drawing.Size(36, 21);
+            this.label5.TabIndex = 237;
             this.label5.Text = "List";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.BackColor = System.Drawing.Color.Transparent;
+            this.label2.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Bold);
+            this.label2.ForeColor = System.Drawing.Color.Gray;
+            this.label2.Location = new System.Drawing.Point(29, 567);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(139, 30);
+            this.label2.TabIndex = 238;
+            this.label2.Text = "Total Entries:";
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.BackColor = System.Drawing.Color.Transparent;
+            this.label1.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Bold);
+            this.label1.ForeColor = System.Drawing.Color.LightSteelBlue;
+            this.label1.Location = new System.Drawing.Point(162, 567);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(25, 30);
+            this.label1.TabIndex = 239;
+            this.label1.Text = "0";
             // 
             // ReservationsList
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1146, 744);
-            this.Controls.Add(this.ReservationsGV);
-            this.Controls.Add(this.label1);
+            this.ClientSize = new System.Drawing.Size(894, 627);
             this.Controls.Add(this.label2);
+            this.Controls.Add(this.label1);
+            this.Controls.Add(this.label4);
+            this.Controls.Add(this.label5);
+            this.Controls.Add(this.ReservationsGV);
             this.Controls.Add(this.bunifuFlatButton1);
             this.Controls.Add(this.bunifuMetroTextbox1);
-            this.Controls.Add(this.label4);
             this.Controls.Add(this.bunifuSeparator2);
-            this.Controls.Add(this.label5);
             this.Name = "ReservationsList";
             this.Text = "ReservationsList";
             this.Load += new System.EventHandler(this.ReservationsList_Load);
@@ -181,12 +184,12 @@ namespace Frontend.ResidentForms
         #endregion
 
         private System.Windows.Forms.DataGridView ReservationsGV;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label2;
         private Bunifu.Framework.UI.BunifuFlatButton bunifuFlatButton1;
         private Bunifu.Framework.UI.BunifuMetroTextbox bunifuMetroTextbox1;
-        private System.Windows.Forms.Label label4;
         private Bunifu.Framework.UI.BunifuSeparator bunifuSeparator2;
+        private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label label1;
     }
 }

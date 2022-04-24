@@ -158,8 +158,8 @@
             // 
             // bunifuFlatButton1
             // 
-            this.bunifuFlatButton1.Activecolor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(116)))), ((int)(((byte)(166)))));
-            this.bunifuFlatButton1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(116)))), ((int)(((byte)(166)))));
+            this.bunifuFlatButton1.Activecolor = System.Drawing.Color.LightSteelBlue;
+            this.bunifuFlatButton1.BackColor = System.Drawing.Color.LightSteelBlue;
             this.bunifuFlatButton1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.bunifuFlatButton1.BorderRadius = 2;
             this.bunifuFlatButton1.ButtonText = "Sign up";
@@ -181,8 +181,8 @@
             this.bunifuFlatButton1.Location = new System.Drawing.Point(135, 296);
             this.bunifuFlatButton1.Margin = new System.Windows.Forms.Padding(2);
             this.bunifuFlatButton1.Name = "bunifuFlatButton1";
-            this.bunifuFlatButton1.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(116)))), ((int)(((byte)(166)))));
-            this.bunifuFlatButton1.OnHovercolor = System.Drawing.Color.Navy;
+            this.bunifuFlatButton1.Normalcolor = System.Drawing.Color.LightSteelBlue;
+            this.bunifuFlatButton1.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(19)))), ((int)(((byte)(30)))), ((int)(((byte)(46)))));
             this.bunifuFlatButton1.OnHoverTextColor = System.Drawing.SystemColors.ControlLight;
             this.bunifuFlatButton1.selected = false;
             this.bunifuFlatButton1.Size = new System.Drawing.Size(198, 48);
@@ -190,7 +190,7 @@
             this.bunifuFlatButton1.Text = "Sign up";
             this.bunifuFlatButton1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.bunifuFlatButton1.Textcolor = System.Drawing.Color.White;
-            this.bunifuFlatButton1.TextFont = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bunifuFlatButton1.TextFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold);
             this.bunifuFlatButton1.Click += new System.EventHandler(this.ResidentSignUpButton_Click);
             // 
             // label3
