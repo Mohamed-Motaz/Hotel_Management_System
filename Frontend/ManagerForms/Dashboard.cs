@@ -59,17 +59,17 @@ namespace Frontend.Extras
 
             dynamic obj = Service.DashBoard();
 
-            label1.Text = obj.newResidents;
+            label1.Text = obj.newResidents.ToString();
 
-            label16.Text = obj.weeklyIncome;
+            label16.Text = obj.weeklyIncome.ToString();
 
-            label7.Text = obj.numOfWorkers ;
+            label7.Text = obj.numOfWorkers.ToString();
 
-            label8.Text = obj.monthlyIncome;
+            label8.Text = obj.monthlyIncome.ToString();
 
-            label6.Text = obj.currentResidents;
+            label6.Text = obj.currentResidents.ToString();
 
-            label20.Text = obj.yearlyIncome;
+            label20.Text = obj.yearlyIncome.ToString();
 
         }
     }

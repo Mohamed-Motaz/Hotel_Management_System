@@ -94,7 +94,7 @@ namespace Backend.Models
 
         public static List<object> viewAllWorkers()
         {
-            return (List<object>)Apphost.ListOfRoomServices.list.Concat(Apphost.ListOfPrivilegedWorkers.list);
+            return Apphost.ListOfRoomServices.list.Concat(Apphost.ListOfPrivilegedWorkers.list).ToList();
         }
         public static List<object> viewAllResidents()
         {

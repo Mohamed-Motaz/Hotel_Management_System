@@ -17,7 +17,7 @@ namespace Backend.Controllers
     {
 
         [HttpPost]
-        public string dashboard() //api/manager/dashboard
+        public dynamic dashboard() //api/manager/dashboard
         {
             dynamic resp = new ExpandoObject();
             resp.newResidents = Resident.getTodayResidents();
@@ -26,20 +26,20 @@ namespace Backend.Controllers
             resp.numOfWorkers = workers.Count;
             resp.weeklyIncome = Manager.getIncome(Duration.Weekly);
             resp.monthlyIncome = Manager.getIncome(Duration.Monthly);
-            resp.annualylyIncome = Manager.getIncome(Duration.Annualy);
-            string res = JsonConvert.SerializeObject(resp);
-            return res;
+            resp.yearlyIncome = Manager.getIncome(Duration.Annualy);
+            
+            return resp;
         }
 
         [HttpPost]
-        public string getIncome() //api/manager/getIncome
+        public dynamic getIncome() //api/manager/getIncome
         {
             dynamic resp = new ExpandoObject();
             resp.weeklyIncome = Manager.getIncome(Duration.Weekly);
             resp.monthlyIncome = Manager.getIncome(Duration.Monthly);
-            resp.annualylyIncome = Manager.getIncome(Duration.Annualy);
-            string res = JsonConvert.SerializeObject(resp);
-            return res;
+            resp.yearlyIncome = Manager.getIncome(Duration.Annualy);
+            
+            return resp;
         }
 
 
