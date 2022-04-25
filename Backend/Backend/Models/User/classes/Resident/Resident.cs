@@ -15,21 +15,28 @@ namespace Backend.Models
             this.password = password;
         }
 
-        public void EditResident(Resident editedResident)
+        public bool EditResident(int oldId,Resident editedResident)
         {
             for (Iterator ResidentsIterator = Apphost.ListOfResidents.GetIterator(); ResidentsIterator.hasNext();)
             {
                 Resident resident = ResidentsIterator.getNext() as Resident;
-                if (editedResident.id == resident.id)
+                if (oldId == resident.id)
                 {
-                    resident = editedResident;
-                    break;
+                    resident.userName = editedResident.userName;
+                    resident.phoneNumber = editedResident.phoneNumber;
+                    resident.password = editedResident.password;
+                    resident.email = editedResident.email;
+                    resident.age = editedResident.age;
+                    return true;
                 }
             }
+            return false;
         }
-        public void AddResident(Resident resident)
+        public bool AddResident(Resident resident)
         {
+            if (UserAuthenticationServices.isUserNameFound(resident.userName)) return false;
             Apphost.ListOfResidents.list.Add(resident);
+            return true;
         }
 
         public static Resident getResident(int id)
@@ -46,7 +53,7 @@ namespace Backend.Models
         }
 
 
-        public static void deleteResident(int id)
+        public static bool deleteResident(int id)
         {
             for (Iterator ResidentsIterator = Apphost.ListOfResidents.GetIterator(); ResidentsIterator.hasNext();)
             {
@@ -54,9 +61,10 @@ namespace Backend.Models
                 if (id == resident.id)
                 {
                     Apphost.ListOfResidents.list.Remove(resident);
-                    break;
+                    return true;
                 }
             }
+            return false;
         }
 
         public static int getTodayResidents()

@@ -35,41 +35,37 @@ namespace Backend.Controllers
             {
                 worker = new Manager(Convert.ToString(obj.userName), Convert.ToInt32(obj.age), Convert.ToString(obj.email), Convert.ToString(obj.phoneNumber), Convert.ToInt32(obj.salary), Convert.ToString( obj.jobTitle), Convert.ToString(obj.incomeType), Convert.ToString(obj.password));
             }
-            Manager.addWorker(worker, Convert.ToString(obj.password));
             dynamic resp = new ExpandoObject();
-            resp.Success = true;
+            resp.Success = Manager.addWorker(worker, Convert.ToString(obj.password));
             return resp;
         }
 
         [HttpPost]
         public dynamic edit([FromBody] dynamic obj) //api/worker/edit
         {
-            AbstractWorker worker;
+            AbstractWorker editedWorker;
             if (Convert.ToString(obj.jobTitle) == JobTitle.RoomService)
             {
-                worker = new RoomService(Convert.ToString(obj.userName), Convert.ToInt32(obj.age), Convert.ToString(obj.email), Convert.ToString(obj.phoneNumber), Convert.ToInt32(obj.salary), Convert.ToString(obj.jobTitle), Convert.ToString(obj.incomeType));
+                editedWorker = new RoomService(Convert.ToString(obj.userName), Convert.ToInt32(obj.age), Convert.ToString(obj.email), Convert.ToString(obj.phoneNumber), Convert.ToInt32(obj.salary), Convert.ToString(obj.jobTitle), Convert.ToString(obj.incomeType));
             }
             else if(Convert.ToString(obj.jobTitle) == JobTitle.Receptionist)
             {
-                worker = new Receptionist(Convert.ToString(obj.userName), Convert.ToInt32(obj.age), Convert.ToString(obj.email), Convert.ToString(obj.phoneNumber), Convert.ToInt32(obj.salary), Convert.ToString(obj.jobTitle), Convert.ToString(obj.incomeType), Convert.ToString(obj.password));
+                editedWorker = new Receptionist(Convert.ToString(obj.userName), Convert.ToInt32(obj.age), Convert.ToString(obj.email), Convert.ToString(obj.phoneNumber), Convert.ToInt32(obj.salary), Convert.ToString(obj.jobTitle), Convert.ToString(obj.incomeType), Convert.ToString(obj.password));
             }
             else
             {
-                worker = new Manager(Convert.ToString(obj.userName), Convert.ToInt32(obj.age), Convert.ToString(obj.email), Convert.ToString(obj.phoneNumber), Convert.ToInt32(obj.salary), Convert.ToString(obj.jobTitle), Convert.ToString(obj.incomeType), Convert.ToString(obj.password));
+                editedWorker = new Manager(Convert.ToString(obj.userName), Convert.ToInt32(obj.age), Convert.ToString(obj.email), Convert.ToString(obj.phoneNumber), Convert.ToInt32(obj.salary), Convert.ToString(obj.jobTitle), Convert.ToString(obj.incomeType), Convert.ToString(obj.password));
             }
-            Manager.editWorker(worker, Convert.ToString(obj.password));
             dynamic resp = new ExpandoObject();
-            resp.Success = true;
+            resp.Success = Manager.editWorker(Convert.ToInt32(obj.id), editedWorker, Convert.ToString(obj.password));
             return resp;
         }
 
         [HttpPost]
         public dynamic delete([FromBody] dynamic obj) //api/worker/delete
         {
-            Manager.deleteWorker(Convert.ToInt32(obj.id));
             dynamic resp = new ExpandoObject();
-            resp.Success = true;
-
+            resp.Success = Manager.deleteWorker(Convert.ToInt32(obj.id));
             return resp;
         }
 

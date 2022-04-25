@@ -20,10 +20,8 @@ namespace Backend.Controllers
         public dynamic add([FromBody] dynamic obj) //api/resident/add
         {
             Resident resident = new Resident(Convert.ToString(obj.userName), Convert.ToInt32(obj.age), Convert.ToString(obj.email), Convert.ToString(obj.phoneNumber), Convert.ToString(obj.password));
-            resident.AddResident(resident);
             dynamic resp = new ExpandoObject();
-            resp.Success = true;
-            
+            resp.Success = resident.AddResident(resident);
             return resp;
         }
 
@@ -31,20 +29,17 @@ namespace Backend.Controllers
         public dynamic edit([FromBody] dynamic obj) //api/resident/edit
         {
             Resident resident = new Resident(Convert.ToString(obj.userName), Convert.ToInt32(obj.age), Convert.ToString(obj.email), Convert.ToString(obj.phoneNumber), Convert.ToString(obj.password));
-            resident.EditResident(resident);
             dynamic resp = new ExpandoObject();
-            resp.Success = true;
-            
+            resp.Success = resident.EditResident(Convert.ToInt32(obj.id), resident);
             return resp;
         }
 
         [HttpPost]
         public dynamic delete([FromBody] dynamic obj) //api/resident/delete
         {
-            Resident.deleteResident(Convert.ToInt32(obj.id));
             dynamic resp = new ExpandoObject();
-            resp.Success = true;
-            
+            resp.Success = Resident.deleteResident(Convert.ToInt32(obj.id));
+
             return resp;
         }
 

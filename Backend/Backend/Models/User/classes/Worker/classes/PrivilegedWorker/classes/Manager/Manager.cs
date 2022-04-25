@@ -10,9 +10,11 @@ namespace Backend.Models
         public Manager(string userName, int age, string email, string phoneNumber, int salary, string jobTitle, string incomeType, string password) : 
             base(userName, age, email, phoneNumber, salary, jobTitle, incomeType, password) {}
 
-        public static void addWorker(AbstractWorker newWorker, string password)
+        public static bool addWorker(AbstractWorker newWorker, string password)
         {
-            if(newWorker.jobTitle == JobTitle.Receptionist)
+            if (UserAuthenticationServices.isUserNameFound(newWorker.userName)) return false;
+            
+            if (newWorker.jobTitle == JobTitle.Receptionist)
             {
                 Receptionist receptionist = new Receptionist(newWorker.userName,newWorker.age,newWorker.email,newWorker.phoneNumber,newWorker.salary,newWorker.jobTitle,newWorker.incomeType, password);
                 Apphost.ListOfPrivilegedWorkers.list.Add(receptionist);
@@ -27,21 +29,25 @@ namespace Backend.Models
                 RoomService roomService = (RoomService) newWorker;
                 Apphost.ListOfRoomServices.list.Add(roomService);
             }
+            return true;
         }
 
-        public static void deleteWorker(int id)
+        public static bool deleteWorker(int id)
         {
             for (Iterator workerIterator = Apphost.ListOfRoomServices.GetIterator(); workerIterator.hasNext();)
             {
                 RoomService worker = workerIterator.getNext() as RoomService;
                 if (worker.id == id)
                 {
+
                     if (worker.jobTitle == JobTitle.RoomService)
-                        Apphost.ListOfRoomServices.list.Remove(worker);
+                         Apphost.ListOfRoomServices.list.Remove(worker);
                     else
                         Apphost.ListOfPrivilegedWorkers.list.Remove(worker);
+                    return true;
                 }
             }
+            return false;
         }
 
         public static AbstractWorker getWorker(int id)
@@ -73,16 +79,25 @@ namespace Backend.Models
             return null;
         }
 
-        public static void editWorker(AbstractWorker editedWorker, string password)
+        public static bool editWorker(int oldId, AbstractWorker editedWorker, string password)
         {
-            if (editedWorker.jobTitle == JobTitle.RoomService)
+            AbstractWorker oldWorker = getWorker(oldId);
+
+            if (oldWorker.jobTitle == JobTitle.RoomService)
             {
                 for (Iterator workerIterator = Apphost.ListOfRoomServices.GetIterator(); workerIterator.hasNext();)
                 {
                     RoomService worker = workerIterator.getNext() as RoomService;
-                    if (worker.id == editedWorker.id)
+                    if (worker.id == oldId)
                     {
-                        worker = (RoomService)editedWorker;
+                        worker.email = editedWorker.email;
+                        worker.age = editedWorker.age;
+                        worker.jobTitle = editedWorker.jobTitle;
+                        worker.incomeType = editedWorker.incomeType;    
+                        worker.userName = editedWorker.userName;
+                        worker.phoneNumber = editedWorker.phoneNumber;  
+                        worker.salary = editedWorker.salary;
+                        return true;
                     }
                 }
             }
@@ -92,12 +107,21 @@ namespace Backend.Models
                 {
                     AbstractPrivilegedWorker worker = workerIterator.getNext() as AbstractPrivilegedWorker;
                     worker.password = password;
-                    if (worker.id == editedWorker.id)
+                    if (worker.id == oldId)
                     {
-                        worker = (AbstractPrivilegedWorker)editedWorker;
+                        worker.email = editedWorker.email;
+                        worker.age = editedWorker.age;
+                        worker.jobTitle = editedWorker.jobTitle;
+                        worker.incomeType = editedWorker.incomeType;
+                        worker.userName = editedWorker.userName;
+                        worker.phoneNumber = editedWorker.phoneNumber;
+                        worker.salary = editedWorker.salary;
+                        worker.password = password;
+                        return true;
                     }
                 }
             }
+            return false;
         }
 
         public static List<object> viewAllWorkers()
@@ -136,7 +160,6 @@ namespace Backend.Models
                     totalIncome += booking.totalPrice;
                 }
             }
-
             return totalIncome;
         }
 
