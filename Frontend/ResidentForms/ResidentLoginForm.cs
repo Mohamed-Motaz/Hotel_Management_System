@@ -62,8 +62,8 @@ namespace Frontend
             obj.userName = txtUser.Text;
             obj.password = txtPass.Text;
             obj.worker = false;
-            bool valid = Service.SignIn(obj);
-            if (valid == true )
+            string type = Service.SignIn(obj);
+            if (type == "Resident")
             {
                 MainResidentForm residentForm = new MainResidentForm();
                 residentForm.Show();
