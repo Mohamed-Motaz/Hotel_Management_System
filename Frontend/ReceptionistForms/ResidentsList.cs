@@ -42,12 +42,12 @@ namespace Frontend.ReceptionistForms
             foreach (dynamic res in residents)
             {
                 DataGridViewRow row = (DataGridViewRow)dataGridView1.Rows[0].Clone();
-                row.Cells[2].Value = res.id;
-                row.Cells[3].Value = res.Name;
-                row.Cells[4].Value = res.age;
-                row.Cells[5].Value = res.Email;
-                row.Cells[6].Value = res.PhoneNumber;
-                row.Cells[7].Value = res.password;
+                row.Cells[2].Value = res.id.ToString() ;
+                row.Cells[3].Value = res.userName.ToString();
+                row.Cells[4].Value = res.age.ToString();
+                row.Cells[5].Value = res.email.ToString();
+                row.Cells[6].Value = res.phoneNumber.ToString();
+                row.Cells[7].Value = res.password.ToString();
 
                 dataGridView1.Rows.Add(row);
             }
@@ -58,6 +58,7 @@ namespace Frontend.ReceptionistForms
 
         private void bunifuMetroTextbox1_OnValueChanged(object sender, EventArgs e)
         {
+            int cnt = 0;
             if (this.bunifuMetroTextbox1.Text != string.Empty)
             {
                 try
@@ -67,6 +68,7 @@ namespace Frontend.ReceptionistForms
                         if (row.Cells[3].Value != null && row.Cells[3].Value.ToString().ToLower().Contains(bunifuMetroTextbox1.Text.ToLower()))
                         {
                             row.Visible = true;
+                            cnt++;
                         }
                         else
                             row.Visible = false; 
@@ -83,12 +85,15 @@ namespace Frontend.ReceptionistForms
             {
                 foreach (DataGridViewRow row in dataGridView1.Rows)
                 {
+                    cnt++;
                     if (row.Visible != true)
                     {
                         row.Visible = true;
                     }
                 }
+                cnt--;
             }
+            label1.Text = cnt.ToString();
 
         }
     }

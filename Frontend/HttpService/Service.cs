@@ -163,7 +163,7 @@ namespace Frontend.HttpService
             HttpResponseMessage response = Post("api/reservation/getAll", "");
             string responseStr = response.Content.ReadAsStringAsync().Result;
             dynamic obj = JsonConvert.DeserializeObject<ExpandoObject>(responseStr, converter);
-            List<dynamic> Reservations = JsonConvert.DeserializeObject<List<dynamic>>(obj, converter);
+            List<dynamic> Reservations = obj.lst;
             return Reservations;
         }
         public static void AddReservation(dynamic input)
@@ -194,9 +194,10 @@ namespace Frontend.HttpService
         }
         
         //Rooms
-        public static List<object> GetAvailableRooms()
+        public static List<object> GetAvailableRooms(dynamic input)
         {
-            HttpResponseMessage response = Post("api/reservation/builder", "");
+            string json = JsonConvert.SerializeObject(input);
+            HttpResponseMessage response = Post("api/reservation/builder", json);
             string responseStr = response.Content.ReadAsStringAsync().Result;
             dynamic obj = JsonConvert.DeserializeObject<ExpandoObject>(responseStr, converter);
             List<object> availableRooms = obj.lst;

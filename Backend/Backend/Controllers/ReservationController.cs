@@ -21,16 +21,17 @@ namespace Backend.Controllers
         [HttpPost]
         public dynamic builder([FromBody] dynamic obj) //api/reservation/builder    
         {
-            List<object> singleRooms = RoomAndBoardingBuilder.GetSingleRoomBookings(Convert.ToInt64(obj.startDate), Convert.ToInt64(obj.endDate));
-            List<object> doubleRooms = RoomAndBoardingBuilder.GetDoubleRoomBookings(Convert.ToInt64(obj.startDate), Convert.ToInt64(obj.endDate));
-            List<object> tripleRooms = RoomAndBoardingBuilder.GetTripleRoomBookings(Convert.ToInt64(obj.startDate), Convert.ToInt64(obj.endDate));
+            List<RoomAndBoarding> singleRooms = RoomAndBoardingBuilder.GetSingleRoomBookings(Convert.ToInt64(obj.startDate), Convert.ToInt64(obj.endDate));
+            List<RoomAndBoarding> doubleRooms = RoomAndBoardingBuilder.GetDoubleRoomBookings(Convert.ToInt64(obj.startDate), Convert.ToInt64(obj.endDate));
+            List<RoomAndBoarding> tripleRooms = RoomAndBoardingBuilder.GetTripleRoomBookings(Convert.ToInt64(obj.startDate), Convert.ToInt64(obj.endDate));
 
-            List<object> mixedRooms = singleRooms
+            List<RoomAndBoarding> mixedRooms = singleRooms
                 .Concat(doubleRooms)
                 .Concat(tripleRooms)
-                .ToList();      
-
-            return obj.lst = mixedRooms;
+                .ToList();
+            obj = new ExpandoObject();
+            obj.lst = mixedRooms;
+            return obj;
         }
 
         [HttpPost]

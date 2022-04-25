@@ -63,9 +63,10 @@ namespace Frontend.ReceptionistForms
         private void searchByIdBtn_Click(object sender, EventArgs e)
         {
             resident.id = searchbyIdTextbox.Text;
-
+            dynamic obj = new ExpandoObject();
+            obj.id = resident.id;
             //TODO: api set resident to the api returend resident
-            dynamic res = Service.GetResident(resident.id);
+            dynamic res = Service.GetResident(obj);
             nameTextBox.Text = res.username;
             ageTextBox.Text = res.age;
             emailTextBox.Text = res.email;

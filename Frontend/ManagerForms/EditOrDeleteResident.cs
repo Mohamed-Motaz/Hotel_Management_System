@@ -39,9 +39,10 @@ namespace Frontend.ManagerForms
         private void searchByIdBtn_Click(object sender, EventArgs e)
         {
             resident.id = searchbyIdTextbox.Text;
-
+            dynamic obj = new ExpandoObject();
+            obj.id = searchbyIdTextbox.Text;
             //TODO: api set resident to the api returend resident
-            dynamic res = Service.GetResident(resident.id);
+            dynamic res = Service.GetResident(obj);
              
             nameTextBox.Text = res.name.ToString();
             ageTextBox.Text = res.age.ToString();

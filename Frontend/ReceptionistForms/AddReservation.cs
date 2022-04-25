@@ -20,13 +20,6 @@ namespace Frontend.ReceptionistForms
 
         private void AddReservation_Load(object sender, EventArgs e)
         {
-            dynamic AvailableRooms = Service.GetAvailableRooms();
-            foreach(dynamic room in AvailableRooms)
-            {
-                // api returns all available rooms to display it in combo box
-
-                RoomTypeComboBox.Items.Add(room.roomType + " " + room.boardingType);
-            }
             StartDateDatepicker.Value = DateTime.Today;
             EndDateDatepicker.Value = DateTime.Today.AddDays(1);
         }
@@ -41,14 +34,22 @@ namespace Frontend.ReceptionistForms
         {
             Clear();
         }
-
+        public static long GetDateInEpoch(int day, int month, int year)
+        {
+            return (long)(new DateTimeOffset(year, month, day, 0, 0, 0, TimeSpan.Zero) - new DateTimeOffset(1970, 1, 1, 0, 0, 0, TimeSpan.Zero)).TotalSeconds;
+        }
         private void SaveButton_Click(object sender, EventArgs e)
         {
             dynamic Reservation = new ExpandoObject();
             Reservation.residentId = ResidentIDTextBox.Text;
             Reservation.roomType = RoomTypeComboBox.GetItemText(RoomTypeComboBox.SelectedItem);
-            Reservation.startDate = Convert.ToInt64(StartDateDatepicker.Value);
-            Reservation.endDate = Convert.ToInt64( EndDateDatepicker.Value );
+            
+            DateTime dt = Convert.ToDateTime(StartDateDatepicker.Value);
+            Reservation.startDate = GetDateInEpoch(dt.Day, dt.Month, dt.Year);
+
+            dt = Convert.ToDateTime(EndDateDatepicker.Value);
+            Reservation.endDate = GetDateInEpoch(dt.Day, dt.Month, dt.Year);
+
             if ((EndDateDatepicker.Value < StartDateDatepicker.Value))
                 MessageBox.Show("Please Enter a valid end date");
             else if (!CheckForResidentID(int.Parse(ResidentIDTextBox.Text)))
@@ -71,6 +72,35 @@ namespace Frontend.ReceptionistForms
             obj.id = ResidentID;
 
             return Service.checkForResident(obj);
+        }
+
+        private void showAvailableRooms(object sender, EventArgs e)
+        {
+            dynamic obj = new ExpandoObject();
+
+            DateTime dt = Convert.ToDateTime(StartDateDatepicker.Value);
+            obj.startDate = GetDateInEpoch(dt.Day, dt.Month, dt.Year);
+
+            dt = Convert.ToDateTime(EndDateDatepicker.Value);
+            obj.endDate = GetDateInEpoch(dt.Day, dt.Month, dt.Year);
+
+            dynamic AvailableRooms = Service.GetAvailableRooms(obj);
+            foreach (dynamic room in AvailableRooms)
+            {
+                // api returns all available rooms to display it in combo box
+
+                RoomTypeComboBox.Items.Add(room.roomType + " " + room.boardingType);
+            }
+        }
+
+        private void StartDateDatepicker_onValueChanged(object sender, EventArgs e)
+        {
+            showAvailableRooms(sender, e);
+        }
+
+        private void EndDateDatepicker_onValueChanged(object sender, EventArgs e)
+        {
+            showAvailableRooms(sender, e);
         }
     }
 }

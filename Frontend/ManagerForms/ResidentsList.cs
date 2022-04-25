@@ -45,8 +45,8 @@ namespace Frontend.ManagerForms
                 row.Cells[2].Value = res.id.ToString();
                 row.Cells[3].Value = res.userName.ToString();
                 row.Cells[4].Value = res.age.ToString();
-                row.Cells[5].Value = res.email.ToString();
-                row.Cells[6].Value = res.phoneNumber.ToString();
+                row.Cells[5].Value = res.phoneNumber.ToString();
+                row.Cells[6].Value = res.email.ToString();
                 row.Cells[7].Value = res.password.ToString();
 
                 dataGridView1.Rows.Add(row);

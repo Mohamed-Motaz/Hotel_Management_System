@@ -45,6 +45,7 @@ namespace Frontend.ReceptionistForms
             this.StartDateDatepicker = new Bunifu.Framework.UI.BunifuDatepicker();
             this.dateTimePicker2 = new System.Windows.Forms.DateTimePicker();
             this.label2 = new System.Windows.Forms.Label();
+            this.availableRooms = new Bunifu.Framework.UI.BunifuFlatButton();
             this.SuspendLayout();
             // 
             // bunifuSeparator43
@@ -190,6 +191,7 @@ namespace Frontend.ReceptionistForms
             this.EndDateDatepicker.Size = new System.Drawing.Size(284, 39);
             this.EndDateDatepicker.TabIndex = 555;
             this.EndDateDatepicker.Value = new System.DateTime(2018, 4, 3, 23, 29, 0, 0);
+            this.EndDateDatepicker.onValueChanged += new System.EventHandler(this.EndDateDatepicker_onValueChanged);
             // 
             // dateTimePicker1
             // 
@@ -214,7 +216,7 @@ namespace Frontend.ReceptionistForms
             this.RoomTypeComboBox.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.RoomTypeComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.RoomTypeComboBox.FormattingEnabled = true;
-            this.RoomTypeComboBox.Location = new System.Drawing.Point(125, 196);
+            this.RoomTypeComboBox.Location = new System.Drawing.Point(127, 210);
             this.RoomTypeComboBox.Name = "RoomTypeComboBox";
             this.RoomTypeComboBox.Size = new System.Drawing.Size(284, 21);
             this.RoomTypeComboBox.TabIndex = 552;
@@ -224,7 +226,7 @@ namespace Frontend.ReceptionistForms
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.Color.DimGray;
-            this.label4.Location = new System.Drawing.Point(8, 196);
+            this.label4.Location = new System.Drawing.Point(8, 207);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(99, 21);
             this.label4.TabIndex = 551;
@@ -264,6 +266,7 @@ namespace Frontend.ReceptionistForms
             this.StartDateDatepicker.Size = new System.Drawing.Size(284, 39);
             this.StartDateDatepicker.TabIndex = 548;
             this.StartDateDatepicker.Value = new System.DateTime(2018, 4, 3, 23, 29, 0, 0);
+            this.StartDateDatepicker.onValueChanged += new System.EventHandler(this.StartDateDatepicker_onValueChanged);
             // 
             // dateTimePicker2
             // 
@@ -284,11 +287,47 @@ namespace Frontend.ReceptionistForms
             this.label2.TabIndex = 557;
             this.label2.Text = "Edit Reservation";
             // 
+            // availableRooms
+            // 
+            this.availableRooms.Activecolor = System.Drawing.Color.LightSteelBlue;
+            this.availableRooms.BackColor = System.Drawing.Color.LightSteelBlue;
+            this.availableRooms.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.availableRooms.BorderRadius = 2;
+            this.availableRooms.ButtonText = "Show Available Rooms";
+            this.availableRooms.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.availableRooms.DisabledColor = System.Drawing.Color.Gray;
+            this.availableRooms.Iconcolor = System.Drawing.Color.Transparent;
+            this.availableRooms.Iconimage = null;
+            this.availableRooms.Iconimage_right = null;
+            this.availableRooms.Iconimage_right_Selected = null;
+            this.availableRooms.Iconimage_Selected = null;
+            this.availableRooms.IconMarginLeft = 0;
+            this.availableRooms.IconMarginRight = 0;
+            this.availableRooms.IconRightVisible = true;
+            this.availableRooms.IconRightZoom = 0D;
+            this.availableRooms.IconVisible = true;
+            this.availableRooms.IconZoom = 90D;
+            this.availableRooms.IsTab = false;
+            this.availableRooms.Location = new System.Drawing.Point(467, 196);
+            this.availableRooms.Name = "availableRooms";
+            this.availableRooms.Normalcolor = System.Drawing.Color.LightSteelBlue;
+            this.availableRooms.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(19)))), ((int)(((byte)(30)))), ((int)(((byte)(46)))));
+            this.availableRooms.OnHoverTextColor = System.Drawing.Color.White;
+            this.availableRooms.selected = false;
+            this.availableRooms.Size = new System.Drawing.Size(261, 54);
+            this.availableRooms.TabIndex = 558;
+            this.availableRooms.Text = "Show Available Rooms";
+            this.availableRooms.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.availableRooms.Textcolor = System.Drawing.Color.White;
+            this.availableRooms.TextFont = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Bold);
+            this.availableRooms.Click += new System.EventHandler(this.availableRooms_Click);
+            // 
             // EditOrDeleteReservation
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(821, 500);
+            this.Controls.Add(this.availableRooms);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.EndDateDatepicker);
@@ -328,5 +367,6 @@ namespace Frontend.ReceptionistForms
         private Bunifu.Framework.UI.BunifuDatepicker StartDateDatepicker;
         private System.Windows.Forms.DateTimePicker dateTimePicker2;
         private System.Windows.Forms.Label label2;
+        private Bunifu.Framework.UI.BunifuFlatButton availableRooms;
     }
 }

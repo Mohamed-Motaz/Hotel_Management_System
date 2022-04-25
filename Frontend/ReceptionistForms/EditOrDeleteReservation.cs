@@ -21,14 +21,9 @@ namespace Frontend.ReceptionistForms
 
         private void EditOrDeleteReservation_Load(object sender, EventArgs e)
         {
-            dynamic AvailableRooms = Service.GetAvailableRooms();
-            foreach (dynamic room in AvailableRooms)
-            {
-                // api returns all available rooms to display it in combo box
-                RoomTypeComboBox.Items.Add(room);
-            }
             StartDateDatepicker.Value = DateTime.Today;
             EndDateDatepicker.Value = DateTime.Today.AddDays(1);
+
         }
 
         private void EditReservationBtn_Click(object sender, EventArgs e)
@@ -82,6 +77,30 @@ namespace Frontend.ReceptionistForms
         {
             // api call send resident id and check if it's found return true
             return false;
+        }
+
+        private void availableRooms_Click(object sender, EventArgs e)
+        {
+            dynamic obj = new ExpandoObject();
+            obj.startDate =  long.Parse( EndDateDatepicker.Value.ToString("yyyyMMddHHmmss") );
+            obj.endDate = long.Parse(StartDateDatepicker.Value.ToString("yyyyMMddHHmmss"));  
+            dynamic AvailableRooms = Service.GetAvailableRooms(obj);
+            foreach (dynamic room in AvailableRooms)
+            {
+                // api returns all available rooms to display it in combo box
+
+                RoomTypeComboBox.Items.Add(room.roomType + " " + room.boardingType);
+            }
+        }
+
+        private void StartDateDatepicker_onValueChanged(object sender, EventArgs e)
+        {
+            availableRooms_Click( sender,  e);
+        }
+
+        private void EndDateDatepicker_onValueChanged(object sender, EventArgs e)
+        {
+            availableRooms_Click(sender, e);
         }
     }
 }

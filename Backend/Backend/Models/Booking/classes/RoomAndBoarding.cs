@@ -6,8 +6,7 @@ public class RoomAndBoarding
 
     public string roomType { get; set; }
     public string boardingType { get; set; }
-    public dynamic RoomType { get; }
-    public dynamic BoardingType { get; }
+    
 
     public RoomAndBoarding(string roomType, string boardingType)
     {
