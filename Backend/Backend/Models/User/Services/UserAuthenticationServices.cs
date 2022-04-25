@@ -6,7 +6,7 @@ using System;
 public static class UserAuthenticationServices
 {
 
-    public static string Signin(string Password, string username, bool IsWorker)
+    public static string Signin(string username, string Password,  bool IsWorker)
     {
 
         if (IsWorker)

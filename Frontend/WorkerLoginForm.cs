@@ -12,6 +12,8 @@ using System.Data.SqlClient;
 using Frontend.ManagerForms;
 using Frontend.ReceptionistForms;
 using Frontend.ResidentForms;
+using System.Dynamic;
+using Frontend.HttpService;
 
 namespace Frontend
 {
@@ -29,13 +31,28 @@ namespace Frontend
         int count;
         private string username, password;
 
+        public  bool LogInCheck()
+        {
+            dynamic obj = new ExpandoObject();
+            obj.userName = txtUser.Text;
+            obj.password = txtPass.Text;
+            obj.worker = true;
+            return Service.SignIn(obj);
+        }
 
         private void btnLogin_Click(object sender, EventArgs e)
         {
             //login();
-           frmMain managerMainForm = new frmMain();
-            this.Hide();
-            managerMainForm.Show();
+            if (LogInCheck() == true)
+            {
+                frmMain managerMainForm = new frmMain();
+                this.Hide();
+                managerMainForm.Show();
+            }
+            else
+            {
+                MessageBox.Show("Please enter a valid data");
+            }
         }
 
         private void login()
@@ -144,9 +161,16 @@ namespace Frontend
 
         private void bunifuFlatButton1_Click_1(object sender, EventArgs e)
         {
-            frmMainReceptionist frmMainReceptionist = new frmMainReceptionist();
-            this.Hide();
-            frmMainReceptionist.Show();
+            if (LogInCheck() == true)
+            {
+                frmMainReceptionist frmMainReceptionist = new frmMainReceptionist();
+                this.Hide();
+                frmMainReceptionist.Show();
+            }
+            else
+            {
+                MessageBox.Show("Please enter a valid data");
+            }
         }
 
     }

@@ -133,7 +133,7 @@ namespace Frontend.HttpService
             HttpResponseMessage response = Post("api/main/signin", json);
             string responseStr = response.Content.ReadAsStringAsync().Result;
             dynamic obj = JsonConvert.DeserializeObject<ExpandoObject>(responseStr, converter);
-            if (obj.type != "")
+            if (obj.type != "Failed")
                 return true;
             else
                 return false;

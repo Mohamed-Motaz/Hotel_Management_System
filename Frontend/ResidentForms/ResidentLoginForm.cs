@@ -12,7 +12,8 @@ using System.Data.SqlClient;
 using Frontend.ManagerForms;
 using Frontend.ReceptionistForms;
 using Frontend.ResidentForms;
-
+using System.Dynamic;
+using Frontend.HttpService;
 namespace Frontend
 {
     public partial class ResidentLoginForm : Form
@@ -57,8 +58,20 @@ namespace Frontend
 
         private void ResidentLoginButton_Click(object sender, EventArgs e)
         {
-            MainResidentForm residentForm = new MainResidentForm();
-            residentForm.Show();
+            dynamic obj = new ExpandoObject();
+            obj.userName = txtUser.Text;
+            obj.password = txtPass.Text;
+            obj.worker = false;
+            bool valid = Service.SignIn(obj);
+            if (valid == true )
+            {
+                MainResidentForm residentForm = new MainResidentForm();
+                residentForm.Show();
+            }
+            else
+            {
+                MessageBox.Show("Please enter a valid data");
+            }
         }
 
         private void ResidentSignUpButton_Click(object sender, EventArgs e)

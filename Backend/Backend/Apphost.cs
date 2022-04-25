@@ -89,7 +89,7 @@ namespace Backend
 
             ListOfResidents.list = new List<object>()
             {
-
+                new Resident("resident", 22, "resident@", "01111111", "1"),
                 new Resident("ali", 22, "aliagina@", "01111111", "1122334455"),
                 new Resident("moatez", 23, "mohamedmoatez@", "011111444", "112233664488"),
                 new Resident("Rawan", 24, "Rawan@", "0114546465777", "112231116688000"),
@@ -97,10 +97,12 @@ namespace Backend
             };
 
             ListOfPrivilegedWorkers.list = new List<object> {
+                new Manager("manager", 55, "manager@gmail.com", "011192839924", 30000, JobTitle.Manager, "Weekly", "1"),
                 new Manager("Hossam El-Dien", 55, "hossam.eldien@gmail.com", "011192839924", 30000, JobTitle.Manager, "Weekly", "Hossam123"),
                 new Manager("Sshraf Sherien", 40, "ashraf.sherien@gmail.com", "011134343466", 20000, JobTitle.Manager, "Monthly", "Ashraf123"),
                 new Manager("Ahmed Fouda", 43, "ahmed.fouda@gmail.com", "011166090988", 15000, JobTitle.Manager, "Weekly", "Ahmed123"),
-
+                
+                new Receptionist("receptionist", 26, "receptionist@gmail.com", "01004999911", 10000, JobTitle.Receptionist, "Monthly", "1"),
                 new Receptionist("Mostafa Hussien", 27, "mostafa.hussien@gmail.com", "01004999999", 10000, JobTitle.Receptionist, "Weekly", "Mostafa123"),
                 new Receptionist("Mona Yasser", 25, "mona.yasser@gmail.com", "01004993399", 10000, JobTitle.Receptionist, "Monthly", "Mona123"),
                 new Receptionist("Salma Amin", 26, "salma.amin@gmail.com", "01004999911", 10000, JobTitle.Receptionist, "Monthly", "Salma123"),
