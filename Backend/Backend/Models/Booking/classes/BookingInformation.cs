@@ -20,6 +20,7 @@ namespace Backend.Models
 
         public BookingInformation(Room room, BoardingType boarding, int residentId, long startDate, long endDate)
         {
+            this.id = BookingIds++;
             roomId = room.Id;
             boardingType = boarding.type;
             this.residentId = residentId;

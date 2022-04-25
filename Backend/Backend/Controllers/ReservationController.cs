@@ -39,8 +39,7 @@ namespace Backend.Controllers
         {
             RoomAndBoarding roomAndBoarding = new RoomAndBoarding(Convert.ToString(obj.roomType), Convert.ToString(obj.boardingType));
             dynamic resp = new ExpandoObject();
-            resp.TotalPrice = BookingServices.MakeBooking(roomAndBoarding, Convert.ToInt64(obj.startDate), Convert.ToInt64(obj.endDate), Convert.ToInt32(obj.residentId));
-            
+            resp.TotalPrice = BookingServices.MakeBooking(roomAndBoarding, Convert.ToInt64(obj.startDate), Convert.ToInt64(obj.endDate), Convert.ToInt32(obj.residentId));         
             return resp;
         }
 
@@ -52,7 +51,6 @@ namespace Backend.Controllers
             BookingInformation booking = new BookingInformation(room, boardingType, Convert.ToInt32(obj.residentId), Convert.ToInt64(obj.startDate), Convert.ToInt64(obj.endDate));
             dynamic resp = new ExpandoObject();
             resp.TotalPrice = BookingServices.EditBooking(booking);
-            
             return resp;
         }
 
@@ -69,8 +67,7 @@ namespace Backend.Controllers
         public dynamic checkout([FromBody] dynamic obj) //api/reservation/checkout
         {
             dynamic resp = new ExpandoObject();
-            resp.lst = new List<object>(Receptionist.checkOut(Convert.ToInt32(obj.roomId)));
-            
+            resp.lst = new List<object>(Receptionist.checkOut(Convert.ToInt32(obj.roomId)));           
             return resp;
         }
 
@@ -79,8 +76,7 @@ namespace Backend.Controllers
         public dynamic get([FromBody] dynamic obj) //api/reservation/get
         {
             dynamic resp = new ExpandoObject();
-            resp.lst = new List<object>(BookingServices.GetBookingInformations(Convert.ToInt32(obj.id)));
-            
+            resp.lst = new List<object>(BookingServices.GetBookingInformations(Convert.ToInt32(obj.residentId)));         
             return resp;
         }
 
@@ -89,7 +85,6 @@ namespace Backend.Controllers
         {
             dynamic resp = new ExpandoObject();
             resp.lst = new List<object>(BookingServices.GetActiveBookingInformation());
-            
             return resp;
         }
 
@@ -97,8 +92,7 @@ namespace Backend.Controllers
         public dynamic getAll() //api/reservation/getAll
         {
             dynamic resp = new ExpandoObject();
-            resp.lst = new List<object>(BookingServices.GetAllBookingInformation());
-            
+            resp.lst = new List<object>(BookingServices.GetAllBookingInformation());          
             return resp;
         }
 

@@ -67,7 +67,7 @@ public static class BookingServices
         {
             BookingInformation booking = bookingIterator.getNext() as BookingInformation;
 
-            if (booking.startDate >= TimeHandler.GetTodayInEpoch())
+            if (booking.endDate > TimeHandler.GetTodayInEpoch())
             {
                 activeBookingInformation.Add(booking);
             }
