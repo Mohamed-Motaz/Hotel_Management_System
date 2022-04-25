@@ -183,8 +183,11 @@ namespace Frontend.HttpService
             HttpResponseMessage response = Post("api/reservation/Edit", json);
             string responseStr = response.Content.ReadAsStringAsync().Result;
             dynamic obj = JsonConvert.DeserializeObject<ExpandoObject>(responseStr, converter);
-            bool succeed = Convert.ToBoolean(obj.boolName);
-            return succeed;
+            if (obj.totalPrice is null)
+                return false;
+            else
+                return true;
+            
         }
 
         public static void Checkout(dynamic input)

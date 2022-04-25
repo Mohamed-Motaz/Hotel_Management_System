@@ -42,8 +42,12 @@ namespace Frontend.ReceptionistForms
         {
             dynamic Reservation = new ExpandoObject();
             Reservation.residentId = ResidentIDTextBox.Text;
-            Reservation.roomType = RoomTypeComboBox.GetItemText(RoomTypeComboBox.SelectedItem);
-            
+            //Reservation.roomType = RoomTypeComboBox.GetItemText(RoomTypeComboBox.SelectedItem);
+            string types = RoomTypeComboBox.GetItemText(RoomTypeComboBox.SelectedItem);
+            string[] list = types.Split('/');
+            Reservation.roomType = list[0];
+            Reservation.boardingType = list[1];
+
             DateTime dt = Convert.ToDateTime(StartDateDatepicker.Value);
             Reservation.startDate = GetDateInEpoch(dt.Day, dt.Month, dt.Year);
 
@@ -89,7 +93,7 @@ namespace Frontend.ReceptionistForms
             {
                 // api returns all available rooms to display it in combo box
 
-                RoomTypeComboBox.Items.Add(room.roomType + " " + room.boardingType);
+                RoomTypeComboBox.Items.Add(room.roomType + "/" + room.boardingType);
             }
         }
 

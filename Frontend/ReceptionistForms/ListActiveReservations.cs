@@ -28,7 +28,7 @@ namespace Frontend.ReceptionistForms
             ActiveReservationsGV.ColumnCount = 7;
             ActiveReservationsGV.Columns[0].Name = "ID";
             ActiveReservationsGV.Columns[1].Name = "RoomID";
-            ActiveReservationsGV.Columns[2].Name = "BoardID";
+            ActiveReservationsGV.Columns[2].Name = "Board Type";
             ActiveReservationsGV.Columns[3].Name = "ResidentID";
             ActiveReservationsGV.Columns[4].Name = "Start Date";
             ActiveReservationsGV.Columns[5].Name = "End Date";
@@ -43,12 +43,12 @@ namespace Frontend.ReceptionistForms
             {
                 DataGridViewRow row = (DataGridViewRow)ActiveReservationsGV.Rows[0].Clone();
                 row.Cells[0].Value = res.id;
-                row.Cells[1].Value = res.RoomId;
-                row.Cells[2].Value = res.BoardId;
-                row.Cells[3].Value = res.ResidentId;
-                row.Cells[4].Value = res.StartDate;
-                row.Cells[5].Value = res.EndDate;
-                row.Cells[6].Value = res.TotalPrice;
+                row.Cells[1].Value = res.roomId;
+                row.Cells[2].Value = res.boardingType;
+                row.Cells[3].Value = res.residentId;
+                row.Cells[4].Value = res.startDate;
+                row.Cells[5].Value = res.endDate;
+                row.Cells[6].Value = res.totalPrice;
 
                 ActiveReservationsGV.Rows.Add(row);
             }

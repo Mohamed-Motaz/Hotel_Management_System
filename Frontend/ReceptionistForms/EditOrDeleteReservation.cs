@@ -25,14 +25,23 @@ namespace Frontend.ReceptionistForms
             EndDateDatepicker.Value = DateTime.Today.AddDays(1);
 
         }
-
+        
         private void EditReservationBtn_Click(object sender, EventArgs e)
         {
             dynamic Reservation = new ExpandoObject();
             Reservation.residentId = ResidentIDTextBox.Text;
-            Reservation.boardingType = RoomTypeComboBox.GetItemText(RoomTypeComboBox.SelectedItem); // room tye wla boarding type
-            Reservation.startDate = StartDateDatepicker.Value;
-            Reservation.endDate = EndDateDatepicker.Value;
+            Reservation.roomId = roomText.Text;
+          //  Reservation.boardingType = RoomTypeComboBox.GetItemText(RoomTypeComboBox.SelectedItem); // room tye wla boarding type
+            string types = RoomTypeComboBox.GetItemText(RoomTypeComboBox.SelectedItem);
+            string[] list = types.Split('/');
+            Reservation.roomType = list[0];
+            Reservation.boardingType = list[1];
+            DateTime dt = Convert.ToDateTime(StartDateDatepicker.Value);
+            Reservation.startDate = GetDateInEpoch(dt.Day, dt.Month, dt.Year);
+
+            dt = Convert.ToDateTime(EndDateDatepicker.Value);
+            Reservation.endDate = GetDateInEpoch(dt.Day, dt.Month, dt.Year);
+
             if ((EndDateDatepicker.Value < StartDateDatepicker.Value))
                 MessageBox.Show("Please Enter a valid end date");
             else if (!CheckForResidentID(int.Parse(ResidentIDTextBox.Text)))
@@ -100,7 +109,7 @@ namespace Frontend.ReceptionistForms
             {
                 // api returns all available rooms to display it in combo box
 
-                RoomTypeComboBox.Items.Add(room.roomType + " " + room.boardingType);
+                RoomTypeComboBox.Items.Add(room.roomType + "/" + room.boardingType);
             }
         }
 
