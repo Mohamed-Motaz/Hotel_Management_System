@@ -22,10 +22,6 @@ namespace Frontend.ResidentForms
         {
             setUpDataGridView();
         }
-        public static DateTime GetDateFromEpoch(long epoch)
-        {
-            return new DateTime(1970, 1, 1, 0, 0, 0, DateTimeKind.Local).AddSeconds(epoch);
-        }
         public void setUpDataGridView()
         {
             ReservationsGV.ColumnCount = 7;
@@ -49,8 +45,8 @@ namespace Frontend.ResidentForms
                 row.Cells[1].Value = res.roomId.ToString();
                 row.Cells[2].Value = res.boardingType.ToString();
                 row.Cells[3].Value = res.residentId.ToString();
-                row.Cells[4].Value = GetDateFromEpoch(res.startDate).ToString();
-                row.Cells[5].Value = GetDateFromEpoch(res.endDate).ToString();
+                row.Cells[4].Value = TimeHandler.GetDateFromEpoch(res.startDate).ToString();
+                row.Cells[5].Value = TimeHandler.GetDateFromEpoch(res.endDate).ToString();
                 row.Cells[6].Value = res.totalPrice.ToString();
 
                 ReservationsGV.Rows.Add(row);

@@ -34,10 +34,6 @@ namespace Frontend.ReceptionistForms
         {
             Clear();
         }
-        public static long GetDateInEpoch(int day, int month, int year)
-        {
-            return (long)(new DateTimeOffset(year, month, day, 0, 0, 0, TimeSpan.Zero) - new DateTimeOffset(1970, 1, 1, 0, 0, 0, TimeSpan.Zero)).TotalSeconds;
-        }
         private void SaveButton_Click(object sender, EventArgs e)
         {
             dynamic Reservation = new ExpandoObject();
@@ -49,10 +45,10 @@ namespace Frontend.ReceptionistForms
             Reservation.boardingType = list[1];
 
             DateTime dt = Convert.ToDateTime(StartDateDatepicker.Value);
-            Reservation.startDate = GetDateInEpoch(dt.Day, dt.Month, dt.Year);
+            Reservation.startDate = TimeHandler.GetDateInEpoch(dt.Day, dt.Month, dt.Year);
 
             dt = Convert.ToDateTime(EndDateDatepicker.Value);
-            Reservation.endDate = GetDateInEpoch(dt.Day, dt.Month, dt.Year);
+            Reservation.endDate = TimeHandler.GetDateInEpoch(dt.Day, dt.Month, dt.Year);
 
             if ((EndDateDatepicker.Value < StartDateDatepicker.Value))
                 MessageBox.Show("Please Enter a valid end date");
@@ -83,10 +79,10 @@ namespace Frontend.ReceptionistForms
             dynamic obj = new ExpandoObject();
 
             DateTime dt = Convert.ToDateTime(StartDateDatepicker.Value);
-            obj.startDate = GetDateInEpoch(dt.Day, dt.Month, dt.Year);
+            obj.startDate = TimeHandler.GetDateInEpoch(dt.Day, dt.Month, dt.Year);
 
             dt = Convert.ToDateTime(EndDateDatepicker.Value);
-            obj.endDate = GetDateInEpoch(dt.Day, dt.Month, dt.Year);
+            obj.endDate = TimeHandler.GetDateInEpoch(dt.Day, dt.Month, dt.Year);
 
             dynamic AvailableRooms = Service.GetAvailableRooms(obj);
             foreach (dynamic room in AvailableRooms)

@@ -84,6 +84,7 @@
       <DependentUpon>Diagnosis.cs</DependentUpon>
     </Compile>
     <Compile Include="HttpService\Service.cs" />
+    <Compile Include="HttpService\TimeHandler.cs" />
     <Compile Include="ManagerForms\AddResident.cs">
       <SubType>Form</SubType>
     </Compile>
