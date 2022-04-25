@@ -39,19 +39,19 @@ public static class UserAuthenticationServices
         for (Iterator ResidentsIterator = Apphost.ListOfResidents.GetIterator(); ResidentsIterator.hasNext();)
         {
             Resident resident = ResidentsIterator.getNext() as Resident;
-            if (resident.userName == userName) return false;
+            if (resident.userName == userName) return true;
         }
         for (Iterator workerIterator = Apphost.ListOfRoomServices.GetIterator(); workerIterator.hasNext();)
         {
-            AbstractWorker worker = workerIterator.getNext() as AbstractWorker;
-            if (worker.userName == userName) return false;
+            AbstractWorker roomWorker = workerIterator.getNext() as AbstractWorker;
+            if (roomWorker.userName == userName) return true;
         }
         for (Iterator workerIterator = Apphost.ListOfPrivilegedWorkers.GetIterator(); workerIterator.hasNext();)
         {
             AbstractPrivilegedWorker worker = workerIterator.getNext() as AbstractPrivilegedWorker;
-            if (worker.userName == userName) return false;
+            if (worker.userName == userName) return true;
         }
-        return true;
+        return false;
     }
 
 }
