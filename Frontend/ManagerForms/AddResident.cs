@@ -32,6 +32,8 @@ namespace Frontend.Extras
 
             //send to api addResident
             Service.AddResident(resident);
+            
+            clearBtn_Click(sender,e);
 
         }
         private void clearBtn_Click(object sender, EventArgs e)

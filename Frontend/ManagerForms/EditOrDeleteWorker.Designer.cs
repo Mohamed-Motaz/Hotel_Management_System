@@ -53,6 +53,8 @@ namespace Frontend.ManagerForms
             this.label8 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
+            this.jobTitleTextbox = new System.Windows.Forms.TextBox();
+            this.jobTitlelabel = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // bunifuSeparator43
@@ -94,7 +96,7 @@ namespace Frontend.ManagerForms
             // incomeTypeTextBox
             // 
             this.incomeTypeTextBox.BackColor = System.Drawing.SystemColors.Control;
-            this.incomeTypeTextBox.Location = new System.Drawing.Point(284, 392);
+            this.incomeTypeTextBox.Location = new System.Drawing.Point(284, 425);
             this.incomeTypeTextBox.MaxLength = 20;
             this.incomeTypeTextBox.Name = "incomeTypeTextBox";
             this.incomeTypeTextBox.Size = new System.Drawing.Size(296, 20);
@@ -374,7 +376,7 @@ namespace Frontend.ManagerForms
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold);
             this.label8.ForeColor = System.Drawing.Color.DimGray;
-            this.label8.Location = new System.Drawing.Point(143, 389);
+            this.label8.Location = new System.Drawing.Point(143, 424);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(111, 21);
             this.label8.TabIndex = 514;
@@ -402,11 +404,34 @@ namespace Frontend.ManagerForms
             this.label9.TabIndex = 516;
             this.label9.Text = "Search by ID:";
             // 
+            // jobTitleTextbox
+            // 
+            this.jobTitleTextbox.BackColor = System.Drawing.SystemColors.Control;
+            this.jobTitleTextbox.Enabled = false;
+            this.jobTitleTextbox.Location = new System.Drawing.Point(284, 384);
+            this.jobTitleTextbox.MaxLength = 20;
+            this.jobTitleTextbox.Name = "jobTitleTextbox";
+            this.jobTitleTextbox.Size = new System.Drawing.Size(296, 20);
+            this.jobTitleTextbox.TabIndex = 517;
+            // 
+            // jobTitlelabel
+            // 
+            this.jobTitlelabel.AutoSize = true;
+            this.jobTitlelabel.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold);
+            this.jobTitlelabel.ForeColor = System.Drawing.Color.DimGray;
+            this.jobTitlelabel.Location = new System.Drawing.Point(143, 384);
+            this.jobTitlelabel.Name = "jobTitlelabel";
+            this.jobTitlelabel.Size = new System.Drawing.Size(79, 21);
+            this.jobTitlelabel.TabIndex = 518;
+            this.jobTitlelabel.Text = "Job Title:";
+            // 
             // EditOrDeleteWorker
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(835, 571);
+            this.Controls.Add(this.jobTitlelabel);
+            this.Controls.Add(this.jobTitleTextbox);
             this.Controls.Add(this.label9);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label8);
@@ -462,5 +487,7 @@ namespace Frontend.ManagerForms
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.TextBox jobTitleTextbox;
+        private System.Windows.Forms.Label jobTitlelabel;
     }
 }
