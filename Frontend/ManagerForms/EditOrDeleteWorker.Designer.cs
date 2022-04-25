@@ -32,9 +32,8 @@ namespace Frontend.ManagerForms
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(EditOrDeleteWorker));
             this.bunifuSeparator43 = new Bunifu.Framework.UI.BunifuSeparator();
             this.isRoomService = new System.Windows.Forms.CheckBox();
-            this.jobTitleTextBox = new System.Windows.Forms.TextBox();
-            this.incomeTypeTextBox = new System.Windows.Forms.TextBox();
             this.salaryTextBox = new System.Windows.Forms.TextBox();
+            this.incomeTypeTextBox = new System.Windows.Forms.TextBox();
             this.passwordTextBox = new System.Windows.Forms.TextBox();
             this.ageTextBox = new System.Windows.Forms.TextBox();
             this.nameTextBox = new System.Windows.Forms.TextBox();
@@ -50,7 +49,6 @@ namespace Frontend.ManagerForms
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label24 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
@@ -84,32 +82,23 @@ namespace Frontend.ManagerForms
             this.isRoomService.UseVisualStyleBackColor = true;
             this.isRoomService.CheckedChanged += new System.EventHandler(this.isRoomService_CheckedChanged);
             // 
-            // jobTitleTextBox
+            // salaryTextBox
             // 
-            this.jobTitleTextBox.BackColor = System.Drawing.SystemColors.Control;
-            this.jobTitleTextBox.Location = new System.Drawing.Point(280, 372);
-            this.jobTitleTextBox.MaxLength = 20;
-            this.jobTitleTextBox.Name = "jobTitleTextBox";
-            this.jobTitleTextBox.Size = new System.Drawing.Size(296, 20);
-            this.jobTitleTextBox.TabIndex = 440;
+            this.salaryTextBox.BackColor = System.Drawing.SystemColors.Control;
+            this.salaryTextBox.Location = new System.Drawing.Point(284, 347);
+            this.salaryTextBox.MaxLength = 20;
+            this.salaryTextBox.Name = "salaryTextBox";
+            this.salaryTextBox.Size = new System.Drawing.Size(296, 20);
+            this.salaryTextBox.TabIndex = 440;
             // 
             // incomeTypeTextBox
             // 
             this.incomeTypeTextBox.BackColor = System.Drawing.SystemColors.Control;
-            this.incomeTypeTextBox.Location = new System.Drawing.Point(280, 412);
+            this.incomeTypeTextBox.Location = new System.Drawing.Point(284, 392);
             this.incomeTypeTextBox.MaxLength = 20;
             this.incomeTypeTextBox.Name = "incomeTypeTextBox";
             this.incomeTypeTextBox.Size = new System.Drawing.Size(296, 20);
             this.incomeTypeTextBox.TabIndex = 438;
-            // 
-            // salaryTextBox
-            // 
-            this.salaryTextBox.BackColor = System.Drawing.SystemColors.Control;
-            this.salaryTextBox.Location = new System.Drawing.Point(282, 335);
-            this.salaryTextBox.MaxLength = 20;
-            this.salaryTextBox.Name = "salaryTextBox";
-            this.salaryTextBox.Size = new System.Drawing.Size(296, 20);
-            this.salaryTextBox.TabIndex = 437;
             // 
             // passwordTextBox
             // 
@@ -369,23 +358,12 @@ namespace Frontend.ManagerForms
             this.label24.TabIndex = 507;
             this.label24.Text = "Name:";
             // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold);
-            this.label5.ForeColor = System.Drawing.Color.DimGray;
-            this.label5.Location = new System.Drawing.Point(143, 335);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(79, 21);
-            this.label5.TabIndex = 512;
-            this.label5.Text = "Job Title:";
-            // 
             // label1
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold);
             this.label1.ForeColor = System.Drawing.Color.DimGray;
-            this.label1.Location = new System.Drawing.Point(145, 372);
+            this.label1.Location = new System.Drawing.Point(145, 344);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(62, 21);
             this.label1.TabIndex = 513;
@@ -396,7 +374,7 @@ namespace Frontend.ManagerForms
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold);
             this.label8.ForeColor = System.Drawing.Color.DimGray;
-            this.label8.Location = new System.Drawing.Point(145, 409);
+            this.label8.Location = new System.Drawing.Point(143, 389);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(111, 21);
             this.label8.TabIndex = 514;
@@ -433,7 +411,6 @@ namespace Frontend.ManagerForms
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.label5);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.label4);
@@ -443,9 +420,8 @@ namespace Frontend.ManagerForms
             this.Controls.Add(this.bunifuFlatButton1);
             this.Controls.Add(this.searchbyIdTextbox);
             this.Controls.Add(this.isRoomService);
-            this.Controls.Add(this.jobTitleTextBox);
-            this.Controls.Add(this.incomeTypeTextBox);
             this.Controls.Add(this.salaryTextBox);
+            this.Controls.Add(this.incomeTypeTextBox);
             this.Controls.Add(this.passwordTextBox);
             this.Controls.Add(this.ageTextBox);
             this.Controls.Add(this.nameTextBox);
@@ -465,7 +441,6 @@ namespace Frontend.ManagerForms
         #endregion
         private Bunifu.Framework.UI.BunifuSeparator bunifuSeparator43;
         private System.Windows.Forms.CheckBox isRoomService;
-        private System.Windows.Forms.TextBox jobTitleTextBox;
         private System.Windows.Forms.TextBox incomeTypeTextBox;
         private System.Windows.Forms.TextBox salaryTextBox;
         private System.Windows.Forms.TextBox passwordTextBox;
@@ -483,7 +458,6 @@ namespace Frontend.ManagerForms
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label24;
-        private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label2;

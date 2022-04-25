@@ -35,14 +35,20 @@ namespace Frontend.ManagerForms
             dynamic obj = new ExpandoObject();
             obj.id = worker.id;
             dynamic work = Service.GetWorkerById(obj);
-            nameTextBox.Text = work.name.ToString();
+            nameTextBox.Text = work.userName.ToString();
             ageTextBox.Text = work.age.ToString();
             emailTextBox.Text = work.email.ToString();
-            if (isRoomService.Checked) { work.password = ""; }
-            else { passwordTextBox.Text = work.password; }
-            phoneTextBox.Text = work.phoneNumber.ToString();
+            try
+            {
+                if (isRoomService.Checked) { work.password = ""; }
+                else { passwordTextBox.Text = work.password.ToString(); }
+            }catch(Exception ex)
+            {
+                // dp nothing
+            }
+                
+             phoneTextBox.Text = work.phoneNumber.ToString();
             salaryTextBox.Text = work.salary.ToString();
-            jobTitleTextBox.Text = work.jobType.ToString();
             incomeTypeTextBox.Text = work.incomeType.ToString();
         }
 
@@ -62,7 +68,7 @@ namespace Frontend.ManagerForms
             obj.password = passwordTextBox.Text;
             obj.phoneNumber = phoneTextBox.Text;
             obj.salary = salaryTextBox.Text;
-            obj.jobTitle = jobTitleTextBox.Text;
+            obj.jobTitle = salaryTextBox.Text;
             obj.incomeType = incomeTypeTextBox.Text;
 
             Service.EditResident(obj);
@@ -88,7 +94,7 @@ namespace Frontend.ManagerForms
             passwordTextBox.Text = "";
             phoneTextBox.Text = "";
             salaryTextBox.Text = "";
-            jobTitleTextBox.Text = "";
+            salaryTextBox.Text = "";
             incomeTypeTextBox.Text = "";
         }
 
