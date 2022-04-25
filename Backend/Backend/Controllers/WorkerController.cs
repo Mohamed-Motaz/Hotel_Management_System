@@ -76,7 +76,8 @@ namespace Backend.Controllers
         [HttpPost]
         public dynamic get([FromBody] dynamic obj) //api/worker/get
         {
-            dynamic resp = JsonConvert.DeserializeObject(Manager.getWorker(Convert.ToInt32(obj.id)));
+            string json = JsonConvert.SerializeObject(Manager.getWorker(Convert.ToInt32(obj.id)));
+            dynamic resp = JsonConvert.DeserializeObject(json);
             return resp;
         }
 

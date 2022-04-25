@@ -52,7 +52,7 @@ namespace Frontend.ReceptionistForms
 
             if ((EndDateDatepicker.Value < StartDateDatepicker.Value))
                 MessageBox.Show("Please Enter a valid end date");
-            else if (!CheckForResidentID(int.Parse(ResidentIDTextBox.Text)))
+            else if (!CheckForResidentID(ResidentIDTextBox.Text))
                 MessageBox.Show("Please Enter a valid resident id");
             else
             {
@@ -65,7 +65,7 @@ namespace Frontend.ReceptionistForms
             }
             Clear();
         }
-        private bool CheckForResidentID(int ResidentID)
+        private bool CheckForResidentID(string ResidentID)
         {
             // api call send resident id and check if it's found return true
             dynamic obj = new ExpandoObject();

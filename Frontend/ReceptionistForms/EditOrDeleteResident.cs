@@ -67,11 +67,11 @@ namespace Frontend.ReceptionistForms
             obj.id = resident.id;
             //TODO: api set resident to the api returend resident
             dynamic res = Service.GetResident(obj);
-            nameTextBox.Text = res.username;
-            ageTextBox.Text = res.age;
-            emailTextBox.Text = res.email;
-            passwordTextBox.Text = res.password;
-            phoneTextBox.Text = res.phoneNumber;
+            nameTextBox.Text = res.userName.ToString() ;
+            ageTextBox.Text = res.age.ToString();
+            emailTextBox.Text = res.email.ToString();
+            passwordTextBox.Text = res.password.ToString();
+            phoneTextBox.Text = res.phoneNumber.ToString();
         }
 
         private void editResidentBtn_Click(object sender, EventArgs e)

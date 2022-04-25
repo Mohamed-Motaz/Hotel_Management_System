@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Frontend.ReceptionistForms;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -25,12 +26,14 @@ namespace Frontend.ResidentForms
 
         private void addReservationButton_Click(object sender, EventArgs e)
         {
-
+            AddReservation addReservation = new AddReservation();
+            addReservation.Show();
         }
 
         private void editOrDeleteReservationButton_Click(object sender, EventArgs e)
         {
-
+            EditOrDeleteReservation editOrDeleteReservation = new EditOrDeleteReservation();
+            editOrDeleteReservation.Show();
         }
     }
 }

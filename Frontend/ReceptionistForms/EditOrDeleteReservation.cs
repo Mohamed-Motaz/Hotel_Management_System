@@ -76,14 +76,25 @@ namespace Frontend.ReceptionistForms
         private bool CheckForResidentID(int ResidentID)
         {
             // api call send resident id and check if it's found return true
-            return false;
-        }
+            dynamic obj = new ExpandoObject();
+            obj.id = ResidentID;
 
+            return Service.checkForResident(obj); 
+        }
+        public static long GetDateInEpoch(int day, int month, int year)
+        {
+            return (long)(new DateTimeOffset(year, month, day, 0, 0, 0, TimeSpan.Zero) - new DateTimeOffset(1970, 1, 1, 0, 0, 0, TimeSpan.Zero)).TotalSeconds;
+        }
         private void availableRooms_Click(object sender, EventArgs e)
         {
             dynamic obj = new ExpandoObject();
-            obj.startDate =  long.Parse( EndDateDatepicker.Value.ToString("yyyyMMddHHmmss") );
-            obj.endDate = long.Parse(StartDateDatepicker.Value.ToString("yyyyMMddHHmmss"));  
+            DateTime dt = Convert.ToDateTime(StartDateDatepicker.Value);
+            obj.startDate = GetDateInEpoch(dt.Day, dt.Month, dt.Year);
+
+            dt = Convert.ToDateTime(EndDateDatepicker.Value);
+            obj.endDate = GetDateInEpoch(dt.Day, dt.Month, dt.Year);
+          
+            
             dynamic AvailableRooms = Service.GetAvailableRooms(obj);
             foreach (dynamic room in AvailableRooms)
             {
@@ -95,12 +106,12 @@ namespace Frontend.ReceptionistForms
 
         private void StartDateDatepicker_onValueChanged(object sender, EventArgs e)
         {
-            availableRooms_Click( sender,  e);
+            //availableRooms_Click( sender,  e);
         }
 
         private void EndDateDatepicker_onValueChanged(object sender, EventArgs e)
         {
-            availableRooms_Click(sender, e);
+           // availableRooms_Click(sender, e);
         }
     }
 }
