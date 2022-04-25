@@ -155,7 +155,7 @@ namespace Backend.Models
             {
                 BookingInformation booking = bookingIterator.getNext() as BookingInformation;
                 
-                if (booking.endDate <= targetedDuration)
+                if (booking.endDate >= targetedDuration)
                 {
                     totalIncome += booking.totalPrice;
                 }
