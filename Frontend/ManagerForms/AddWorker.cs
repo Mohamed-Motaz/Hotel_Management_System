@@ -24,6 +24,11 @@ namespace Frontend.Extras
             JobTitleComboBox.Items.Add("Manager");
             JobTitleComboBox.Items.Add("Room Service");
             JobTitleComboBox.Items.Add("Receptionist");
+
+            incomeTypeComboBox.Items.Add("Weekly");
+            incomeTypeComboBox.Items.Add("Monthly");
+            incomeTypeComboBox.Items.Add("Yearly");
+
             passwordTextBox.Enabled = !isRoomServices.Checked;
         }
         private void addWorkerBtn_Click(object sender, EventArgs e)
@@ -36,7 +41,7 @@ namespace Frontend.Extras
             worker.phoneNumber = phoneTextBox.Text;
             worker.salary = salaryTextBox.Text;
             worker.jobTitle = JobTitleComboBox.GetItemText(JobTitleComboBox.SelectedItem);
-            worker.incomeType = incomeTypeTextBox.Text;
+            worker.incomeType = incomeTypeComboBox.GetItemText(incomeTypeComboBox.SelectedItem);
             // Pass password as null if the jobtype is Room Service
             if (CheckIfWorkerIsPrivileged())
                 worker.password = passwordTextBox.Text;
@@ -94,7 +99,6 @@ namespace Frontend.Extras
             passwordTextBox.Text = "";
             phoneTextBox.Text = "";
             salaryTextBox.Text = "";
-            incomeTypeTextBox.Text = "";
         }
 
         private void IsRoomService(object sender, EventArgs e)

@@ -31,7 +31,7 @@ namespace Frontend
         int count;
         private string username, password;
 
-        public  bool LogInCheck()
+        public string LogInCheck()
         {
             dynamic obj = new ExpandoObject();
             obj.userName = txtUser.Text;
@@ -43,7 +43,7 @@ namespace Frontend
         private void btnLogin_Click(object sender, EventArgs e)
         {
             //login();
-            if (LogInCheck() == true)
+            if (LogInCheck() == "Manager")
             {
                 frmMain managerMainForm = new frmMain();
                 this.Hide();
@@ -161,7 +161,7 @@ namespace Frontend
 
         private void bunifuFlatButton1_Click_1(object sender, EventArgs e)
         {
-            if (LogInCheck() == true)
+            if (LogInCheck() == "Receptionist")
             {
                 frmMainReceptionist frmMainReceptionist = new frmMainReceptionist();
                 this.Hide();

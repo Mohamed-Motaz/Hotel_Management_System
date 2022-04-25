@@ -37,17 +37,16 @@ namespace Frontend.ReceptionistForms
             this.label3 = new System.Windows.Forms.Label();
             this.EndDateDatepicker = new Bunifu.Framework.UI.BunifuDatepicker();
             this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
-            this.ResidentIDTextBox = new System.Windows.Forms.TextBox();
             this.RoomTypeComboBox = new System.Windows.Forms.ComboBox();
             this.label4 = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
             this.label24 = new System.Windows.Forms.Label();
             this.StartDateDatepicker = new Bunifu.Framework.UI.BunifuDatepicker();
             this.dateTimePicker2 = new System.Windows.Forms.DateTimePicker();
             this.label2 = new System.Windows.Forms.Label();
             this.availableRooms = new Bunifu.Framework.UI.BunifuFlatButton();
-            this.roomLabel = new System.Windows.Forms.Label();
-            this.roomText = new System.Windows.Forms.TextBox();
+            this.label9 = new System.Windows.Forms.Label();
+            this.bunifuFlatButton1 = new Bunifu.Framework.UI.BunifuFlatButton();
+            this.searchbyIdTextbox = new Bunifu.Framework.UI.BunifuMetroTextbox();
             this.SuspendLayout();
             // 
             // bunifuSeparator43
@@ -83,7 +82,7 @@ namespace Frontend.ReceptionistForms
             this.DeleteReservationBtn.IconVisible = true;
             this.DeleteReservationBtn.IconZoom = 90D;
             this.DeleteReservationBtn.IsTab = false;
-            this.DeleteReservationBtn.Location = new System.Drawing.Point(313, 416);
+            this.DeleteReservationBtn.Location = new System.Drawing.Point(320, 525);
             this.DeleteReservationBtn.Margin = new System.Windows.Forms.Padding(4);
             this.DeleteReservationBtn.Name = "DeleteReservationBtn";
             this.DeleteReservationBtn.Normalcolor = System.Drawing.Color.LightSteelBlue;
@@ -119,7 +118,7 @@ namespace Frontend.ReceptionistForms
             this.ClearBtn.IconVisible = true;
             this.ClearBtn.IconZoom = 90D;
             this.ClearBtn.IsTab = false;
-            this.ClearBtn.Location = new System.Drawing.Point(542, 416);
+            this.ClearBtn.Location = new System.Drawing.Point(577, 525);
             this.ClearBtn.Margin = new System.Windows.Forms.Padding(4);
             this.ClearBtn.Name = "ClearBtn";
             this.ClearBtn.Normalcolor = System.Drawing.Color.LightSteelBlue;
@@ -155,7 +154,7 @@ namespace Frontend.ReceptionistForms
             this.EditReservationBtn.IconVisible = true;
             this.EditReservationBtn.IconZoom = 90D;
             this.EditReservationBtn.IsTab = false;
-            this.EditReservationBtn.Location = new System.Drawing.Point(83, 416);
+            this.EditReservationBtn.Location = new System.Drawing.Point(74, 525);
             this.EditReservationBtn.Margin = new System.Windows.Forms.Padding(4);
             this.EditReservationBtn.Name = "EditReservationBtn";
             this.EditReservationBtn.Normalcolor = System.Drawing.Color.LightSteelBlue;
@@ -175,7 +174,7 @@ namespace Frontend.ReceptionistForms
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.DimGray;
-            this.label3.Location = new System.Drawing.Point(429, 202);
+            this.label3.Location = new System.Drawing.Point(420, 229);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(87, 21);
             this.label3.TabIndex = 556;
@@ -188,7 +187,7 @@ namespace Frontend.ReceptionistForms
             this.EndDateDatepicker.ForeColor = System.Drawing.Color.White;
             this.EndDateDatepicker.Format = System.Windows.Forms.DateTimePickerFormat.Long;
             this.EndDateDatepicker.FormatCustom = null;
-            this.EndDateDatepicker.Location = new System.Drawing.Point(522, 201);
+            this.EndDateDatepicker.Location = new System.Drawing.Point(525, 229);
             this.EndDateDatepicker.Name = "EndDateDatepicker";
             this.EndDateDatepicker.Size = new System.Drawing.Size(284, 39);
             this.EndDateDatepicker.TabIndex = 555;
@@ -198,19 +197,10 @@ namespace Frontend.ReceptionistForms
             // dateTimePicker1
             // 
             this.dateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dateTimePicker1.Location = new System.Drawing.Point(543, 202);
+            this.dateTimePicker1.Location = new System.Drawing.Point(577, 229);
             this.dateTimePicker1.Name = "dateTimePicker1";
             this.dateTimePicker1.Size = new System.Drawing.Size(200, 20);
             this.dateTimePicker1.TabIndex = 554;
-            // 
-            // ResidentIDTextBox
-            // 
-            this.ResidentIDTextBox.BackColor = System.Drawing.SystemColors.Control;
-            this.ResidentIDTextBox.Location = new System.Drawing.Point(198, 98);
-            this.ResidentIDTextBox.MaxLength = 20;
-            this.ResidentIDTextBox.Name = "ResidentIDTextBox";
-            this.ResidentIDTextBox.Size = new System.Drawing.Size(174, 20);
-            this.ResidentIDTextBox.TabIndex = 553;
             // 
             // RoomTypeComboBox
             // 
@@ -218,7 +208,7 @@ namespace Frontend.ReceptionistForms
             this.RoomTypeComboBox.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.RoomTypeComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.RoomTypeComboBox.FormattingEnabled = true;
-            this.RoomTypeComboBox.Location = new System.Drawing.Point(128, 280);
+            this.RoomTypeComboBox.Location = new System.Drawing.Point(139, 411);
             this.RoomTypeComboBox.Name = "RoomTypeComboBox";
             this.RoomTypeComboBox.Size = new System.Drawing.Size(284, 21);
             this.RoomTypeComboBox.TabIndex = 552;
@@ -228,29 +218,18 @@ namespace Frontend.ReceptionistForms
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.Color.DimGray;
-            this.label4.Location = new System.Drawing.Point(8, 277);
+            this.label4.Location = new System.Drawing.Point(13, 408);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(99, 21);
             this.label4.TabIndex = 551;
             this.label4.Text = "Room Type:";
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.DimGray;
-            this.label1.Location = new System.Drawing.Point(37, 98);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(101, 21);
-            this.label1.TabIndex = 550;
-            this.label1.Text = "Resident ID:";
             // 
             // label24
             // 
             this.label24.AutoSize = true;
             this.label24.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label24.ForeColor = System.Drawing.Color.DimGray;
-            this.label24.Location = new System.Drawing.Point(13, 201);
+            this.label24.Location = new System.Drawing.Point(18, 229);
             this.label24.Name = "label24";
             this.label24.Size = new System.Drawing.Size(94, 21);
             this.label24.TabIndex = 549;
@@ -263,7 +242,7 @@ namespace Frontend.ReceptionistForms
             this.StartDateDatepicker.ForeColor = System.Drawing.Color.White;
             this.StartDateDatepicker.Format = System.Windows.Forms.DateTimePickerFormat.Long;
             this.StartDateDatepicker.FormatCustom = null;
-            this.StartDateDatepicker.Location = new System.Drawing.Point(139, 201);
+            this.StartDateDatepicker.Location = new System.Drawing.Point(130, 229);
             this.StartDateDatepicker.Name = "StartDateDatepicker";
             this.StartDateDatepicker.Size = new System.Drawing.Size(284, 39);
             this.StartDateDatepicker.TabIndex = 548;
@@ -273,7 +252,7 @@ namespace Frontend.ReceptionistForms
             // dateTimePicker2
             // 
             this.dateTimePicker2.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dateTimePicker2.Location = new System.Drawing.Point(181, 201);
+            this.dateTimePicker2.Location = new System.Drawing.Point(159, 229);
             this.dateTimePicker2.Name = "dateTimePicker2";
             this.dateTimePicker2.Size = new System.Drawing.Size(200, 20);
             this.dateTimePicker2.TabIndex = 547;
@@ -310,7 +289,7 @@ namespace Frontend.ReceptionistForms
             this.availableRooms.IconVisible = true;
             this.availableRooms.IconZoom = 90D;
             this.availableRooms.IsTab = false;
-            this.availableRooms.Location = new System.Drawing.Point(482, 266);
+            this.availableRooms.Location = new System.Drawing.Point(505, 393);
             this.availableRooms.Name = "availableRooms";
             this.availableRooms.Normalcolor = System.Drawing.Color.LightSteelBlue;
             this.availableRooms.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(19)))), ((int)(((byte)(30)))), ((int)(((byte)(46)))));
@@ -324,42 +303,84 @@ namespace Frontend.ReceptionistForms
             this.availableRooms.TextFont = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Bold);
             this.availableRooms.Click += new System.EventHandler(this.availableRooms_Click);
             // 
-            // roomLabel
+            // label9
             // 
-            this.roomLabel.AutoSize = true;
-            this.roomLabel.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.roomLabel.ForeColor = System.Drawing.Color.DimGray;
-            this.roomLabel.Location = new System.Drawing.Point(444, 95);
-            this.roomLabel.Name = "roomLabel";
-            this.roomLabel.Size = new System.Drawing.Size(80, 21);
-            this.roomLabel.TabIndex = 559;
-            this.roomLabel.Text = "Room ID:";
+            this.label9.AutoSize = true;
+            this.label9.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold);
+            this.label9.ForeColor = System.Drawing.Color.DimGray;
+            this.label9.Location = new System.Drawing.Point(53, 83);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(177, 21);
+            this.label9.TabIndex = 563;
+            this.label9.Text = "Search by Booking ID:";
             // 
-            // roomText
+            // bunifuFlatButton1
             // 
-            this.roomText.BackColor = System.Drawing.SystemColors.Control;
-            this.roomText.Location = new System.Drawing.Point(569, 95);
-            this.roomText.MaxLength = 20;
-            this.roomText.Name = "roomText";
-            this.roomText.Size = new System.Drawing.Size(160, 20);
-            this.roomText.TabIndex = 560;
+            this.bunifuFlatButton1.Activecolor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(139)))), ((int)(((byte)(87)))));
+            this.bunifuFlatButton1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(141)))), ((int)(((byte)(188)))));
+            this.bunifuFlatButton1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.bunifuFlatButton1.BorderRadius = 0;
+            this.bunifuFlatButton1.ButtonText = "";
+            this.bunifuFlatButton1.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.bunifuFlatButton1.DisabledColor = System.Drawing.Color.Gray;
+            this.bunifuFlatButton1.Iconcolor = System.Drawing.Color.Transparent;
+            this.bunifuFlatButton1.Iconimage = ((System.Drawing.Image)(resources.GetObject("bunifuFlatButton1.Iconimage")));
+            this.bunifuFlatButton1.Iconimage_right = null;
+            this.bunifuFlatButton1.Iconimage_right_Selected = null;
+            this.bunifuFlatButton1.Iconimage_Selected = null;
+            this.bunifuFlatButton1.IconMarginLeft = 0;
+            this.bunifuFlatButton1.IconMarginRight = 0;
+            this.bunifuFlatButton1.IconRightVisible = true;
+            this.bunifuFlatButton1.IconRightZoom = 0D;
+            this.bunifuFlatButton1.IconVisible = true;
+            this.bunifuFlatButton1.IconZoom = 25D;
+            this.bunifuFlatButton1.IsTab = false;
+            this.bunifuFlatButton1.Location = new System.Drawing.Point(511, 83);
+            this.bunifuFlatButton1.Margin = new System.Windows.Forms.Padding(4);
+            this.bunifuFlatButton1.Name = "bunifuFlatButton1";
+            this.bunifuFlatButton1.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(141)))), ((int)(((byte)(188)))));
+            this.bunifuFlatButton1.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(116)))), ((int)(((byte)(166)))));
+            this.bunifuFlatButton1.OnHoverTextColor = System.Drawing.Color.White;
+            this.bunifuFlatButton1.selected = false;
+            this.bunifuFlatButton1.Size = new System.Drawing.Size(30, 28);
+            this.bunifuFlatButton1.TabIndex = 561;
+            this.bunifuFlatButton1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.bunifuFlatButton1.Textcolor = System.Drawing.Color.White;
+            this.bunifuFlatButton1.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 6.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bunifuFlatButton1.Click += new System.EventHandler(this.bunifuFlatButton1_Click);
+            // 
+            // searchbyIdTextbox
+            // 
+            this.searchbyIdTextbox.BorderColorFocused = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(116)))), ((int)(((byte)(166)))));
+            this.searchbyIdTextbox.BorderColorIdle = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(141)))), ((int)(((byte)(188)))));
+            this.searchbyIdTextbox.BorderColorMouseHover = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(116)))), ((int)(((byte)(166)))));
+            this.searchbyIdTextbox.BorderThickness = 1;
+            this.searchbyIdTextbox.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.searchbyIdTextbox.Font = new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.searchbyIdTextbox.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.searchbyIdTextbox.isPassword = false;
+            this.searchbyIdTextbox.Location = new System.Drawing.Point(271, 83);
+            this.searchbyIdTextbox.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.searchbyIdTextbox.Name = "searchbyIdTextbox";
+            this.searchbyIdTextbox.Size = new System.Drawing.Size(233, 28);
+            this.searchbyIdTextbox.TabIndex = 562;
+            this.searchbyIdTextbox.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             // 
             // EditOrDeleteReservation
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(821, 500);
-            this.Controls.Add(this.roomText);
-            this.Controls.Add(this.roomLabel);
+            this.ClientSize = new System.Drawing.Size(821, 625);
+            this.Controls.Add(this.label9);
+            this.Controls.Add(this.bunifuFlatButton1);
+            this.Controls.Add(this.searchbyIdTextbox);
             this.Controls.Add(this.availableRooms);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.EndDateDatepicker);
             this.Controls.Add(this.dateTimePicker1);
-            this.Controls.Add(this.ResidentIDTextBox);
             this.Controls.Add(this.RoomTypeComboBox);
             this.Controls.Add(this.label4);
-            this.Controls.Add(this.label1);
             this.Controls.Add(this.label24);
             this.Controls.Add(this.StartDateDatepicker);
             this.Controls.Add(this.dateTimePicker2);
@@ -383,16 +404,15 @@ namespace Frontend.ReceptionistForms
         private System.Windows.Forms.Label label3;
         private Bunifu.Framework.UI.BunifuDatepicker EndDateDatepicker;
         private System.Windows.Forms.DateTimePicker dateTimePicker1;
-        private System.Windows.Forms.TextBox ResidentIDTextBox;
         private System.Windows.Forms.ComboBox RoomTypeComboBox;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label24;
         private Bunifu.Framework.UI.BunifuDatepicker StartDateDatepicker;
         private System.Windows.Forms.DateTimePicker dateTimePicker2;
         private System.Windows.Forms.Label label2;
         private Bunifu.Framework.UI.BunifuFlatButton availableRooms;
-        private System.Windows.Forms.Label roomLabel;
-        private System.Windows.Forms.TextBox roomText;
+        private System.Windows.Forms.Label label9;
+        private Bunifu.Framework.UI.BunifuFlatButton bunifuFlatButton1;
+        private Bunifu.Framework.UI.BunifuMetroTextbox searchbyIdTextbox;
     }
 }

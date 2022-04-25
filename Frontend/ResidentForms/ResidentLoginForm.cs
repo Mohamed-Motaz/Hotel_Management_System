@@ -62,9 +62,12 @@ namespace Frontend
             obj.userName = txtUser.Text;
             obj.password = txtPass.Text;
             obj.worker = false;
-            bool valid = Service.SignIn(obj);
-            if (valid == true )
+            string info = Service.SignIn(obj);
+            string[] list = info.Split('/');
+            string type = list[0];
+            if (type == "Resident")
             {
+                ResidentInformation.residentId = Int32.Parse(list[1]);
                 MainResidentForm residentForm = new MainResidentForm();
                 residentForm.Show();
             }

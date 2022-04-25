@@ -9,6 +9,8 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using Frontend.HttpService;
+using Frontend.ResidentForms;
+
 namespace Frontend.ReceptionistForms
 {
     public partial class EditOrDeleteReservation : Form
@@ -29,9 +31,9 @@ namespace Frontend.ReceptionistForms
         private void EditReservationBtn_Click(object sender, EventArgs e)
         {
             dynamic Reservation = new ExpandoObject();
-            Reservation.residentId = ResidentIDTextBox.Text;
-            Reservation.roomId = roomText.Text;
-          //  Reservation.boardingType = RoomTypeComboBox.GetItemText(RoomTypeComboBox.SelectedItem); // room tye wla boarding type
+            Reservation.residentId = ResidentInformation.residentId; // the keep tracked one
+            //Reservation.roomId = roomText.Text;
+     
             string types = RoomTypeComboBox.GetItemText(RoomTypeComboBox.SelectedItem);
             string[] list = types.Split('/');
             Reservation.roomType = list[0];
@@ -44,8 +46,6 @@ namespace Frontend.ReceptionistForms
 
             if ((EndDateDatepicker.Value < StartDateDatepicker.Value))
                 MessageBox.Show("Please Enter a valid end date");
-            else if (!CheckForResidentID(int.Parse(ResidentIDTextBox.Text)))
-                MessageBox.Show("Please Enter a valid resident id");
             else
             {
                 Service.EditReservation(Reservation);
@@ -59,7 +59,6 @@ namespace Frontend.ReceptionistForms
         private void Clear()
         {
             RoomTypeComboBox.SelectedItem = "";
-            ResidentIDTextBox.Text = "";
             StartDateDatepicker.Value = DateTime.Today;
             EndDateDatepicker.Value = DateTime.Today.AddDays(1);
         }
@@ -70,16 +69,12 @@ namespace Frontend.ReceptionistForms
 
         private void DeleteReservationBtn_Click(object sender, EventArgs e)
         {
-            if (!CheckForResidentID(int.Parse(ResidentIDTextBox.Text)))
-                MessageBox.Show("Please Enter a valid resident id");
-            else
-            {
+            
                 dynamic obj = new ExpandoObject();
-                obj.id = roomText.Text;
+                obj.id = searchbyIdTextbox.Text;
                 Service.DeleteReservation(obj);
-
                 MessageBox.Show("Reservation has been deleted successfully!");
-            }
+           
             Clear();
         }
         private bool CheckForResidentID(int ResidentID)
@@ -117,6 +112,20 @@ namespace Frontend.ReceptionistForms
         private void EndDateDatepicker_onValueChanged(object sender, EventArgs e)
         {
            // availableRooms_Click(sender, e);
+        }
+
+        private void bunifuFlatButton1_Click(object sender, EventArgs e)
+        {
+            dynamic reservation = new ExpandoObject();
+            reservation.bookingId = searchbyIdTextbox.Text;
+
+            // call api for get Booking info by booking id
+            dynamic res = Service.GetReservation(reservation);
+
+            StartDateDatepicker.Value = TimeHandler.GetDateFromEpoch(res.startDate);
+            EndDateDatepicker.Value = TimeHandler.GetDateFromEpoch(res.endDate);
+            RoomTypeComboBox.Text = res.roomType;
+
         }
     }
 }

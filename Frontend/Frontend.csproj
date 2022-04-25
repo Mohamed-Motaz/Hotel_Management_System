@@ -281,6 +281,7 @@
     <Compile Include="ResidentForms\ResidentDashboard.Designer.cs">
       <DependentUpon>ResidentDashboard.cs</DependentUpon>
     </Compile>
+    <Compile Include="ResidentForms\ResidentInformation.cs" />
     <Compile Include="ResidentForms\ResidentLoginForm.cs">
       <SubType>Form</SubType>
     </Compile>

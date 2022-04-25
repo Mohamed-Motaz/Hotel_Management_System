@@ -24,16 +24,19 @@ namespace Frontend.ResidentForms
         }
         public void setUpDataGridView()
         {
-            ReservationsGV.ColumnCount = 7;
+            ReservationsGV.ColumnCount = 8;
             ReservationsGV.Columns[0].Name = "ID";
-            ReservationsGV.Columns[1].Name = "RoomID";
-            ReservationsGV.Columns[2].Name = "BoardID";
-            ReservationsGV.Columns[3].Name = "ResidentID";
-            ReservationsGV.Columns[4].Name = "Start Date";
-            ReservationsGV.Columns[5].Name = "End Date";
-            ReservationsGV.Columns[6].Name = "Total price";
+            ReservationsGV.Columns[1].Name = "RoomID"; 
+            ReservationsGV.Columns[2].Name = "Room Type";
+            ReservationsGV.Columns[3].Name = "Boarding Type"; 
+            ReservationsGV.Columns[4].Name = "ResidentID";
+            ReservationsGV.Columns[5].Name = "Start Date";
+            ReservationsGV.Columns[6].Name = "End Date";
+            ReservationsGV.Columns[7].Name = "Total price";
 
-            List<dynamic> reservations = Service.GetAllReservations();
+            dynamic obj = new ExpandoObject();
+            obj.residentId = ResidentInformation.residentId; // keep track of cuurent resident id
+            List<dynamic> reservations = Service.GetResidentReservations(obj);
 
             label1.Text = reservations.Count.ToString();
 
@@ -43,11 +46,12 @@ namespace Frontend.ResidentForms
                 DataGridViewRow row = (DataGridViewRow)ReservationsGV.Rows[0].Clone();
                 row.Cells[0].Value = res.id.ToString();
                 row.Cells[1].Value = res.roomId.ToString();
-                row.Cells[2].Value = res.boardingType.ToString();
-                row.Cells[3].Value = res.residentId.ToString();
-                row.Cells[4].Value = TimeHandler.GetDateFromEpoch(res.startDate);
-                row.Cells[5].Value = TimeHandler.GetDateFromEpoch(res.endDate);
-                row.Cells[6].Value = res.totalPrice.ToString();
+                row.Cells[2].Value = res.roomType.ToString();
+                row.Cells[3].Value = res.boardingType.ToString();
+                row.Cells[4].Value = res.residentId.ToString();
+                row.Cells[5].Value = TimeHandler.GetDateFromEpoch(res.startDate);
+                row.Cells[6].Value = TimeHandler.GetDateFromEpoch(res.endDate);
+                row.Cells[7].Value = res.totalPrice.ToString();
 
                 ReservationsGV.Rows.Add(row);
             }

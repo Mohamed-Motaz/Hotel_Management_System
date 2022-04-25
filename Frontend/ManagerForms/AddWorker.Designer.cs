@@ -36,7 +36,6 @@ namespace Frontend.Extras
             this.nameTextBox = new System.Windows.Forms.TextBox();
             this.phoneTextBox = new System.Windows.Forms.TextBox();
             this.emailTextBox = new System.Windows.Forms.TextBox();
-            this.incomeTypeTextBox = new System.Windows.Forms.TextBox();
             this.salaryTextBox = new System.Windows.Forms.TextBox();
             this.bunifuFlatButton1 = new Bunifu.Framework.UI.BunifuFlatButton();
             this.addResidentBtn = new Bunifu.Framework.UI.BunifuFlatButton();
@@ -51,6 +50,7 @@ namespace Frontend.Extras
             this.label1 = new System.Windows.Forms.Label();
             this.JobTitleComboBox = new System.Windows.Forms.ComboBox();
             this.isRoomServices = new System.Windows.Forms.CheckBox();
+            this.incomeTypeComboBox = new System.Windows.Forms.ComboBox();
             this.SuspendLayout();
             // 
             // bunifuSeparator43
@@ -108,15 +108,6 @@ namespace Frontend.Extras
             this.emailTextBox.Name = "emailTextBox";
             this.emailTextBox.Size = new System.Drawing.Size(299, 20);
             this.emailTextBox.TabIndex = 406;
-            // 
-            // incomeTypeTextBox
-            // 
-            this.incomeTypeTextBox.BackColor = System.Drawing.SystemColors.Control;
-            this.incomeTypeTextBox.Location = new System.Drawing.Point(282, 201);
-            this.incomeTypeTextBox.MaxLength = 20;
-            this.incomeTypeTextBox.Name = "incomeTypeTextBox";
-            this.incomeTypeTextBox.Size = new System.Drawing.Size(299, 20);
-            this.incomeTypeTextBox.TabIndex = 417;
             // 
             // salaryTextBox
             // 
@@ -316,7 +307,7 @@ namespace Frontend.Extras
             this.isRoomServices.AutoSize = true;
             this.isRoomServices.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold);
             this.isRoomServices.ForeColor = System.Drawing.Color.DimGray;
-            this.isRoomServices.Location = new System.Drawing.Point(624, 201);
+            this.isRoomServices.Location = new System.Drawing.Point(606, 341);
             this.isRoomServices.Name = "isRoomServices";
             this.isRoomServices.Size = new System.Drawing.Size(131, 24);
             this.isRoomServices.TabIndex = 510;
@@ -324,11 +315,23 @@ namespace Frontend.Extras
             this.isRoomServices.UseVisualStyleBackColor = true;
             this.isRoomServices.CheckedChanged += new System.EventHandler(this.IsRoomService);
             // 
+            // incomeTypeComboBox
+            // 
+            this.incomeTypeComboBox.BackColor = System.Drawing.SystemColors.Control;
+            this.incomeTypeComboBox.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.incomeTypeComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.incomeTypeComboBox.FormattingEnabled = true;
+            this.incomeTypeComboBox.Location = new System.Drawing.Point(283, 201);
+            this.incomeTypeComboBox.Name = "incomeTypeComboBox";
+            this.incomeTypeComboBox.Size = new System.Drawing.Size(298, 21);
+            this.incomeTypeComboBox.TabIndex = 511;
+            // 
             // AddWorker
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(821, 500);
+            this.Controls.Add(this.incomeTypeComboBox);
             this.Controls.Add(this.isRoomServices);
             this.Controls.Add(this.JobTitleComboBox);
             this.Controls.Add(this.label1);
@@ -342,7 +345,6 @@ namespace Frontend.Extras
             this.Controls.Add(this.label5);
             this.Controls.Add(this.bunifuFlatButton1);
             this.Controls.Add(this.addResidentBtn);
-            this.Controls.Add(this.incomeTypeTextBox);
             this.Controls.Add(this.salaryTextBox);
             this.Controls.Add(this.passwordTextBox);
             this.Controls.Add(this.ageTextBox);
@@ -365,7 +367,6 @@ namespace Frontend.Extras
         private System.Windows.Forms.TextBox nameTextBox;
         private System.Windows.Forms.TextBox phoneTextBox;
         private System.Windows.Forms.TextBox emailTextBox;
-        private System.Windows.Forms.TextBox incomeTypeTextBox;
         private System.Windows.Forms.TextBox salaryTextBox;
         private Bunifu.Framework.UI.BunifuFlatButton bunifuFlatButton1;
         private Bunifu.Framework.UI.BunifuFlatButton addResidentBtn;
@@ -380,5 +381,6 @@ namespace Frontend.Extras
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.ComboBox JobTitleComboBox;
         private System.Windows.Forms.CheckBox isRoomServices;
+        private System.Windows.Forms.ComboBox incomeTypeComboBox;
     }
 }

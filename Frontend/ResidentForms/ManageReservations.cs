@@ -35,5 +35,10 @@ namespace Frontend.ResidentForms
             EditOrDeleteReservation editOrDeleteReservation = new EditOrDeleteReservation();
             editOrDeleteReservation.Show();
         }
+
+        private void ManageReservations_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

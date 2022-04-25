@@ -145,6 +145,7 @@ namespace Frontend.ResidentForms
             this.Controls.Add(this.bunifuSeparator1);
             this.Name = "ManageReservations";
             this.Text = "ManageReservations";
+            this.Load += new System.EventHandler(this.ManageReservations_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

@@ -126,17 +126,14 @@ namespace Frontend.HttpService
 
         // Sign in 
 
-        public static bool SignIn(dynamic input)
+        public static string SignIn(dynamic input)
         {
 
             string json = JsonConvert.SerializeObject(input);
             HttpResponseMessage response = Post("api/main/signin", json);
             string responseStr = response.Content.ReadAsStringAsync().Result;
             dynamic obj = JsonConvert.DeserializeObject<ExpandoObject>(responseStr, converter);
-            if (obj.type != "Failed")
-                return true;
-            else
-                return false;
+            return obj.type;
         }
 
         public static dynamic DashBoard()
@@ -156,6 +153,23 @@ namespace Frontend.HttpService
             dynamic obj = JsonConvert.DeserializeObject<ExpandoObject>(responseStr, converter);
             List<dynamic> activeReservations = obj.lst;
             return activeReservations;
+        }
+        public static List<dynamic> GetResidentReservations(dynamic input)
+        {
+            string json = JsonConvert.SerializeObject(input);
+            HttpResponseMessage response = Post("api/reservation/getResidentBookings", json);
+            string responseStr = response.Content.ReadAsStringAsync().Result;
+            dynamic obj = JsonConvert.DeserializeObject<ExpandoObject>(responseStr, converter);
+            List<dynamic> Reservations = obj.lst;
+            return Reservations;
+        }
+        public static dynamic GetReservation(dynamic input)
+        {
+            string json = JsonConvert.SerializeObject(input);
+            HttpResponseMessage response = Post("api/reservation/get", json);
+            string responseStr = response.Content.ReadAsStringAsync().Result;
+            dynamic obj = JsonConvert.DeserializeObject<ExpandoObject>(responseStr, converter);
+            return obj;
         }
 
         public static List<dynamic> GetAllReservations()

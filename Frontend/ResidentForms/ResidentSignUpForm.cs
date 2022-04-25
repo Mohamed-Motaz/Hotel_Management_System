@@ -66,7 +66,7 @@ namespace Frontend
             resident.age = AgeTextBox.Text;
             resident.phoneNumber = PhoneNumberTextBox.Text;
             // validation
-            if (Validate())
+            if (Validate()) // try tp user built in validate
             {
                 // send to api addResident after validation
                 Service.AddResident(resident);
