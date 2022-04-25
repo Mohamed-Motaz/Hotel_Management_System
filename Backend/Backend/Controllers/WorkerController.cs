@@ -25,15 +25,15 @@ namespace Backend.Controllers
             AbstractWorker worker;
             if (obj.jobTitle == JobTitle.RoomService)
             {
-                worker = new RoomService(Convert.ToString(obj.username), Convert.ToInt32(obj.age), Convert.ToString(obj.email), Convert.ToString(obj.phoneNumber), Convert.ToInt32(obj.salary), Convert.ToString(obj.jobTitle), Convert.ToString(obj.incomeType));
+                worker = new RoomService(Convert.ToString(obj.userName), Convert.ToInt32(obj.age), Convert.ToString(obj.email), Convert.ToString(obj.phoneNumber), Convert.ToInt32(obj.salary), Convert.ToString(obj.jobTitle), Convert.ToString(obj.incomeType));
             }
             else if (obj.jobTitle == JobTitle.Receptionist)
             {
-                worker = new Receptionist(Convert.ToString(obj.username), Convert.ToInt32(obj.age), Convert.ToString(obj.email), Convert.ToString(obj.phoneNumber), Convert.ToInt32(obj.salary), Convert.ToString(obj.jobTitle), Convert.ToString(obj.incomeType), Convert.ToString(obj.password));
+                worker = new Receptionist(Convert.ToString(obj.userName), Convert.ToInt32(obj.age), Convert.ToString(obj.email), Convert.ToString(obj.phoneNumber), Convert.ToInt32(obj.salary), Convert.ToString(obj.jobTitle), Convert.ToString(obj.incomeType), Convert.ToString(obj.password));
             }
             else
             {
-                worker = new Manager(Convert.ToString(obj.username), Convert.ToInt32(obj.age), Convert.ToString(obj.email), Convert.ToString(obj.phoneNumber), Convert.ToInt32(obj.salary), Convert.ToString( obj.jobTitle), Convert.ToString(obj.incomeType), Convert.ToString(obj.password));
+                worker = new Manager(Convert.ToString(obj.userName), Convert.ToInt32(obj.age), Convert.ToString(obj.email), Convert.ToString(obj.phoneNumber), Convert.ToInt32(obj.salary), Convert.ToString( obj.jobTitle), Convert.ToString(obj.incomeType), Convert.ToString(obj.password));
             }
             Manager.addWorker(worker, Convert.ToString(obj.password));
             dynamic resp = new ExpandoObject();
@@ -47,15 +47,15 @@ namespace Backend.Controllers
             AbstractWorker worker;
             if (Convert.ToString(obj.jobTitle) == JobTitle.RoomService)
             {
-                worker = new RoomService(Convert.ToString(obj.username), Convert.ToInt32(obj.age), Convert.ToString(obj.email), Convert.ToString(obj.phoneNumber), Convert.ToInt32(obj.salary), Convert.ToString(obj.jobTitle), Convert.ToString(obj.incomeType));
+                worker = new RoomService(Convert.ToString(obj.userName), Convert.ToInt32(obj.age), Convert.ToString(obj.email), Convert.ToString(obj.phoneNumber), Convert.ToInt32(obj.salary), Convert.ToString(obj.jobTitle), Convert.ToString(obj.incomeType));
             }
             else if(Convert.ToString(obj.jobTitle) == JobTitle.Receptionist)
             {
-                worker = new Receptionist(Convert.ToString(obj.username), Convert.ToInt32(obj.age), Convert.ToString(obj.email), Convert.ToString(obj.phoneNumber), Convert.ToInt32(obj.salary), Convert.ToString(obj.jobTitle), Convert.ToString(obj.incomeType), Convert.ToString(obj.password));
+                worker = new Receptionist(Convert.ToString(obj.userName), Convert.ToInt32(obj.age), Convert.ToString(obj.email), Convert.ToString(obj.phoneNumber), Convert.ToInt32(obj.salary), Convert.ToString(obj.jobTitle), Convert.ToString(obj.incomeType), Convert.ToString(obj.password));
             }
             else
             {
-                worker = new Manager(Convert.ToString(obj.username), Convert.ToInt32(obj.age), Convert.ToString(obj.email), Convert.ToString(obj.phoneNumber), Convert.ToInt32(obj.salary), Convert.ToString(obj.jobTitle), Convert.ToString(obj.incomeType), Convert.ToString(obj.password));
+                worker = new Manager(Convert.ToString(obj.userName), Convert.ToInt32(obj.age), Convert.ToString(obj.email), Convert.ToString(obj.phoneNumber), Convert.ToInt32(obj.salary), Convert.ToString(obj.jobTitle), Convert.ToString(obj.incomeType), Convert.ToString(obj.password));
             }
             Manager.editWorker(worker, Convert.ToString(obj.password));
             dynamic resp = new ExpandoObject();

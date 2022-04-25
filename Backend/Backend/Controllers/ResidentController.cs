@@ -19,7 +19,7 @@ namespace Backend.Controllers
         [HttpPost]
         public dynamic add([FromBody] dynamic obj) //api/resident/add
         {
-            Resident resident = new Resident(Convert.ToString(obj.username), Convert.ToInt32(obj.age), Convert.ToString(obj.email), Convert.ToString(obj.phoneNumber), Convert.ToString(obj.password));
+            Resident resident = new Resident(Convert.ToString(obj.userName), Convert.ToInt32(obj.age), Convert.ToString(obj.email), Convert.ToString(obj.phoneNumber), Convert.ToString(obj.password));
             resident.AddResident(resident);
             dynamic resp = new ExpandoObject();
             resp.Success = true;
@@ -30,7 +30,7 @@ namespace Backend.Controllers
         [HttpPost]
         public dynamic edit([FromBody] dynamic obj) //api/resident/edit
         {
-            Resident resident = new Resident(Convert.ToString(obj.username), Convert.ToInt32(obj.age), Convert.ToString(obj.email), Convert.ToString(obj.phoneNumber), Convert.ToString(obj.password));
+            Resident resident = new Resident(Convert.ToString(obj.userName), Convert.ToInt32(obj.age), Convert.ToString(obj.email), Convert.ToString(obj.phoneNumber), Convert.ToString(obj.password));
             resident.EditResident(resident);
             dynamic resp = new ExpandoObject();
             resp.Success = true;
@@ -51,9 +51,10 @@ namespace Backend.Controllers
         [HttpPost]
         public dynamic get([FromBody] dynamic obj) //api/resident/get
         {
+           
             string json = JsonConvert.SerializeObject(Resident.getResident(Convert.ToInt32(obj.id)));
             dynamic resp = JsonConvert.DeserializeObject(json);
-            return resp;
+            return resp;          
         }
 
         [HttpPost]

@@ -51,7 +51,7 @@ namespace Backend.Models
                 AbstractWorker worker = workerIterator.getNext() as AbstractWorker;
                 if (worker.id == id)
                 {
-                    return worker;
+                    return (RoomService)worker;
                 }
             }
             for (Iterator workerIterator = Apphost.ListOfPrivilegedWorkers.GetIterator(); workerIterator.hasNext();)
@@ -59,6 +59,14 @@ namespace Backend.Models
                 AbstractPrivilegedWorker worker = workerIterator.getNext() as AbstractPrivilegedWorker;
                 if (worker.id == id)
                 {
+                    if(worker.jobTitle == JobTitle.Receptionist)
+                    {
+                        worker = (Receptionist)worker;
+                    }
+                    else
+                    {
+                        worker = (Manager)worker;
+                    }
                     return worker;
                 }
             }
