@@ -33,11 +33,12 @@ namespace Frontend.ManagerForms
 
             //TODO: api set worker to the api returend worker
             dynamic obj = new ExpandoObject();
-            obj.id = worker.id;
+            obj.id = Convert.ToInt32( searchbyIdTextbox.Text);
             dynamic work = Service.GetWorkerById(obj);
             nameTextBox.Text = work.userName.ToString();
             ageTextBox.Text = work.age.ToString();
             emailTextBox.Text = work.email.ToString();
+            jobTitleTextbox.Text = work.jobTitle.ToString();
             try
             {
                 if (isRoomService.Checked) { work.password = ""; }
@@ -68,10 +69,9 @@ namespace Frontend.ManagerForms
             obj.password = passwordTextBox.Text;
             obj.phoneNumber = phoneTextBox.Text;
             obj.salary = salaryTextBox.Text;
-            obj.jobTitle = salaryTextBox.Text;
             obj.incomeType = incomeTypeTextBox.Text;
-
-            Service.EditResident(obj);
+            obj.jobTitle = jobTitleTextbox.Text;
+            Service.EditWorker(obj);
 
             // and delete it
             clearBtn_Click(sender, e);
@@ -94,7 +94,7 @@ namespace Frontend.ManagerForms
             passwordTextBox.Text = "";
             phoneTextBox.Text = "";
             salaryTextBox.Text = "";
-            salaryTextBox.Text = "";
+            jobTitleTextbox.Text = "";
             incomeTypeTextBox.Text = "";
         }
 
