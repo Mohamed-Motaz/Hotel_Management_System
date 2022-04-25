@@ -23,7 +23,7 @@ namespace Frontend.Extras
         private void addResidentBtn_Click(object sender, EventArgs e)
         {
             dynamic resident = new ExpandoObject();
-            resident.username = nameTextBox.Text;
+            resident.userName = nameTextBox.Text;
             resident.age = ageTextBox.Text;
             resident.email = emailTextBox.Text;
             resident.password = passwordTextBox.Text;

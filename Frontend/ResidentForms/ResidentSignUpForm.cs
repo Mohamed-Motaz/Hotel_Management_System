@@ -60,7 +60,7 @@ namespace Frontend
         private void ResidentSignUpButton_Click(object sender, EventArgs e)
         {
             dynamic resident = new ExpandoObject();
-            resident.username = UserNameTextBox.Text;
+            resident.userName = UserNameTextBox.Text;
             resident.password = PasswordTextBox.Text;
             resident.email = EmailTextBox.Text;
             resident.age = AgeTextBox.Text;

@@ -30,7 +30,7 @@ namespace Frontend.Extras
         {
             dynamic worker = new ExpandoObject();
 
-            worker.username = nameTextBox.Text;
+            worker.userName = nameTextBox.Text;
             worker.age = ageTextBox.Text;
             worker.email = emailTextBox.Text;
             worker.phoneNumber = phoneTextBox.Text;
@@ -62,7 +62,7 @@ namespace Frontend.Extras
             {
                 worker.age = Convert.ToInt32(ageTextBox.Text);
                 worker.salary = Convert.ToDouble(salaryTextBox.Text);
-                worker.username = nameTextBox.Text;
+                worker.userName = nameTextBox.Text;
             }catch(Exception ex)
             {
                 // do Nothing

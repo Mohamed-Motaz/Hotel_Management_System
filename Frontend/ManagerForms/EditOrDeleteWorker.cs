@@ -56,7 +56,7 @@ namespace Frontend.ManagerForms
             //api takes all data and edit it
             dynamic obj = new ExpandoObject();
             obj.id = searchbyIdTextbox.Text;
-            obj.username = nameTextBox.Text;
+            obj.userName = nameTextBox.Text;
             obj.age = ageTextBox.Text;
             obj.email = emailTextBox.Text;
             obj.password = passwordTextBox.Text;
