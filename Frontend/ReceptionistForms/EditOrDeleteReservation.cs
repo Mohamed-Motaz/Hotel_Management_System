@@ -75,7 +75,7 @@ namespace Frontend.ReceptionistForms
             else
             {
                 dynamic obj = new ExpandoObject();
-                obj.id = ResidentIDTextBox.Text;
+                obj.id = roomText.Text;
                 Service.DeleteReservation(obj);
 
                 MessageBox.Show("Reservation has been deleted successfully!");

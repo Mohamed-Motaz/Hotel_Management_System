@@ -9,9 +9,9 @@ namespace Frontend.HttpService
     class TimeHandler
     {
 
-        public static DateTime GetDateFromEpoch(long epoch)
+        public static string GetDateFromEpoch(long epoch)
         {
-            return new DateTime(1970, 1, 1, 0, 0, 0, DateTimeKind.Local).AddSeconds(epoch);
+            return (new DateTime(1970, 1, 1, 0, 0, 0, DateTimeKind.Local).AddSeconds(epoch)).ToShortDateString();
         }
 
         public static long GetDateInEpoch(int day, int month, int year)

@@ -45,8 +45,8 @@ namespace Frontend.ResidentForms
                 row.Cells[1].Value = res.roomId.ToString();
                 row.Cells[2].Value = res.boardingType.ToString();
                 row.Cells[3].Value = res.residentId.ToString();
-                row.Cells[4].Value = TimeHandler.GetDateFromEpoch(res.startDate).ToString();
-                row.Cells[5].Value = TimeHandler.GetDateFromEpoch(res.endDate).ToString();
+                row.Cells[4].Value = TimeHandler.GetDateFromEpoch(res.startDate);
+                row.Cells[5].Value = TimeHandler.GetDateFromEpoch(res.endDate);
                 row.Cells[6].Value = res.totalPrice.ToString();
 
                 ReservationsGV.Rows.Add(row);
