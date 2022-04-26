@@ -71,8 +71,17 @@ namespace Frontend.ManagerForms
             obj.salary = salaryTextBox.Text;
             obj.incomeType = incomeTypeTextBox.Text;
             obj.jobTitle = jobTitleTextbox.Text;
-            Service.EditWorker(obj);
+            
+            dynamic resp = Service.EditWorker(obj);
 
+            if (resp.success == true)
+            {
+                MessageBox.Show("This worker has been edited successfuly");
+            }
+            else
+            {
+                MessageBox.Show("Cannot edit this worker");
+            }
             // and delete it
             clearBtn_Click(sender, e);
         }
@@ -82,7 +91,17 @@ namespace Frontend.ManagerForms
             dynamic obj = new ExpandoObject();
             obj.id = searchbyIdTextbox.Text;
 
-            Service.DeleteResident(obj);
+            
+            dynamic resp = Service.DeleteWorker(obj);
+
+            if (resp.success == true)
+            {
+                MessageBox.Show("This worker has been deleted successfuly");
+            }
+            else
+            {
+                MessageBox.Show("Cannot delete this worker");
+            }
         }
 
         private void clearBtn_Click(object sender, EventArgs e)

@@ -98,7 +98,7 @@ namespace Backend.Controllers
             modifiedBooking.boardingType = bookingObject.boardingType;
             modifiedBooking.totalPrice = bookingObject.totalPrice;
 
-            resp.booking = bookingObject;
+            resp.booking = modifiedBooking;
             resp.Success = !(bookingObject is null);
             return resp;
         }

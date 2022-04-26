@@ -62,7 +62,17 @@ namespace Frontend.ManagerForms
             obj.password = passwordTextBox.Text;
             obj.phoneNumber = phoneTextBox.Text;
 
-            Service.EditResident(obj);
+           
+            dynamic resp = Service.EditResident(obj);
+
+            if (resp.success == true)
+            {
+                MessageBox.Show("This resident has been edited successfuly");
+            }
+            else
+            {
+                MessageBox.Show("Cannot edit this resident");
+            }
 
             // and delete it
             clearBtn_Click(sender, e);
@@ -73,7 +83,17 @@ namespace Frontend.ManagerForms
             dynamic obj = new ExpandoObject();
             obj.id = searchbyIdTextbox.Text;
 
-            Service.DeleteResident(obj);
+            
+            dynamic resp = Service.DeleteResident(obj);
+
+            if (resp.success == true)
+            {
+                MessageBox.Show("This resident has been deleted successfuly");
+            }
+            else
+            {
+                MessageBox.Show("Cannot delete this resident");
+            }
         }
     }
 }

@@ -58,9 +58,17 @@ namespace Frontend.ReceptionistForms
                 // api call takes [ResidentID, RoomType, startDate, EndDate]
                 // returns[RoomID and TotalPrice] in case success reservation then add it to reservationsList
                 // else return failed reservation
-                Service.AddReservation(Reservation);
-                MessageBox.Show("Reservation has been added successfully!");
-                // MessageBox.Show();
+                
+                dynamic resp = Service.AddReservation(Reservation);
+                if (resp.success == true)
+                {
+                    MessageBox.Show("Reservation has been added successfully!");
+
+                }
+                else
+                {
+                    MessageBox.Show("Cannot add this reservation");
+                }
             }
             Clear();
         }
@@ -94,12 +102,12 @@ namespace Frontend.ReceptionistForms
 
         private void StartDateDatepicker_onValueChanged(object sender, EventArgs e)
         {
-            showAvailableRooms(sender, e);
+            //showAvailableRooms(sender, e);
         }
 
         private void EndDateDatepicker_onValueChanged(object sender, EventArgs e)
         {
-            showAvailableRooms(sender, e);
+            //showAvailableRooms(sender, e);
         }
     }
 }

@@ -23,7 +23,15 @@ namespace Frontend.ReceptionistForms
             // send to api room id and make it avaliable
             dynamic obj = new ExpandoObject();
             obj.roomId = RoomIDTextBox.Text;
-            Service.Checkout(obj);
+            dynamic resp = Service.Checkout(obj);
+            if (resp.success = true)
+            {
+                MessageBox.Show("Checkout has been done");
+            }
+            else
+            {
+                MessageBox.Show("Cannot finish checkout process");
+            }
         }
     }
 }

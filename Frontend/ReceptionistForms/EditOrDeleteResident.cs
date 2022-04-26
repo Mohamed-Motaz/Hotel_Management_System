@@ -25,30 +25,7 @@ namespace Frontend.ReceptionistForms
             resident = new ExpandoObject();
         }
 
-        private void editWorkerBtn_Click(object sender, EventArgs e)
-        {
-            //api takes all data and edit it
-            dynamic obj = new ExpandoObject();
-            obj.id = searchbyIdTextbox.Text;
-            obj.userName = nameTextBox.Text;
-            obj.age = ageTextBox.Text;
-            obj.email = emailTextBox.Text;
-            obj.password = passwordTextBox.Text;
-            obj.phoneNumber = phoneTextBox.Text;
-            
-
-            Service.EditResident(obj);
-            // and delete it
-            clearBtn_Click(sender, e);
-        }
-
-        private void deleteWorkerBtn_Click(object sender, EventArgs e)
-        {
-            dynamic obj = new ExpandoObject();
-            obj.id = searchbyIdTextbox.Text;
-
-            Service.DeleteResident(obj);
-        }
+      
 
         private void clearBtn_Click(object sender, EventArgs e)
         {
@@ -85,7 +62,15 @@ namespace Frontend.ReceptionistForms
             obj.password = passwordTextBox.Text;
             obj.phoneNumber = phoneTextBox.Text;
 
-            Service.EditResident(obj);
+            dynamic resp = Service.EditResident(obj);
+            if (resp.success == true)
+            {
+                MessageBox.Show("This resident has been edited");
+            }
+            else
+            {
+                MessageBox.Show("Cannot edit this resident");
+            }
 
             // and delete it
             clearBtn_Click(sender, e);
@@ -98,7 +83,15 @@ namespace Frontend.ReceptionistForms
             dynamic obj = new ExpandoObject();
             obj.id = searchbyIdTextbox.Text;
 
-            Service.DeleteResident(obj);
+            dynamic resp =  Service.DeleteResident(obj);
+            if (resp.success == true)
+            {
+                MessageBox.Show("This resident has been deleted");
+            }
+            else
+            {
+                MessageBox.Show("Cannot delete this resident");
+            }
             clearBtn_Click(sender, e);
         }
     }

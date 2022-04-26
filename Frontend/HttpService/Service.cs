@@ -63,20 +63,29 @@ namespace Frontend.HttpService
                 return true;
         }
     
-        public static void EditResident(dynamic input)
+        public static dynamic EditResident(dynamic input)
         {
             string json = JsonConvert.SerializeObject(input);
             HttpResponseMessage response = Post("api/resident/edit", json);
+            string responseStr = response.Content.ReadAsStringAsync().Result;
+            dynamic obj = JsonConvert.DeserializeObject<ExpandoObject>(responseStr, converter);
+            return obj;
         }
-        public static void AddResident(dynamic input)
+        public static dynamic AddResident(dynamic input)
         {
             string json = JsonConvert.SerializeObject(input);
             HttpResponseMessage response = Post("api/resident/add", json);
+            string responseStr = response.Content.ReadAsStringAsync().Result;
+            dynamic obj = JsonConvert.DeserializeObject<ExpandoObject>(responseStr, converter);
+            return obj;
         }
-        public static void DeleteResident(dynamic input)
+        public static dynamic DeleteResident(dynamic input)
         {
             string json = JsonConvert.SerializeObject(input);
             HttpResponseMessage response = Post("api/resident/delete", json);
+            string responseStr = response.Content.ReadAsStringAsync().Result;
+            dynamic obj = JsonConvert.DeserializeObject<ExpandoObject>(responseStr, converter);
+            return obj;
         }
         public static List<dynamic> GetAllResidents()
         {
@@ -107,21 +116,30 @@ namespace Frontend.HttpService
             List<dynamic> workers = obj.lst; 
             return workers;
         }
-        public static void DeleteWorker(dynamic input)
+        public static dynamic DeleteWorker(dynamic input)
         {
             string json = JsonConvert.SerializeObject(input);
             HttpResponseMessage response = Post("api/worker/delete", json);
+            string responseStr = response.Content.ReadAsStringAsync().Result;
+            dynamic obj = JsonConvert.DeserializeObject<ExpandoObject>(responseStr, converter);
+            return obj;
         }
-        public static void EditWorker(dynamic input)
+        public static dynamic EditWorker(dynamic input)
         {
             string json = JsonConvert.SerializeObject(input);
             HttpResponseMessage response = Post("api/worker/edit", json);
+            string responseStr = response.Content.ReadAsStringAsync().Result;
+            dynamic obj = JsonConvert.DeserializeObject<ExpandoObject>(responseStr, converter);
+            return obj;
         }
 
-        public static void AddWorker(dynamic input)
+        public static dynamic AddWorker(dynamic input)
         {
             string json = JsonConvert.SerializeObject(input);
             HttpResponseMessage response = Post("api/worker/add", json);
+            string responseStr = response.Content.ReadAsStringAsync().Result;
+            dynamic obj = JsonConvert.DeserializeObject<ExpandoObject>(responseStr, converter);
+            return obj;
         }
 
         // Sign in 
@@ -182,10 +200,13 @@ namespace Frontend.HttpService
             List<dynamic> Reservations = obj.lst;
             return Reservations;
         }
-        public static void AddReservation(dynamic input)
+        public static dynamic AddReservation(dynamic input)
         {
             string json = JsonConvert.SerializeObject(input);
             HttpResponseMessage response = Post("api/reservation/add", json);
+            string responseStr = response.Content.ReadAsStringAsync().Result;
+            dynamic obj = JsonConvert.DeserializeObject<ExpandoObject>(responseStr, converter);
+            return obj;
         }
         public static dynamic DeleteReservation(dynamic input)
         {
@@ -206,10 +227,13 @@ namespace Frontend.HttpService
             
         }
 
-        public static void Checkout(dynamic input)
+        public static dynamic Checkout(dynamic input)
         {
             string json = JsonConvert.SerializeObject(input);
             HttpResponseMessage response = Post("api/reservation/checkout", json);
+            string responseStr = response.Content.ReadAsStringAsync().Result;
+            dynamic obj = JsonConvert.DeserializeObject<ExpandoObject>(responseStr, converter);
+            return obj;
         }
         
         //Rooms

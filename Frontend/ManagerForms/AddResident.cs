@@ -31,8 +31,17 @@ namespace Frontend.Extras
 
 
             //send to api addResident
-            Service.AddResident(resident);
+            dynamic resp = Service.AddResident(resident);
             
+            if(resp.success == true)
+            {
+                MessageBox.Show("New resident has been added");
+            }
+            else
+            {
+                MessageBox.Show("Cannot add this resident");
+            }
+
             clearBtn_Click(sender,e);
 
         }
