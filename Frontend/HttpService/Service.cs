@@ -126,14 +126,14 @@ namespace Frontend.HttpService
 
         // Sign in 
 
-        public static string SignIn(dynamic input)
+        public static dynamic SignIn(dynamic input)
         {
 
             string json = JsonConvert.SerializeObject(input);
             HttpResponseMessage response = Post("api/main/signin", json);
             string responseStr = response.Content.ReadAsStringAsync().Result;
             dynamic obj = JsonConvert.DeserializeObject<ExpandoObject>(responseStr, converter);
-            return obj.type;
+            return obj;
         }
 
         public static dynamic DashBoard()

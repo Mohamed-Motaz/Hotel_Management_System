@@ -119,4 +119,3 @@ D:\Hotel_Management_System\Backend\Backend\obj\Debug\Backend.csproj.CoreCompileI
 D:\Hotel_Management_System\Backend\Backend\obj\Debug\Backend.csproj.CopyComplete
 D:\Hotel_Management_System\Backend\Backend\obj\Debug\Backend.dll
 D:\Hotel_Management_System\Backend\Backend\obj\Debug\Backend.pdb
-D:\Hotel_Management_System\Backend\Backend\obj\Debug\Backend.csproj.AssemblyReference.cache
