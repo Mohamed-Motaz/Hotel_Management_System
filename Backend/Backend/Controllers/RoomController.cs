@@ -20,7 +20,7 @@ namespace Backend.Controllers
         {
             dynamic resp = new ExpandoObject();
             resp.lst = new List<object>(RoomServices.GetAvailableRooms());
-            
+            resp.Success = true;
             return resp;
         }
 
@@ -29,7 +29,7 @@ namespace Backend.Controllers
         {
             dynamic resp = new ExpandoObject();
             resp.lst = new List<object>(RoomServices.GetReservedRooms());
-            
+            resp.Success = true;
             return resp;
         }
 
@@ -38,7 +38,7 @@ namespace Backend.Controllers
         {
             dynamic resp = new ExpandoObject();
             resp.lst = new List<object>(RoomServices.GetAllRooms());
-            
+            resp.Success = true;
             return resp;
         }
 

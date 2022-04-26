@@ -20,6 +20,8 @@ namespace Backend.Controllers
         {
             dynamic resp = new ExpandoObject();
             resp.Type = UserAuthenticationServices.Signin(Convert.ToString(obj.userName), Convert.ToString(obj.password), Convert.ToBoolean(obj.worker));
+            resp.Success = (resp.Type != "Failed");
+            if(resp.Type == "Resident") resp.id = Resident.getResidentByUserName(Convert.ToString(obj.userName));
             return resp;
         }
 
