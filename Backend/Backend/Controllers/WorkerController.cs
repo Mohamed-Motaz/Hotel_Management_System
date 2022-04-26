@@ -74,6 +74,7 @@ namespace Backend.Controllers
         {
             string json = JsonConvert.SerializeObject(Manager.getWorker(Convert.ToInt32(obj.id)));
             dynamic resp = JsonConvert.DeserializeObject(json);
+            resp.Success = true;
             return resp;
         }
 
@@ -82,6 +83,7 @@ namespace Backend.Controllers
         {
             dynamic resp = new ExpandoObject();
             resp.lst = new List<object>(Manager.viewAllWorkers());
+            resp.Success = true;
             return resp;
         }
 

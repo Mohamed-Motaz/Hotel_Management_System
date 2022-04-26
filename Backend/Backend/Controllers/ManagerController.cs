@@ -27,7 +27,7 @@ namespace Backend.Controllers
             resp.weeklyIncome = Manager.getIncome(Duration.Weekly);
             resp.monthlyIncome = Manager.getIncome(Duration.Monthly);
             resp.yearlyIncome = Manager.getIncome(Duration.Yearly);
-            
+            resp.Success = true;
             return resp;
         }
 
@@ -38,7 +38,7 @@ namespace Backend.Controllers
             resp.weeklyIncome = Manager.getIncome(Duration.Weekly);
             resp.monthlyIncome = Manager.getIncome(Duration.Monthly);
             resp.yearlyIncome = Manager.getIncome(Duration.Yearly);
-            
+            resp.Success = true;
             return resp;
         }
 

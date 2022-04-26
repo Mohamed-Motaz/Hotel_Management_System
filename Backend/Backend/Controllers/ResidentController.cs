@@ -49,6 +49,7 @@ namespace Backend.Controllers
            
             string json = JsonConvert.SerializeObject(Resident.getResident(Convert.ToInt32(obj.id)));
             dynamic resp = JsonConvert.DeserializeObject(json);
+            resp.Success = true;
             return resp;          
         }
 
@@ -57,7 +58,7 @@ namespace Backend.Controllers
         {
             dynamic resp = new ExpandoObject();
             resp.lst = new List<object>(Manager.viewAllResidents());
-            
+            resp.Success = true;
             return resp;
         }
 

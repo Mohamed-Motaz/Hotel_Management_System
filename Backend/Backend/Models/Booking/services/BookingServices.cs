@@ -14,35 +14,41 @@ public static class BookingServices
         return (room.PricePerNight + board.price) * TimeHandler.GetNumberOfDays(startDate, endDate);
     }
    
-    public static double MakeBooking(RoomAndBoarding bookingDetails, long startDate, long endDate, int residentId)
+    public static BookingInformation MakeBooking(RoomAndBoarding bookingDetails, long startDate, long endDate, int residentId)
     {
         Room room = RoomFactory.GetRoom(bookingDetails.roomType, startDate, endDate);
         BoardingType board = BoardingTypesCache.GetBoardingType(bookingDetails.boardingType);
         BookingInformation bookingInformation = new BookingInformation(room, board, residentId, startDate, endDate);
         Apphost.ListOfBookingInformation.list.Add(bookingInformation);
-        return bookingInformation.totalPrice;
+        return bookingInformation;
     }
 
-    public static double EditBooking(BookingInformation editedBooking)
+    public static BookingInformation EditBooking(int oldId,BookingInformation booking)
     {
-        BookingInformation oldBooking = null;
         for (Iterator bookingIterator = Apphost.ListOfBookingInformation.GetIterator(); bookingIterator.hasNext();)
         {
-            BookingInformation booking = bookingIterator.getNext() as BookingInformation;
-            if (booking.id == editedBooking.id)
-                oldBooking = booking;
-            
-        }
+            BookingInformation oldBooking = bookingIterator.getNext() as BookingInformation;
+            if (oldBooking.id == oldId)
+            {
+                oldBooking.roomId = booking.roomId;
+                oldBooking.startDate = booking.startDate;
+                oldBooking.endDate = booking.endDate;
+                oldBooking.boardingType = booking.boardingType;
+                if (oldBooking.startDate < TimeHandler.GetTodayInEpoch())
+                {
+                    double oldPrice = GetBookingPrice(BoardingTypesCache.GetBoardingType(oldBooking.boardingType), Room.getRoomById(oldBooking.roomId), oldBooking.startDate, TimeHandler.GetTodayInEpoch());
+                    double newPrice = GetBookingPrice(BoardingTypesCache.GetBoardingType(booking.boardingType), Room.getRoomById(booking.roomId), TimeHandler.GetTodayInEpoch(), booking.endDate);
+                    oldBooking.totalPrice = newPrice + oldPrice;
+                }
+                else
+                {
+                    oldBooking.totalPrice = booking.totalPrice;
 
-        if (oldBooking.startDate < TimeHandler.GetTodayInEpoch())  
-        {
-            double oldPrice = GetBookingPrice(BoardingTypesCache.GetBoardingType(oldBooking.boardingType), Room.getRoomById(oldBooking.roomId), oldBooking.startDate, TimeHandler.GetTodayInEpoch());
-            double newPrice = GetBookingPrice(BoardingTypesCache.GetBoardingType(editedBooking.boardingType), Room.getRoomById(editedBooking.roomId), TimeHandler.GetTodayInEpoch(), editedBooking.endDate);
-            editedBooking.totalPrice = newPrice + oldPrice;
+                }
+                return oldBooking;
+            }      
         }
-        Apphost.ListOfBookingInformation.list.Remove(oldBooking);
-        Apphost.ListOfBookingInformation.list.Add(editedBooking);
-        return editedBooking.totalPrice;
+        return null;
     }
 
     public static List<object> GetBookingInformations(int residentId)
@@ -58,6 +64,20 @@ public static class BookingServices
             }
         }
         return bookingInformations;
+    }
+
+    public static BookingInformation GetBooking(int id)
+    {
+
+        for (Iterator bookingIterator = Apphost.ListOfBookingInformation.GetIterator(); bookingIterator.hasNext();)
+        {
+            BookingInformation booking = bookingIterator.getNext() as BookingInformation;
+            if (booking.id == id)
+            {
+                return booking;
+            }
+        }
+        return null;
     }
 
     public static List<object> GetActiveBookingInformation()

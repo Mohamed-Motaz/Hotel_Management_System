@@ -52,6 +52,19 @@ namespace Backend.Models
             return null;
         }
 
+        public static int getResidentByUserName(string userName)
+        {
+            for (Iterator ResidentsIterator = Apphost.ListOfResidents.GetIterator(); ResidentsIterator.hasNext();)
+            {
+                Resident resident = ResidentsIterator.getNext() as Resident;
+                if (userName == resident.userName)
+                {
+                    return resident.id;
+                }
+            }
+            return -1;
+        }
+
 
         public static bool deleteResident(int id)
         {
