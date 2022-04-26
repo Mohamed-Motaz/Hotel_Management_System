@@ -19,7 +19,7 @@ namespace Backend.Models
                 if (booking.roomId == roomId)
                 {
                     booking.endDate = TimeHandler.GetDateInEpoch(DateTime.Today.Day, DateTime.Today.Month, DateTime.Today.Year);
-                    BookingServices.EditBooking(booking);
+                    BookingServices.EditBooking(booking.id,booking);
                     return booking.totalPrice;
                 }
             }

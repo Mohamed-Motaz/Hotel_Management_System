@@ -133,7 +133,7 @@ namespace Backend.Controllers
         public dynamic getActive() //api/reservation/getActive
         {
             dynamic resp = new ExpandoObject();
-            List<object> bookingList = new List<object>(BookingServices.GetBookingInformations(Convert.ToInt32(obj.residentId)));
+            List<object> bookingList = new List<object>(BookingServices.GetActiveBookingInformation());
             List<object> modifiedBookingList = new List<object>();
             foreach (object booking in bookingList)
             {
@@ -158,7 +158,7 @@ namespace Backend.Controllers
         public dynamic getAll() //api/reservation/getAll
         {
             dynamic resp = new ExpandoObject();
-            List<object> bookingList = new List<object>(BookingServices.GetBookingInformations(Convert.ToInt32(obj.residentId)));
+            List<object> bookingList = new List<object>(BookingServices.GetAllBookingInformation());
             List<object> modifiedBookingList = new List<object>();
             foreach (object booking in bookingList)
             {
