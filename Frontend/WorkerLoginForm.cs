@@ -37,7 +37,8 @@ namespace Frontend
             obj.userName = txtUser.Text;
             obj.password = txtPass.Text;
             obj.worker = true;
-            return Service.SignIn(obj);
+            dynamic resp = Service.SignIn(obj);
+            return resp.type;
         }
 
         private void btnLogin_Click(object sender, EventArgs e)

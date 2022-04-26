@@ -8,7 +8,7 @@ namespace Frontend.ResidentForms
 {
     class ResidentInformation
     {
-        public static int residentId = 4;
+        public static long residentId = 4;
 
     }
 }

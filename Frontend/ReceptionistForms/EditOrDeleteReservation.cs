@@ -32,27 +32,47 @@ namespace Frontend.ReceptionistForms
         {
             dynamic Reservation = new ExpandoObject();
             Reservation.residentId = ResidentInformation.residentId; // the keep tracked one
-            //Reservation.roomId = roomText.Text;
-     
-            string types = RoomTypeComboBox.GetItemText(RoomTypeComboBox.SelectedItem);
-            string[] list = types.Split('/');
-            Reservation.roomType = list[0];
-            Reservation.boardingType = list[1];
+            Reservation.id = Convert.ToInt32( searchbyIdTextbox.Text) ;
+            if (!(RoomTypeComboBox.SelectedItem is null))
+            {
+                string types = RoomTypeComboBox.GetItemText(RoomTypeComboBox.SelectedItem);
+                string[] list = types.Split('/');
+                Reservation.roomType = list[0];
+                Reservation.boardingType = list[1];
+            }
+            else
+            {
+                Reservation.roomType = "";
+                Reservation.boardingType = "" ;
+            }
             DateTime dt = Convert.ToDateTime(StartDateDatepicker.Value);
             Reservation.startDate = TimeHandler.GetDateInEpoch(dt.Day, dt.Month, dt.Year);
 
             dt = Convert.ToDateTime(EndDateDatepicker.Value);
             Reservation.endDate = TimeHandler.GetDateInEpoch(dt.Day, dt.Month, dt.Year);
-
-            if ((EndDateDatepicker.Value < StartDateDatepicker.Value))
+            long currentDate = Convert.ToInt64(TimeHandler.GetDateInEpoch(DateTime.Now.Day, DateTime.Now.Month, DateTime.Now.Year));
+            if(Reservation.startDate <   currentDate )
+            {
+                MessageBox.Show("Please enter a valid start date");
+            }
+            else if ((EndDateDatepicker.Value < StartDateDatepicker.Value))
                 MessageBox.Show("Please Enter a valid end date");
             else
             {
-                Service.EditReservation(Reservation);
+                dynamic response = Service.EditReservation(Reservation);
                 // api takes [ ResidentID with new( RoomType, startDate, EndDate) ]
                 // and delete reservation of ResidentID 
                 // returns bool 1 -> success deleteReservation or 0-> fail deleteReservation
-                MessageBox.Show("Reservation has been edited successfully!");
+                if (response.success == true)
+                {
+                    MessageBox.Show("Reservation has been edied successfully!\n " +
+                        "Total Price =  " + response.totalPrice + "\n" + 
+                         "Room ID = " + response.roomId  );
+                }
+                else
+                {
+                    MessageBox.Show("Room type cannot be edited");
+                }
             }
             Clear();
         }
@@ -72,8 +92,13 @@ namespace Frontend.ReceptionistForms
             
                 dynamic obj = new ExpandoObject();
                 obj.id = searchbyIdTextbox.Text;
-                Service.DeleteReservation(obj);
-                MessageBox.Show("Reservation has been deleted successfully!");
+               dynamic response = Service.DeleteReservation(obj);
+                if(response.success == true)
+                    MessageBox.Show("Reservation has been deleted successfully!");
+                else
+                {
+                    MessageBox.Show("Reservation cannot be deleted!");
+                }
            
             Clear();
         }
@@ -117,14 +142,14 @@ namespace Frontend.ReceptionistForms
         private void bunifuFlatButton1_Click(object sender, EventArgs e)
         {
             dynamic reservation = new ExpandoObject();
-            reservation.bookingId = searchbyIdTextbox.Text;
+            reservation.id = searchbyIdTextbox.Text;
 
             // call api for get Booking info by booking id
             dynamic res = Service.GetReservation(reservation);
 
-            StartDateDatepicker.Value = TimeHandler.GetDateFromEpoch(res.startDate);
-            EndDateDatepicker.Value = TimeHandler.GetDateFromEpoch(res.endDate);
-            RoomTypeComboBox.Text = res.roomType;
+            StartDateDatepicker.Value = Convert.ToDateTime( TimeHandler.GetDateFromEpoch(res.booking.startDate));
+            EndDateDatepicker.Value = Convert.ToDateTime( TimeHandler.GetDateFromEpoch(res.booking.endDate) );
+            RoomTypeComboBox.Text =  Convert.ToString( res.booking.roomType) + "/" + Convert.ToString( res.booking.boardingType);
 
         }
     }

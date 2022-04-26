@@ -126,14 +126,14 @@ namespace Frontend.HttpService
 
         // Sign in 
 
-        public static string SignIn(dynamic input)
+        public static dynamic SignIn(dynamic input)
         {
 
             string json = JsonConvert.SerializeObject(input);
-            HttpResponseMessage response = Post("api/main/signin", json);
+            HttpResponseMessage response = Post("api/main/signIn", json);
             string responseStr = response.Content.ReadAsStringAsync().Result;
             dynamic obj = JsonConvert.DeserializeObject<ExpandoObject>(responseStr, converter);
-            return obj.type;
+            return obj;
         }
 
         public static dynamic DashBoard()
@@ -172,6 +172,8 @@ namespace Frontend.HttpService
             return obj;
         }
 
+
+
         public static List<dynamic> GetAllReservations()
         {
             HttpResponseMessage response = Post("api/reservation/getAll", "");
@@ -185,22 +187,22 @@ namespace Frontend.HttpService
             string json = JsonConvert.SerializeObject(input);
             HttpResponseMessage response = Post("api/reservation/add", json);
         }
-        public static void DeleteReservation(dynamic input)
+        public static dynamic DeleteReservation(dynamic input)
         {
             string json = JsonConvert.SerializeObject(input);
             HttpResponseMessage response = Post("api/reservation/delete", json);
-        }
-
-        public static bool EditReservation(dynamic input)
-        {
-            string json = JsonConvert.SerializeObject(input);
-            HttpResponseMessage response = Post("api/reservation/Edit", json);
             string responseStr = response.Content.ReadAsStringAsync().Result;
             dynamic obj = JsonConvert.DeserializeObject<ExpandoObject>(responseStr, converter);
-            if (obj.totalPrice is null)
-                return false;
-            else
-                return true;
+            return obj;
+        }
+
+        public static dynamic EditReservation(dynamic input)
+        {
+            string json = JsonConvert.SerializeObject(input);
+            HttpResponseMessage response = Post("api/reservation/edit", json);
+            string responseStr = response.Content.ReadAsStringAsync().Result;
+            dynamic obj = JsonConvert.DeserializeObject<ExpandoObject>(responseStr, converter);
+            return obj;
             
         }
 

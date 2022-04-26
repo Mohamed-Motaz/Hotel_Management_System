@@ -70,6 +70,7 @@ namespace Frontend
             {
                 // send to api addResident after validation
                 Service.AddResident(resident);
+             //   ResidentInformation.residentId = 1;
                 MainResidentForm residentForm = new MainResidentForm();
                 residentForm.Show();
             }

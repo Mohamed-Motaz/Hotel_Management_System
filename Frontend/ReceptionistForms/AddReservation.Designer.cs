@@ -33,13 +33,11 @@ namespace Frontend.ReceptionistForms
             this.ClearBtn = new Bunifu.Framework.UI.BunifuFlatButton();
             this.SaveButton = new Bunifu.Framework.UI.BunifuFlatButton();
             this.bunifuSeparator43 = new Bunifu.Framework.UI.BunifuSeparator();
-            this.label1 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label24 = new System.Windows.Forms.Label();
             this.dateTimePicker2 = new System.Windows.Forms.DateTimePicker();
             this.StartDateDatepicker = new Bunifu.Framework.UI.BunifuDatepicker();
             this.RoomTypeComboBox = new System.Windows.Forms.ComboBox();
-            this.ResidentIDTextBox = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.EndDateDatepicker = new Bunifu.Framework.UI.BunifuDatepicker();
             this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
@@ -129,17 +127,6 @@ namespace Frontend.ReceptionistForms
             this.bunifuSeparator43.Transparency = 255;
             this.bunifuSeparator43.Vertical = false;
             // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold);
-            this.label1.ForeColor = System.Drawing.Color.DimGray;
-            this.label1.Location = new System.Drawing.Point(257, 57);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(101, 21);
-            this.label1.TabIndex = 495;
-            this.label1.Text = "Resident ID:";
-            // 
             // label4
             // 
             this.label4.AutoSize = true;
@@ -194,15 +181,6 @@ namespace Frontend.ReceptionistForms
             this.RoomTypeComboBox.Name = "RoomTypeComboBox";
             this.RoomTypeComboBox.Size = new System.Drawing.Size(284, 21);
             this.RoomTypeComboBox.TabIndex = 500;
-            // 
-            // ResidentIDTextBox
-            // 
-            this.ResidentIDTextBox.BackColor = System.Drawing.SystemColors.Control;
-            this.ResidentIDTextBox.Location = new System.Drawing.Point(358, 57);
-            this.ResidentIDTextBox.MaxLength = 20;
-            this.ResidentIDTextBox.Name = "ResidentIDTextBox";
-            this.ResidentIDTextBox.Size = new System.Drawing.Size(231, 20);
-            this.ResidentIDTextBox.TabIndex = 501;
             // 
             // label3
             // 
@@ -293,10 +271,8 @@ namespace Frontend.ReceptionistForms
             this.Controls.Add(this.label3);
             this.Controls.Add(this.EndDateDatepicker);
             this.Controls.Add(this.dateTimePicker1);
-            this.Controls.Add(this.ResidentIDTextBox);
             this.Controls.Add(this.RoomTypeComboBox);
             this.Controls.Add(this.label4);
-            this.Controls.Add(this.label1);
             this.Controls.Add(this.label24);
             this.Controls.Add(this.StartDateDatepicker);
             this.Controls.Add(this.dateTimePicker2);
@@ -316,13 +292,11 @@ namespace Frontend.ReceptionistForms
         private Bunifu.Framework.UI.BunifuFlatButton ClearBtn;
         private Bunifu.Framework.UI.BunifuFlatButton SaveButton;
         private Bunifu.Framework.UI.BunifuSeparator bunifuSeparator43;
-        private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label24;
         private System.Windows.Forms.DateTimePicker dateTimePicker2;
         private Bunifu.Framework.UI.BunifuDatepicker StartDateDatepicker;
         private System.Windows.Forms.ComboBox RoomTypeComboBox;
-        private System.Windows.Forms.TextBox ResidentIDTextBox;
         private System.Windows.Forms.Label label3;
         private Bunifu.Framework.UI.BunifuDatepicker EndDateDatepicker;
         private System.Windows.Forms.DateTimePicker dateTimePicker1;

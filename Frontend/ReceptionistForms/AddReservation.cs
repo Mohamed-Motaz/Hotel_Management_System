@@ -9,6 +9,8 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using Frontend.HttpService;
+using Frontend.ResidentForms;
+
 namespace Frontend.ReceptionistForms
 {
     public partial class AddReservation : Form
@@ -26,7 +28,6 @@ namespace Frontend.ReceptionistForms
         private void Clear()
         {
             RoomTypeComboBox.SelectedItem = "";
-            ResidentIDTextBox.Text = "";
             StartDateDatepicker.Value = DateTime.Today;
             EndDateDatepicker.Value = DateTime.Today.AddDays(1);
         }
@@ -37,7 +38,7 @@ namespace Frontend.ReceptionistForms
         private void SaveButton_Click(object sender, EventArgs e)
         {
             dynamic Reservation = new ExpandoObject();
-            Reservation.residentId = ResidentIDTextBox.Text;
+            Reservation.residentId = ResidentInformation.residentId;
             //Reservation.roomType = RoomTypeComboBox.GetItemText(RoomTypeComboBox.SelectedItem);
             string types = RoomTypeComboBox.GetItemText(RoomTypeComboBox.SelectedItem);
             string[] list = types.Split('/');
@@ -52,8 +53,6 @@ namespace Frontend.ReceptionistForms
 
             if ((EndDateDatepicker.Value < StartDateDatepicker.Value))
                 MessageBox.Show("Please Enter a valid end date");
-            else if (!CheckForResidentID(ResidentIDTextBox.Text))
-                MessageBox.Show("Please Enter a valid resident id");
             else
             {
                 // api call takes [ResidentID, RoomType, startDate, EndDate]
