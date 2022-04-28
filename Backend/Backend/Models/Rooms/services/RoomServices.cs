@@ -39,12 +39,14 @@ namespace Backend.Models
 
         public static List<object> GetReservedRooms()
         {
+            TimeHandler timeHandler = TimeHandler.getInstance();
+
             List<object> reservedRooms = new List<object>();
 
             for (Iterator roomIterator = Apphost.ListOfRooms.GetIterator(); roomIterator.hasNext();)
             {
                 Room room = roomIterator.getNext() as Room;
-                if (!CheckIfRoomAvailable(room, TimeHandler.GetTodayInEpoch(), TimeHandler.GetTodayInEpoch()))
+                if (!CheckIfRoomAvailable(room, timeHandler.GetTodayInEpoch(), timeHandler.GetTodayInEpoch()))
                 {
                     reservedRooms.Add(room);
                 }
@@ -54,13 +56,14 @@ namespace Backend.Models
 
         public static List<object> GetAvailableRooms()
         {
+            TimeHandler timeHandler = TimeHandler.getInstance();
             List<object> availableRooms = new List<object>();
 
             for (Iterator roomIterator = Apphost.ListOfRooms.GetIterator(); roomIterator.hasNext();)
             {
                 Room room = roomIterator.getNext() as Room;
 
-                if (CheckIfRoomAvailable(room, TimeHandler.GetTodayInEpoch(), TimeHandler.GetTodayInEpoch()))
+                if (CheckIfRoomAvailable(room, timeHandler.GetTodayInEpoch(), timeHandler.GetTodayInEpoch()))
                 {
                     availableRooms.Add(room);
                 }

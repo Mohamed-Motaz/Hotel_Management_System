@@ -137,18 +137,18 @@ namespace Backend.Models
         {
             long targetedDuration;
             double totalIncome = 0;
-            
-            if(duration == Duration.Weekly)
+            TimeHandler timeHandler = TimeHandler.getInstance();
+            if (duration == Duration.Weekly)
             {
-                targetedDuration = TimeHandler.GetLastWeekInEpoch();
+                targetedDuration = timeHandler.GetLastWeekInEpoch();
             }
             else if(duration == Duration.Monthly)
             {
-                targetedDuration = TimeHandler.GetLastMonthInEpoch();
+                targetedDuration = timeHandler.GetLastMonthInEpoch();
             }
             else
             {
-                targetedDuration=TimeHandler.GetLastYearInEpoch();
+                targetedDuration = timeHandler.GetLastYearInEpoch();
             }
 
             for (Iterator bookingIterator = Apphost.ListOfBookingInformation.GetIterator(); bookingIterator.hasNext();)

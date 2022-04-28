@@ -13,12 +13,13 @@ namespace Backend.Models
 
         public static double checkOut(int roomId)
         {
+            TimeHandler timeHandler = TimeHandler.getInstance();
             for (Iterator bookingIterator = Apphost.ListOfBookingInformation.GetIterator(); bookingIterator.hasNext();)
             {
                 BookingInformation booking = bookingIterator.getNext() as BookingInformation;
                 if (booking.roomId == roomId)
                 {
-                    booking.endDate = TimeHandler.GetDateInEpoch(DateTime.Today.Day, DateTime.Today.Month, DateTime.Today.Year);
+                    booking.endDate = timeHandler.GetDateInEpoch(DateTime.Today.Day, DateTime.Today.Month, DateTime.Today.Year);
                     BookingServices.EditBooking(booking.id,booking);
                     return booking.totalPrice;
                 }

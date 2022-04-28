@@ -11,7 +11,8 @@ public static class BookingServices
 
     public static double GetBookingPrice(BoardingType board, Room room, long startDate, long endDate)
     {
-        return (room.PricePerNight + board.price) * TimeHandler.GetNumberOfDays(startDate, endDate);
+        TimeHandler timeHandler = TimeHandler.getInstance();
+        return (room.PricePerNight + board.price) * timeHandler.GetNumberOfDays(startDate, endDate);
     }
    
     public static BookingInformation MakeBooking(RoomAndBoarding bookingDetails, long startDate, long endDate, int residentId)
@@ -25,6 +26,7 @@ public static class BookingServices
 
     public static BookingInformation EditBooking(int oldId,BookingInformation booking)
     {
+        TimeHandler timeHandler = TimeHandler.getInstance();
         for (Iterator bookingIterator = Apphost.ListOfBookingInformation.GetIterator(); bookingIterator.hasNext();)
         {
             BookingInformation oldBooking = bookingIterator.getNext() as BookingInformation;
@@ -34,10 +36,10 @@ public static class BookingServices
                 oldBooking.startDate = booking.startDate;
                 oldBooking.endDate = booking.endDate;
                 oldBooking.boardingType = booking.boardingType;
-                if (oldBooking.startDate < TimeHandler.GetTodayInEpoch())
+                if (oldBooking.startDate < timeHandler.GetTodayInEpoch())
                 {
-                    double oldPrice = GetBookingPrice(BoardingTypesCache.GetBoardingType(oldBooking.boardingType), Room.getRoomById(oldBooking.roomId), oldBooking.startDate, TimeHandler.GetTodayInEpoch());
-                    double newPrice = GetBookingPrice(BoardingTypesCache.GetBoardingType(booking.boardingType), Room.getRoomById(booking.roomId), TimeHandler.GetTodayInEpoch(), booking.endDate);
+                    double oldPrice = GetBookingPrice(BoardingTypesCache.GetBoardingType(oldBooking.boardingType), Room.getRoomById(oldBooking.roomId), oldBooking.startDate, timeHandler.GetTodayInEpoch());
+                    double newPrice = GetBookingPrice(BoardingTypesCache.GetBoardingType(booking.boardingType), Room.getRoomById(booking.roomId), timeHandler.GetTodayInEpoch(), booking.endDate);
                     oldBooking.totalPrice = newPrice + oldPrice;
                 }
                 else
@@ -87,9 +89,9 @@ public static class BookingServices
         {
             BookingInformation booking = bookingIterator.getNext() as BookingInformation;
 
-            long today = TimeHandler.GetTodayInEpoch();
+            TimeHandler timeHandler = TimeHandler.getInstance();
 
-            if (booking.endDate > today)
+            if (booking.endDate > timeHandler.GetTodayInEpoch())
             {
                 activeBookingInformation.Add(booking);
             }
@@ -104,13 +106,13 @@ public static class BookingServices
     
     public static bool deleteBooking(int id)
     {
-
+        TimeHandler timeHandler = TimeHandler.getInstance();
         for (Iterator bookingIterator = Apphost.ListOfBookingInformation.GetIterator(); bookingIterator.hasNext();)
         {
             BookingInformation booking = bookingIterator.getNext() as BookingInformation;
             if (id == booking.id)
             {
-                if (booking.startDate < TimeHandler.GetTodayInEpoch())
+                if (booking.startDate < timeHandler.GetTodayInEpoch())
                 {
                     return false;
                 }

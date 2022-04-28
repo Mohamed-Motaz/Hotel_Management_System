@@ -67,16 +67,17 @@ namespace Backend
 
         private static void InitializeFakeData()
         {
+            TimeHandler timeHandler = TimeHandler.getInstance();
             ListOfBookingInformation.list = new List<object>()
             {
-                new BookingInformation(ListOfRooms.list[0] as Room, BoardingTypesCache.GetBoardingType(BoardingTypes.Full), 1, TimeHandler.GetLastWeekInEpoch(), TimeHandler.GetLastWeekInEpoch() + 3600 * 24),
-                new BookingInformation(ListOfRooms.list[33] as Room, BoardingTypesCache.GetBoardingType(BoardingTypes.Half), 2, TimeHandler.GetLastWeekInEpoch(), TimeHandler.GetLastWeekInEpoch() + 3600 * 24),
-                new BookingInformation(ListOfRooms.list[63] as Room, BoardingTypesCache.GetBoardingType(BoardingTypes.BedAndBreakfast), 3, TimeHandler.GetLastWeekInEpoch(), TimeHandler.GetLastWeekInEpoch() + 3600 * 24),
+                new BookingInformation(ListOfRooms.list[0] as Room, BoardingTypesCache.GetBoardingType(BoardingTypes.Full), 1, timeHandler.GetLastWeekInEpoch(), timeHandler.GetLastWeekInEpoch() + 3600 * 24),
+                new BookingInformation(ListOfRooms.list[33] as Room, BoardingTypesCache.GetBoardingType(BoardingTypes.Half), 2, timeHandler.GetLastWeekInEpoch(), timeHandler.GetLastWeekInEpoch() + 3600 * 24),
+                new BookingInformation(ListOfRooms.list[63] as Room, BoardingTypesCache.GetBoardingType(BoardingTypes.BedAndBreakfast), 3, timeHandler.GetLastWeekInEpoch(), timeHandler.GetLastWeekInEpoch() + 3600 * 24),
 
 
-                new BookingInformation(ListOfRooms.list[0] as Room, BoardingTypesCache.GetBoardingType(BoardingTypes.Full), 1, TimeHandler.GetLastWeekInEpoch(), TimeHandler.GetTodayInEpoch() + 10000000),
-                new BookingInformation(ListOfRooms.list[33] as Room, BoardingTypesCache.GetBoardingType(BoardingTypes.Half), 2, TimeHandler.GetLastWeekInEpoch(), TimeHandler.GetTodayInEpoch() + 10000000),
-                new BookingInformation(ListOfRooms.list[63] as Room, BoardingTypesCache.GetBoardingType(BoardingTypes.BedAndBreakfast), 3, TimeHandler.GetLastWeekInEpoch(), TimeHandler.GetTodayInEpoch() + 100000)
+                new BookingInformation(ListOfRooms.list[0] as Room, BoardingTypesCache.GetBoardingType(BoardingTypes.Full), 1, timeHandler.GetLastWeekInEpoch(), timeHandler.GetTodayInEpoch() + 10000000),
+                new BookingInformation(ListOfRooms.list[33] as Room, BoardingTypesCache.GetBoardingType(BoardingTypes.Half), 2, timeHandler.GetLastWeekInEpoch(), timeHandler.GetTodayInEpoch() + 10000000),
+                new BookingInformation(ListOfRooms.list[63] as Room, BoardingTypesCache.GetBoardingType(BoardingTypes.BedAndBreakfast), 3, timeHandler.GetLastWeekInEpoch(), timeHandler.GetTodayInEpoch() + 100000)
             };
 
             ListOfRoomServices.list = new List<object>()

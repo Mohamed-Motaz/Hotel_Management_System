@@ -82,12 +82,14 @@ namespace Backend.Models
 
         public static int getTodayResidents()
         {
+            TimeHandler timeHandler = TimeHandler.getInstance();
+
             HashSet<int> residents = new HashSet<int>();
             for (Iterator bookingIterator = Apphost.ListOfBookingInformation.GetIterator(); bookingIterator.hasNext();)
             {
                 BookingInformation booking = bookingIterator.getNext() as BookingInformation;
 
-                if (booking.startDate == TimeHandler.GetTodayInEpoch())
+                if (booking.startDate == timeHandler.GetTodayInEpoch())
                 {
                     residents.Add(booking.residentId);
                 }
@@ -97,12 +99,13 @@ namespace Backend.Models
 
         public static int getCurrentResidents()
         {
+            TimeHandler timeHandler = TimeHandler.getInstance();
             HashSet<int> residents = new HashSet<int>();
             for (Iterator bookingIterator = Apphost.ListOfBookingInformation.GetIterator(); bookingIterator.hasNext();)
             {
                 BookingInformation booking = bookingIterator.getNext() as BookingInformation;
 
-                if (booking.endDate > TimeHandler.GetTodayInEpoch())
+                if (booking.endDate > timeHandler.GetTodayInEpoch())
                 {
                     residents.Add(booking.residentId);
                 }
