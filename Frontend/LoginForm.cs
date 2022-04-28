@@ -58,12 +58,14 @@ namespace Frontend
         private void ResidentLoginButton_Click(object sender, EventArgs e)
         {
             ResidentLoginForm residentForm = new ResidentLoginForm();
+            this.Hide();
             residentForm.Show();
         }
 
         private void WorkerLoginButton_Click(object sender, EventArgs e)
         {
             WorkerLoginForm workerLoginForm = new WorkerLoginForm();
+            this.Hide();
             workerLoginForm.Show();
         }
     }

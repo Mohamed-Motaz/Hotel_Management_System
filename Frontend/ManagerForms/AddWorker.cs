@@ -67,6 +67,7 @@ namespace Frontend.Extras
 
             if (resp.success == true)
             {
+                this.Hide();
                 MessageBox.Show("New worker has been added");
             }
             else

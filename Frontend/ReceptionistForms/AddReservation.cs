@@ -61,9 +61,10 @@ namespace Frontend.ReceptionistForms
                 
                 dynamic resp = Service.AddReservation(Reservation);
                 if (resp.success == true)
-                {
+                { 
+                    this.Hide();
                     MessageBox.Show("Reservation has been added successfully!");
-
+                   
                 }
                 else
                 {

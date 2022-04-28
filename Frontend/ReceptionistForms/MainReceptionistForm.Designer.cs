@@ -384,6 +384,7 @@
             this.manageResidentsButton.IconZoom = 35D;
             this.manageResidentsButton.IsTab = false;
             this.manageResidentsButton.Location = new System.Drawing.Point(1, 195);
+            this.manageResidentsButton.Margin = new System.Windows.Forms.Padding(6, 7, 6, 7);
             this.manageResidentsButton.Name = "manageResidentsButton";
             this.manageResidentsButton.Normalcolor = System.Drawing.Color.LightSteelBlue;
             this.manageResidentsButton.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(19)))), ((int)(((byte)(30)))), ((int)(((byte)(46)))));
@@ -430,6 +431,7 @@
             this.manageReservationsButton.IconZoom = 35D;
             this.manageReservationsButton.IsTab = false;
             this.manageReservationsButton.Location = new System.Drawing.Point(1, 246);
+            this.manageReservationsButton.Margin = new System.Windows.Forms.Padding(6, 7, 6, 7);
             this.manageReservationsButton.Name = "manageReservationsButton";
             this.manageReservationsButton.Normalcolor = System.Drawing.Color.LightSteelBlue;
             this.manageReservationsButton.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(19)))), ((int)(((byte)(30)))), ((int)(((byte)(46)))));

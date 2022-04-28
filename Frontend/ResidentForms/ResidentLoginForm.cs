@@ -68,6 +68,7 @@ namespace Frontend
             { 
                 ResidentInformation.residentId = res.id;
                 MainResidentForm residentForm = new MainResidentForm();
+                this.Hide();
                 residentForm.Show();
             }
             else
@@ -79,8 +80,16 @@ namespace Frontend
         private void ResidentSignUpButton_Click(object sender, EventArgs e)
         {
             ResidentSignUpForm residentSignUpForm = new ResidentSignUpForm();
+            this.Hide();
             residentSignUpForm.Show();
 
+        }
+
+        private void BackBtn(object sender, EventArgs e)
+        {
+            frmLogin form = new frmLogin();
+            this.Hide();
+            form.Show();
         }
     }
 }

@@ -160,6 +160,14 @@ namespace Frontend
             //}
         }
 
+        private void BackBtn_Click(object sender, EventArgs e)
+        {
+            frmLogin form = new frmLogin();
+            this.Hide();
+            form.Show();
+            
+        }
+
         private void bunifuFlatButton1_Click_1(object sender, EventArgs e)
         {
             if (LogInCheck() == "Receptionist")

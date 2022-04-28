@@ -65,6 +65,7 @@ namespace Frontend.ReceptionistForms
                 // returns bool 1 -> success deleteReservation or 0-> fail deleteReservation
                 if (response.success == true)
                 {
+                    this.Hide();
                     MessageBox.Show("Reservation has been edied successfully!\n " +
                         "Total Price =  " + response.totalPrice + "\n" + 
                          "Room ID = " + response.roomId  );
@@ -89,17 +90,20 @@ namespace Frontend.ReceptionistForms
 
         private void DeleteReservationBtn_Click(object sender, EventArgs e)
         {
-            
-                dynamic obj = new ExpandoObject();
-                obj.id = searchbyIdTextbox.Text;
-               dynamic response = Service.DeleteReservation(obj);
-                if(response.success == true)
-                    MessageBox.Show("Reservation has been deleted successfully!");
-                else
-                {
-                    MessageBox.Show("Reservation cannot be deleted!");
-                }
-           
+
+            dynamic obj = new ExpandoObject();
+            obj.id = searchbyIdTextbox.Text;
+            dynamic response = Service.DeleteReservation(obj);
+            if (response.success == true)
+            {
+                this.Hide();
+                MessageBox.Show("Reservation has been deleted successfully!");
+            }
+            else
+            {
+                MessageBox.Show("Reservation cannot be deleted!");
+            }
+
             Clear();
         }
         private bool CheckForResidentID(int ResidentID)

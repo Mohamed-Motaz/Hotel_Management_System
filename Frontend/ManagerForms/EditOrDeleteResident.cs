@@ -67,6 +67,7 @@ namespace Frontend.ManagerForms
 
             if (resp.success == true)
             {
+                this.Hide();
                 MessageBox.Show("This resident has been edited successfuly");
             }
             else
@@ -88,6 +89,7 @@ namespace Frontend.ManagerForms
 
             if (resp.success == true)
             {
+                this.Hide();
                 MessageBox.Show("This resident has been deleted successfuly");
             }
             else

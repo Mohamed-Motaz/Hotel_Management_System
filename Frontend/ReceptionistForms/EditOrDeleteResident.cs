@@ -65,6 +65,7 @@ namespace Frontend.ReceptionistForms
             dynamic resp = Service.EditResident(obj);
             if (resp.success == true)
             {
+                this.Hide();
                 MessageBox.Show("This resident has been edited");
             }
             else
@@ -86,6 +87,7 @@ namespace Frontend.ReceptionistForms
             dynamic resp =  Service.DeleteResident(obj);
             if (resp.success == true)
             {
+                this.Hide();
                 MessageBox.Show("This resident has been deleted");
             }
             else

@@ -20,9 +20,6 @@ namespace Frontend.ResidentForms
         {
             InitializeComponent();
         }
-
-        
-
         private void ResidentDashboard_Load(object sender, EventArgs e)
         {
             resident = new ExpandoObject();
@@ -48,8 +45,5 @@ namespace Frontend.ResidentForms
         //see list of reservations
         //add reservation
         //delete reservation
-
-
-        private void label18_Click(object sender, EventArgs e){}
     }
 }

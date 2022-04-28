@@ -35,6 +35,7 @@ namespace Frontend.Extras
             
             if(resp.success == true)
             {
+                this.Hide();
                 MessageBox.Show("New resident has been added");
             }
             else

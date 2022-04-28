@@ -443,9 +443,8 @@
             this.activeUserLabel.ForeColor = System.Drawing.SystemColors.Control;
             this.activeUserLabel.Location = new System.Drawing.Point(102, 62);
             this.activeUserLabel.Name = "activeUserLabel";
-            this.activeUserLabel.Size = new System.Drawing.Size(85, 30);
+            this.activeUserLabel.Size = new System.Drawing.Size(0, 30);
             this.activeUserLabel.TabIndex = 15;
-            this.activeUserLabel.Text = "Saloma";
             this.activeUserLabel.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // label2

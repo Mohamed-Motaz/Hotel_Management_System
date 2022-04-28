@@ -121,7 +121,7 @@
   <data name="addReservationButton.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAgAAAAIACAYAAAD0eNT6AAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAO
-        DwAADg8Bxgru6QAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAADxpSURBVHhe7d0J
+        DgAADg4BFE0MDQAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAADxpSURBVHhe7d0J
         lJx1lfdxjZAXFJEZedUzL+PI8TCOZ84ZPSoOrzqyLyG9JelOyNJZu9PZOgFFGEdFcMngAjo6irgLg7gA
         voKKoCDgAogoKq4girKIbAZI0lW9PO+9T6qh8uTXS1XXs3+fcz7nwE131bPc/723qmt5WhAEADKu2t/5
         /Epf+2HmpEpfx5uq/R0fqK7tvLg60PWt4YGuW4fXzbtzZMP8+0Y2LHhwZOOCR0Y3dm8b3dT9hNk5uqmn
@@ -385,7 +385,7 @@
   <data name="editOrDeleteReservationButton.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAgAAAAIACAYAAAD0eNT6AAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAO
-        wwAADsMBx2+oZAAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAAEyJSURBVHhe7d0H
+        wgAADsIBFShKgAAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAAEyJSURBVHhe7d0H
         eFTXmf9xXOKNU52s0/6bskk2ZTebZLOJ42ST3ezGsb2Ok41TnHiTuLfYMahXkLgSuACiGIPVJRBFxWCM
         C00SophqTJGEN3ZsExsVhDAYNwxIOv97xCGG0QuMpLkz5975/p7n8zjFiJnR3Pd9586954wgwczuyrQv
         7K7I+H1HRXpBW0Xqwvby1NUd5cnN7WXJL7WVJu9vK0l6q60k4Yi2u3hUX78SV9FINRgdlelqT00+4ktf
@@ -718,7 +718,7 @@
   <data name="ReservationsButton.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAgAAAAIACAYAAAD0eNT6AAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAO
-        wwAADsMBx2+oZAAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAAE2DSURBVHhe7d15
+        wgAADsIBFShKgAAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAAE2DSURBVHhe7d15
         lNXlved7MpzO6dV39Vp9zrk5fbpvd7rvvd19G5wSPaFAMSi4q0CNB8neBWoMRqNmoBicIk4kGkVqF5Mj
         GucZh8QBJ6Ki4IzIHEcUQRHFKRonhOf+dvF41O275Kmq/TzPbz/781nrtbJW8sfvl/37/r6fH1W19+6j
         KCnllXeMEcmbla9uaTj3rjY32NtSURTFf2j5isRGBZm6uc8ac/uzZoq9NRVFUfyGlq9IbFSQqas8AOgh

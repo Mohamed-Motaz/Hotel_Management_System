@@ -32,6 +32,7 @@ namespace Frontend.ReceptionistForms
             dynamic resp = Service.AddResident(resident);
             if(resp.success = true)
             {
+                this.Hide();
                 MessageBox.Show("New resident has been added");
             }
             else

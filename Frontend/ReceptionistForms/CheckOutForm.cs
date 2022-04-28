@@ -26,6 +26,7 @@ namespace Frontend.ReceptionistForms
             dynamic resp = Service.Checkout(obj);
             if (resp.success = true)
             {
+                this.Hide();
                 MessageBox.Show("Checkout has been done");
             }
             else

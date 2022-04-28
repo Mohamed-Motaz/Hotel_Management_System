@@ -72,6 +72,7 @@ namespace Frontend
                 Service.AddResident(resident);
              //   ResidentInformation.residentId = 1;
                 MainResidentForm residentForm = new MainResidentForm();
+                this.Hide();
                 residentForm.Show();
             }
             else
@@ -112,6 +113,13 @@ namespace Frontend
                 isOkay = false;
             }
             return isOkay;
+        }
+
+        private void BackBtn(object sender, EventArgs e)
+        {
+            ResidentLoginForm form = new ResidentLoginForm();
+            this.Hide();
+            form.Show();
         }
     }
 }

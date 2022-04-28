@@ -76,6 +76,7 @@ namespace Frontend.ManagerForms
 
             if (resp.success == true)
             {
+                this.Hide();
                 MessageBox.Show("This worker has been edited successfuly");
             }
             else
@@ -96,6 +97,7 @@ namespace Frontend.ManagerForms
 
             if (resp.success == true)
             {
+                this.Hide();
                 MessageBox.Show("This worker has been deleted successfuly");
             }
             else
