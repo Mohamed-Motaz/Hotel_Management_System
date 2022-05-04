@@ -128,19 +128,25 @@ namespace Frontend.ManagerForms
         private void deleteWorkerBtn_Click(object sender, EventArgs e)
         {
             dynamic obj = new ExpandoObject();
-            obj.id = searchbyIdTextbox.Text;
-
-            
-            dynamic resp = Service.DeleteWorker(obj);
-
-            if (resp.success == true)
+            if ((searchbyIdTextbox.Text.Length == 0))
             {
-                this.Hide();
-                MessageBox.Show("This worker has been deleted successfuly");
+                MessageBox.Show("Please enter a valid id.");
             }
             else
             {
-                MessageBox.Show("Cannot delete this worker");
+                obj.id = searchbyIdTextbox.Text;
+
+                dynamic resp = Service.DeleteWorker(obj);
+
+                if (resp.success == true)
+                {
+                    this.Hide();
+                    MessageBox.Show("This worker has been deleted successfuly");
+                }
+                else
+                {
+                    MessageBox.Show("Cannot delete this worker");
+                }
             }
         }
 

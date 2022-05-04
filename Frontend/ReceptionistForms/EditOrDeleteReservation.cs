@@ -51,12 +51,12 @@ namespace Frontend.ReceptionistForms
             dt = Convert.ToDateTime(EndDateDatepicker.Value);
             Reservation.endDate = TimeHandler.GetDateInEpoch(dt.Day, dt.Month, dt.Year);
             long currentDate = Convert.ToInt64(TimeHandler.GetDateInEpoch(DateTime.Now.Day, DateTime.Now.Month, DateTime.Now.Year));
-            if(Reservation.startDate <   currentDate )
-            {
+            if (Reservation.startDate < currentDate)
                 MessageBox.Show("Please enter a valid start date");
-            }
             else if ((EndDateDatepicker.Value < StartDateDatepicker.Value))
                 MessageBox.Show("Please Enter a valid end date");
+            else if (string.IsNullOrEmpty(RoomTypeComboBox.Text))
+                MessageBox.Show("Please choose a valid Room Type.");
             else
             {
                 dynamic response = Service.EditReservation(Reservation);
@@ -92,18 +92,24 @@ namespace Frontend.ReceptionistForms
         {
 
             dynamic obj = new ExpandoObject();
-            obj.id = searchbyIdTextbox.Text;
-            dynamic response = Service.DeleteReservation(obj);
-            if (response.success == true)
+            if (searchbyIdTextbox.Text.Length == 0)
             {
-                this.Hide();
-                MessageBox.Show("Reservation has been deleted successfully!");
+                MessageBox.Show("Please enter a valid id");
             }
             else
             {
-                MessageBox.Show("Reservation cannot be deleted!");
+                obj.id = searchbyIdTextbox.Text;
+                dynamic response = Service.DeleteReservation(obj);
+                if (response.success == true)
+                {
+                    this.Hide();
+                    MessageBox.Show("Reservation has been deleted successfully!");
+                }
+                else
+                {
+                    MessageBox.Show("Reservation cannot be deleted!");
+                }
             }
-
             Clear();
         }
         private bool CheckForResidentID(int ResidentID)
@@ -146,15 +152,21 @@ namespace Frontend.ReceptionistForms
         private void bunifuFlatButton1_Click(object sender, EventArgs e)
         {
             dynamic reservation = new ExpandoObject();
-            reservation.id = searchbyIdTextbox.Text;
+            if (searchbyIdTextbox.Text.Length == 0)
+            {
+                MessageBox.Show("Please enter a valid id");
+            }
+            else
+            {
+                reservation.id = searchbyIdTextbox.Text;
 
-            // call api for get Booking info by booking id
-            dynamic res = Service.GetReservation(reservation);
+                // call api for get Booking info by booking id
+                dynamic res = Service.GetReservation(reservation);
 
-            StartDateDatepicker.Value = Convert.ToDateTime( TimeHandler.GetDateFromEpoch(res.booking.startDate));
-            EndDateDatepicker.Value = Convert.ToDateTime( TimeHandler.GetDateFromEpoch(res.booking.endDate) );
-            RoomTypeComboBox.Text =  Convert.ToString( res.booking.roomType) + "/" + Convert.ToString( res.booking.boardingType);
-
+                StartDateDatepicker.Value = Convert.ToDateTime(TimeHandler.GetDateFromEpoch(res.booking.startDate));
+                EndDateDatepicker.Value = Convert.ToDateTime(TimeHandler.GetDateFromEpoch(res.booking.endDate));
+                RoomTypeComboBox.Text = Convert.ToString(res.booking.roomType) + "/" + Convert.ToString(res.booking.boardingType);
+            }
         }
     }
 }

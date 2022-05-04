@@ -43,6 +43,8 @@ namespace Frontend.ReceptionistForms
             this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             this.label2 = new System.Windows.Forms.Label();
             this.availableRooms = new Bunifu.Framework.UI.BunifuFlatButton();
+            this.ResidentIDTextBox = new System.Windows.Forms.TextBox();
+            this.label1 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // ClearBtn
@@ -143,7 +145,7 @@ namespace Frontend.ReceptionistForms
             this.label24.AutoSize = true;
             this.label24.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold);
             this.label24.ForeColor = System.Drawing.Color.DimGray;
-            this.label24.Location = new System.Drawing.Point(1, 101);
+            this.label24.Location = new System.Drawing.Point(1, 146);
             this.label24.Name = "label24";
             this.label24.Size = new System.Drawing.Size(94, 21);
             this.label24.TabIndex = 492;
@@ -152,7 +154,7 @@ namespace Frontend.ReceptionistForms
             // dateTimePicker2
             // 
             this.dateTimePicker2.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dateTimePicker2.Location = new System.Drawing.Point(169, 98);
+            this.dateTimePicker2.Location = new System.Drawing.Point(183, 143);
             this.dateTimePicker2.Name = "dateTimePicker2";
             this.dateTimePicker2.Size = new System.Drawing.Size(200, 20);
             this.dateTimePicker2.TabIndex = 488;
@@ -164,7 +166,7 @@ namespace Frontend.ReceptionistForms
             this.StartDateDatepicker.ForeColor = System.Drawing.Color.White;
             this.StartDateDatepicker.Format = System.Windows.Forms.DateTimePickerFormat.Long;
             this.StartDateDatepicker.FormatCustom = null;
-            this.StartDateDatepicker.Location = new System.Drawing.Point(101, 91);
+            this.StartDateDatepicker.Location = new System.Drawing.Point(115, 136);
             this.StartDateDatepicker.Name = "StartDateDatepicker";
             this.StartDateDatepicker.Size = new System.Drawing.Size(284, 39);
             this.StartDateDatepicker.TabIndex = 490;
@@ -187,7 +189,7 @@ namespace Frontend.ReceptionistForms
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold);
             this.label3.ForeColor = System.Drawing.Color.DimGray;
-            this.label3.Location = new System.Drawing.Point(402, 101);
+            this.label3.Location = new System.Drawing.Point(416, 146);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(87, 21);
             this.label3.TabIndex = 504;
@@ -200,7 +202,7 @@ namespace Frontend.ReceptionistForms
             this.EndDateDatepicker.ForeColor = System.Drawing.Color.White;
             this.EndDateDatepicker.Format = System.Windows.Forms.DateTimePickerFormat.Long;
             this.EndDateDatepicker.FormatCustom = null;
-            this.EndDateDatepicker.Location = new System.Drawing.Point(495, 91);
+            this.EndDateDatepicker.Location = new System.Drawing.Point(509, 136);
             this.EndDateDatepicker.Name = "EndDateDatepicker";
             this.EndDateDatepicker.Size = new System.Drawing.Size(284, 39);
             this.EndDateDatepicker.TabIndex = 503;
@@ -210,7 +212,7 @@ namespace Frontend.ReceptionistForms
             // dateTimePicker1
             // 
             this.dateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dateTimePicker1.Location = new System.Drawing.Point(563, 98);
+            this.dateTimePicker1.Location = new System.Drawing.Point(577, 143);
             this.dateTimePicker1.Name = "dateTimePicker1";
             this.dateTimePicker1.Size = new System.Drawing.Size(200, 20);
             this.dateTimePicker1.TabIndex = 502;
@@ -261,11 +263,32 @@ namespace Frontend.ReceptionistForms
             this.availableRooms.TextFont = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Bold);
             this.availableRooms.Click += new System.EventHandler(this.showAvailableRooms);
             // 
+            // ResidentIDTextBox
+            // 
+            this.ResidentIDTextBox.BackColor = System.Drawing.SystemColors.Control;
+            this.ResidentIDTextBox.Location = new System.Drawing.Point(381, 73);
+            this.ResidentIDTextBox.Name = "ResidentIDTextBox";
+            this.ResidentIDTextBox.Size = new System.Drawing.Size(196, 20);
+            this.ResidentIDTextBox.TabIndex = 507;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold);
+            this.label1.ForeColor = System.Drawing.Color.DimGray;
+            this.label1.Location = new System.Drawing.Point(281, 73);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(99, 21);
+            this.label1.TabIndex = 508;
+            this.label1.Text = "Resident id:";
+            // 
             // AddReservation
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(821, 500);
+            this.Controls.Add(this.label1);
+            this.Controls.Add(this.ResidentIDTextBox);
             this.Controls.Add(this.availableRooms);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label3);
@@ -302,5 +325,7 @@ namespace Frontend.ReceptionistForms
         private System.Windows.Forms.DateTimePicker dateTimePicker1;
         private System.Windows.Forms.Label label2;
         private Bunifu.Framework.UI.BunifuFlatButton availableRooms;
+        private System.Windows.Forms.TextBox ResidentIDTextBox;
+        private System.Windows.Forms.Label label1;
     }
 }

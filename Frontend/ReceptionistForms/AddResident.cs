@@ -22,14 +22,13 @@ namespace Frontend.ReceptionistForms
         private void addResidentBtn_Click(object sender, EventArgs e)
         {
             dynamic resident = new ExpandoObject();
-            resident.userName = UserNameTextBox.Text;
-            resident.age = Convert.ToInt32( AgeTextBox.Text);
-            resident.email = EmailTextBox.Text;
-            resident.password = PasswordTextBox.Text;
-            resident.phoneNumber = PhoneNumberTextBox.Text;
-
             if (Validate())
             {
+                resident.userName = UserNameTextBox.Text;
+                resident.age = Convert.ToInt32(AgeTextBox.Text);
+                resident.email = EmailTextBox.Text;
+                resident.password = PasswordTextBox.Text;
+                resident.phoneNumber = PhoneNumberTextBox.Text;
                 //send to api addResident
                 dynamic resp = Service.AddResident(resident);
                 if (resp.success = true)

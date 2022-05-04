@@ -40,30 +40,38 @@ namespace Frontend.ReceptionistForms
 
         private void searchByIdBtn_Click(object sender, EventArgs e)
         {
-            resident.id = searchbyIdTextbox.Text;
-            dynamic obj = new ExpandoObject();
-            obj.id = resident.id;
-            //TODO: api set resident to the api returend resident
-            dynamic res = Service.GetResident(obj);
-            UserNameTextBox.Text = res.userName.ToString() ;
-            AgeTextBox.Text = res.age.ToString();
-            EmailTextBox.Text = res.email.ToString();
-            PasswordTextBox.Text = res.password.ToString();
-            PhoneNumberTextBox.Text = res.phoneNumber.ToString();
+            if ((searchbyIdTextbox.Text.Length == 0))
+            {
+                MessageBox.Show("Please enter a valid id.");
+            }
+            else
+            {
+                resident.id = searchbyIdTextbox.Text;
+                dynamic obj = new ExpandoObject();
+                obj.id = resident.id;
+                //TODO: api set resident to the api returend resident
+                dynamic res = Service.GetResident(obj);
+                UserNameTextBox.Text = res.userName.ToString();
+                AgeTextBox.Text = res.age.ToString();
+                EmailTextBox.Text = res.email.ToString();
+                PasswordTextBox.Text = res.password.ToString();
+                PhoneNumberTextBox.Text = res.phoneNumber.ToString();
+            }
         }
 
         private void editResidentBtn_Click(object sender, EventArgs e)
         {
             //api takes all data and edit it
             dynamic obj = new ExpandoObject();
-            obj.id = searchbyIdTextbox.Text;
-            obj.userName = UserNameTextBox.Text;
-            obj.age = AgeTextBox.Text;
-            obj.email = EmailTextBox.Text;
-            obj.password = PasswordTextBox.Text;
-            obj.phoneNumber = PhoneNumberTextBox.Text;
+
             if (Validate())
             {
+                obj.id = searchbyIdTextbox.Text;
+                obj.userName = UserNameTextBox.Text;
+                obj.age = AgeTextBox.Text;
+                obj.email = EmailTextBox.Text;
+                obj.password = PasswordTextBox.Text;
+                obj.phoneNumber = PhoneNumberTextBox.Text;
                 dynamic resp = Service.EditResident(obj);
                 if (resp.success == true)
                 {
@@ -84,19 +92,26 @@ namespace Frontend.ReceptionistForms
             //api takes searchbyIdTextbox.Text , jobTitleTextBox.Text 
             // and clear it
             dynamic obj = new ExpandoObject();
-            obj.id = searchbyIdTextbox.Text;
-
-            dynamic resp =  Service.DeleteResident(obj);
-            if (resp.success == true)
+            if ((searchbyIdTextbox.Text.Length == 0))
             {
-                this.Hide();
-                MessageBox.Show("This resident has been deleted");
+                MessageBox.Show("Please enter a valid id.");
             }
             else
             {
-                MessageBox.Show("Cannot delete this resident");
+                obj.id = searchbyIdTextbox.Text;
+
+                dynamic resp = Service.DeleteResident(obj);
+                if (resp.success == true)
+                {
+                    this.Hide();
+                    MessageBox.Show("This resident has been deleted");
+                }
+                else
+                {
+                    MessageBox.Show("Cannot delete this resident");
+                }
+                clearBtn_Click(sender, e);
             }
-            clearBtn_Click(sender, e);
         }
         private bool Validate()
         {

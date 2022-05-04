@@ -39,6 +39,7 @@ namespace Frontend.ReceptionistForms
         {
             dynamic Reservation = new ExpandoObject();
             Reservation.residentId = ResidentInformation.residentId;
+            ResidentIDTextBox.Text = ResidentInformation.residentId.ToString();
             //Reservation.roomType = RoomTypeComboBox.GetItemText(RoomTypeComboBox.SelectedItem);
             string types = RoomTypeComboBox.GetItemText(RoomTypeComboBox.SelectedItem);
             string[] list = types.Split('/');
@@ -53,6 +54,8 @@ namespace Frontend.ReceptionistForms
 
             if ((EndDateDatepicker.Value < StartDateDatepicker.Value))
                 MessageBox.Show("Please Enter a valid end date");
+            else if (string.IsNullOrEmpty(RoomTypeComboBox.Text))
+                MessageBox.Show("Please choose a valid Room Type.");
             else
             {
                 // api call takes [ResidentID, RoomType, startDate, EndDate]
@@ -70,8 +73,8 @@ namespace Frontend.ReceptionistForms
                 {
                     MessageBox.Show("Cannot add this reservation");
                 }
+                Clear();
             }
-            Clear();
         }
         private bool CheckForResidentID(string ResidentID)
         {
