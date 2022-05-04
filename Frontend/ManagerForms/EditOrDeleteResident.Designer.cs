@@ -33,11 +33,11 @@ namespace Frontend.ManagerForms
             this.deleteWorkerBtn = new Bunifu.Framework.UI.BunifuFlatButton();
             this.bunifuFlatButton1 = new Bunifu.Framework.UI.BunifuFlatButton();
             this.searchbyIdTextbox = new Bunifu.Framework.UI.BunifuMetroTextbox();
-            this.passwordTextBox = new System.Windows.Forms.TextBox();
-            this.ageTextBox = new System.Windows.Forms.TextBox();
-            this.nameTextBox = new System.Windows.Forms.TextBox();
-            this.phoneTextBox = new System.Windows.Forms.TextBox();
-            this.emailTextBox = new System.Windows.Forms.TextBox();
+            this.PasswordTextBox = new System.Windows.Forms.TextBox();
+            this.AgeTextBox = new System.Windows.Forms.TextBox();
+            this.UserNameTextBox = new System.Windows.Forms.TextBox();
+            this.PhoneNumberTextBox = new System.Windows.Forms.TextBox();
+            this.EmailTextBox = new System.Windows.Forms.TextBox();
             this.clearBtn = new Bunifu.Framework.UI.BunifuFlatButton();
             this.editWorkerBtn = new Bunifu.Framework.UI.BunifuFlatButton();
             this.bunifuSeparator43 = new Bunifu.Framework.UI.BunifuSeparator();
@@ -88,7 +88,7 @@ namespace Frontend.ManagerForms
             // 
             // bunifuFlatButton1
             // 
-            this.bunifuFlatButton1.Activecolor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(139)))), ((int)(((byte)(87)))));
+            this.bunifuFlatButton1.Activecolor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(141)))), ((int)(((byte)(188)))));
             this.bunifuFlatButton1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(141)))), ((int)(((byte)(188)))));
             this.bunifuFlatButton1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.bunifuFlatButton1.BorderRadius = 0;
@@ -138,48 +138,48 @@ namespace Frontend.ManagerForms
             this.searchbyIdTextbox.TabIndex = 468;
             this.searchbyIdTextbox.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             // 
-            // passwordTextBox
+            // PasswordTextBox
             // 
-            this.passwordTextBox.BackColor = System.Drawing.SystemColors.Control;
-            this.passwordTextBox.Location = new System.Drawing.Point(284, 286);
-            this.passwordTextBox.MaxLength = 20;
-            this.passwordTextBox.Name = "passwordTextBox";
-            this.passwordTextBox.Size = new System.Drawing.Size(296, 20);
-            this.passwordTextBox.TabIndex = 459;
+            this.PasswordTextBox.BackColor = System.Drawing.SystemColors.Control;
+            this.PasswordTextBox.Location = new System.Drawing.Point(284, 286);
+            this.PasswordTextBox.MaxLength = 20;
+            this.PasswordTextBox.Name = "PasswordTextBox";
+            this.PasswordTextBox.Size = new System.Drawing.Size(296, 20);
+            this.PasswordTextBox.TabIndex = 459;
             // 
-            // ageTextBox
+            // AgeTextBox
             // 
-            this.ageTextBox.BackColor = System.Drawing.SystemColors.Control;
-            this.ageTextBox.Location = new System.Drawing.Point(284, 209);
-            this.ageTextBox.Name = "ageTextBox";
-            this.ageTextBox.Size = new System.Drawing.Size(296, 20);
-            this.ageTextBox.TabIndex = 457;
+            this.AgeTextBox.BackColor = System.Drawing.SystemColors.Control;
+            this.AgeTextBox.Location = new System.Drawing.Point(284, 209);
+            this.AgeTextBox.Name = "AgeTextBox";
+            this.AgeTextBox.Size = new System.Drawing.Size(296, 20);
+            this.AgeTextBox.TabIndex = 457;
             // 
-            // nameTextBox
+            // UserNameTextBox
             // 
-            this.nameTextBox.BackColor = System.Drawing.SystemColors.Control;
-            this.nameTextBox.Location = new System.Drawing.Point(284, 172);
-            this.nameTextBox.Name = "nameTextBox";
-            this.nameTextBox.Size = new System.Drawing.Size(298, 20);
-            this.nameTextBox.TabIndex = 455;
+            this.UserNameTextBox.BackColor = System.Drawing.SystemColors.Control;
+            this.UserNameTextBox.Location = new System.Drawing.Point(284, 172);
+            this.UserNameTextBox.Name = "UserNameTextBox";
+            this.UserNameTextBox.Size = new System.Drawing.Size(298, 20);
+            this.UserNameTextBox.TabIndex = 455;
             // 
-            // phoneTextBox
+            // PhoneNumberTextBox
             // 
-            this.phoneTextBox.BackColor = System.Drawing.SystemColors.Control;
-            this.phoneTextBox.Location = new System.Drawing.Point(284, 323);
-            this.phoneTextBox.MaxLength = 20;
-            this.phoneTextBox.Name = "phoneTextBox";
-            this.phoneTextBox.Size = new System.Drawing.Size(296, 20);
-            this.phoneTextBox.TabIndex = 453;
+            this.PhoneNumberTextBox.BackColor = System.Drawing.SystemColors.Control;
+            this.PhoneNumberTextBox.Location = new System.Drawing.Point(284, 323);
+            this.PhoneNumberTextBox.MaxLength = 20;
+            this.PhoneNumberTextBox.Name = "PhoneNumberTextBox";
+            this.PhoneNumberTextBox.Size = new System.Drawing.Size(296, 20);
+            this.PhoneNumberTextBox.TabIndex = 453;
             // 
-            // emailTextBox
+            // EmailTextBox
             // 
-            this.emailTextBox.BackColor = System.Drawing.SystemColors.Control;
-            this.emailTextBox.Location = new System.Drawing.Point(284, 246);
-            this.emailTextBox.MaxLength = 20;
-            this.emailTextBox.Name = "emailTextBox";
-            this.emailTextBox.Size = new System.Drawing.Size(296, 20);
-            this.emailTextBox.TabIndex = 452;
+            this.EmailTextBox.BackColor = System.Drawing.SystemColors.Control;
+            this.EmailTextBox.Location = new System.Drawing.Point(284, 246);
+            this.EmailTextBox.MaxLength = 20;
+            this.EmailTextBox.Name = "EmailTextBox";
+            this.EmailTextBox.Size = new System.Drawing.Size(296, 20);
+            this.EmailTextBox.TabIndex = 452;
             // 
             // clearBtn
             // 
@@ -358,11 +358,11 @@ namespace Frontend.ManagerForms
             this.Controls.Add(this.deleteWorkerBtn);
             this.Controls.Add(this.bunifuFlatButton1);
             this.Controls.Add(this.searchbyIdTextbox);
-            this.Controls.Add(this.passwordTextBox);
-            this.Controls.Add(this.ageTextBox);
-            this.Controls.Add(this.nameTextBox);
-            this.Controls.Add(this.phoneTextBox);
-            this.Controls.Add(this.emailTextBox);
+            this.Controls.Add(this.PasswordTextBox);
+            this.Controls.Add(this.AgeTextBox);
+            this.Controls.Add(this.UserNameTextBox);
+            this.Controls.Add(this.PhoneNumberTextBox);
+            this.Controls.Add(this.EmailTextBox);
             this.Controls.Add(this.clearBtn);
             this.Controls.Add(this.editWorkerBtn);
             this.Controls.Add(this.bunifuSeparator43);
@@ -380,11 +380,11 @@ namespace Frontend.ManagerForms
         private Bunifu.Framework.UI.BunifuFlatButton deleteWorkerBtn;
         private Bunifu.Framework.UI.BunifuFlatButton bunifuFlatButton1;
         private Bunifu.Framework.UI.BunifuMetroTextbox searchbyIdTextbox;
-        private System.Windows.Forms.TextBox passwordTextBox;
-        private System.Windows.Forms.TextBox ageTextBox;
-        private System.Windows.Forms.TextBox nameTextBox;
-        private System.Windows.Forms.TextBox phoneTextBox;
-        private System.Windows.Forms.TextBox emailTextBox;
+        private System.Windows.Forms.TextBox PasswordTextBox;
+        private System.Windows.Forms.TextBox AgeTextBox;
+        private System.Windows.Forms.TextBox UserNameTextBox;
+        private System.Windows.Forms.TextBox PhoneNumberTextBox;
+        private System.Windows.Forms.TextBox EmailTextBox;
         private Bunifu.Framework.UI.BunifuFlatButton clearBtn;
         private Bunifu.Framework.UI.BunifuFlatButton editWorkerBtn;
         private Bunifu.Framework.UI.BunifuSeparator bunifuSeparator43;

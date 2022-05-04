@@ -32,12 +32,12 @@ namespace Frontend.Extras
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(AddResident));
             this.bunifuFlatButton2 = new Bunifu.Framework.UI.BunifuFlatButton();
             this.addResidentBtn = new Bunifu.Framework.UI.BunifuFlatButton();
-            this.ageTextBox = new System.Windows.Forms.TextBox();
-            this.nameTextBox = new System.Windows.Forms.TextBox();
-            this.phoneTextBox = new System.Windows.Forms.TextBox();
-            this.emailTextBox = new System.Windows.Forms.TextBox();
+            this.AgeTextBox = new System.Windows.Forms.TextBox();
+            this.UserNameTextBox = new System.Windows.Forms.TextBox();
+            this.PhoneNumberTextBox = new System.Windows.Forms.TextBox();
+            this.EmailTextBox = new System.Windows.Forms.TextBox();
             this.bunifuSeparator43 = new Bunifu.Framework.UI.BunifuSeparator();
-            this.passwordTextBox = new System.Windows.Forms.TextBox();
+            this.PasswordTextBox = new System.Windows.Forms.TextBox();
             this.label24 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
@@ -120,39 +120,39 @@ namespace Frontend.Extras
             this.addResidentBtn.TextFont = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.addResidentBtn.Click += new System.EventHandler(this.addResidentBtn_Click);
             // 
-            // ageTextBox
+            // AgeTextBox
             // 
-            this.ageTextBox.BackColor = System.Drawing.SystemColors.Control;
-            this.ageTextBox.Location = new System.Drawing.Point(291, 153);
-            this.ageTextBox.Name = "ageTextBox";
-            this.ageTextBox.Size = new System.Drawing.Size(298, 20);
-            this.ageTextBox.TabIndex = 347;
+            this.AgeTextBox.BackColor = System.Drawing.SystemColors.Control;
+            this.AgeTextBox.Location = new System.Drawing.Point(291, 153);
+            this.AgeTextBox.Name = "AgeTextBox";
+            this.AgeTextBox.Size = new System.Drawing.Size(298, 20);
+            this.AgeTextBox.TabIndex = 347;
             // 
-            // nameTextBox
+            // UserNameTextBox
             // 
-            this.nameTextBox.BackColor = System.Drawing.SystemColors.Control;
-            this.nameTextBox.Location = new System.Drawing.Point(291, 127);
-            this.nameTextBox.Name = "nameTextBox";
-            this.nameTextBox.Size = new System.Drawing.Size(298, 20);
-            this.nameTextBox.TabIndex = 345;
+            this.UserNameTextBox.BackColor = System.Drawing.SystemColors.Control;
+            this.UserNameTextBox.Location = new System.Drawing.Point(291, 127);
+            this.UserNameTextBox.Name = "UserNameTextBox";
+            this.UserNameTextBox.Size = new System.Drawing.Size(298, 20);
+            this.UserNameTextBox.TabIndex = 345;
             // 
-            // phoneTextBox
+            // PhoneNumberTextBox
             // 
-            this.phoneTextBox.BackColor = System.Drawing.SystemColors.Control;
-            this.phoneTextBox.Location = new System.Drawing.Point(293, 264);
-            this.phoneTextBox.MaxLength = 20;
-            this.phoneTextBox.Name = "phoneTextBox";
-            this.phoneTextBox.Size = new System.Drawing.Size(296, 20);
-            this.phoneTextBox.TabIndex = 332;
+            this.PhoneNumberTextBox.BackColor = System.Drawing.SystemColors.Control;
+            this.PhoneNumberTextBox.Location = new System.Drawing.Point(293, 264);
+            this.PhoneNumberTextBox.MaxLength = 20;
+            this.PhoneNumberTextBox.Name = "PhoneNumberTextBox";
+            this.PhoneNumberTextBox.Size = new System.Drawing.Size(296, 20);
+            this.PhoneNumberTextBox.TabIndex = 332;
             // 
-            // emailTextBox
+            // EmailTextBox
             // 
-            this.emailTextBox.BackColor = System.Drawing.SystemColors.Control;
-            this.emailTextBox.Location = new System.Drawing.Point(291, 190);
-            this.emailTextBox.MaxLength = 20;
-            this.emailTextBox.Name = "emailTextBox";
-            this.emailTextBox.Size = new System.Drawing.Size(298, 20);
-            this.emailTextBox.TabIndex = 331;
+            this.EmailTextBox.BackColor = System.Drawing.SystemColors.Control;
+            this.EmailTextBox.Location = new System.Drawing.Point(291, 190);
+            this.EmailTextBox.MaxLength = 20;
+            this.EmailTextBox.Name = "EmailTextBox";
+            this.EmailTextBox.Size = new System.Drawing.Size(298, 20);
+            this.EmailTextBox.TabIndex = 331;
             // 
             // bunifuSeparator43
             // 
@@ -167,14 +167,14 @@ namespace Frontend.Extras
             this.bunifuSeparator43.Transparency = 255;
             this.bunifuSeparator43.Vertical = false;
             // 
-            // passwordTextBox
+            // PasswordTextBox
             // 
-            this.passwordTextBox.BackColor = System.Drawing.SystemColors.Control;
-            this.passwordTextBox.Location = new System.Drawing.Point(293, 227);
-            this.passwordTextBox.MaxLength = 20;
-            this.passwordTextBox.Name = "passwordTextBox";
-            this.passwordTextBox.Size = new System.Drawing.Size(296, 20);
-            this.passwordTextBox.TabIndex = 401;
+            this.PasswordTextBox.BackColor = System.Drawing.SystemColors.Control;
+            this.PasswordTextBox.Location = new System.Drawing.Point(293, 227);
+            this.PasswordTextBox.MaxLength = 20;
+            this.PasswordTextBox.Name = "PasswordTextBox";
+            this.PasswordTextBox.Size = new System.Drawing.Size(296, 20);
+            this.PasswordTextBox.TabIndex = 401;
             // 
             // label24
             // 
@@ -253,13 +253,13 @@ namespace Frontend.Extras
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.label24);
-            this.Controls.Add(this.passwordTextBox);
+            this.Controls.Add(this.PasswordTextBox);
             this.Controls.Add(this.bunifuFlatButton2);
             this.Controls.Add(this.addResidentBtn);
-            this.Controls.Add(this.ageTextBox);
-            this.Controls.Add(this.nameTextBox);
-            this.Controls.Add(this.phoneTextBox);
-            this.Controls.Add(this.emailTextBox);
+            this.Controls.Add(this.AgeTextBox);
+            this.Controls.Add(this.UserNameTextBox);
+            this.Controls.Add(this.PhoneNumberTextBox);
+            this.Controls.Add(this.EmailTextBox);
             this.Controls.Add(this.bunifuSeparator43);
             this.Name = "AddResident";
             this.Text = "AddResident";
@@ -272,12 +272,12 @@ namespace Frontend.Extras
 
         private Bunifu.Framework.UI.BunifuFlatButton bunifuFlatButton2;
         private Bunifu.Framework.UI.BunifuFlatButton addResidentBtn;
-        private System.Windows.Forms.TextBox ageTextBox;
-        private System.Windows.Forms.TextBox nameTextBox;
-        private System.Windows.Forms.TextBox phoneTextBox;
-        private System.Windows.Forms.TextBox emailTextBox;
+        private System.Windows.Forms.TextBox AgeTextBox;
+        private System.Windows.Forms.TextBox UserNameTextBox;
+        private System.Windows.Forms.TextBox PhoneNumberTextBox;
+        private System.Windows.Forms.TextBox EmailTextBox;
         private Bunifu.Framework.UI.BunifuSeparator bunifuSeparator43;
-        private System.Windows.Forms.TextBox passwordTextBox;
+        private System.Windows.Forms.TextBox PasswordTextBox;
         private System.Windows.Forms.Label label24;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;

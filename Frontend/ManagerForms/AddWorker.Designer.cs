@@ -31,12 +31,12 @@ namespace Frontend.Extras
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(AddWorker));
             this.bunifuSeparator43 = new Bunifu.Framework.UI.BunifuSeparator();
-            this.passwordTextBox = new System.Windows.Forms.TextBox();
-            this.ageTextBox = new System.Windows.Forms.TextBox();
-            this.nameTextBox = new System.Windows.Forms.TextBox();
-            this.phoneTextBox = new System.Windows.Forms.TextBox();
-            this.emailTextBox = new System.Windows.Forms.TextBox();
-            this.salaryTextBox = new System.Windows.Forms.TextBox();
+            this.PasswordTextBox = new System.Windows.Forms.TextBox();
+            this.AgeTextBox = new System.Windows.Forms.TextBox();
+            this.UserNameTextBox = new System.Windows.Forms.TextBox();
+            this.PhoneNumberTextBox = new System.Windows.Forms.TextBox();
+            this.EmailTextBox = new System.Windows.Forms.TextBox();
+            this.SalaryTextBox = new System.Windows.Forms.TextBox();
             this.bunifuFlatButton1 = new Bunifu.Framework.UI.BunifuFlatButton();
             this.addResidentBtn = new Bunifu.Framework.UI.BunifuFlatButton();
             this.label5 = new System.Windows.Forms.Label();
@@ -50,7 +50,7 @@ namespace Frontend.Extras
             this.label1 = new System.Windows.Forms.Label();
             this.JobTitleComboBox = new System.Windows.Forms.ComboBox();
             this.isRoomServices = new System.Windows.Forms.CheckBox();
-            this.incomeTypeComboBox = new System.Windows.Forms.ComboBox();
+            this.IncomeTypeComboBox = new System.Windows.Forms.ComboBox();
             this.SuspendLayout();
             // 
             // bunifuSeparator43
@@ -66,57 +66,57 @@ namespace Frontend.Extras
             this.bunifuSeparator43.Transparency = 255;
             this.bunifuSeparator43.Vertical = false;
             // 
-            // passwordTextBox
+            // PasswordTextBox
             // 
-            this.passwordTextBox.BackColor = System.Drawing.SystemColors.Control;
-            this.passwordTextBox.Location = new System.Drawing.Point(282, 344);
-            this.passwordTextBox.MaxLength = 20;
-            this.passwordTextBox.Name = "passwordTextBox";
-            this.passwordTextBox.Size = new System.Drawing.Size(299, 20);
-            this.passwordTextBox.TabIndex = 413;
+            this.PasswordTextBox.BackColor = System.Drawing.SystemColors.Control;
+            this.PasswordTextBox.Location = new System.Drawing.Point(281, 163);
+            this.PasswordTextBox.MaxLength = 20;
+            this.PasswordTextBox.Name = "PasswordTextBox";
+            this.PasswordTextBox.Size = new System.Drawing.Size(299, 20);
+            this.PasswordTextBox.TabIndex = 413;
             // 
-            // ageTextBox
+            // AgeTextBox
             // 
-            this.ageTextBox.BackColor = System.Drawing.SystemColors.Control;
-            this.ageTextBox.Location = new System.Drawing.Point(282, 128);
-            this.ageTextBox.Name = "ageTextBox";
-            this.ageTextBox.Size = new System.Drawing.Size(299, 20);
-            this.ageTextBox.TabIndex = 411;
+            this.AgeTextBox.BackColor = System.Drawing.SystemColors.Control;
+            this.AgeTextBox.Location = new System.Drawing.Point(282, 128);
+            this.AgeTextBox.Name = "AgeTextBox";
+            this.AgeTextBox.Size = new System.Drawing.Size(299, 20);
+            this.AgeTextBox.TabIndex = 411;
             // 
-            // nameTextBox
+            // UserNameTextBox
             // 
-            this.nameTextBox.BackColor = System.Drawing.SystemColors.Control;
-            this.nameTextBox.Location = new System.Drawing.Point(282, 91);
-            this.nameTextBox.Name = "nameTextBox";
-            this.nameTextBox.Size = new System.Drawing.Size(298, 20);
-            this.nameTextBox.TabIndex = 409;
+            this.UserNameTextBox.BackColor = System.Drawing.SystemColors.Control;
+            this.UserNameTextBox.Location = new System.Drawing.Point(282, 91);
+            this.UserNameTextBox.Name = "UserNameTextBox";
+            this.UserNameTextBox.Size = new System.Drawing.Size(298, 20);
+            this.UserNameTextBox.TabIndex = 409;
             // 
-            // phoneTextBox
+            // PhoneNumberTextBox
             // 
-            this.phoneTextBox.BackColor = System.Drawing.SystemColors.Control;
-            this.phoneTextBox.Location = new System.Drawing.Point(282, 236);
-            this.phoneTextBox.MaxLength = 20;
-            this.phoneTextBox.Name = "phoneTextBox";
-            this.phoneTextBox.Size = new System.Drawing.Size(299, 20);
-            this.phoneTextBox.TabIndex = 407;
+            this.PhoneNumberTextBox.BackColor = System.Drawing.SystemColors.Control;
+            this.PhoneNumberTextBox.Location = new System.Drawing.Point(282, 236);
+            this.PhoneNumberTextBox.MaxLength = 20;
+            this.PhoneNumberTextBox.Name = "PhoneNumberTextBox";
+            this.PhoneNumberTextBox.Size = new System.Drawing.Size(299, 20);
+            this.PhoneNumberTextBox.TabIndex = 407;
             // 
-            // emailTextBox
+            // EmailTextBox
             // 
-            this.emailTextBox.BackColor = System.Drawing.SystemColors.Control;
-            this.emailTextBox.Location = new System.Drawing.Point(282, 163);
-            this.emailTextBox.MaxLength = 20;
-            this.emailTextBox.Name = "emailTextBox";
-            this.emailTextBox.Size = new System.Drawing.Size(299, 20);
-            this.emailTextBox.TabIndex = 406;
+            this.EmailTextBox.BackColor = System.Drawing.SystemColors.Control;
+            this.EmailTextBox.Location = new System.Drawing.Point(281, 201);
+            this.EmailTextBox.MaxLength = 20;
+            this.EmailTextBox.Name = "EmailTextBox";
+            this.EmailTextBox.Size = new System.Drawing.Size(299, 20);
+            this.EmailTextBox.TabIndex = 406;
             // 
-            // salaryTextBox
+            // SalaryTextBox
             // 
-            this.salaryTextBox.BackColor = System.Drawing.SystemColors.Control;
-            this.salaryTextBox.Location = new System.Drawing.Point(282, 273);
-            this.salaryTextBox.MaxLength = 20;
-            this.salaryTextBox.Name = "salaryTextBox";
-            this.salaryTextBox.Size = new System.Drawing.Size(299, 20);
-            this.salaryTextBox.TabIndex = 416;
+            this.SalaryTextBox.BackColor = System.Drawing.SystemColors.Control;
+            this.SalaryTextBox.Location = new System.Drawing.Point(282, 273);
+            this.SalaryTextBox.MaxLength = 20;
+            this.SalaryTextBox.Name = "SalaryTextBox";
+            this.SalaryTextBox.Size = new System.Drawing.Size(299, 20);
+            this.SalaryTextBox.TabIndex = 416;
             // 
             // bunifuFlatButton1
             // 
@@ -230,7 +230,7 @@ namespace Frontend.Extras
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold);
             this.label4.ForeColor = System.Drawing.Color.DimGray;
-            this.label4.Location = new System.Drawing.Point(144, 162);
+            this.label4.Location = new System.Drawing.Point(144, 198);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(57, 21);
             this.label4.TabIndex = 503;
@@ -241,7 +241,7 @@ namespace Frontend.Extras
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold);
             this.label6.ForeColor = System.Drawing.Color.DimGray;
-            this.label6.Location = new System.Drawing.Point(144, 344);
+            this.label6.Location = new System.Drawing.Point(144, 160);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(86, 21);
             this.label6.TabIndex = 504;
@@ -285,7 +285,7 @@ namespace Frontend.Extras
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold);
             this.label1.ForeColor = System.Drawing.Color.DimGray;
-            this.label1.Location = new System.Drawing.Point(144, 198);
+            this.label1.Location = new System.Drawing.Point(144, 341);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(111, 21);
             this.label1.TabIndex = 508;
@@ -315,23 +315,23 @@ namespace Frontend.Extras
             this.isRoomServices.UseVisualStyleBackColor = true;
             this.isRoomServices.CheckedChanged += new System.EventHandler(this.IsRoomService);
             // 
-            // incomeTypeComboBox
+            // IncomeTypeComboBox
             // 
-            this.incomeTypeComboBox.BackColor = System.Drawing.SystemColors.Control;
-            this.incomeTypeComboBox.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.incomeTypeComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.incomeTypeComboBox.FormattingEnabled = true;
-            this.incomeTypeComboBox.Location = new System.Drawing.Point(283, 201);
-            this.incomeTypeComboBox.Name = "incomeTypeComboBox";
-            this.incomeTypeComboBox.Size = new System.Drawing.Size(298, 21);
-            this.incomeTypeComboBox.TabIndex = 511;
+            this.IncomeTypeComboBox.BackColor = System.Drawing.SystemColors.Control;
+            this.IncomeTypeComboBox.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.IncomeTypeComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.IncomeTypeComboBox.FormattingEnabled = true;
+            this.IncomeTypeComboBox.Location = new System.Drawing.Point(281, 344);
+            this.IncomeTypeComboBox.Name = "IncomeTypeComboBox";
+            this.IncomeTypeComboBox.Size = new System.Drawing.Size(300, 21);
+            this.IncomeTypeComboBox.TabIndex = 511;
             // 
             // AddWorker
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(821, 500);
-            this.Controls.Add(this.incomeTypeComboBox);
+            this.Controls.Add(this.IncomeTypeComboBox);
             this.Controls.Add(this.isRoomServices);
             this.Controls.Add(this.JobTitleComboBox);
             this.Controls.Add(this.label1);
@@ -345,12 +345,12 @@ namespace Frontend.Extras
             this.Controls.Add(this.label5);
             this.Controls.Add(this.bunifuFlatButton1);
             this.Controls.Add(this.addResidentBtn);
-            this.Controls.Add(this.salaryTextBox);
-            this.Controls.Add(this.passwordTextBox);
-            this.Controls.Add(this.ageTextBox);
-            this.Controls.Add(this.nameTextBox);
-            this.Controls.Add(this.phoneTextBox);
-            this.Controls.Add(this.emailTextBox);
+            this.Controls.Add(this.SalaryTextBox);
+            this.Controls.Add(this.PasswordTextBox);
+            this.Controls.Add(this.AgeTextBox);
+            this.Controls.Add(this.UserNameTextBox);
+            this.Controls.Add(this.PhoneNumberTextBox);
+            this.Controls.Add(this.EmailTextBox);
             this.Controls.Add(this.bunifuSeparator43);
             this.Name = "AddWorker";
             this.Text = "PhysicalExaminationPanel";
@@ -362,12 +362,12 @@ namespace Frontend.Extras
 
         #endregion
         private Bunifu.Framework.UI.BunifuSeparator bunifuSeparator43;
-        private System.Windows.Forms.TextBox passwordTextBox;
-        private System.Windows.Forms.TextBox ageTextBox;
-        private System.Windows.Forms.TextBox nameTextBox;
-        private System.Windows.Forms.TextBox phoneTextBox;
-        private System.Windows.Forms.TextBox emailTextBox;
-        private System.Windows.Forms.TextBox salaryTextBox;
+        private System.Windows.Forms.TextBox PasswordTextBox;
+        private System.Windows.Forms.TextBox AgeTextBox;
+        private System.Windows.Forms.TextBox UserNameTextBox;
+        private System.Windows.Forms.TextBox PhoneNumberTextBox;
+        private System.Windows.Forms.TextBox EmailTextBox;
+        private System.Windows.Forms.TextBox SalaryTextBox;
         private Bunifu.Framework.UI.BunifuFlatButton bunifuFlatButton1;
         private Bunifu.Framework.UI.BunifuFlatButton addResidentBtn;
         private System.Windows.Forms.Label label5;
@@ -381,6 +381,6 @@ namespace Frontend.Extras
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.ComboBox JobTitleComboBox;
         private System.Windows.Forms.CheckBox isRoomServices;
-        private System.Windows.Forms.ComboBox incomeTypeComboBox;
+        private System.Windows.Forms.ComboBox IncomeTypeComboBox;
     }
 }

@@ -23,5 +23,17 @@ namespace Frontend.Extras
             ResidentsList residentsList = new ResidentsList();
             residentsList.Show();
         }
+
+        private void addResidentButton_Click(object sender, EventArgs e)
+        {
+            AddResident addResident = new AddResident();
+            addResident.Show();
+        }
+
+        private void editOrDeleteResidentButton_Click(object sender, EventArgs e)
+        {
+            EditOrDeleteResident editOrDeleteResident = new EditOrDeleteResident();
+            editOrDeleteResident.Show();
+        }
     }
 }

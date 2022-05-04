@@ -6,6 +6,7 @@ using System.Drawing;
 using System.Dynamic;
 using System.Linq;
 using System.Text;
+using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using Frontend.HttpService;
@@ -23,39 +24,59 @@ namespace Frontend.ManagerForms
         private void EditOrDeleteWorker_Load(object sender, EventArgs e)
         {
             worker = new ExpandoObject();
-            passwordTextBox.Enabled = !isRoomService.Checked;
+            PasswordTextBox.Enabled = !isRoomService.Checked;
+            JobTitleComboBox.Items.Add("Manager");
+            JobTitleComboBox.Items.Add("Room Service");
+            JobTitleComboBox.Items.Add("Receptionist");
+
+            IncomeTypeComboBox.Items.Add("Weekly");
+            IncomeTypeComboBox.Items.Add("Monthly");
+            IncomeTypeComboBox.Items.Add("Yearly");
         }
 
-
+        private bool CheckIfWorkerIsPrivileged()
+        {
+            bool isManager = JobTitleComboBox.GetItemText(JobTitleComboBox.SelectedItem).Equals("Manager");
+            bool isReceptionist = JobTitleComboBox.GetItemText(JobTitleComboBox.SelectedItem).Equals("Receptionist");
+            return isManager || isReceptionist;
+        }
         private void searchByIdBtn_Click(object sender, EventArgs e)
         {
-            worker.id = searchbyIdTextbox.Text;
-
-            //TODO: api set worker to the api returend worker
-            dynamic obj = new ExpandoObject();
-            obj.id = Convert.ToInt32( searchbyIdTextbox.Text);
-            dynamic work = Service.GetWorkerById(obj);
-            nameTextBox.Text = work.userName.ToString();
-            ageTextBox.Text = work.age.ToString();
-            emailTextBox.Text = work.email.ToString();
-            jobTitleTextbox.Text = work.jobTitle.ToString();
-            try
+            if ((searchbyIdTextbox.Text.Length == 0))
             {
-                if (isRoomService.Checked) { work.password = ""; }
-                else { passwordTextBox.Text = work.password.ToString(); }
-            }catch(Exception ex)
-            {
-                // dp nothing
+                MessageBox.Show("Please enter a valid id.");
             }
-                
-             phoneTextBox.Text = work.phoneNumber.ToString();
-            salaryTextBox.Text = work.salary.ToString();
-            incomeTypeTextBox.Text = work.incomeType.ToString();
+            else
+            {
+                worker.id = searchbyIdTextbox.Text;
+
+                //TODO: api set worker to the api returend worker
+                dynamic obj = new ExpandoObject();
+                obj.id = Convert.ToInt32(searchbyIdTextbox.Text);
+                dynamic work = Service.GetWorkerById(obj);
+                UserNameTextBox.Text = work.userName.ToString();
+                AgeTextBox.Text = work.age.ToString();
+                EmailTextBox.Text = work.email.ToString();
+                JobTitleComboBox.SelectedItem = work.jobTitle.ToString();
+                try
+                {
+                    if (isRoomService.Checked) { work.password = ""; }
+                    else { PasswordTextBox.Text = work.password.ToString(); }
+                }
+                catch (Exception ex)
+                {
+                    // dp nothing
+                }
+
+                PhoneNumberTextBox.Text = work.phoneNumber.ToString();
+                SalaryTextBox.Text = work.salary.ToString();
+                IncomeTypeComboBox.SelectedItem = work.incomeType.ToString();
+            }
         }
 
         private void isRoomService_CheckedChanged(object sender, EventArgs e)
         {
-            passwordTextBox.Enabled = !isRoomService.Checked;
+            PasswordTextBox.Enabled = !isRoomService.Checked;
         }
 
         private void editWorkerBtn_Click(object sender, EventArgs e)
@@ -63,25 +84,42 @@ namespace Frontend.ManagerForms
             //api takes all data and edit it
             dynamic obj = new ExpandoObject();
             obj.id = searchbyIdTextbox.Text;
-            obj.userName = nameTextBox.Text;
-            obj.age = ageTextBox.Text;
-            obj.email = emailTextBox.Text;
-            obj.password = passwordTextBox.Text;
-            obj.phoneNumber = phoneTextBox.Text;
-            obj.salary = salaryTextBox.Text;
-            obj.incomeType = incomeTypeTextBox.Text;
-            obj.jobTitle = jobTitleTextbox.Text;
-            
-            dynamic resp = Service.EditWorker(obj);
-
-            if (resp.success == true)
+            obj.userName = UserNameTextBox.Text;
+            obj.age = AgeTextBox.Text;
+            obj.email = EmailTextBox.Text;
+            obj.phoneNumber = PhoneNumberTextBox.Text;
+            obj.salary = SalaryTextBox.Text;
+            obj.incomeType = IncomeTypeComboBox.GetItemText(IncomeTypeComboBox.SelectedItem);
+            obj.jobTitle = JobTitleComboBox.GetItemText(JobTitleComboBox.SelectedItem);
+            bool WorkerIsPrivileged = false;
+            if (CheckIfWorkerIsPrivileged())
             {
-                this.Hide();
-                MessageBox.Show("This worker has been edited successfuly");
+                obj.password = PasswordTextBox.Text;
+                PasswordTextBox.Enabled = true;
+                WorkerIsPrivileged = true;
             }
             else
+                obj.password = null;
+            if (Validate())
             {
-                MessageBox.Show("Cannot edit this worker");
+                if (WorkerIsPrivileged && PasswordTextBox.Text.Length == 0)
+                {
+                    MessageBox.Show("Please enter a valid password.");
+                }
+                else
+                {
+                    dynamic resp = Service.EditWorker(obj);
+
+                    if (resp.success == true)
+                    {
+                        this.Hide();
+                        MessageBox.Show("This worker has been edited successfuly");
+                    }
+                    else
+                    {
+                        MessageBox.Show("Cannot edit this worker");
+                    }
+                }
             }
             // and delete it
             clearBtn_Click(sender, e);
@@ -109,16 +147,56 @@ namespace Frontend.ManagerForms
         private void clearBtn_Click(object sender, EventArgs e)
         {
             searchbyIdTextbox.Text = "";
-            nameTextBox.Text = "";
-            ageTextBox.Text = "";
-            emailTextBox.Text = "";
-            passwordTextBox.Text = "";
-            phoneTextBox.Text = "";
-            salaryTextBox.Text = "";
-            jobTitleTextbox.Text = "";
-            incomeTypeTextBox.Text = "";
+            UserNameTextBox.Text = "";
+            AgeTextBox.Text = "";
+            EmailTextBox.Text = "";
+            PasswordTextBox.Text = "";
+            PhoneNumberTextBox.Text = "";
+            SalaryTextBox.Text = "";
         }
-
+        private bool Validate()
+        {
+            bool isOkay = true;
+            string email = EmailTextBox.Text;
+            Regex regex = new Regex(@"^([\w\.\-]+)@([\w\-]+)((\.(\w){2,3})+)$");
+            Match match = regex.Match(email);
+            if ((UserNameTextBox.Text.Length == 0))
+            {
+                MessageBox.Show("Please enter a valid user name.");
+                isOkay = false;
+            }
+            else if ((SalaryTextBox.Text.Length == 0))
+            {
+                MessageBox.Show("Please enter a valid salary.");
+                isOkay = false;
+            }
+            else if (int.Parse(AgeTextBox.Text) < 0 || (AgeTextBox.Text.Length == 0))
+            {
+                MessageBox.Show("Please enter a valid age.");
+                isOkay = false;
+            }
+            else if (PhoneNumberTextBox.Text.Length == 0 || (PhoneNumberTextBox.Text.Length != 11))
+            {
+                MessageBox.Show("Please enter a valid phone number.");
+                isOkay = false;
+            }
+            else if (!match.Success)
+            {
+                MessageBox.Show("Please enter a valid email.");
+                isOkay = false;
+            }
+            else if (string.IsNullOrEmpty(IncomeTypeComboBox.Text))
+            {
+                MessageBox.Show("Please choose a valid income type.");
+                isOkay = false;
+            }
+            else if (string.IsNullOrEmpty(JobTitleComboBox.Text))
+            {
+                MessageBox.Show("Please choose a valid job tilte.");
+                isOkay = false;
+            }
+            return isOkay;
+        }
 
 
 

@@ -59,8 +59,7 @@ namespace Frontend.ManagerForms
             }
             
         }
-
-        private void bunifuMetroTextbox1_OnValueChanged(object sender, EventArgs e)
+        private void SearchTextbox_OnValueChanged(object sender, EventArgs e)
         {
             int cnt = 0;
             if (this.bunifuMetroTextbox1.Text != string.Empty)

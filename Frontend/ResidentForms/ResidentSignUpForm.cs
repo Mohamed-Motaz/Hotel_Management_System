@@ -24,7 +24,8 @@ namespace Frontend
             InitializeComponent();
             this.ActiveControl = UserNameTextBox;
             UserNameTextBox.Focus();
-        
+            GenderTypeComboBox.Items.Add("Female");
+            GenderTypeComboBox.Items.Add("Male");
         }
         private void btnLogin_Click(object sender, EventArgs e)
         {
@@ -111,6 +112,10 @@ namespace Frontend
             {
                 MessageBox.Show("Please enter a valid email.");
                 isOkay = false;
+            }
+            else if (!GenderTypeComboBox.SelectedItem.Equals("Male") || !GenderTypeComboBox.SelectedItem.Equals("Female"))
+            {
+                MessageBox.Show("Please choose a valid gender.");
             }
             return isOkay;
         }

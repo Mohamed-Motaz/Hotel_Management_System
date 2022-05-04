@@ -34,6 +34,8 @@ namespace Frontend.Extras
             this.bunifuSeparator1 = new Bunifu.Framework.UI.BunifuSeparator();
             this.label2 = new System.Windows.Forms.Label();
             this.residentsListButton = new Bunifu.Framework.UI.BunifuTileButton();
+            this.addResidentButton = new Bunifu.Framework.UI.BunifuTileButton();
+            this.editOrDeleteResidentButton = new Bunifu.Framework.UI.BunifuTileButton();
             this.SuspendLayout();
             // 
             // label1
@@ -83,18 +85,60 @@ namespace Frontend.Extras
             this.residentsListButton.ImageZoom = 50;
             this.residentsListButton.LabelPosition = 49;
             this.residentsListButton.LabelText = "Residents List";
-            this.residentsListButton.Location = new System.Drawing.Point(376, 184);
+            this.residentsListButton.Location = new System.Drawing.Point(95, 161);
             this.residentsListButton.Margin = new System.Windows.Forms.Padding(6);
             this.residentsListButton.Name = "residentsListButton";
-            this.residentsListButton.Size = new System.Drawing.Size(167, 155);
+            this.residentsListButton.Size = new System.Drawing.Size(236, 168);
             this.residentsListButton.TabIndex = 72;
             this.residentsListButton.Click += new System.EventHandler(this.residentsListButton_Click);
+            // 
+            // addResidentButton
+            // 
+            this.addResidentButton.BackColor = System.Drawing.Color.LightSteelBlue;
+            this.addResidentButton.color = System.Drawing.Color.LightSteelBlue;
+            this.addResidentButton.colorActive = System.Drawing.Color.FromArgb(((int)(((byte)(19)))), ((int)(((byte)(30)))), ((int)(((byte)(46)))));
+            this.addResidentButton.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.addResidentButton.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Bold);
+            this.addResidentButton.ForeColor = System.Drawing.Color.White;
+            this.addResidentButton.Image = ((System.Drawing.Image)(resources.GetObject("addResidentButton.Image")));
+            this.addResidentButton.ImagePosition = 24;
+            this.addResidentButton.ImageZoom = 40;
+            this.addResidentButton.LabelPosition = 49;
+            this.addResidentButton.LabelText = "Add Resident";
+            this.addResidentButton.Location = new System.Drawing.Point(353, 161);
+            this.addResidentButton.Margin = new System.Windows.Forms.Padding(6);
+            this.addResidentButton.Name = "addResidentButton";
+            this.addResidentButton.Size = new System.Drawing.Size(236, 168);
+            this.addResidentButton.TabIndex = 87;
+            this.addResidentButton.Click += new System.EventHandler(this.addResidentButton_Click);
+            // 
+            // editOrDeleteResidentButton
+            // 
+            this.editOrDeleteResidentButton.BackColor = System.Drawing.Color.LightSteelBlue;
+            this.editOrDeleteResidentButton.color = System.Drawing.Color.LightSteelBlue;
+            this.editOrDeleteResidentButton.colorActive = System.Drawing.Color.FromArgb(((int)(((byte)(19)))), ((int)(((byte)(30)))), ((int)(((byte)(46)))));
+            this.editOrDeleteResidentButton.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.editOrDeleteResidentButton.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Bold);
+            this.editOrDeleteResidentButton.ForeColor = System.Drawing.Color.White;
+            this.editOrDeleteResidentButton.Image = ((System.Drawing.Image)(resources.GetObject("editOrDeleteResidentButton.Image")));
+            this.editOrDeleteResidentButton.ImagePosition = 24;
+            this.editOrDeleteResidentButton.ImageZoom = 40;
+            this.editOrDeleteResidentButton.LabelPosition = 49;
+            this.editOrDeleteResidentButton.LabelText = "Edit or Delete Resident";
+            this.editOrDeleteResidentButton.Location = new System.Drawing.Point(208, 341);
+            this.editOrDeleteResidentButton.Margin = new System.Windows.Forms.Padding(6);
+            this.editOrDeleteResidentButton.Name = "editOrDeleteResidentButton";
+            this.editOrDeleteResidentButton.Size = new System.Drawing.Size(236, 168);
+            this.editOrDeleteResidentButton.TabIndex = 86;
+            this.editOrDeleteResidentButton.Click += new System.EventHandler(this.editOrDeleteResidentButton_Click);
             // 
             // ManageResidents
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1146, 744);
+            this.Controls.Add(this.addResidentButton);
+            this.Controls.Add(this.editOrDeleteResidentButton);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.bunifuSeparator1);
             this.Controls.Add(this.label2);
@@ -112,5 +156,7 @@ namespace Frontend.Extras
         private Bunifu.Framework.UI.BunifuSeparator bunifuSeparator1;
         private System.Windows.Forms.Label label2;
         private Bunifu.Framework.UI.BunifuTileButton residentsListButton;
+        private Bunifu.Framework.UI.BunifuTileButton addResidentButton;
+        private Bunifu.Framework.UI.BunifuTileButton editOrDeleteResidentButton;
     }
 }

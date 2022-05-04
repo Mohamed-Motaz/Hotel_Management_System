@@ -42,13 +42,13 @@
             this.bunifuFlatButton1 = new Bunifu.Framework.UI.BunifuFlatButton();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
-            this.GenderTextBox = new System.Windows.Forms.TextBox();
             this.EmailTextBox = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.AgeTextBox = new System.Windows.Forms.TextBox();
             this.PhoneNumberTextBox = new System.Windows.Forms.TextBox();
             this.bunifuFlatButton7 = new Bunifu.Framework.UI.BunifuFlatButton();
+            this.GenderTypeComboBox = new System.Windows.Forms.ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -216,19 +216,6 @@
             this.label4.TabIndex = 499;
             this.label4.Text = "Email:";
             // 
-            // GenderTextBox
-            // 
-            this.GenderTextBox.BackColor = System.Drawing.Color.Silver;
-            this.GenderTextBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.GenderTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.GenderTextBox.ForeColor = System.Drawing.SystemColors.InactiveCaptionText;
-            this.GenderTextBox.Location = new System.Drawing.Point(135, 176);
-            this.GenderTextBox.Multiline = true;
-            this.GenderTextBox.Name = "GenderTextBox";
-            this.GenderTextBox.PasswordChar = '•';
-            this.GenderTextBox.Size = new System.Drawing.Size(251, 23);
-            this.GenderTextBox.TabIndex = 498;
-            // 
             // EmailTextBox
             // 
             this.EmailTextBox.BackColor = System.Drawing.Color.Silver;
@@ -325,6 +312,17 @@
             this.bunifuFlatButton7.TextFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bunifuFlatButton7.Click += new System.EventHandler(this.BackBtn);
             // 
+            // GenderTypeComboBox
+            // 
+            this.GenderTypeComboBox.BackColor = System.Drawing.SystemColors.Control;
+            this.GenderTypeComboBox.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.GenderTypeComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.GenderTypeComboBox.FormattingEnabled = true;
+            this.GenderTypeComboBox.Location = new System.Drawing.Point(135, 179);
+            this.GenderTypeComboBox.Name = "GenderTypeComboBox";
+            this.GenderTypeComboBox.Size = new System.Drawing.Size(251, 21);
+            this.GenderTypeComboBox.TabIndex = 506;
+            // 
             // ResidentSignUpForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -332,6 +330,7 @@
             this.BackColor = System.Drawing.Color.Silver;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(471, 378);
+            this.Controls.Add(this.GenderTypeComboBox);
             this.Controls.Add(this.bunifuFlatButton7);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label6);
@@ -339,7 +338,6 @@
             this.Controls.Add(this.PhoneNumberTextBox);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label4);
-            this.Controls.Add(this.GenderTextBox);
             this.Controls.Add(this.EmailTextBox);
             this.Controls.Add(this.bunifuFlatButton1);
             this.Controls.Add(this.label2);
@@ -376,13 +374,13 @@
         private Bunifu.Framework.UI.BunifuFlatButton bunifuFlatButton1;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.TextBox GenderTextBox;
         private System.Windows.Forms.TextBox EmailTextBox;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.TextBox AgeTextBox;
         private System.Windows.Forms.TextBox PhoneNumberTextBox;
         private Bunifu.Framework.UI.BunifuFlatButton bunifuFlatButton7;
+        private System.Windows.Forms.ComboBox GenderTypeComboBox;
     }
 }
 
