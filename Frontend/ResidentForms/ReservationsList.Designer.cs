@@ -172,6 +172,7 @@ namespace Frontend.ResidentForms
             this.Controls.Add(this.bunifuFlatButton1);
             this.Controls.Add(this.bunifuMetroTextbox1);
             this.Controls.Add(this.bunifuSeparator2);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "ReservationsList";
             this.Text = "ReservationsList";
             this.Load += new System.EventHandler(this.ReservationsList_Load);

@@ -143,6 +143,7 @@ namespace Frontend.ResidentForms
             this.Controls.Add(this.addReservationButton);
             this.Controls.Add(this.editOrDeleteReservationButton);
             this.Controls.Add(this.bunifuSeparator1);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "ManageReservations";
             this.Text = "ManageReservations";
             this.Load += new System.EventHandler(this.ManageReservations_Load);

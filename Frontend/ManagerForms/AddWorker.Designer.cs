@@ -352,6 +352,7 @@ namespace Frontend.Extras
             this.Controls.Add(this.PhoneNumberTextBox);
             this.Controls.Add(this.EmailTextBox);
             this.Controls.Add(this.bunifuSeparator43);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "AddWorker";
             this.Text = "PhysicalExaminationPanel";
             this.Load += new System.EventHandler(this.AddWorker_Load);

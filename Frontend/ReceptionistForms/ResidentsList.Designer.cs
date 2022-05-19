@@ -171,6 +171,7 @@ namespace Frontend.ReceptionistForms
             this.Controls.Add(this.label4);
             this.Controls.Add(this.bunifuSeparator2);
             this.Controls.Add(this.label5);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "ResidentsList";
             this.Text = "ResidentsList";
             this.Load += new System.EventHandler(this.ResidentsList_Load);

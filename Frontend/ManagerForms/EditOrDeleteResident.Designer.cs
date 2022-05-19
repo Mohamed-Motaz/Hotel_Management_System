@@ -366,6 +366,7 @@ namespace Frontend.ManagerForms
             this.Controls.Add(this.clearBtn);
             this.Controls.Add(this.editWorkerBtn);
             this.Controls.Add(this.bunifuSeparator43);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "EditOrDeleteResident";
             this.Text = "EditOrDeleteResident";

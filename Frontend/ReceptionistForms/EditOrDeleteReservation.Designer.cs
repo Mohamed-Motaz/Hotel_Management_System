@@ -388,6 +388,7 @@ namespace Frontend.ReceptionistForms
             this.Controls.Add(this.ClearBtn);
             this.Controls.Add(this.EditReservationBtn);
             this.Controls.Add(this.bunifuSeparator43);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "EditOrDeleteReservation";
             this.Text = "EditOrDeleteReservation";
             this.Load += new System.EventHandler(this.EditOrDeleteReservation_Load);

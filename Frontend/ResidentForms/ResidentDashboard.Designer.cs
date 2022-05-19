@@ -459,6 +459,7 @@ namespace Frontend.ResidentForms
             this.Controls.Add(this.numberOfNights);
             this.Controls.Add(this.bunifuFlatButton4);
             this.Controls.Add(this.bunifuFlatButton1);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "ResidentDashboard";
             this.Text = "ResidentDashboard";
             this.Load += new System.EventHandler(this.ResidentDashboard_Load);
