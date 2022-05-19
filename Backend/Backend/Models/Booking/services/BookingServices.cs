@@ -30,7 +30,7 @@ public static class BookingServices
         for (Iterator bookingIterator = Apphost.ListOfBookingInformation.GetIterator(); bookingIterator.hasNext();)
         {
             BookingInformation oldBooking = bookingIterator.getNext() as BookingInformation;
-            if (oldBooking.id == oldId)
+            if (oldBooking.id == oldId && oldBooking.residentId == booking.residentId)
             {
                 oldBooking.roomId = booking.roomId;
                 oldBooking.startDate = booking.startDate;
