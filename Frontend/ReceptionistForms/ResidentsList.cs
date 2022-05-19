@@ -27,29 +27,29 @@ namespace Frontend.ReceptionistForms
 
         private void SetupDataGridView()
         {
-            dataGridView1.ColumnCount = 8;
-            dataGridView1.Columns[2].Name = "ID";
-            dataGridView1.Columns[3].Name = "Name";
-            dataGridView1.Columns[4].Name = "Age";
-            dataGridView1.Columns[5].Name = "PhoneNumber";
-            dataGridView1.Columns[6].Name = "Email";
-            dataGridView1.Columns[7].Name = "Password";
+            ResidentsListGridView.ColumnCount = 7;
+            ResidentsListGridView.Columns[0].Name = "ID";
+            ResidentsListGridView.Columns[1].Name = "Name";
+            ResidentsListGridView.Columns[2].Name = "Age";
+            ResidentsListGridView.Columns[3].Name = "PhoneNumber";
+            ResidentsListGridView.Columns[4].Name = "Email";
+            // ResidentsListGridView.Columns[5].Name = "Password";
            
             List<dynamic> residents = Service.GetAllResidents();
 
-            label1.Text = residents.Count.ToString();
+            CntLabel.Text = residents.Count.ToString();
 
             foreach (dynamic res in residents)
             {
-                DataGridViewRow row = (DataGridViewRow)dataGridView1.Rows[0].Clone();
-                row.Cells[2].Value = res.id.ToString() ;
-                row.Cells[3].Value = res.userName.ToString();
-                row.Cells[4].Value = res.age.ToString();
-                row.Cells[5].Value = res.email.ToString();
-                row.Cells[6].Value = res.phoneNumber.ToString();
-                row.Cells[7].Value = res.password.ToString();
+                DataGridViewRow row = (DataGridViewRow)ResidentsListGridView.Rows[0].Clone();
+                row.Cells[0].Value = res.id.ToString() ;
+                row.Cells[1].Value = res.userName.ToString();
+                row.Cells[2].Value = res.age.ToString();
+                row.Cells[3].Value = res.email.ToString();
+                row.Cells[4].Value = res.phoneNumber.ToString();
+                // row.Cells[5].Value = res.password.ToString();
 
-                dataGridView1.Rows.Add(row);
+                ResidentsListGridView.Rows.Add(row);
             }
 
             
@@ -63,7 +63,7 @@ namespace Frontend.ReceptionistForms
             {
                 try
                 {
-                    foreach (DataGridViewRow row in dataGridView1.Rows)
+                    foreach (DataGridViewRow row in ResidentsListGridView.Rows)
                     {
                         if (row.Cells[3].Value != null && row.Cells[3].Value.ToString().ToLower().Contains(bunifuMetroTextbox1.Text.ToLower()))
                         {
@@ -83,7 +83,7 @@ namespace Frontend.ReceptionistForms
             }
             else
             {
-                foreach (DataGridViewRow row in dataGridView1.Rows)
+                foreach (DataGridViewRow row in ResidentsListGridView.Rows)
                 {
                     cnt++;
                     if (row.Visible != true)
@@ -93,7 +93,7 @@ namespace Frontend.ReceptionistForms
                 }
                 cnt--;
             }
-            label1.Text = cnt.ToString();
+            CntLabel.Text = cnt.ToString();
 
         }
     }
