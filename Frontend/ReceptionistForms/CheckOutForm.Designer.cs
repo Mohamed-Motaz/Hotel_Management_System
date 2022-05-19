@@ -126,6 +126,7 @@
             this.Controls.Add(this.RoomIDTextBox);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.bunifuSeparator43);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "CheckOutForm";
             this.Text = "CheckOutForm";
             this.ResumeLayout(false);

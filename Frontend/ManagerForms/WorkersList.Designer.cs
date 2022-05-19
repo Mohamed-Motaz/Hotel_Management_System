@@ -171,6 +171,7 @@ namespace Frontend.ManagerForms
             this.Controls.Add(this.label4);
             this.Controls.Add(this.bunifuSeparator2);
             this.Controls.Add(this.label5);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "WorkersList";
             this.Text = "WorkersList";
             this.Load += new System.EventHandler(this.WorkersList_Load);

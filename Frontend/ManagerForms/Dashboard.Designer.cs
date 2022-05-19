@@ -647,6 +647,7 @@ namespace Frontend.Extras
             this.Controls.Add(this.bunifuFlatButton4);
             this.Controls.Add(this.bunifuFlatButton2);
             this.Controls.Add(this.bunifuFlatButton1);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Dashboard";
             this.Text = "BasePanel";
             this.Load += new System.EventHandler(this.Dashboard_Load);

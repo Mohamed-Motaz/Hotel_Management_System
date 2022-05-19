@@ -143,6 +143,7 @@ namespace Frontend.Extras
             this.Controls.Add(this.bunifuSeparator1);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.workersListButton);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "ManageWorkers";
             this.Text = "ManageWorkers";
             this.ResumeLayout(false);

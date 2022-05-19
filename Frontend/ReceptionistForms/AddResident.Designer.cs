@@ -259,6 +259,7 @@ namespace Frontend.ReceptionistForms
             this.Controls.Add(this.EmailTextBox);
             this.Controls.Add(this.label22);
             this.Controls.Add(this.bunifuSeparator43);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "AddResident";
             this.Text = "AddResident";
             this.ResumeLayout(false);
