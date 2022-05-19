@@ -13,7 +13,7 @@ public static class UserAuthenticationServices
         {
             for (Iterator WorkerIterator = Apphost.ListOfPrivilegedWorkers.GetIterator(); WorkerIterator.hasNext();)
             {
-                AbstractPrivilegedWorker Worker = WorkerIterator.getNext() as AbstractPrivilegedWorker;
+                PrivilegedWorker Worker = WorkerIterator.getNext() as PrivilegedWorker;
                 if (Worker.userName == username)
                 {
                     return (Worker.password == Password) ? ( (Worker.jobTitle == JobTitle.Manager) ? "Manager" : "Receptionist") : "Failed"; 
@@ -43,12 +43,12 @@ public static class UserAuthenticationServices
         }
         for (Iterator workerIterator = Apphost.ListOfRoomServices.GetIterator(); workerIterator.hasNext();)
         {
-            AbstractWorker roomWorker = workerIterator.getNext() as AbstractWorker;
+            Worker roomWorker = workerIterator.getNext() as Worker;
             if (roomWorker.userName == userName) return true;
         }
         for (Iterator workerIterator = Apphost.ListOfPrivilegedWorkers.GetIterator(); workerIterator.hasNext();)
         {
-            AbstractPrivilegedWorker worker = workerIterator.getNext() as AbstractPrivilegedWorker;
+            PrivilegedWorker worker = workerIterator.getNext() as PrivilegedWorker;
             if (worker.userName == userName) return true;
         }
         return false;

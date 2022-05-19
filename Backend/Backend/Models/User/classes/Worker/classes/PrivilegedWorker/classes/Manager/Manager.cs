@@ -5,12 +5,12 @@ using System.Web;
 
 namespace Backend.Models
 {
-    public class Manager : AbstractPrivilegedWorker
+    public class Manager : PrivilegedWorker
     {
         public Manager(string userName, int age, string email, string phoneNumber, int salary, string jobTitle, string incomeType, string password) : 
             base(userName, age, email, phoneNumber, salary, jobTitle, incomeType, password) {}
 
-        public static bool addWorker(AbstractWorker newWorker, string password)
+        public static bool addWorker(Worker newWorker, string password)
         {
             if (UserAuthenticationServices.isUserNameFound(newWorker.userName)) return false;
             
@@ -50,11 +50,11 @@ namespace Backend.Models
             return false;
         }
 
-        public static AbstractWorker getWorker(int id)
+        public static Worker getWorker(int id)
         {
             for (Iterator workerIterator = Apphost.ListOfRoomServices.GetIterator(); workerIterator.hasNext();)
             {
-                AbstractWorker worker = workerIterator.getNext() as AbstractWorker;
+                Worker worker = workerIterator.getNext() as Worker;
                 if (worker.id == id)
                 {
                     return (RoomService)worker;
@@ -62,7 +62,7 @@ namespace Backend.Models
             }
             for (Iterator workerIterator = Apphost.ListOfPrivilegedWorkers.GetIterator(); workerIterator.hasNext();)
             {
-                AbstractPrivilegedWorker worker = workerIterator.getNext() as AbstractPrivilegedWorker;
+                PrivilegedWorker worker = workerIterator.getNext() as PrivilegedWorker;
                 if (worker.id == id)
                 {
                     if(worker.jobTitle == JobTitle.Receptionist)
@@ -79,9 +79,9 @@ namespace Backend.Models
             return null;
         }
 
-        public static bool editWorker(int oldId, AbstractWorker editedWorker, string password)
+        public static bool editWorker(int oldId, Worker editedWorker, string password)
         {
-            AbstractWorker oldWorker = getWorker(oldId);
+            Worker oldWorker = getWorker(oldId);
 
             if (oldWorker.jobTitle == JobTitle.RoomService)
             {
@@ -105,7 +105,7 @@ namespace Backend.Models
             {
                 for (Iterator workerIterator = Apphost.ListOfPrivilegedWorkers.GetIterator(); workerIterator.hasNext();)
                 {
-                    AbstractPrivilegedWorker worker = workerIterator.getNext() as AbstractPrivilegedWorker;
+                    PrivilegedWorker worker = workerIterator.getNext() as PrivilegedWorker;
                     worker.password = password;
                     if (worker.id == oldId)
                     {

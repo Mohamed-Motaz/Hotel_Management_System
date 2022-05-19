@@ -5,7 +5,7 @@ using System.Web;
 
 namespace Backend.Models
 {
-    public class Resident : AbstractUser
+    public class Resident : User
     {
         public string password;
 

@@ -5,7 +5,7 @@ using System.Web;
 
 namespace Backend.Models
 {
-    public class AbstractUser
+    public abstract class User
     {
         public static int UserIds = 1;
         public int id { set; get; }
@@ -14,7 +14,7 @@ namespace Backend.Models
         public string email { set; get; }
         public string phoneNumber { set; get; }
 
-        public AbstractUser(string userName, int age, string email, string phoneNumber)
+        public User(string userName, int age, string email, string phoneNumber)
         {
             id = UserIds++;
             this.userName = userName;

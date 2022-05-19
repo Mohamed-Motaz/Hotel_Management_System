@@ -22,7 +22,7 @@ namespace Backend.Controllers
         [HttpPost]
         public dynamic add([FromBody] dynamic obj) //api/worker/add
         {
-            AbstractWorker worker;
+            Worker worker;
             if (obj.jobTitle == JobTitle.RoomService)
             {
                 worker = new RoomService(Convert.ToString(obj.userName), Convert.ToInt32(obj.age), Convert.ToString(obj.email), Convert.ToString(obj.phoneNumber), Convert.ToInt32(obj.salary), Convert.ToString(obj.jobTitle), Convert.ToString(obj.incomeType));
@@ -43,7 +43,7 @@ namespace Backend.Controllers
         [HttpPost]
         public dynamic edit([FromBody] dynamic obj) //api/worker/edit
         {
-            AbstractWorker editedWorker;
+            Worker editedWorker;
             if (Convert.ToString(obj.jobTitle) == JobTitle.RoomService)
             {
                 editedWorker = new RoomService(Convert.ToString(obj.userName), Convert.ToInt32(obj.age), Convert.ToString(obj.email), Convert.ToString(obj.phoneNumber), Convert.ToInt32(obj.salary), Convert.ToString(obj.jobTitle), Convert.ToString(obj.incomeType));
