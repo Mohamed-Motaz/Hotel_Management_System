@@ -31,7 +31,7 @@ namespace Backend.Controllers
                 .ToList();
             obj = new ExpandoObject();
             obj.lst = mixedRooms;
-            obj.Success = true;
+            obj.Success = (mixedRooms.Count != 0);
             return obj;
         }
 
@@ -78,8 +78,9 @@ namespace Backend.Controllers
         public dynamic checkout([FromBody] dynamic obj) //api/reservation/checkout
         {
             dynamic resp = new ExpandoObject();
+
             resp.lst = new List<object>(Receptionist.checkOut(Convert.ToInt32(obj.roomId)));
-            resp.Success = true;
+            resp.Success = (resp.lst != -1);
             return resp;
         }
 
@@ -125,7 +126,7 @@ namespace Backend.Controllers
                 modifiedBookingList.Add(modifiedBooking);
             }
             resp.lst = modifiedBookingList;
-            resp.Success = true;
+            resp.Success = (modifiedBookingList.Count != 0);
             return resp;
         }
 
@@ -150,7 +151,7 @@ namespace Backend.Controllers
                 modifiedBookingList.Add(modifiedBooking);
             }
             resp.lst = modifiedBookingList;
-            resp.Success = true;
+            resp.Success = (modifiedBookingList.Count != 0);
             return resp;
         }
 
@@ -174,7 +175,8 @@ namespace Backend.Controllers
                 modifiedBooking.totalPrice = bookingObject.totalPrice;
                 modifiedBookingList.Add(modifiedBooking);
             }
-            resp.lst = modifiedBookingList; resp.Success = true;
+            resp.lst = modifiedBookingList; 
+            resp.Success = (modifiedBookingList.Count != 0);
             return resp;
         }
 

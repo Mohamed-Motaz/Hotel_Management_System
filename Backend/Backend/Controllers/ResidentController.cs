@@ -49,7 +49,7 @@ namespace Backend.Controllers
            
             string json = JsonConvert.SerializeObject(Resident.getResident(Convert.ToInt32(obj.id)));
             dynamic resp = JsonConvert.DeserializeObject(json);
-            resp.Success = true;
+            resp.Success = !(Resident.getResident(Convert.ToInt32(obj.id)) is null);
             return resp;          
         }
 
