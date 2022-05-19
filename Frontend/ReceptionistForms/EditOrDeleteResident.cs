@@ -139,7 +139,7 @@ namespace Frontend.ReceptionistForms
                 MessageBox.Show("Please enter a valid phone number.");
                 isOkay = false;
             }
-            else if (!match.Success)
+            else if (EmailTextBox.Text.Length==0)
             {
                 MessageBox.Show("Please enter a valid email.");
                 isOkay = false;
