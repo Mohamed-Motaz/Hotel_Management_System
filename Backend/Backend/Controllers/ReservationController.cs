@@ -90,15 +90,17 @@ namespace Backend.Controllers
             dynamic resp = new ExpandoObject();
             BookingInformation bookingObject = BookingServices.GetBooking(Convert.ToInt32(obj.id));
             dynamic modifiedBooking = new ExpandoObject();
-            modifiedBooking.id = bookingObject.id;
-            modifiedBooking.roomId = bookingObject.roomId;
-            modifiedBooking.residentId = bookingObject.residentId;
-            modifiedBooking.startDate = bookingObject.startDate;
-            modifiedBooking.endDate = bookingObject.endDate;
-            modifiedBooking.roomType = RoomServices.GetRoomById(bookingObject.roomId).Type;
-            modifiedBooking.boardingType = bookingObject.boardingType;
-            modifiedBooking.totalPrice = bookingObject.totalPrice;
-
+            if (bookingObject != null)
+            {
+                modifiedBooking.id = bookingObject.id;
+                modifiedBooking.roomId = bookingObject.roomId;
+                modifiedBooking.residentId = bookingObject.residentId;
+                modifiedBooking.startDate = bookingObject.startDate;
+                modifiedBooking.endDate = bookingObject.endDate;
+                modifiedBooking.roomType = RoomServices.GetRoomById(bookingObject.roomId).Type;
+                modifiedBooking.boardingType = bookingObject.boardingType;
+                modifiedBooking.totalPrice = bookingObject.totalPrice;
+            }
             resp.booking = modifiedBooking;
             resp.Success = !(bookingObject is null);
             return resp;

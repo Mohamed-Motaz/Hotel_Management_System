@@ -162,10 +162,16 @@ namespace Frontend.ReceptionistForms
 
                 // call api for get Booking info by booking id
                 dynamic res = Service.GetReservation(reservation);
-
-                StartDateDatepicker.Value = Convert.ToDateTime(TimeHandler.GetDateFromEpoch(res.booking.startDate));
-                EndDateDatepicker.Value = Convert.ToDateTime(TimeHandler.GetDateFromEpoch(res.booking.endDate));
-                RoomTypeComboBox.Text = Convert.ToString(res.booking.roomType) + "/" + Convert.ToString(res.booking.boardingType);
+                if (res.success == true)
+                {
+                    StartDateDatepicker.Value = Convert.ToDateTime(TimeHandler.GetDateFromEpoch(res.booking.startDate));
+                    EndDateDatepicker.Value = Convert.ToDateTime(TimeHandler.GetDateFromEpoch(res.booking.endDate));
+                    RoomTypeComboBox.SelectedText = Convert.ToString(res.booking.roomType) + "/" + Convert.ToString(res.booking.boardingType);
+                }
+                else
+                {
+                    MessageBox.Show("Please enter a valid id");
+                }
             }
         }
     }

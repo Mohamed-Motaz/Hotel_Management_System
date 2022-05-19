@@ -108,14 +108,15 @@ namespace Frontend
                 MessageBox.Show("Please enter a valid phone number.");
                 isOkay = false;
             }
-            else if (!match.Success)
+            else if (EmailTextBox.Text.Length == 0)
             {
                 MessageBox.Show("Please enter a valid email.");
                 isOkay = false;
             }
-            else if (!GenderTypeComboBox.SelectedItem.Equals("Male") || !GenderTypeComboBox.SelectedItem.Equals("Female"))
+            else if (!GenderTypeComboBox.SelectedItem.Equals("Male") && !GenderTypeComboBox.SelectedItem.Equals("Female"))
             {
                 MessageBox.Show("Please choose a valid gender.");
+                isOkay = false; 
             }
             return isOkay;
         }
