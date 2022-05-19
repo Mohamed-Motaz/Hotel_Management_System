@@ -59,30 +59,6 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="AddResident.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="AddResident.Designer.cs">
-      <DependentUpon>AddResident.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Category.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Category.Designer.cs">
-      <DependentUpon>Category.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Course.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Course.Designer.cs">
-      <DependentUpon>Course.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Diagnosis.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Diagnosis.Designer.cs">
-      <DependentUpon>Diagnosis.cs</DependentUpon>
-    </Compile>
     <Compile Include="HttpService\Service.cs" />
     <Compile Include="HttpService\TimeHandler.cs" />
     <Compile Include="ManagerForms\AddResident.cs">
@@ -108,12 +84,6 @@
     </Compile>
     <Compile Include="Extras\DiagnosisPanel.Designer.cs">
       <DependentUpon>DiagnosisPanel.cs</DependentUpon>
-    </Compile>
-    <Compile Include="DoctorList.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="DoctorList.Designer.cs">
-      <DependentUpon>DoctorList.cs</DependentUpon>
     </Compile>
     <Compile Include="ManagerForms\EditOrDeleteResident.cs">
       <SubType>Form</SubType>
@@ -189,12 +159,6 @@
     </Compile>
     <Compile Include="Models\TestClass.cs" />
     <Compile Include="obj\Debug\.NETFramework,Version=v4.5.AssemblyAttributes.cs" />
-    <Compile Include="Patients.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Patients.Designer.cs">
-      <DependentUpon>Patients.cs</DependentUpon>
-    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="ReceptionistForms\AddReservation.cs">
@@ -294,30 +258,12 @@
     <Compile Include="ResidentForms\ResidentSignUpForm.Designer.cs">
       <DependentUpon>ResidentSignUpForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="ViewPatient.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="ViewPatient.Designer.cs">
-      <DependentUpon>ViewPatient.cs</DependentUpon>
-    </Compile>
     <Compile Include="WorkerLoginForm.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="WorkerLoginForm.Designer.cs">
       <DependentUpon>WorkerLoginForm.cs</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="AddResident.resx">
-      <DependentUpon>AddResident.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Category.resx">
-      <DependentUpon>Category.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Course.resx">
-      <DependentUpon>Course.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Diagnosis.resx">
-      <DependentUpon>Diagnosis.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="ManagerForms\AddResident.resx">
       <DependentUpon>AddResident.cs</DependentUpon>
     </EmbeddedResource>
@@ -329,9 +275,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Extras\DiagnosisPanel.resx">
       <DependentUpon>DiagnosisPanel.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="DoctorList.resx">
-      <DependentUpon>DoctorList.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ManagerForms\EditOrDeleteResident.resx">
       <DependentUpon>EditOrDeleteResident.cs</DependentUpon>
@@ -368,9 +311,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="ManagerForms\WorkersList.resx">
       <DependentUpon>WorkersList.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Patients.resx">
-      <DependentUpon>Patients.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -428,9 +368,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="ResidentForms\ResidentSignUpForm.resx">
       <DependentUpon>ResidentSignUpForm.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="ViewPatient.resx">
-      <DependentUpon>ViewPatient.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="WorkerLoginForm.resx">
       <DependentUpon>WorkerLoginForm.cs</DependentUpon>

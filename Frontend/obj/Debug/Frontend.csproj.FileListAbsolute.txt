@@ -121,15 +121,10 @@ C:\Users\Mohamed Motaz\Desktop\HotelManagementSystem\Frontend\obj\Debug\Frontend
 C:\Users\Mohamed Motaz\Desktop\HotelManagementSystem\Frontend\obj\Debug\Frontend.ResidentSignUpForm.resources
 C:\Users\Mohamed Motaz\Desktop\HotelManagementSystem\Frontend\obj\Debug\Frontend.WorkerLoginForm.resources
 D:\My projects\Hotel_Management_System\Frontend\obj\Debug\Frontend.csproj.AssemblyReference.cache
-D:\My projects\Hotel_Management_System\Frontend\obj\Debug\Frontend.frmAddPatient.resources
-D:\My projects\Hotel_Management_System\Frontend\obj\Debug\Frontend.Category.resources
-D:\My projects\Hotel_Management_System\Frontend\obj\Debug\Frontend.Course.resources
-D:\My projects\Hotel_Management_System\Frontend\obj\Debug\Frontend.Diagnosis.resources
 D:\My projects\Hotel_Management_System\Frontend\obj\Debug\Frontend.Extras.AddResident.resources
 D:\My projects\Hotel_Management_System\Frontend\obj\Debug\Frontend.Extras.ArchivePanel.resources
 D:\My projects\Hotel_Management_System\Frontend\obj\Debug\Frontend.Extras.Dashboard.resources
 D:\My projects\Hotel_Management_System\Frontend\obj\Debug\Frontend.DiagnosisPanel.resources
-D:\My projects\Hotel_Management_System\Frontend\obj\Debug\Frontend.DoctorList.resources
 D:\My projects\Hotel_Management_System\Frontend\obj\Debug\Frontend.ManagerForms.EditOrDeleteResident.resources
 D:\My projects\Hotel_Management_System\Frontend\obj\Debug\Frontend.ManagerForms.EditOrDeleteWorker.resources
 D:\My projects\Hotel_Management_System\Frontend\obj\Debug\Frontend.Extras.ManageResidents.resources
@@ -142,7 +137,6 @@ D:\My projects\Hotel_Management_System\Frontend\obj\Debug\Frontend.Extras.RoomsS
 D:\My projects\Hotel_Management_System\Frontend\obj\Debug\Frontend.frmLogin.resources
 D:\My projects\Hotel_Management_System\Frontend\obj\Debug\Frontend.ManagerForms.frmMain.resources
 D:\My projects\Hotel_Management_System\Frontend\obj\Debug\Frontend.ManagerForms.WorkersList.resources
-D:\My projects\Hotel_Management_System\Frontend\obj\Debug\Frontend.frmPatient.resources
 D:\My projects\Hotel_Management_System\Frontend\obj\Debug\Frontend.Properties.Resources.resources
 D:\My projects\Hotel_Management_System\Frontend\obj\Debug\Frontend.ReceptionistForms.AddReservation.resources
 D:\My projects\Hotel_Management_System\Frontend\obj\Debug\Frontend.ReceptionistForms.AddResident.resources
@@ -157,7 +151,6 @@ D:\My projects\Hotel_Management_System\Frontend\obj\Debug\Frontend.ResidentForms
 D:\My projects\Hotel_Management_System\Frontend\obj\Debug\Frontend.ResidentForms.ManageReservations.resources
 D:\My projects\Hotel_Management_System\Frontend\obj\Debug\Frontend.ResidentForms.ReservationsList.resources
 D:\My projects\Hotel_Management_System\Frontend\obj\Debug\Frontend.ResidentForms.ResidentDashboard.resources
-D:\My projects\Hotel_Management_System\Frontend\obj\Debug\Frontend.frmViewPatient.resources
 D:\My projects\Hotel_Management_System\Frontend\obj\Debug\Frontend.csproj.GenerateResource.cache
 D:\My projects\Hotel_Management_System\Frontend\obj\Debug\Frontend.csproj.CoreCompileInputs.cache
 D:\My projects\Hotel_Management_System\Frontend\obj\Debug\Frontend.exe
