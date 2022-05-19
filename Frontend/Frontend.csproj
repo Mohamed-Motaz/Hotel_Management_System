@@ -67,23 +67,11 @@
     <Compile Include="ManagerForms\AddResident.Designer.cs">
       <DependentUpon>AddResident.cs</DependentUpon>
     </Compile>
-    <Compile Include="Extras\ArchivePanel.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Extras\ArchivePanel.Designer.cs">
-      <DependentUpon>ArchivePanel.cs</DependentUpon>
-    </Compile>
     <Compile Include="ManagerForms\Dashboard.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="ManagerForms\Dashboard.Designer.cs">
       <DependentUpon>Dashboard.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Extras\DiagnosisPanel.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Extras\DiagnosisPanel.Designer.cs">
-      <DependentUpon>DiagnosisPanel.cs</DependentUpon>
     </Compile>
     <Compile Include="ManagerForms\EditOrDeleteResident.cs">
       <SubType>Form</SubType>
@@ -108,18 +96,6 @@
     </Compile>
     <Compile Include="ManagerForms\ManageWorkers.Designer.cs">
       <DependentUpon>ManageWorkers.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Extras\MedicalHistoryPanel.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Extras\MedicalHistoryPanel.Designer.cs">
-      <DependentUpon>MedicalHistoryPanel.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Extras\PatientDiagnosisPanel.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Extras\PatientDiagnosisPanel.Designer.cs">
-      <DependentUpon>PatientDiagnosisPanel.cs</DependentUpon>
     </Compile>
     <Compile Include="ManagerForms\AddWorker.cs">
       <SubType>Form</SubType>
@@ -267,14 +243,8 @@
     <EmbeddedResource Include="ManagerForms\AddResident.resx">
       <DependentUpon>AddResident.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Extras\ArchivePanel.resx">
-      <DependentUpon>ArchivePanel.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="ManagerForms\Dashboard.resx">
       <DependentUpon>Dashboard.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Extras\DiagnosisPanel.resx">
-      <DependentUpon>DiagnosisPanel.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ManagerForms\EditOrDeleteResident.resx">
       <DependentUpon>EditOrDeleteResident.cs</DependentUpon>
@@ -287,12 +257,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="ManagerForms\ManageWorkers.resx">
       <DependentUpon>ManageWorkers.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Extras\MedicalHistoryPanel.resx">
-      <DependentUpon>MedicalHistoryPanel.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Extras\PatientDiagnosisPanel.resx">
-      <DependentUpon>PatientDiagnosisPanel.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ManagerForms\AddWorker.resx">
       <DependentUpon>AddWorker.cs</DependentUpon>
@@ -442,82 +406,6 @@
     <Content Include="ICONS\SignUpIcon2.png" />
     <Content Include="ICONS\view.png" />
     <Content Include="ICONS\WorkersIcon.png" />
-    <Content Include="img\0057447ecd561f8.jpg" />
-    <Content Include="img\Add Database_64px.png" />
-    <Content Include="img\Add New_50px.png" />
-    <Content Include="img\Add User Group Man Man_64px.png" />
-    <Content Include="img\Add User Male_52px.png" />
-    <Content Include="img\Archive_96px.png" />
-    <Content Include="img\Arrow_52px.png" />
-    <Content Include="img\back.png" />
-    <Content Include="img\background.png" />
-    <Content Include="img\Calendar_96px.png" />
-    <Content Include="img\Cancel_48px.png" />
-    <Content Include="img\Cancel_80px.png" />
-    <Content Include="img\Cancel_96px.png" />
-    <Content Include="img\Cast_48px.png" />
-    <Content Include="img\Chevron Right_50px.png" />
-    <Content Include="img\Clinic.png" />
-    <Content Include="img\Clock_64px.png" />
-    <Content Include="img\Close Window_100px.png" />
-    <Content Include="img\Close Window_104px.png" />
-    <Content Include="img\close.png" />
-    <Content Include="img\Dashboard_50px.png" />
-    <Content Include="img\Dashboard_64px.png" />
-    <Content Include="img\Department_64px.png" />
-    <Content Include="img\Doctor Male_64px.png" />
-    <Content Include="img\Document_100px.png" />
-    <Content Include="img\Document_52px.png" />
-    <Content Include="img\dot.png" />
-    <Content Include="img\download.png" />
-    <Content Include="img\Dumbbell_50px.png" />
-    <Content Include="img\Exit_40px.png" />
-    <Content Include="img\Filled Circle_50px.png" />
-    <Content Include="img\green-dot.svg.med-min.png" />
-    <Content Include="img\green-dot.svg.med.png" />
-    <Content Include="img\Heart Health_50px.png" />
-    <Content Include="img\Hospital_100px.png" />
-    <Content Include="img\Hospital_50px.png" />
-    <Content Include="img\icon-circle-150x150-singleuser.png" />
-    <Content Include="img\icon-info.png" />
-    <Content Include="img\Information_64px.png" />
-    <Content Include="img\List_96px.png" />
-    <Content Include="img\Login_96px.png" />
-    <Content Include="img\logo.png" />
-    <Content Include="img\makefg.png" />
-    <Content Include="img\Medical Doctor_100px.png" />
-    <Content Include="img\Medical Doctor_50px.png" />
-    <Content Include="img\Minimize Window_52px.png" />
-    <Content Include="img\national_u_logo.ico" />
-    <Content Include="img\Nurse Call_100px.png" />
-    <Content Include="img\Nurse Call_50px.png" />
-    <Content Include="img\Order History_100px.png" />
-    <Content Include="img\Order History_96px.png" />
-    <Content Include="img\password.png" />
-    <Content Include="img\patient.png" />
-    <Content Include="img\Refresh_icon.png" />
-    <Content Include="img\right-arrow-png-right-arrow-gray-clip-art-at-clker-com-vector-clip-art-online-royalty-free-public-domain-378.png" />
-    <Content Include="img\right-arrows-2x.png" />
-    <Content Include="img\Search Icon White.png" />
-    <Content Include="img\Search_100px.png" />
-    <Content Include="img\Search_48px.png" />
-    <Content Include="img\Settings_64px.png" />
-    <Content Include="img\shadow %281%29.png" />
-    <Content Include="img\shadow.gif" />
-    <Content Include="img\shadow.png" />
-    <Content Include="img\Shutdown_16px.png" />
-    <Content Include="img\Shutdown_30px.png" />
-    <Content Include="img\Sign Out_48px.png" />
-    <Content Include="img\System Diagnostic_100px.png" />
-    <Content Include="img\System Report_64px.png" />
-    <Content Include="img\user %281%29.png" />
-    <Content Include="img\user.jpg" />
-    <Content Include="img\user.png" />
-    <Content Include="img\User_100px.png" />
-    <Content Include="img\User_50px.png" />
-    <Content Include="img\View Details_64px.png" />
-    <Content Include="img\VisualEditor_-_Icon_-_Close_-_white.svg.png" />
-    <Content Include="img\X-ray_64px.png" />
     <Content Include="national_u_logo.ico" />
     <Content Include="packages\Newtonsoft.Json.13.0.1\lib\net20\Newtonsoft.Json.dll" />
     <Content Include="packages\Newtonsoft.Json.13.0.1\lib\net20\Newtonsoft.Json.xml" />

@@ -122,15 +122,11 @@ C:\Users\Mohamed Motaz\Desktop\HotelManagementSystem\Frontend\obj\Debug\Frontend
 C:\Users\Mohamed Motaz\Desktop\HotelManagementSystem\Frontend\obj\Debug\Frontend.WorkerLoginForm.resources
 D:\My projects\Hotel_Management_System\Frontend\obj\Debug\Frontend.csproj.AssemblyReference.cache
 D:\My projects\Hotel_Management_System\Frontend\obj\Debug\Frontend.Extras.AddResident.resources
-D:\My projects\Hotel_Management_System\Frontend\obj\Debug\Frontend.Extras.ArchivePanel.resources
 D:\My projects\Hotel_Management_System\Frontend\obj\Debug\Frontend.Extras.Dashboard.resources
-D:\My projects\Hotel_Management_System\Frontend\obj\Debug\Frontend.DiagnosisPanel.resources
 D:\My projects\Hotel_Management_System\Frontend\obj\Debug\Frontend.ManagerForms.EditOrDeleteResident.resources
 D:\My projects\Hotel_Management_System\Frontend\obj\Debug\Frontend.ManagerForms.EditOrDeleteWorker.resources
 D:\My projects\Hotel_Management_System\Frontend\obj\Debug\Frontend.Extras.ManageResidents.resources
 D:\My projects\Hotel_Management_System\Frontend\obj\Debug\Frontend.Extras.ManageWorkers.resources
-D:\My projects\Hotel_Management_System\Frontend\obj\Debug\Frontend.Extras.MedicalHistoryPanel.resources
-D:\My projects\Hotel_Management_System\Frontend\obj\Debug\Frontend.Extras.PatientDiagnosisPanel.resources
 D:\My projects\Hotel_Management_System\Frontend\obj\Debug\Frontend.Extras.AddWorker.resources
 D:\My projects\Hotel_Management_System\Frontend\obj\Debug\Frontend.ManagerForms.ResidentsList.resources
 D:\My projects\Hotel_Management_System\Frontend\obj\Debug\Frontend.Extras.RoomsStatus.resources
