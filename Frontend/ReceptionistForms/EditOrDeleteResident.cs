@@ -50,12 +50,20 @@ namespace Frontend.ReceptionistForms
                 dynamic obj = new ExpandoObject();
                 obj.id = resident.id;
                 //TODO: api set resident to the api returend resident
-                dynamic res = Service.GetResident(obj);
-                UserNameTextBox.Text = res.userName.ToString();
-                AgeTextBox.Text = res.age.ToString();
-                EmailTextBox.Text = res.email.ToString();
-                PasswordTextBox.Text = res.password.ToString();
-                PhoneNumberTextBox.Text = res.phoneNumber.ToString();
+                dynamic response = Service.GetResident(obj);
+                dynamic res = response.lst;
+                if (response.success == true)
+                {
+                    UserNameTextBox.Text = res.userName.ToString();
+                    AgeTextBox.Text = res.age.ToString();
+                    EmailTextBox.Text = res.email.ToString();
+                    PasswordTextBox.Text = res.password.ToString();
+                    PhoneNumberTextBox.Text = res.phoneNumber.ToString();
+                }
+                else
+                {
+                    MessageBox.Show("Please enter a valid id.");
+                }
             }
         }
 
