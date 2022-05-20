@@ -34,16 +34,6 @@ namespace Frontend.HttpService
                 return response;
             }
         }
-        // to getList
-       /* private List<dynamic> getList(HttpResponseMessage response) 
-        {
-            string responseStr = response.Content.ReadAsStringAsync().Result;
-            dynamic obj = JsonConvert.DeserializeObject<ExpandoObject>(responseStr);
-            List<dynamic> lst = JsonConvert.DeserializeObject<ExpandoObject><List<dynamic>>(obj);
-            return lst;
-        }*/
-
-        //Resident Functions
         
 
         public static dynamic GetResident(dynamic input)

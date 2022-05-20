@@ -29,11 +29,11 @@ namespace Frontend.ResidentForms
 
             if (reservations.Count - 1 < 0)
             {
-                roomType.Text = "";
-                totalCost.Text = "";
-                numberOfNights.Text = "";
-                startDate.Text = "";
-                boardingType.Text = "";
+                roomType.Text = "-";
+                totalCost.Text = "0";
+                numberOfNights.Text = "0";
+                startDate.Text = "-";
+                boardingType.Text = "-";
                 return;
             }
 
