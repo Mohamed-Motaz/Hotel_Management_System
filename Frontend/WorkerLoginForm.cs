@@ -47,6 +47,7 @@ namespace Frontend
             if (LogInCheck() == "Manager")
             {
                 frmMain managerMainForm = new frmMain();
+               
                 this.Hide();
                 managerMainForm.Show();
             }

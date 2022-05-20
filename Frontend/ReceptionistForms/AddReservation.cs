@@ -38,10 +38,25 @@ namespace Frontend.ReceptionistForms
         private void SaveButton_Click(object sender, EventArgs e)
         {
             dynamic Reservation = new ExpandoObject();
-            Reservation.residentId = ResidentInformation.residentId;
-            ResidentIDTextBox.Text = ResidentInformation.residentId.ToString();
+            long currentResidentId = ResidentInformation.residentId;
+            if(currentResidentId == -1)
+            {
+                currentResidentId = Convert.ToInt64(ResidentIDTextBox.Text);
+            }
+
+
+            Reservation.residentId = currentResidentId;
+            Reservation.id = currentResidentId;
+
+            dynamic resident = Service.GetResident(Reservation);
+            if(resident.success != true)
+            {
+                MessageBox.Show("Please enter a valid ID!");
+                return;
+            }
+
+
             Reservation.roomType = Reservation.boardingType = "";
-            //Reservation.roomType = RoomTypeComboBox.GetItemText(RoomTypeComboBox.SelectedItem);
             string types = RoomTypeComboBox.GetItemText(RoomTypeComboBox.SelectedItem);
             string[] list = types.Split('/');
             if (list.Length == 2)

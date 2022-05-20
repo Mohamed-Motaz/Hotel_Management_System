@@ -143,7 +143,7 @@ namespace Frontend.ManagerForms
             }
             else
             {
-                obj.id = searchbyIdTextbox.Text;
+                obj.id = Convert.ToInt32( searchbyIdTextbox.Text ) ;
 
                 dynamic resp = Service.DeleteWorker(obj);
 

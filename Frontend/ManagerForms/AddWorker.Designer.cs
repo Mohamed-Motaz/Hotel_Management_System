@@ -307,13 +307,14 @@ namespace Frontend.Extras
             this.isRoomServices.AutoSize = true;
             this.isRoomServices.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold);
             this.isRoomServices.ForeColor = System.Drawing.Color.DimGray;
-            this.isRoomServices.Location = new System.Drawing.Point(606, 341);
+            this.isRoomServices.Location = new System.Drawing.Point(611, 163);
             this.isRoomServices.Name = "isRoomServices";
             this.isRoomServices.Size = new System.Drawing.Size(131, 24);
             this.isRoomServices.TabIndex = 510;
             this.isRoomServices.Text = "Room Services";
             this.isRoomServices.UseVisualStyleBackColor = true;
             this.isRoomServices.CheckedChanged += new System.EventHandler(this.IsRoomService);
+            this.isRoomServices.EnabledChanged += new System.EventHandler(this.isRoomServices_EnabledChanged);
             // 
             // IncomeTypeComboBox
             // 

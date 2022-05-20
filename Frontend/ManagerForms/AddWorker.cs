@@ -98,6 +98,7 @@ namespace Frontend.Extras
             PasswordTextBox.Text = "";
             PhoneNumberTextBox.Text = "";
             SalaryTextBox.Text = "";
+            PasswordTextBox.Enabled = false;
         }
 
         private void IsRoomService(object sender, EventArgs e)
@@ -110,6 +111,7 @@ namespace Frontend.Extras
             string email = EmailTextBox.Text;
             Regex regex = new Regex(@"^([\w\.\-]+)@([\w\-]+)((\.(\w){2,3})+)$");
             Match match = regex.Match(email);
+            PasswordTextBox.Enabled = false;
             if ((UserNameTextBox.Text.Length == 0))
             {
                 MessageBox.Show("Please enter a valid user name.");
@@ -146,6 +148,11 @@ namespace Frontend.Extras
                 isOkay = false;
             }
             return isOkay;
+        }
+
+        private void isRoomServices_EnabledChanged(object sender, EventArgs e)
+        {
+            PasswordTextBox.Text = "";
         }
     }
 }

@@ -33,7 +33,6 @@ namespace Frontend.ResidentForms
             this.label17 = new System.Windows.Forms.Label();
             this.label19 = new System.Windows.Forms.Label();
             this.bunifuImageButton6 = new Bunifu.Framework.UI.BunifuImageButton();
-            this.boardingType = new System.Windows.Forms.Label();
             this.bunifuFlatButton6 = new Bunifu.Framework.UI.BunifuFlatButton();
             this.label14 = new System.Windows.Forms.Label();
             this.label15 = new System.Windows.Forms.Label();
@@ -44,7 +43,6 @@ namespace Frontend.ResidentForms
             this.bunifuSeparator3 = new Bunifu.Framework.UI.BunifuSeparator();
             this.label12 = new System.Windows.Forms.Label();
             this.roomType = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.bunifuImageButton1 = new Bunifu.Framework.UI.BunifuImageButton();
@@ -53,6 +51,7 @@ namespace Frontend.ResidentForms
             this.bunifuFlatButton4 = new Bunifu.Framework.UI.BunifuFlatButton();
             this.bunifuFlatButton1 = new Bunifu.Framework.UI.BunifuFlatButton();
             this.startDate = new System.Windows.Forms.Label();
+            this.boardingType = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.bunifuImageButton6)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bunifuImageButton5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bunifuImageButton1)).BeginInit();
@@ -95,18 +94,6 @@ namespace Frontend.ResidentForms
             this.bunifuImageButton6.TabIndex = 136;
             this.bunifuImageButton6.TabStop = false;
             this.bunifuImageButton6.Zoom = 6;
-            // 
-            // boardingType
-            // 
-            this.boardingType.AutoSize = true;
-            this.boardingType.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(115)))), ((int)(((byte)(183)))));
-            this.boardingType.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.boardingType.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.boardingType.Location = new System.Drawing.Point(306, 410);
-            this.boardingType.Name = "boardingType";
-            this.boardingType.Size = new System.Drawing.Size(254, 31);
-            this.boardingType.TabIndex = 135;
-            this.boardingType.Text = "Bed and Breakfast";
             // 
             // bunifuFlatButton6
             // 
@@ -260,9 +247,9 @@ namespace Frontend.ResidentForms
             this.label12.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.label12.Location = new System.Drawing.Point(313, 298);
             this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(69, 24);
+            this.label12.Size = new System.Drawing.Size(96, 24);
             this.label12.TabIndex = 120;
-            this.label12.Text = "Nights";
+            this.label12.Text = "End Date";
             // 
             // roomType
             // 
@@ -275,18 +262,6 @@ namespace Frontend.ResidentForms
             this.roomType.Size = new System.Drawing.Size(41, 45);
             this.roomType.TabIndex = 117;
             this.roomType.Text = "1";
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(221)))), ((int)(((byte)(75)))), ((int)(((byte)(57)))));
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold);
-            this.label3.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label3.Location = new System.Drawing.Point(24, 136);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(130, 24);
-            this.label3.TabIndex = 115;
-            this.label3.Text = "Single Room";
             // 
             // label10
             // 
@@ -305,11 +280,12 @@ namespace Frontend.ResidentForms
             this.label2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(221)))), ((int)(((byte)(75)))), ((int)(((byte)(57)))));
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
             this.label2.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label2.Location = new System.Drawing.Point(27, 164);
+            this.label2.Location = new System.Drawing.Point(27, 145);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(130, 22);
+            this.label2.Size = new System.Drawing.Size(130, 18);
             this.label2.TabIndex = 116;
             this.label2.Text = "Room Type";
+            this.label2.Click += new System.EventHandler(this.label2_Click);
             // 
             // bunifuImageButton1
             // 
@@ -431,6 +407,18 @@ namespace Frontend.ResidentForms
             this.startDate.TabIndex = 137;
             this.startDate.Text = "22/22/22";
             // 
+            // boardingType
+            // 
+            this.boardingType.AutoSize = true;
+            this.boardingType.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(115)))), ((int)(((byte)(183)))));
+            this.boardingType.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.boardingType.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.boardingType.Location = new System.Drawing.Point(306, 410);
+            this.boardingType.Name = "boardingType";
+            this.boardingType.Size = new System.Drawing.Size(254, 31);
+            this.boardingType.TabIndex = 135;
+            this.boardingType.Text = "Bed and Breakfast";
+            // 
             // ResidentDashboard
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -451,7 +439,6 @@ namespace Frontend.ResidentForms
             this.Controls.Add(this.bunifuSeparator3);
             this.Controls.Add(this.label12);
             this.Controls.Add(this.roomType);
-            this.Controls.Add(this.label3);
             this.Controls.Add(this.label10);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.bunifuImageButton1);
@@ -477,7 +464,6 @@ namespace Frontend.ResidentForms
         private System.Windows.Forms.Label label17;
         private System.Windows.Forms.Label label19;
         private Bunifu.Framework.UI.BunifuImageButton bunifuImageButton6;
-        private System.Windows.Forms.Label boardingType;
         private Bunifu.Framework.UI.BunifuFlatButton bunifuFlatButton6;
         private System.Windows.Forms.Label label14;
         private System.Windows.Forms.Label label15;
@@ -488,7 +474,6 @@ namespace Frontend.ResidentForms
         private Bunifu.Framework.UI.BunifuSeparator bunifuSeparator3;
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.Label roomType;
-        private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Label label2;
         private Bunifu.Framework.UI.BunifuImageButton bunifuImageButton1;
@@ -497,5 +482,6 @@ namespace Frontend.ResidentForms
         private Bunifu.Framework.UI.BunifuFlatButton bunifuFlatButton4;
         private Bunifu.Framework.UI.BunifuFlatButton bunifuFlatButton1;
         private System.Windows.Forms.Label startDate;
+        private System.Windows.Forms.Label boardingType;
     }
 }

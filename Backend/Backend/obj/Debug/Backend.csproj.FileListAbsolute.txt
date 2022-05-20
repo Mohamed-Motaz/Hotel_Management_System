@@ -420,4 +420,3 @@ C:\Users\abdelazim\Documents\GitHub\Hotel_Management_System_Design_Patterns\Back
 C:\Users\abdelazim\Documents\GitHub\Hotel_Management_System_Design_Patterns\Backend\Backend\obj\Debug\Backend.csproj.CopyComplete
 C:\Users\abdelazim\Documents\GitHub\Hotel_Management_System_Design_Patterns\Backend\Backend\obj\Debug\Backend.dll
 C:\Users\abdelazim\Documents\GitHub\Hotel_Management_System_Design_Patterns\Backend\Backend\obj\Debug\Backend.pdb
-D:\Hotel_Management_System\Backend\Backend\obj\Debug\Backend.csproj.AssemblyReference.cache

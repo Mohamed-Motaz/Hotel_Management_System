@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Frontend.HttpService;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -22,24 +23,40 @@ namespace Frontend.ResidentForms
         }
         private void ResidentDashboard_Load(object sender, EventArgs e)
         {
-            resident = new ExpandoObject();
-            bookingInfo = new ExpandoObject();
-            room = new ExpandoObject();
-            // make resident equal the resident of the passed ID
-            // make bookingInfo equal the bookingInfo of the passed resident ID
-            // make room equal the room that has roomId in the bookingInfo
+            dynamic obj = new ExpandoObject();
+            obj.residentId = ResidentInformation.residentId; // keep track of cuurent resident id
+            List<dynamic> reservations = Service.GetResidentReservations(obj);
+
+            if (reservations.Count - 1 < 0)
+            {
+                roomType.Text = "";
+                totalCost.Text = "";
+                numberOfNights.Text = "";
+                startDate.Text = "";
+                boardingType.Text = "";
+                return;
+            }
+
+            dynamic res = reservations[reservations.Count - 1];
+           
             try
             {
-                roomType.Text = room.type;
-                totalCost.Text = bookingInfo.totalCost;
-                numberOfNights.Text = bookingInfo.numberOfNights;
-                startDate.Text = bookingInfo.startDate;
-                boardingType.Text = bookingInfo.boardingType;
-            }catch(Exception ex)
+                roomType.Text = res.roomType.ToString();
+                totalCost.Text = res.totalPrice.ToString();
+                numberOfNights.Text = TimeHandler.GetDateFromEpoch(res.endDate);
+                startDate.Text = TimeHandler.GetDateFromEpoch(res.startDate) ;
+                boardingType.Text = res.boardingType.ToString();
+            }
+            catch(Exception ex)
             {
 
             }
 
+
+        }
+
+        private void label2_Click(object sender, EventArgs e)
+        {
 
         }
         //see list of reservations

@@ -82,23 +82,23 @@ namespace Backend
 
             ListOfRoomServices.list = new List<object>()
             {
-                new RoomService("Salma", 21, "salma@gmail.com", "0111991111", 5000, JobTitle.RoomService, "Monthly" ),
-                new RoomService("Rawan", 21, "rawan@gmail.com", "01155551111", 6000, JobTitle.RoomService , "Weekly"),
-                new RoomService("Kareem", 21, "kareem@gmail.com", "0166661111", 15000, JobTitle.RoomService, "Yearly" )
+                new RoomService("Salma", 21, "salma@gmail.com", "01119944415", 5000, JobTitle.RoomService, "Monthly" ),
+                new RoomService("Rawan", 21, "rawan@gmail.com", "01119944415", 6000, JobTitle.RoomService , "Weekly"),
+                new RoomService("Kareem", 21, "kareem@gmail.com", "01119944415", 15000, JobTitle.RoomService, "Yearly" )
 
             };
 
             ListOfResidents.list = new List<object>()
             {
-                new Resident("resident", 22, "resident@", "01111111", "1"),
-                new Resident("ali", 22, "aliagina@", "01111111", "1122334455"),
-                new Resident("moatez", 23, "mohamedmoatez@", "011111444", "112233664488"),
-                new Resident("Rawan", 24, "Rawan@", "0114546465777", "112231116688000"),
+                new Resident("resident", 22, "resident@", "01119944415", "1"),
+                new Resident("ali", 22, "aliagina@", "01119944415", "1122334455"),
+                new Resident("moatez", 23, "mohamedmoatez@", "01119944415", "112233664488"),
+                new Resident("Rawan", 24, "Rawan@", "01119944415", "112231116688000"),
 
             };
 
             ListOfPrivilegedWorkers.list = new List<object> {
-                new Manager("manager", 55, "manager@gmail.com", "011192839924", 30000, JobTitle.Manager, "Weekly", "1"),
+                new Manager("manager", 55, "manager@gmail.com", "01119944415", 30000, JobTitle.Manager, "Weekly", "1"),
                 new Manager("Hossam El-Dien", 55, "hossam.eldien@gmail.com", "011192839924", 30000, JobTitle.Manager, "Weekly", "Hossam123"),
                 new Manager("Sshraf Sherien", 40, "ashraf.sherien@gmail.com", "011134343466", 20000, JobTitle.Manager, "Monthly", "Ashraf123"),
                 new Manager("Ahmed Fouda", 43, "ahmed.fouda@gmail.com", "011166090988", 15000, JobTitle.Manager, "Weekly", "Ahmed123"),

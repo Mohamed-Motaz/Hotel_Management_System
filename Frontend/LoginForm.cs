@@ -57,6 +57,7 @@ namespace Frontend
 
         private void ResidentLoginButton_Click(object sender, EventArgs e)
         {
+            ResidentInformation.residentId = -1;
             ResidentLoginForm residentForm = new ResidentLoginForm();
             this.Hide();
             residentForm.Show();
@@ -64,6 +65,7 @@ namespace Frontend
 
         private void WorkerLoginButton_Click(object sender, EventArgs e)
         {
+            ResidentInformation.residentId = -1;
             WorkerLoginForm workerLoginForm = new WorkerLoginForm();
             this.Hide();
             workerLoginForm.Show();

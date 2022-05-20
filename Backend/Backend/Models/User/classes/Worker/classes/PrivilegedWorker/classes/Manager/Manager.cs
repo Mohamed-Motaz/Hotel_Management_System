@@ -39,15 +39,25 @@ namespace Backend.Models
                 RoomService worker = workerIterator.getNext() as RoomService;
                 if (worker.id == id)
                 {
-
-                    if (worker.jobTitle == JobTitle.RoomService)
-                         Apphost.ListOfRoomServices.list.Remove(worker);
-                    else
-                        Apphost.ListOfPrivilegedWorkers.list.Remove(worker);
+                    Apphost.ListOfRoomServices.list.Remove(worker);
                     return true;
                 }
             }
+
+            for (Iterator workerIterator = Apphost.ListOfPrivilegedWorkers.GetIterator(); workerIterator.hasNext();)
+            {
+                PrivilegedWorker worker = workerIterator.getNext() as PrivilegedWorker;
+                if (worker.id == id)
+                {
+                    Apphost.ListOfPrivilegedWorkers.list.Remove(worker);
+                    return true;
+                }
+            }
+
             return false;
+
+
+
         }
 
         public static Worker getWorker(int id)
