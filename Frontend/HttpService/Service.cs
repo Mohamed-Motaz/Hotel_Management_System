@@ -44,6 +44,7 @@ namespace Frontend.HttpService
         }*/
 
         //Resident Functions
+        
 
         public static dynamic GetResident(dynamic input)
         {
@@ -247,13 +248,13 @@ namespace Frontend.HttpService
             return availableRooms;
         }
 
-        public static dynamic GetReservedRoom(dynamic input)
+        public static List<dynamic> GetReservedRoom(dynamic input)
         {
             string json = JsonConvert.SerializeObject(input);
             HttpResponseMessage response = Post("api/room/getReserved", json);
             string responseStr = response.Content.ReadAsStringAsync().Result;
             dynamic obj = JsonConvert.DeserializeObject<ExpandoObject>(responseStr, converter);
-            List<object> reservedRooms = obj.lst;
+            List<dynamic> reservedRooms = obj.lst;
             return reservedRooms;
         }
 

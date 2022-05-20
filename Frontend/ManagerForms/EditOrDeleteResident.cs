@@ -50,7 +50,7 @@ namespace Frontend.ManagerForms
                 obj.id = searchbyIdTextbox.Text;
                 //TODO: api set resident to the api returend resident
                 dynamic response = Service.GetResident(obj);
-                clearBtn_Click(sender, e);
+                
                 dynamic res = response.lst;
                 if (response.success == true)
                 {
@@ -98,7 +98,8 @@ namespace Frontend.ManagerForms
         private void deleteResidentBtn_Click(object sender, EventArgs e)
         {
             dynamic obj = new ExpandoObject();
-            obj.id = searchbyIdTextbox.Text;
+            string s = searchbyIdTextbox.Text;
+            obj.id = Convert.ToInt32(searchbyIdTextbox.Text);
 
             
             dynamic resp = Service.DeleteResident(obj);

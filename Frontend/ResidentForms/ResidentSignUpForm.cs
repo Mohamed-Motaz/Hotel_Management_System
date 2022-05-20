@@ -88,6 +88,12 @@ namespace Frontend
             string email = EmailTextBox.Text;
             Regex regex = new Regex(@"^([\w\.\-]+)@([\w\-]+)((\.(\w){2,3})+)$");
             Match match = regex.Match(email);
+            string s = GenderTypeComboBox.SelectedItem.ToString();
+            if (s is null || s == "")
+            {
+                MessageBox.Show("Please choose a valid gender.");
+                return false;
+            }
             if ((UserNameTextBox.Text.Length == 0))
             {
                 MessageBox.Show("Please enter a valid user name.");
@@ -113,7 +119,7 @@ namespace Frontend
                 MessageBox.Show("Please enter a valid email.");
                 isOkay = false;
             }
-            else if (!GenderTypeComboBox.SelectedItem.Equals("Male") && !GenderTypeComboBox.SelectedItem.Equals("Female"))
+            else if (!GenderTypeComboBox.SelectedItem.ToString().Equals("Male") && !GenderTypeComboBox.SelectedItem.ToString().Equals("Female"))
             {
                 MessageBox.Show("Please choose a valid gender.");
                 isOkay = false; 

@@ -36,9 +36,9 @@ namespace Backend
         }
         public static void InitializeAllRooms()
         {
-            for(int room = 1; room <= 90; room++)
+            for (int room = 1; room <= 6; room++)
             {
-                if (room <= 30)
+                if (room <= 2)
                 {
                     ListOfRooms.list.Add((Room)new SingleRoom(
                             RoomTypes.Single,
@@ -46,7 +46,7 @@ namespace Backend
                             RoomStatus.Available
                         ));
                 }
-                else if (room <= 60 && room > 30)
+                else if (room <= 4 && room > 2)
                 {
                     ListOfRooms.list.Add((Room)new DoubleRoom(
                             RoomTypes.Double,
@@ -54,7 +54,7 @@ namespace Backend
                             RoomStatus.Available
                         ));
                 }
-                else if (room <= 90 && room > 60)
+                else if (room <= 6 && room > 4)
                 {
                     ListOfRooms.list.Add((Room)new TripleRoom(
                             RoomTypes.Triple,
@@ -70,14 +70,14 @@ namespace Backend
             TimeHandler timeHandler = TimeHandler.getInstance();
             ListOfBookingInformation.list = new List<object>()
             {
-                new BookingInformation(ListOfRooms.list[0] as Room, BoardingTypesCache.GetBoardingType(BoardingTypes.Full), 1, timeHandler.GetLastWeekInEpoch(), timeHandler.GetLastWeekInEpoch() + 3600 * 24),
+              /*  new BookingInformation(ListOfRooms.list[0] as Room, BoardingTypesCache.GetBoardingType(BoardingTypes.Full), 1, timeHandler.GetLastWeekInEpoch(), timeHandler.GetLastWeekInEpoch() + 3600 * 24),
                 new BookingInformation(ListOfRooms.list[33] as Room, BoardingTypesCache.GetBoardingType(BoardingTypes.Half), 2, timeHandler.GetLastWeekInEpoch(), timeHandler.GetLastWeekInEpoch() + 3600 * 24),
                 new BookingInformation(ListOfRooms.list[63] as Room, BoardingTypesCache.GetBoardingType(BoardingTypes.BedAndBreakfast), 3, timeHandler.GetLastWeekInEpoch(), timeHandler.GetLastWeekInEpoch() + 3600 * 24),
 
 
                 new BookingInformation(ListOfRooms.list[0] as Room, BoardingTypesCache.GetBoardingType(BoardingTypes.Full), 1, timeHandler.GetLastWeekInEpoch(), timeHandler.GetTodayInEpoch() + 10000000),
                 new BookingInformation(ListOfRooms.list[33] as Room, BoardingTypesCache.GetBoardingType(BoardingTypes.Half), 2, timeHandler.GetLastWeekInEpoch(), timeHandler.GetTodayInEpoch() + 10000000),
-                new BookingInformation(ListOfRooms.list[63] as Room, BoardingTypesCache.GetBoardingType(BoardingTypes.BedAndBreakfast), 3, timeHandler.GetLastWeekInEpoch(), timeHandler.GetTodayInEpoch() + 100000)
+                new BookingInformation(ListOfRooms.list[63] as Room, BoardingTypesCache.GetBoardingType(BoardingTypes.BedAndBreakfast), 3, timeHandler.GetLastWeekInEpoch(), timeHandler.GetTodayInEpoch() + 100000)*/
             };
 
             ListOfRoomServices.list = new List<object>()

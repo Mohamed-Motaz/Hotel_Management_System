@@ -26,14 +26,15 @@ namespace Frontend.ReceptionistForms
      
         public void setUpDataGridView()
         {
-            ActiveReservationsGV.ColumnCount = 7;
+            ActiveReservationsGV.ColumnCount = 8;
             ActiveReservationsGV.Columns[0].Name = "ID";
             ActiveReservationsGV.Columns[1].Name = "RoomID";
             ActiveReservationsGV.Columns[2].Name = "Board Type";
-            ActiveReservationsGV.Columns[3].Name = "ResidentID";
-            ActiveReservationsGV.Columns[4].Name = "Start Date";
-            ActiveReservationsGV.Columns[5].Name = "End Date";
-            ActiveReservationsGV.Columns[6].Name = "Total price";
+            ActiveReservationsGV.Columns[3].Name = "Room Type";
+            ActiveReservationsGV.Columns[4].Name = "ResidentID";
+            ActiveReservationsGV.Columns[5].Name = "Start Date";
+            ActiveReservationsGV.Columns[6].Name = "End Date";
+            ActiveReservationsGV.Columns[7].Name = "Total price";
 
             List<dynamic> reservations = Service.GetActiveReservations();
 
@@ -46,10 +47,11 @@ namespace Frontend.ReceptionistForms
                 row.Cells[0].Value = res.id;
                 row.Cells[1].Value = res.roomId;
                 row.Cells[2].Value = res.boardingType;
-                row.Cells[3].Value = res.residentId;
-                row.Cells[4].Value = TimeHandler.GetDateFromEpoch(res.startDate);
-                row.Cells[5].Value = TimeHandler.GetDateFromEpoch(res.endDate);
-                row.Cells[6].Value = res.totalPrice;
+                row.Cells[3].Value = res.roomType;
+                row.Cells[4].Value = res.residentId;
+                row.Cells[5].Value = TimeHandler.GetDateFromEpoch(res.startDate);
+                row.Cells[6].Value = TimeHandler.GetDateFromEpoch(res.endDate);
+                row.Cells[7].Value = res.totalPrice;
 
                 ActiveReservationsGV.Rows.Add(row);
             }
