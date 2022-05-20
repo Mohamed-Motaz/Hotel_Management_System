@@ -90,7 +90,8 @@ namespace Frontend.ReceptionistForms
 
         private void showAvailableRooms(object sender, EventArgs e)
         {
-            dynamic obj = new ExpandoObject();
+            RoomTypeComboBox.Items.Clear();
+           dynamic obj = new ExpandoObject();
 
             DateTime dt = Convert.ToDateTime(StartDateDatepicker.Value);
             obj.startDate = TimeHandler.GetDateInEpoch(dt.Day, dt.Month, dt.Year);

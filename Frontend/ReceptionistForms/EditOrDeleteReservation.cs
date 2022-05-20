@@ -122,7 +122,8 @@ namespace Frontend.ReceptionistForms
         }
         private void availableRooms_Click(object sender, EventArgs e)
         {
-            dynamic obj = new ExpandoObject();
+           RoomTypeComboBox.Items.Clear();
+           dynamic obj = new ExpandoObject();
             DateTime dt = Convert.ToDateTime(StartDateDatepicker.Value);
             obj.startDate = TimeHandler.GetDateInEpoch(dt.Day, dt.Month, dt.Year);
 
@@ -166,7 +167,8 @@ namespace Frontend.ReceptionistForms
                 {
                     StartDateDatepicker.Value = Convert.ToDateTime(TimeHandler.GetDateFromEpoch(res.booking.startDate));
                     EndDateDatepicker.Value = Convert.ToDateTime(TimeHandler.GetDateFromEpoch(res.booking.endDate));
-                    RoomTypeComboBox.SelectedText = Convert.ToString(res.booking.roomType) + "/" + Convert.ToString(res.booking.boardingType);
+                    string roomInfo = Convert.ToString(res.booking.roomType) + "/" + Convert.ToString(res.booking.boardingType);
+                    RoomTypeComboBox.Items.Add(roomInfo);
                 }
                 else
                 {
