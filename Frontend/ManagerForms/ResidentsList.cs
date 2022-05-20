@@ -61,7 +61,7 @@ namespace Frontend.ManagerForms
                 {
                     foreach (DataGridViewRow row in ResidentsListGridView.Rows)
                     {
-                        if (row.Cells[3].Value != null && row.Cells[3].Value.ToString().ToLower().Contains(SearchTextbox.Text.ToLower()))
+                        if (row.Cells[1].Value != null && row.Cells[1].Value.ToString().ToLower().Contains(SearchTextbox.Text.ToLower()))
                         {
                             row.Visible = true;
                             cnt++;

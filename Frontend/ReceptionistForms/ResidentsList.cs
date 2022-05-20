@@ -65,7 +65,7 @@ namespace Frontend.ReceptionistForms
                 {
                     foreach (DataGridViewRow row in ResidentsListGridView.Rows)
                     {
-                        if (row.Cells[3].Value != null && row.Cells[3].Value.ToString().ToLower().Contains(bunifuMetroTextbox1.Text.ToLower()))
+                        if (row.Cells[1].Value != null && row.Cells[1].Value.ToString().ToLower().Contains(bunifuMetroTextbox1.Text.ToLower()))
                         {
                             row.Visible = true;
                             cnt++;
