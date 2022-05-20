@@ -55,9 +55,9 @@ namespace Frontend.ManagerForms
                 obj.id = Convert.ToInt32(searchbyIdTextbox.Text);
                 dynamic response = Service.GetWorkerById(obj);
                 
-                dynamic work = response.lst;
                 if (response.success == true)
                 {
+                    dynamic work = response.lst;
                     UserNameTextBox.Text = work.userName.ToString();
                     AgeTextBox.Text = work.age.ToString();
                     EmailTextBox.Text = work.email.ToString();

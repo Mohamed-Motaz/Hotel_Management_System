@@ -98,7 +98,7 @@ namespace Frontend.Extras
             PasswordTextBox.Text = "";
             PhoneNumberTextBox.Text = "";
             SalaryTextBox.Text = "";
-            PasswordTextBox.Enabled = false;
+           
         }
 
         private void IsRoomService(object sender, EventArgs e)

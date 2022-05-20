@@ -116,7 +116,7 @@ namespace Backend.Models
                 for (Iterator workerIterator = Apphost.ListOfPrivilegedWorkers.GetIterator(); workerIterator.hasNext();)
                 {
                     PrivilegedWorker worker = workerIterator.getNext() as PrivilegedWorker;
-                    worker.password = password;
+                   
                     if (worker.id == oldId)
                     {
                         worker.email = editedWorker.email;

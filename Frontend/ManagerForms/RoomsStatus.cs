@@ -43,11 +43,11 @@ namespace Frontend.Extras
             numofhalfboardroomsBusy = 0; 
             numofbedandbreakfastroomsBusy = 0;
 
-            List<dynamic> avaRooms = Service.GetAvailableRooms(new ExpandoObject());
+            List<dynamic> avaRooms = Service.GetActualAvailableRooms(new ExpandoObject());
             List<dynamic> busyRooms = Service.GetReservedRoom(new ExpandoObject());
             List<dynamic> reservations = Service.GetActiveReservations();
 
-            for (int i = 0; i < numoffullboardroomsBusy; i++)
+            for (int i = 0; i < reservations.Count ; i++)
             {
                 if (reservations[i].boardingType == "Full Board")
                 {
@@ -65,15 +65,15 @@ namespace Frontend.Extras
             numofAvailableRooms = avaRooms.Count;
             numofBusyRooms = busyRooms.Count;
 
-            for (int i = 0; i < avaRooms.Count; i++)
+            for (int i = 0; i < avaRooms.Count ; i++)
             {
-                if (avaRooms[i].roomType == "Single Room")
+                if (avaRooms[i].type == "Single Room")
                 {
                     numofsingleroomsava++;
-                }else if (avaRooms[i].roomType == "Double Room")
+                }else if (avaRooms[i].type == "Double Room")
                 {
                     numofdoubleroomsava++;
-                }else if (avaRooms[i].roomType == "Triple Room")
+                }else if (avaRooms[i].type == "Triple Room")
                 {
                     numoftripleroomsava++;
                 }

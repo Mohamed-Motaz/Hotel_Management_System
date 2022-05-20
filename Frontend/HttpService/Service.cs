@@ -226,8 +226,18 @@ namespace Frontend.HttpService
             dynamic obj = JsonConvert.DeserializeObject<ExpandoObject>(responseStr, converter);
             return obj;
         }
-        
+
         //Rooms
+        public static List<object> GetActualAvailableRooms(dynamic input)
+        {
+            string json = JsonConvert.SerializeObject(input);
+            HttpResponseMessage response = Post("api/room/getAvailable", json);
+            string responseStr = response.Content.ReadAsStringAsync().Result;
+            dynamic obj = JsonConvert.DeserializeObject<ExpandoObject>(responseStr, converter);
+            List<object> availableRooms = obj.lst;
+            return availableRooms;
+        }
+
         public static List<object> GetAvailableRooms(dynamic input)
         {
             string json = JsonConvert.SerializeObject(input);
