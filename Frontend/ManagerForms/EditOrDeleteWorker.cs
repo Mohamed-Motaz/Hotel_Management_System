@@ -44,7 +44,7 @@ namespace Frontend.ManagerForms
         {
             if ((searchbyIdTextbox.Text.Length == 0))
             {
-                MessageBox.Show("Please enter a valid id.");
+                MessageBox.Show("Please enter a valid ID! ");
             }
             else
             {
@@ -53,24 +53,32 @@ namespace Frontend.ManagerForms
                 //TODO: api set worker to the api returend worker
                 dynamic obj = new ExpandoObject();
                 obj.id = Convert.ToInt32(searchbyIdTextbox.Text);
-                dynamic work = Service.GetWorkerById(obj);
-                UserNameTextBox.Text = work.userName.ToString();
-                AgeTextBox.Text = work.age.ToString();
-                EmailTextBox.Text = work.email.ToString();
-                JobTitleComboBox.SelectedItem = work.jobTitle.ToString();
-                try
+                dynamic response = Service.GetWorkerById(obj);
+                dynamic work = response.lst;
+                if (response.success == true)
                 {
-                    if (isRoomService.Checked) { work.password = ""; }
-                    else { PasswordTextBox.Text = work.password.ToString(); }
-                }
-                catch (Exception ex)
-                {
-                    // dp nothing
-                }
+                    UserNameTextBox.Text = work.userName.ToString();
+                    AgeTextBox.Text = work.age.ToString();
+                    EmailTextBox.Text = work.email.ToString();
+                    JobTitleComboBox.SelectedItem = work.jobTitle.ToString();
+                    try
+                    {
+                        if (isRoomService.Checked) { work.password = ""; }
+                        else { PasswordTextBox.Text = work.password.ToString(); }
+                    }
+                    catch (Exception ex)
+                    {
+                        // do nothing
+                    }
 
-                PhoneNumberTextBox.Text = work.phoneNumber.ToString();
-                SalaryTextBox.Text = work.salary.ToString();
-                IncomeTypeComboBox.SelectedItem = work.incomeType.ToString();
+                    PhoneNumberTextBox.Text = work.phoneNumber.ToString();
+                    SalaryTextBox.Text = work.salary.ToString();
+                    IncomeTypeComboBox.SelectedItem = work.incomeType.ToString();
+                }
+                else
+                {
+                    MessageBox.Show("Please enter a valid ID!");
+                }
             }
         }
 

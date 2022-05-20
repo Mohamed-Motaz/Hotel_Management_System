@@ -53,7 +53,7 @@ namespace Frontend.ManagerForms
                 dynamic res = response.lst;
                 if (response.success == true)
                 {
-                    UserNameTextBox.Text = res.name.ToString();
+                    UserNameTextBox.Text = res.userName.ToString();
                     AgeTextBox.Text = res.age.ToString();
                     EmailTextBox.Text = res.email.ToString();
                     PasswordTextBox.Text = res.password.ToString();

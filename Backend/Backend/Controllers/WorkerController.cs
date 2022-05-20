@@ -73,7 +73,8 @@ namespace Backend.Controllers
         public dynamic get([FromBody] dynamic obj) //api/worker/get
         {
             string json = JsonConvert.SerializeObject(Manager.getWorker(Convert.ToInt32(obj.id)));
-            dynamic resp = JsonConvert.DeserializeObject(json);
+            dynamic resp = new ExpandoObject();  
+            resp.lst =  JsonConvert.DeserializeObject(json);
             resp.Success = !(Manager.getWorker(Convert.ToInt32(obj.id)) is null);
             return resp;
         }
