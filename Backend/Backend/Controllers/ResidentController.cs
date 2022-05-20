@@ -22,6 +22,7 @@ namespace Backend.Controllers
             Resident resident = new Resident(Convert.ToString(obj.userName), Convert.ToInt32(obj.age), Convert.ToString(obj.email), Convert.ToString(obj.phoneNumber), Convert.ToString(obj.password));
             dynamic resp = new ExpandoObject();
             resp.Success = resident.AddResident(resident);
+            resp.id = Resident.getResidentByUserName(Convert.ToString(obj.userName));
             return resp;
         }
 

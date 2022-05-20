@@ -70,8 +70,10 @@ namespace Frontend
             if (Validate()) // try tp user built in validate
             {
                 // send to api addResident after validation
-                Service.AddResident(resident);
-             //   ResidentInformation.residentId = 1;
+
+              dynamic resp = Service.AddResident(resident);
+               ResidentInformation.residentId = resp.id;
+           
                 MainResidentForm residentForm = new MainResidentForm();
                 this.Hide();
                 residentForm.Show();

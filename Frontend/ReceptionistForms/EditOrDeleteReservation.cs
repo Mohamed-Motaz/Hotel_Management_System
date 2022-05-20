@@ -168,6 +168,7 @@ namespace Frontend.ReceptionistForms
                     StartDateDatepicker.Value = Convert.ToDateTime(TimeHandler.GetDateFromEpoch(res.booking.startDate));
                     EndDateDatepicker.Value = Convert.ToDateTime(TimeHandler.GetDateFromEpoch(res.booking.endDate));
                     string roomInfo = Convert.ToString(res.booking.roomType) + "/" + Convert.ToString(res.booking.boardingType);
+                    RoomTypeComboBox.Items.Clear();
                     RoomTypeComboBox.Items.Add(roomInfo);
                 }
                 else
