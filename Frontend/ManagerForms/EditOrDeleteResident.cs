@@ -50,6 +50,7 @@ namespace Frontend.ManagerForms
                 obj.id = searchbyIdTextbox.Text;
                 //TODO: api set resident to the api returend resident
                 dynamic response = Service.GetResident(obj);
+                clearBtn_Click(sender, e);
                 dynamic res = response.lst;
                 if (response.success == true)
                 {

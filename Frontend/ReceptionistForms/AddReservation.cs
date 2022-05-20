@@ -40,12 +40,15 @@ namespace Frontend.ReceptionistForms
             dynamic Reservation = new ExpandoObject();
             Reservation.residentId = ResidentInformation.residentId;
             ResidentIDTextBox.Text = ResidentInformation.residentId.ToString();
+            Reservation.roomType = Reservation.boardingType = "";
             //Reservation.roomType = RoomTypeComboBox.GetItemText(RoomTypeComboBox.SelectedItem);
             string types = RoomTypeComboBox.GetItemText(RoomTypeComboBox.SelectedItem);
             string[] list = types.Split('/');
-            Reservation.roomType = list[0];
-            Reservation.boardingType = list[1];
-
+            if (list.Length == 2)
+            {
+                Reservation.roomType = list[0];
+                Reservation.boardingType = list[1];
+            }
             DateTime dt = Convert.ToDateTime(StartDateDatepicker.Value);
             Reservation.startDate = TimeHandler.GetDateInEpoch(dt.Day, dt.Month, dt.Year);
 

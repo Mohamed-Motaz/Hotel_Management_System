@@ -54,6 +54,7 @@ namespace Frontend.ManagerForms
                 dynamic obj = new ExpandoObject();
                 obj.id = Convert.ToInt32(searchbyIdTextbox.Text);
                 dynamic response = Service.GetWorkerById(obj);
+                clearBtn_Click( sender, e);
                 dynamic work = response.lst;
                 if (response.success == true)
                 {
